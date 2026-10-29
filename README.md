@@ -4,7 +4,7 @@ Adaptación ASIC del procesador Espino y del juego del Proyecto 2, con LibreLane
 
 ## Estado
 
-La base FPGA portable reproduce las 94 instrucciones del juego y supera una simulación de arranque de 2000 ciclos. Docker Desktop funciona en ARM64 y el ejemplo oficial spm completó el flujo GF180MCU con GDS. La implementación ASIC de Espino y su validación física están pendientes.
+La base FPGA portable reproduce las 94 instrucciones del juego y supera una simulación de arranque de 2000 ciclos. Docker Desktop funciona en ARM64 y el ejemplo oficial spm completó el flujo GF180MCU con GDS. La primera adaptación RTL de interfaz/reset/RF pasó siete pruebas, incluida una comparación de 10000 ciclos con el RF FPGA. La síntesis genérica de reset, botones, RF y SoC con memoria externa pasó; el RF contiene 544 FF genéricos. Las memorias ASIC A/B, el mapeo a GF180 y la validación física de Espino siguen pendientes.
 
 ## Archivos
 
@@ -13,7 +13,9 @@ La base FPGA portable reproduce las 94 instrucciones del juego y supera una simu
 - `scripts/check_baseline.py`: regeneración del programa y simulación con un modelo iCE40 oficial de Yosys.
 - `docs`: cuadernos de estudio y continuidad, y checklist.
 - `evidence`: resultados y huellas del original.
-- `rtl` y `config`: destinos para el desarrollo ASIC posterior.
+- `rtl`: interfaz, reset, sincronización de botones, RF portable y pipeline/periféricos conservados.
+- `config/rtl_stage1.f`: fuentes de producción de esta etapa; aún requiere la futura memoria ASIC.
+- `sim/asic_stage1` y `scripts/check_asic_stage1.py`: pruebas de la primera adaptación.
 
 ## Verificación local
 
@@ -34,3 +36,10 @@ La prueba del entorno terminó con cero errores de Magic DRC, LVS y antena. KLay
 ## Documentación y enunciado
 
 Los cuadernos principales integran las etapas 1 a 5 y las verificaciones del Mac. docs/Requisitos_Proyecto3.md relaciona las exigencias con la evidencia pendiente. Los originales y el kit recuperado están en docs/referencias. Entrega y defensa: 4 de noviembre de 2026, 10:30.
+
+
+## Adaptación RTL de la primera etapa
+
+Ejecutar `python3 scripts/check_asic_stage1.py --ice40-model RUTA_AL_MODELO_CELLS_SIM_V`. Comprueba RF, reset, botones, reinicios, MMIO, display, SPI y los primeros 10000 ciclos del juego frente al RF original. Usa una memoria exclusivamente de simulación; no constituye una implementación de A/B ni equivalencia post-síntesis. Los resultados están en `evidence/asic_stage1` y el detalle en [Adaptación RTL](docs/Adaptacion_RTL_Etapa1.md).
+
+La comprobación genérica `python3 scripts/check_asic_stage1_synthesis.py` pasó para los cuatro bloques, con Yosys 0.62 de la imagen fijada. No descarga imágenes ni ejecuta el flujo físico; utiliza red deshabilitada. `evidence/asic_stage1_synthesis` conserva logs, scripts de síntesis, conteos y huellas. Estos conteos son de lógica genérica, no área ni celdas GF180 mapeadas.

@@ -1,0 +1,5 @@
+<PROJECT_ROOT>/sim/asic_stage1/asic_memory.v:17: error: Unknown module type: ASIC_STAGE1_MEMORY_IS_FOR_SIMULATION_ONLY
+2 error(s) during elaboration.
+*** These modules were missing:
+        ASIC_STAGE1_MEMORY_IS_FOR_SIMULATION_ONLY referenced 1 times.
+***

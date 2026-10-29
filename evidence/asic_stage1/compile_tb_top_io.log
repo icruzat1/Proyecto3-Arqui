@@ -1,0 +1,1 @@
+<PROJECT_ROOT>/sim/asic_stage1/tb_top_io.v:60: warning: @* is sensitive to all 512 words in array 'mem'.

@@ -1,0 +1,2 @@
+PASS reset/buttons: 73 state checks, 54 rising edges; async assertion, exact release, boot interruption, button latency/pulses/restarts
+<PROJECT_ROOT>/sim/asic_stage1/tb_reset_buttons.v:157: $finish called at 608000 (1ps)

@@ -1,0 +1,97 @@
+{
+  "scope": "Generic synthesis of individual blocks, no PDK mapping or physical flow",
+  "container_image": "ghcr.io/librelane/librelane@sha256:24640bd645ae992fa22d4a3e18fde10d728763c78fb140184f9975aa6c7d3e5e",
+  "input_sha256": {
+    "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+    "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+    "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+    "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+    "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+    "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+    "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+    "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+    "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+    "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+    "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+    "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+    "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443"
+  },
+  "blocks": {
+    "reset_ctrl": {
+      "passed": true,
+      "cell_types_by_module_definition": {
+        "$_DFF_PN0_": 3
+      },
+      "log": "evidence/asic_stage1_synthesis/reset_ctrl.log",
+      "netlist_sha256": "d65cd4b341901e07a04f638e7e804faee9b9d33021c1ff1ab08c12c804ee63a0"
+    },
+    "btn_sync": {
+      "passed": true,
+      "cell_types_by_module_definition": {
+        "$_DFF_PN0_": 8
+      },
+      "log": "evidence/asic_stage1_synthesis/btn_sync.log",
+      "netlist_sha256": "ccff540ac01dc31b9eeb942cb67d465565d5e0a1edd176e31427395a2298565a"
+    },
+    "espino_register_file": {
+      "passed": true,
+      "cell_types_by_module_definition": {
+        "$_DFFE_PN0P_": 480,
+        "$_DFF_PN0_": 64,
+        "$_NOT_": 55,
+        "$_AND_": 912,
+        "$_OR_": 928,
+        "$_MUX_": 128
+      },
+      "log": "evidence/asic_stage1_synthesis/espino_register_file.log",
+      "netlist_sha256": "c6bac48a66260fd76f2e62bd1eff67365969985ab6861698365a04dcd49b5122"
+    },
+    "pochoco_soc": {
+      "passed": true,
+      "cell_types_by_module_definition": {
+        "espino_controller": 1,
+        "espino_id_stage": 1,
+        "$paramod\\espino_if_stage\\BootAddr=32'00000000000000000000000000000000": 1,
+        "espino_load_store_unit": 1,
+        "espino_register_file": 1,
+        "$_DFFE_PN0N_": 63,
+        "$_DFFE_PN0P_": 572,
+        "$_NOT_": 192,
+        "$_XOR_": 283,
+        "$_AND_": 1826,
+        "$_MUX_": 658,
+        "$_OR_": 1500,
+        "$_DFF_PN0_": 103,
+        "espino_alu": 1,
+        "espino_decoder": 1,
+        "$paramod\\espino_core\\BootAddr=32'00000000000000000000000000000000": 1,
+        "pochoco_periph": 1,
+        "pochoco_spi_slave": 1,
+        "$_DFF_PN1_": 3
+      },
+      "log": "evidence/asic_stage1_synthesis/pochoco_soc.log",
+      "netlist_sha256": "a895bc6e9242d278abd21050eab2811c89b056dfe5046fa78d8b13829044b891"
+    }
+  },
+  "all_passed": true,
+  "yosys_version": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)",
+  "verification_date": "2026-10-29",
+  "script_sha256": "29e2b6fa6e1648342827965454c7cdf3009744fe7998efda948186c00687f19f",
+  "no_latches_fpga_primitives_or_blackboxes": true,
+  "physical_flow_run": false,
+  "abc_run": false,
+  "asic_top_including_memory_synthesized": false,
+  "warnings": [
+    {
+      "logs": [
+        "evidence/asic_stage1_synthesis/reset_ctrl.log",
+        "evidence/asic_stage1_synthesis/btn_sync.log",
+        "evidence/asic_stage1_synthesis/espino_register_file.log",
+        "evidence/asic_stage1_synthesis/pochoco_soc.log"
+      ],
+      "line": 52,
+      "message": "Replacing memory regs_q with list of registers. See rtl/espino_core/espino_register_file.v:28",
+      "interpretation": "Expected RF conversion to registers; all sources are read before hierarchy pruning, so the warning also appears in reset/buttons runs."
+    }
+  ]
+}

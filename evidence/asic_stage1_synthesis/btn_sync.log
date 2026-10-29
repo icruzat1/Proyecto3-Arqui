@@ -1,0 +1,478 @@
+
+-- Executing script file `build/asic_stage1_synthesis/btn_sync.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/asic/btn_sync.v
+Parsing SystemVerilog input from `rtl/asic/btn_sync.v' to AST representation.
+Generating RTLIL representation for module `\btn_sync'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/asic/reset_ctrl.v
+Parsing SystemVerilog input from `rtl/asic/reset_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\reset_ctrl'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/espino_core/espino_alu.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_alu.v' to AST representation.
+Generating RTLIL representation for module `\espino_alu'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/espino_core/espino_controller.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_controller.v' to AST representation.
+Generating RTLIL representation for module `\espino_controller'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/espino_core/espino_core.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_core.v' to AST representation.
+Generating RTLIL representation for module `\espino_core'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/espino_core/espino_decoder.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_decoder.v' to AST representation.
+Generating RTLIL representation for module `\espino_decoder'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/espino_core/espino_id_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_id_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_id_stage'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: rtl/espino_core/espino_if_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_if_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_if_stage'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: rtl/espino_core/espino_load_store_unit.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_load_store_unit.v' to AST representation.
+Generating RTLIL representation for module `\espino_load_store_unit'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: rtl/espino_core/espino_register_file.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_register_file.v' to AST representation.
+Generating RTLIL representation for module `\espino_register_file'.
+Warning: Replacing memory \regs_q with list of registers. See rtl/espino_core/espino_register_file.v:28
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: rtl/pochoco_periph.v
+Parsing SystemVerilog input from `rtl/pochoco_periph.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_periph'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: rtl/pochoco_soc.v
+Parsing SystemVerilog input from `rtl/pochoco_soc.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_soc'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: rtl/pochoco_spi_slave.v
+Parsing SystemVerilog input from `rtl/pochoco_spi_slave.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_spi_slave'.
+Successfully finished Verilog frontend.
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \btn_sync
+
+14.2. Analyzing design hierarchy..
+Top module:  \btn_sync
+Removing unused module `\pochoco_spi_slave'.
+Removing unused module `\pochoco_soc'.
+Removing unused module `\pochoco_periph'.
+Removing unused module `\espino_register_file'.
+Removing unused module `\espino_load_store_unit'.
+Removing unused module `\espino_if_stage'.
+Removing unused module `\espino_id_stage'.
+Removing unused module `\espino_decoder'.
+Removing unused module `\espino_core'.
+Removing unused module `\espino_controller'.
+Removing unused module `\espino_alu'.
+Removing unused module `\reset_ctrl'.
+Removed 12 unused modules.
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \btn_sync
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \btn_sync
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$rtl/asic/btn_sync.v:20$1 in module btn_sync.
+Removed a total of 0 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 0 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\btn_sync.$proc$rtl/asic/btn_sync.v:20$1'.
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\btn_sync.$proc$rtl/asic/btn_sync.v:20$1'.
+     1/2: $0\sync_q[3:0]
+     2/2: $0\meta_q[3:0]
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\btn_sync.\meta_q' using process `\btn_sync.$proc$rtl/asic/btn_sync.v:20$1'.
+  created $adff cell `$procdff$184' with positive edge clock and positive level reset.
+Creating register for signal `\btn_sync.\sync_q' using process `\btn_sync.$proc$rtl/asic/btn_sync.v:20$1'.
+  created $adff cell `$procdff$189' with positive edge clock and positive level reset.
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `btn_sync.$proc$rtl/asic/btn_sync.v:20$1'.
+Cleaned up 0 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+<suppressed ~4 debug messages>
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+Removed 3 unused cells and 7 unused wires.
+<suppressed ~4 debug messages>
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module btn_sync...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \btn_sync..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \btn_sync.
+Performed a total of 0 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.6.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \btn_sync..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \btn_sync.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module btn_sync:
+  created 0 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \btn_sync..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \btn_sync.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.17.5. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \btn_sync..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \btn_sync.
+Performed a total of 0 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 2 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $adff.
+No more expansions possible.
+<suppressed ~79 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module btn_sync.
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\btn_sync'.
+Computing hashes of 8 cells of `\btn_sync'.
+Finding duplicate cells in `\btn_sync'.
+Removed a total of 0 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \btn_sync..
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `btn_sync'. Setting top module to btn_sync.
+
+15.22.1. Analyzing design hierarchy..
+Top module:  \btn_sync
+
+15.22.2. Analyzing design hierarchy..
+Top module:  \btn_sync
+Removed 0 unused modules.
+
+15.23. Printing statistics.
+
+=== btn_sync ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        6 wires
+       18 wire bits
+        6 public wires
+       18 public wire bits
+        4 ports
+       10 port bits
+        8 cells
+        8   $_DFF_PN0_
+
+15.24. Executing CHECK pass (checking for obvious problems).
+Checking module btn_sync...
+Found and reported 0 problems.
+
+16. Executing CHECK pass (checking for obvious problems).
+Checking module btn_sync...
+Found and reported 0 problems.
+
+17. Executing JSON backend.

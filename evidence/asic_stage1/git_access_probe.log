@@ -1,0 +1,7 @@
+Operation: stage only the reviewed stage-1 RTL, tests, scripts, evidence and documentation in Proyecto 3.
+Result: fatal: Unable to create '<PROJECT_ROOT>/.git/index.lock': Operation not permitted
+No commit or push was performed. The new work remains saved in the working tree.
+VS Code Accounts showed icruzat1 (GitHub); no other account was used.
+A further file-system permission request for .git is deferred until the user returns.
+
+Resolved 2026-10-29 after the user returned and granted write access to Proyecto 3/.git. Staging the reviewed project files completed successfully. Remote operations remain restricted to the icruzat1 session in VS Code.

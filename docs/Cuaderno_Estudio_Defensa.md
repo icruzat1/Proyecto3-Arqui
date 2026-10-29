@@ -1,6 +1,6 @@
 # Cuaderno de estudio y defensa del Proyecto 3
 
-Actualizado el 29 de octubre de 2026. Reúne la preparación de las etapas 1 a 5 y las verificaciones realizadas en el Mac. La adaptación ASIC de Espino y las mediciones A/B siguen pendientes. La prueba física completada corresponde al ejemplo oficial spm.
+Actualizado el 29 de octubre de 2026. Reúne la preparación de las etapas 1 a 5 y las verificaciones realizadas en el Mac. La primera adaptación RTL de interfaz, reset y RF ya pasó sus pruebas de simulación. La síntesis genérica de cuatro bloques pasó; las memorias A/B, el mapeo GF180 y la implementación física de Espino siguen pendientes. La prueba física completada corresponde al ejemplo oficial spm.
 
 ## Estado actual y forma de estudiar
 
@@ -387,3 +387,39 @@ Estos resultados pertenecen al ejemplo de instalación. La comparación de las a
 8. Demostrar la equivalencia RTL/netlist por ciclos y la recuperación de una ronda incorrecta. Cerrar con decisiones justificadas y limitaciones reales.
 
 Este guion todavía necesita las tablas, capturas y resultados del ASIC. No se han creado diapositivas finales ni el informe académico final.
+
+
+## Primera adaptación RTL implementada y probada en el Mac
+
+El 29 de octubre se implementó la primera capa ASIC con autorización del usuario. El [informe de esta etapa](Adaptacion_RTL_Etapa1.md) contiene archivos, pruebas, resultados y límites. No confundir este resultado con las especificaciones históricas anteriores ni con un cierre físico del procesador.
+
+### Cómo explicar el cambio en la defensa
+
+El procesador conserva su pipeline. Se reemplaza el almacenamiento específico de FPGA del banco de registros por FF descritos de forma portable. Se preservan dos lecturas síncronas, una escritura y el ciclo de espera del controlador. En una colisión, la salida recibe el valor anterior; no añadimos forwarding. x0 es constante. Los otros quince registros y ambas salidas se ponen en cero mediante reset: esto hace explícito un comportamiento que el RF anterior no tenía, pues ignoraba esa entrada.
+
+El reset externo sustituye al contador POR inicializado. Se afirma sin esperar reloj y se libera de forma sincronizada. Un segundo registro mantiene detenido al core hasta que la memoria indique disponibilidad. El contador del juego comparte el reset del core; por eso la espera de carga no altera la medición del juego. El cargador usa el reset anterior, no el del core, para poder trabajar mientras este permanece detenido.
+
+Los botones atraviesan dos FF sin introducir antirrebote. Esta latencia se ensaya y deberá mantenerse igual en RTL y netlist. La simulación no reproduce la metastabilidad analógica. Los displays exponen segmentos activos altos y, tras reset, muestran 00. SPI conserva su implementación original y superó una transacción completa con reloj externo lento.
+
+### Qué podemos sostener con evidencia
+
+Pasaron siete ejecuciones: RF, reset/botones, tres casos de arranque, diagnóstico de entradas/salidas y comparación de pipeline. El RF pasó 1903 ciclos de modelo independiente y 1872 comparaciones contra iCE40. El pipeline pasó 10000 ciclos iniciales del juego con el RF antiguo y el nuevo, sin diferencias observadas en control, operandos válidos, escrituras y periféricos. Los archivos originales de Proyecto 2 conservan sus 38 huellas.
+
+La comparación comparte wrapper y memoria de simulación: aísla la sustitución del RF. No prueba rondas completas, netlist, timing, DRC o LVS. La memoria ASIC todavía no existe; el modelo de pruebas usa un archivo y no debe llegar al flujo físico. El script rechaza esa inclusión accidental sin una opción explícita de simulación.
+
+La comprobación de síntesis genérica se completó después de resolver los permisos: reset, botones, RF y SoC con memoria externa pasaron con Yosys 0.62. El RF produjo 480 FF con habilitación y 64 FF de salida, confirmando los 544 bits previstos. Reset produjo tres FF y botones ocho. Son FF genéricos antes del mapeo a la biblioteca GF180; todavía no determinan área física, frecuencia o consumo.
+
+### Preguntas de práctica de esta etapa
+
+1. ¿Por qué cambiar la lectura del RF a combinacional puede romper el procesador? Porque ID y el controlador esperan un ciclo de lectura síncrona; conservar la interfaz no basta si cambia su tiempo.
+2. ¿Por qué no sirve `$readmemh` como cargador de un ASIC? Porque leer un archivo durante simulación no crea un mecanismo físico de carga al encender.
+3. ¿Por qué el contador del juego debe esperar a la memoria? Para medir desde el comienzo real de ejecución, sin sumar la preparación del programa.
+4. ¿Por qué se bloquean solicitudes fuera del core? El IF original genera `~stall` incluso bajo reset; el SoC impide que esa señal acceda a la memoria antes de tiempo.
+5. ¿El test de 10000 ciclos demuestra que el juego funciona completo? No: comprueba el arranque y la espera inicial y aísla el reemplazo del RF. Las rondas correctas/erróneas y la netlist requieren pruebas posteriores.
+
+
+### Cómo defender la primera síntesis
+
+La advertencia «Replacing memory regs_q with list of registers» indica que Yosys convirtió el arreglo del RF a registros, coherente con nuestra decisión de usar FF. No significa que se haya inferido una memoria FPGA. Está conservada con archivo y línea en el informe de etapa. Las comprobaciones no detectaron latches, primitivas SB ni cajas negras.
+
+Es necesario distinguir tres niveles: descripción y simulación RTL; síntesis genérica, completada para estos bloques; y mapeo/implementación física GF180 del macro completo, todavía pendiente. No usar el recuento de FF para inventar área o timing. Los resultados A/B se medirán cuando existan sus memorias y se ejecute el flujo completo.

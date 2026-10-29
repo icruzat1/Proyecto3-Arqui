@@ -1,0 +1,8 @@
+Command: Docker CLI run --rm --pull=never --network=none --platform linux/arm64 --entrypoint yosys <pinned-image> -V
+Exit status: 1
+permission denied while trying to connect to the docker API at unix:///Users/ics/.docker/run/docker.sock
+
+A file-system grant for the socket had been returned, but access remained denied.
+The synthesis tool did not start. A further access request is deferred until the user returns.
+
+Resolved 2026-10-29 after the user returned and granted file-system and communication access. Docker Engine 29.9.2 responded; all four generic synthesis jobs passed. See ../asic_stage1_synthesis/results.json.

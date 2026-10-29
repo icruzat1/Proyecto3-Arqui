@@ -1,0 +1,5 @@
+<PROJECT_ROOT>/rtl/asic/asic_top.v:49: error: Unknown module type: asic_memory
+2 error(s) during elaboration.
+*** These modules were missing:
+        asic_memory referenced 1 times.
+***

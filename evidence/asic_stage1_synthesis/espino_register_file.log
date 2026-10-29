@@ -1,0 +1,689 @@
+
+-- Executing script file `build/asic_stage1_synthesis/espino_register_file.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/asic/btn_sync.v
+Parsing SystemVerilog input from `rtl/asic/btn_sync.v' to AST representation.
+Generating RTLIL representation for module `\btn_sync'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/asic/reset_ctrl.v
+Parsing SystemVerilog input from `rtl/asic/reset_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\reset_ctrl'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/espino_core/espino_alu.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_alu.v' to AST representation.
+Generating RTLIL representation for module `\espino_alu'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/espino_core/espino_controller.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_controller.v' to AST representation.
+Generating RTLIL representation for module `\espino_controller'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/espino_core/espino_core.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_core.v' to AST representation.
+Generating RTLIL representation for module `\espino_core'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/espino_core/espino_decoder.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_decoder.v' to AST representation.
+Generating RTLIL representation for module `\espino_decoder'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/espino_core/espino_id_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_id_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_id_stage'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: rtl/espino_core/espino_if_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_if_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_if_stage'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: rtl/espino_core/espino_load_store_unit.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_load_store_unit.v' to AST representation.
+Generating RTLIL representation for module `\espino_load_store_unit'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: rtl/espino_core/espino_register_file.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_register_file.v' to AST representation.
+Generating RTLIL representation for module `\espino_register_file'.
+Warning: Replacing memory \regs_q with list of registers. See rtl/espino_core/espino_register_file.v:28
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: rtl/pochoco_periph.v
+Parsing SystemVerilog input from `rtl/pochoco_periph.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_periph'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: rtl/pochoco_soc.v
+Parsing SystemVerilog input from `rtl/pochoco_soc.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_soc'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: rtl/pochoco_spi_slave.v
+Parsing SystemVerilog input from `rtl/pochoco_spi_slave.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_spi_slave'.
+Successfully finished Verilog frontend.
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \espino_register_file
+
+14.2. Analyzing design hierarchy..
+Top module:  \espino_register_file
+Removing unused module `\pochoco_spi_slave'.
+Removing unused module `\pochoco_soc'.
+Removing unused module `\pochoco_periph'.
+Removing unused module `\espino_load_store_unit'.
+Removing unused module `\espino_if_stage'.
+Removing unused module `\espino_id_stage'.
+Removing unused module `\espino_decoder'.
+Removing unused module `\espino_core'.
+Removing unused module `\espino_controller'.
+Removing unused module `\espino_alu'.
+Removing unused module `\reset_ctrl'.
+Removing unused module `\btn_sync'.
+Removed 12 unused modules.
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \espino_register_file
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \espino_register_file
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 2 dead cases from process $proc$rtl/espino_core/espino_register_file.v:25$86 in module espino_register_file.
+Marked 5 switch rules as full_case in process $proc$rtl/espino_core/espino_register_file.v:25$86 in module espino_register_file.
+Removed a total of 2 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 7 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+     1/29: $2$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR[3:0]$108
+     2/29: $2$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA[31:0]$109
+     3/29: $2$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA[31:0]$103
+     4/29: $2$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA[31:0]$100
+     5/29: $1$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA[31:0]$99
+     6/29: $1$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR[3:0]$98
+     7/29: $0\rdata_b_o[31:0]
+     8/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA[31:0]$97
+     9/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_ADDR[3:0]$96
+    10/29: $0\rdata_a_o[31:0]
+    11/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA[31:0]$95
+    12/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_ADDR[3:0]$94
+    13/29: $1\index[31:0]
+    14/29: $0\regs_q[15][31:0]
+    15/29: $0\regs_q[14][31:0]
+    16/29: $0\regs_q[13][31:0]
+    17/29: $0\regs_q[12][31:0]
+    18/29: $0\regs_q[11][31:0]
+    19/29: $0\regs_q[10][31:0]
+    20/29: $0\regs_q[9][31:0]
+    21/29: $0\regs_q[8][31:0]
+    22/29: $0\regs_q[7][31:0]
+    23/29: $0\regs_q[6][31:0]
+    24/29: $0\regs_q[5][31:0]
+    25/29: $0\regs_q[4][31:0]
+    26/29: $0\regs_q[3][31:0]
+    27/29: $0\regs_q[2][31:0]
+    28/29: $0\regs_q[1][31:0]
+    29/29: $0\regs_q[0][31:0]
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\espino_register_file.\rdata_a_o' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$424' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\rdata_b_o' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$429' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\index' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$434' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[0]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $dff cell `$procdff$441' with positive edge clock.
+Creating register for signal `\espino_register_file.\regs_q[1]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$446' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[2]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$451' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[3]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$456' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[4]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$461' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[5]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$466' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[6]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$471' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[7]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$476' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[8]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$481' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[9]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$486' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[10]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$491' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[11]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$496' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[12]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$501' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[13]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$506' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[14]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$511' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[15]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$516' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$521' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$526' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$531' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$536' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$541' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$546' with positive edge clock and positive level reset.
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+Removing empty process `espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+Cleaned up 4 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+<suppressed ~56 debug messages>
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+Removed 35 unused cells and 114 unused wires.
+<suppressed ~37 debug messages>
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module espino_register_file...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 107 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 105 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 16/17 on $pmux $procmux$186.
+    dead port 16/17 on $pmux $procmux$203.
+Removed 2 multiplexer ports.
+<suppressed ~55 debug messages>
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 105 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+Removed 5 unused cells and 7 unused wires.
+<suppressed ~7 debug messages>
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+15.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.6.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$516 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[15]).
+Adding EN signal on $procdff$511 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[14]).
+Adding EN signal on $procdff$506 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[13]).
+Adding EN signal on $procdff$501 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[12]).
+Adding EN signal on $procdff$496 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[11]).
+Adding EN signal on $procdff$491 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[10]).
+Adding EN signal on $procdff$486 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[9]).
+Adding EN signal on $procdff$481 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[8]).
+Adding EN signal on $procdff$476 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[7]).
+Adding EN signal on $procdff$471 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[6]).
+Adding EN signal on $procdff$466 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[5]).
+Adding EN signal on $procdff$461 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[4]).
+Adding EN signal on $procdff$456 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[3]).
+Adding EN signal on $procdff$451 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[2]).
+Adding EN signal on $procdff$446 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[1]).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+Removed 30 unused cells and 30 unused wires.
+<suppressed ~31 debug messages>
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+15.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.8.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$195_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$196_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$197_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$198_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$199_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$200_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$201_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$212_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$213_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$214_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$215_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$216_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$217_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$218_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$298_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$312_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$327_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$343_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$360_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$378_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$397_CMP0 ($eq).
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module espino_register_file:
+  created 0 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.14.9. Finished fast OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+<suppressed ~2 debug messages>
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+Removed 2 unused cells and 2 unused wires.
+<suppressed ~3 debug messages>
+
+15.17.5. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \espino_register_file.
+Performed a total of 0 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Removed a total of 0 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+
+15.19.10. Finished fast OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$f1fc4bc1d42e857fca43ce0fdd0da6ff25c612c4\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~269 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module espino_register_file.
+<suppressed ~236 debug messages>
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 2719 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 2621 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 2569 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+<suppressed ~450 debug messages>
+Removed a total of 150 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \espino_register_file..
+Removed 2 unused cells and 470 unused wires.
+<suppressed ~3 debug messages>
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `espino_register_file'. Setting top module to espino_register_file.
+
+15.22.1. Analyzing design hierarchy..
+Top module:  \espino_register_file
+
+15.22.2. Analyzing design hierarchy..
+Top module:  \espino_register_file
+Removed 0 unused modules.
+
+15.23. Printing statistics.
+
+=== espino_register_file ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      343 wires
+     2630 wire bits
+       24 public wires
+      591 public wire bits
+        9 ports
+      111 port bits
+     2567 cells
+      912   $_AND_
+      480   $_DFFE_PN0P_
+       64   $_DFF_PN0_
+      128   $_MUX_
+       55   $_NOT_
+      928   $_OR_
+
+15.24. Executing CHECK pass (checking for obvious problems).
+Checking module espino_register_file...
+Found and reported 0 problems.
+
+16. Executing CHECK pass (checking for obvious problems).
+Checking module espino_register_file...
+Found and reported 0 problems.
+
+17. Executing JSON backend.

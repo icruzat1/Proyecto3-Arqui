@@ -1,0 +1,2 @@
+PASS pipeline_lockstep cycles=10000 rf_commit_cycles=2505 read_request_cycles=1247 write_request_cycles=2
+<PROJECT_ROOT>/sim/asic_stage1/tb_pipeline_lockstep.v:72: $finish called at 1000900000 (1ps)

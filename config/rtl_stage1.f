@@ -1,0 +1,16 @@
+# Stage 1: production RTL, without the pending ASIC memory A/B.
+# This list alone must fail top elaboration until stage 2 supplies asic_memory.
+rtl/asic/asic_top.v
+rtl/asic/btn_sync.v
+rtl/asic/reset_ctrl.v
+rtl/espino_core/espino_alu.v
+rtl/espino_core/espino_controller.v
+rtl/espino_core/espino_core.v
+rtl/espino_core/espino_decoder.v
+rtl/espino_core/espino_id_stage.v
+rtl/espino_core/espino_if_stage.v
+rtl/espino_core/espino_load_store_unit.v
+rtl/espino_core/espino_register_file.v
+rtl/pochoco_periph.v
+rtl/pochoco_soc.v
+rtl/pochoco_spi_slave.v

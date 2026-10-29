@@ -44,7 +44,7 @@ Las constantes del juego corresponden a 25 MHz. El enunciado exige recalibrar pa
 
 ## Siguiente trabajo
 
-Conversar y preparar la tarea inmediata de adaptación ASIC antes de modificar RTL. Empezar por interfaz superior, reset y banco de registros, preservando las latencias. Las arquitecturas A/B, su carga, la ROM automática y la recalibración del programa se implementarán y verificarán por etapas. No redactar prompts futuros.
+Primera adaptación RTL implementada y probada; ver la actualización al final y docs/Adaptacion_RTL_Etapa1.md. El usuario volvió, los permisos fueron concedidos y los cuatro bloques pasaron la síntesis genérica. La siguiente etapa de diseño es implementar A/B, carga real y generación automática desde el assembler; conversar su alcance antes de iniciarla. No redactar prompts futuros.
 
 ## Entorno instalado y versiones fijadas
 
@@ -100,4 +100,25 @@ La entrega y defensa están fijadas para el 4 de noviembre de 2026 a las 10:30. 
 
 La propuesta A de 128 instrucciones y 16 datos y la B de 144 palabras son capacidades provisionales. El enunciado recomienda máximos de 256 instrucciones y 64 datos; cualquier exceso debe justificarse. El SPI bootloader y la simulación SDF son opcionales. El programa actual tiene 94 instrucciones y cero palabras de RAM ordinaria observadas estáticamente; hay que aportar evidencia de ejecución y conservar las dos estrategias exigidas.
 
-No se modificó RTL, assembler, configuración física ni firmware durante esta integración. No se prepararon prompts por adelantado. La checklist queda en 13 de 17 pasos; faltan adaptación ASIC, memorias A/B, pruebas completas y equivalencia, y los experimentos e informe finales.
+No se modificó RTL, assembler, configuración física ni firmware durante esta integración. No se prepararon prompts por adelantado. Al terminar esa integración documental, la checklist quedó en 13 de 17 pasos. El avance posterior de RTL se registra a continuación.
+
+
+## Primera etapa RTL: resultado actual
+
+El usuario cambió a Astra Ultra y autorizó continuar con la primera adaptación. Se implementaron asic_top, reset_ctrl, btn_sync, el SoC con interfaz de memoria externa y el RF portable. Los siete archivos restantes del core y los dos periféricos son idénticos a baseline. No se modificaron firmware, assembler, original Proyecto 2, configuración global de Git ni las referencias del kit.
+
+La memoria asic_memory de producción queda pendiente de A/B. Para elaborar y simular el top se añade explícitamente sim/asic_stage1/asic_memory.v, protegido con ASIC_STAGE1_SIM. No sintetizar ese modelo ni interpretar su demora como carga real de B. El manifiesto config/rtl_stage1.f contiene solo producción y falla al elaborar asic_top sin una memoria real.
+
+scripts/check_asic_stage1.py pasó siete pruebas: RF (1903 ciclos, 1872 diferenciales contra iCE40), reset/botones (73 comprobaciones), arranque con demoras 0/5/144 (dos arranques de 2000 ciclos por caso), diagnóstico MMIO/SPI y comparación de pipeline de 10000 ciclos. La comparación usa el mismo wrapper y sustituye solamente RF; no es post-síntesis ni juego completo. evidence/asic_stage1 conserva logs, hashes y resultados. El programa original sigue teniendo 94 instrucciones idénticas. Las 38 huellas del original coinciden y baseline no tiene diferencias Git.
+
+scripts/check_asic_stage1_synthesis.py se ejecutó con éxito al regresar el usuario y conceder los permisos de comunicación y escritura necesarios. Usa la imagen fijada con red deshabilitada y sin descargar imágenes. Los cuatro bloques reset_ctrl, btn_sync, espino_register_file y pochoco_soc pasaron síntesis genérica con Yosys 0.62, revisión 7326bb7d6641500ecb285c291a54a662cb1e76cf. RF: 544 FF genéricos (480 con habilitación y 64 de salida); reset: tres; botones: ocho. No latches, primitivas SB ni cajas negras. Los check -assert terminaron sin problemas.
+
+La advertencia de convertir regs_q a lista de registros es esperada; aparece en línea 52 de los cuatro logs porque se leen todos los fuentes antes de podar jerarquía. evidence/asic_stage1_synthesis conserva los logs, scripts Yosys, resultados, versión y hashes. Los conteos son genéricos por definición de módulo, no área GF180 ni timing. No se sintetizó el macro completo con memoria A/B, ni se comprobó equivalencia post-síntesis.
+
+La checklist continúa en 14/17, ahora con simulación y síntesis genérica del primer bloque de adaptación terminadas. El siguiente trabajo técnico es la memoria A/B. El riesgo previo de SPI (byte_done sin condicionar por cs_active) sigue documentado y sin modificar; requiere reproducción dirigida antes de decidir una corrección.
+
+### Permisos y publicación
+
+Mientras el usuario estuvo AFK se guardaron las solicitudes y no se enviaron otras. Al volver autorizó explícitamente los permisos pendientes, la síntesis y la subida al repositorio personal. Ya se concedieron escritura para Proyecto 3 y .git, acceso al socket local y comunicación. Docker Engine 29.9.2 respondió correctamente; no fue necesario reinstalar ni cambiar su configuración.
+
+Los errores anteriores de acceso se conservan en evidence/asic_stage1/*_access_probe.log como antecedentes históricos. No deben interpretarse como bloqueos actuales. La cuenta icruzat1 (GitHub) se volvió a comprobar en VS Code. El commit de esta etapa incorpora RTL, pruebas, evidencias y documentación; todas las operaciones remotas se realizan mediante esa sesión personal. Consultar el historial de main y su seguimiento origin/main para identificar el commit publicado. La conexión de oficina permanece excluida.

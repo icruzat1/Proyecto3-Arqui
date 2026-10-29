@@ -1,0 +1,3173 @@
+
+-- Executing script file `build/asic_stage1_synthesis/pochoco_soc.ys' --
+
+1. Executing Verilog-2005 frontend: rtl/asic/btn_sync.v
+Parsing SystemVerilog input from `rtl/asic/btn_sync.v' to AST representation.
+Generating RTLIL representation for module `\btn_sync'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/asic/reset_ctrl.v
+Parsing SystemVerilog input from `rtl/asic/reset_ctrl.v' to AST representation.
+Generating RTLIL representation for module `\reset_ctrl'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/espino_core/espino_alu.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_alu.v' to AST representation.
+Generating RTLIL representation for module `\espino_alu'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: rtl/espino_core/espino_controller.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_controller.v' to AST representation.
+Generating RTLIL representation for module `\espino_controller'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: rtl/espino_core/espino_core.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_core.v' to AST representation.
+Generating RTLIL representation for module `\espino_core'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: rtl/espino_core/espino_decoder.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_decoder.v' to AST representation.
+Generating RTLIL representation for module `\espino_decoder'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: rtl/espino_core/espino_id_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_id_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_id_stage'.
+Successfully finished Verilog frontend.
+
+8. Executing Verilog-2005 frontend: rtl/espino_core/espino_if_stage.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_if_stage.v' to AST representation.
+Generating RTLIL representation for module `\espino_if_stage'.
+Successfully finished Verilog frontend.
+
+9. Executing Verilog-2005 frontend: rtl/espino_core/espino_load_store_unit.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_load_store_unit.v' to AST representation.
+Generating RTLIL representation for module `\espino_load_store_unit'.
+Successfully finished Verilog frontend.
+
+10. Executing Verilog-2005 frontend: rtl/espino_core/espino_register_file.v
+Parsing SystemVerilog input from `rtl/espino_core/espino_register_file.v' to AST representation.
+Generating RTLIL representation for module `\espino_register_file'.
+Warning: Replacing memory \regs_q with list of registers. See rtl/espino_core/espino_register_file.v:28
+Successfully finished Verilog frontend.
+
+11. Executing Verilog-2005 frontend: rtl/pochoco_periph.v
+Parsing SystemVerilog input from `rtl/pochoco_periph.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_periph'.
+Successfully finished Verilog frontend.
+
+12. Executing Verilog-2005 frontend: rtl/pochoco_soc.v
+Parsing SystemVerilog input from `rtl/pochoco_soc.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_soc'.
+Successfully finished Verilog frontend.
+
+13. Executing Verilog-2005 frontend: rtl/pochoco_spi_slave.v
+Parsing SystemVerilog input from `rtl/pochoco_spi_slave.v' to AST representation.
+Generating RTLIL representation for module `\pochoco_spi_slave'.
+Successfully finished Verilog frontend.
+
+14. Executing HIERARCHY pass (managing design hierarchy).
+
+14.1. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     \espino_core
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         \espino_if_stage
+Parameter \BootAddr = 0
+
+14.2. Executing AST frontend in derive mode using pre-parsed AST for module `\espino_if_stage'.
+Parameter \BootAddr = 0
+Generating RTLIL representation for module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Parameter \BootAddr = 0
+
+14.3. Executing AST frontend in derive mode using pre-parsed AST for module `\espino_core'.
+Parameter \BootAddr = 0
+Generating RTLIL representation for module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+
+14.4. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         \espino_if_stage
+Parameter \BootAddr = 0
+Found cached RTLIL representation for module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+
+14.5. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+
+14.6. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+Removing unused module `\espino_if_stage'.
+Removing unused module `\espino_core'.
+Removing unused module `\reset_ctrl'.
+Removing unused module `\btn_sync'.
+Removed 4 unused modules.
+
+15. Executing SYNTH pass.
+
+15.1. Executing HIERARCHY pass (managing design hierarchy).
+
+15.1.1. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+
+15.1.2. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     \pochoco_spi_slave
+Used module:     \pochoco_periph
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+Removed 0 unused modules.
+
+15.2. Executing PROC pass (convert processes to netlists).
+
+15.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+15.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$rtl/pochoco_periph.v:86$128 in module pochoco_periph.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_periph.v:86$128 in module pochoco_periph.
+Removed 1 dead cases from process $proc$rtl/pochoco_periph.v:85$123 in module pochoco_periph.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_periph.v:85$123 in module pochoco_periph.
+Marked 2 switch rules as full_case in process $proc$rtl/pochoco_periph.v:88$119 in module pochoco_periph.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_periph.v:40$115 in module pochoco_periph.
+Removed 2 dead cases from process $proc$rtl/espino_core/espino_register_file.v:25$86 in module espino_register_file.
+Marked 5 switch rules as full_case in process $proc$rtl/espino_core/espino_register_file.v:25$86 in module espino_register_file.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_load_store_unit.v:80$79 in module espino_load_store_unit.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_load_store_unit.v:68$76 in module espino_load_store_unit.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_load_store_unit.v:59$73 in module espino_load_store_unit.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_load_store_unit.v:48$67 in module espino_load_store_unit.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_load_store_unit.v:43$64 in module espino_load_store_unit.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_id_stage.v:139$51 in module espino_id_stage.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_id_stage.v:104$39 in module espino_id_stage.
+Marked 2 switch rules as full_case in process $proc$rtl/espino_core/espino_id_stage.v:63$37 in module espino_id_stage.
+Removed 2 dead cases from process $proc$rtl/espino_core/espino_decoder.v:102$29 in module espino_decoder.
+Marked 9 switch rules as full_case in process $proc$rtl/espino_core/espino_decoder.v:102$29 in module espino_decoder.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_if_stage.v:37$183 in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_alu.v:63$14 in module espino_alu.
+Marked 1 switch rules as full_case in process $proc$rtl/espino_core/espino_alu.v:50$10 in module espino_alu.
+Marked 2 switch rules as full_case in process $proc$rtl/pochoco_spi_slave.v:109$178 in module pochoco_spi_slave.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_spi_slave.v:104$174 in module pochoco_spi_slave.
+Marked 2 switch rules as full_case in process $proc$rtl/pochoco_spi_slave.v:92$172 in module pochoco_spi_slave.
+Marked 2 switch rules as full_case in process $proc$rtl/pochoco_spi_slave.v:69$166 in module pochoco_spi_slave.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_spi_slave.v:41$155 in module pochoco_spi_slave.
+Marked 1 switch rules as full_case in process $proc$rtl/pochoco_soc.v:62$145 in module pochoco_soc.
+Removed a total of 6 dead cases.
+
+15.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 8 redundant assignments.
+Promoted 36 assignments to connections.
+
+15.2.4. Executing PROC_INIT pass (extract init attributes).
+
+15.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_ni in `\pochoco_periph.$proc$rtl/pochoco_periph.v:88$119'.
+Found async reset \rst_ni in `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+Found async reset \rst_ni in `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+Found async reset \rst_ni in `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:48$67'.
+Found async reset \rst_ni in `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:63$37'.
+Found async reset \rst_ni in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+Found async reset \rst_ni in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:109$178'.
+Found async reset \rst_ni in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:104$174'.
+Found async reset \rst_ni in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+Found async reset \rst_ni in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+Found async reset \rst_ni in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+Found async reset \rst_ni in `\pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+
+15.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 2 switches.
+<suppressed ~38 debug messages>
+
+15.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+     1/1: $1\hex2seg$func$rtl/pochoco_periph.v:86$113.$result[6:0]$132
+Creating decoders for process `\pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+     1/1: $1\hex2seg$func$rtl/pochoco_periph.v:85$112.$result[6:0]$127
+Creating decoders for process `\pochoco_periph.$proc$rtl/pochoco_periph.v:88$119'.
+     1/1: $0\rdata_o[31:0]
+Creating decoders for process `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+     1/3: $0\cycles_q[31:0]
+     2/3: $0\digit_q[7:0]
+     3/3: $0\led_q[3:0]
+Creating decoders for process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+     1/29: $2$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR[3:0]$108
+     2/29: $2$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA[31:0]$109
+     3/29: $2$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA[31:0]$103
+     4/29: $2$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA[31:0]$100
+     5/29: $1$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA[31:0]$99
+     6/29: $1$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR[3:0]$98
+     7/29: $0\rdata_b_o[31:0]
+     8/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA[31:0]$97
+     9/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_ADDR[3:0]$96
+    10/29: $0\rdata_a_o[31:0]
+    11/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA[31:0]$95
+    12/29: $1$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_ADDR[3:0]$94
+    13/29: $1\index[31:0]
+    14/29: $0\regs_q[15][31:0]
+    15/29: $0\regs_q[14][31:0]
+    16/29: $0\regs_q[13][31:0]
+    17/29: $0\regs_q[12][31:0]
+    18/29: $0\regs_q[11][31:0]
+    19/29: $0\regs_q[10][31:0]
+    20/29: $0\regs_q[9][31:0]
+    21/29: $0\regs_q[8][31:0]
+    22/29: $0\regs_q[7][31:0]
+    23/29: $0\regs_q[6][31:0]
+    24/29: $0\regs_q[5][31:0]
+    25/29: $0\regs_q[4][31:0]
+    26/29: $0\regs_q[3][31:0]
+    27/29: $0\regs_q[2][31:0]
+    28/29: $0\regs_q[1][31:0]
+    29/29: $0\regs_q[0][31:0]
+Creating decoders for process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:80$79'.
+     1/1: $1\rdata_o[31:0]
+Creating decoders for process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:68$76'.
+     1/1: $1\data_wdata_o[31:0]
+Creating decoders for process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:59$73'.
+     1/1: $1\data_be_o[3:0]
+Creating decoders for process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:48$67'.
+     1/1: $0\busy_q[0:0]
+Creating decoders for process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:43$64'.
+     1/1: $1\busy_d[0:0]
+Creating decoders for process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:139$51'.
+     1/1: $1\rf_wdata_o[31:0]
+Creating decoders for process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:104$39'.
+     1/1: $1\operand_a[31:0]
+Creating decoders for process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:63$37'.
+     1/1: $0\ops_valid_q[0:0]
+Creating decoders for process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+     1/29: $9\illegal_insn_o[0:0]
+     2/29: $8\illegal_insn_o[0:0]
+     3/29: $7\illegal_insn_o[0:0]
+     4/29: $4\alu_operator_o[3:0]
+     5/29: $6\illegal_insn_o[0:0]
+     6/29: $3\lsu_type_o[1:0]
+     7/29: $5\illegal_insn_o[0:0]
+     8/29: $2\lsu_sign_o[0:0]
+     9/29: $2\lsu_type_o[1:0]
+    10/29: $4\illegal_insn_o[0:0]
+    11/29: $3\alu_operator_o[3:0]
+    12/29: $3\illegal_insn_o[0:0]
+    13/29: $2\alu_operator_o[3:0]
+    14/29: $2\illegal_insn_o[0:0]
+    15/29: $1\rf_we_o[0:0]
+    16/29: $1\imm_operand_o[31:0]
+    17/29: $1\alu_op_a_sel_o[1:0]
+    18/29: $1\is_jalr_o[0:0]
+    19/29: $1\is_jal_o[0:0]
+    20/29: $1\is_branch_o[0:0]
+    21/29: $1\rf_wd_sel_o[1:0]
+    22/29: $1\imm_target_o[31:0]
+    23/29: $1\alu_op_b_sel_o[0:0]
+    24/29: $1\alu_operator_o[3:0]
+    25/29: $1\illegal_insn_o[0:0]
+    26/29: $1\lsu_sign_o[0:0]
+    27/29: $1\lsu_type_o[1:0]
+    28/29: $1\lsu_we_o[0:0]
+    29/29: $1\lsu_req_o[0:0]
+Creating decoders for process `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+     1/3: $0\valid_q[0:0]
+     2/3: $0\pc_id_q[31:0]
+     3/3: $0\pc_q[31:0]
+Creating decoders for process `\espino_alu.$proc$rtl/espino_core/espino_alu.v:63$14'.
+     1/1: $1\result_o[31:0]
+Creating decoders for process `\espino_alu.$proc$rtl/espino_core/espino_alu.v:50$10'.
+     1/1: $1\cmp_result_o[0:0]
+Creating decoders for process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:109$178'.
+     1/1: $0\rdata_o[31:0]
+Creating decoders for process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:104$174'.
+     1/1: $0\tx_hold[7:0]
+Creating decoders for process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+     1/2: $0\new_price_q[0:0]
+     2/2: $0\price_q[7:0]
+Creating decoders for process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+     1/3: $0\bit_cnt[3:0]
+     2/3: $0\tx_shift[7:0]
+     3/3: $0\rx_shift[7:0]
+Creating decoders for process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+     1/3: $0\cs_sync[2:0]
+     2/3: $0\mosi_sync[2:0]
+     3/3: $0\sclk_sync[2:0]
+Creating decoders for process `\pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+     1/2: $0\rd_is_spi[0:0]
+     2/2: $0\rd_is_per[0:0]
+
+15.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:86$111.$result' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:86$113.$result' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:86$113.hex' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:85$110.$result' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:85$112.$result' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+No latch inferred for signal `\pochoco_periph.\hex2seg$func$rtl/pochoco_periph.v:85$112.hex' from process `\pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+No latch inferred for signal `\espino_load_store_unit.\rdata_o' from process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:80$79'.
+No latch inferred for signal `\espino_load_store_unit.\data_wdata_o' from process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:68$76'.
+No latch inferred for signal `\espino_load_store_unit.\data_be_o' from process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:59$73'.
+No latch inferred for signal `\espino_load_store_unit.\busy_d' from process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:43$64'.
+No latch inferred for signal `\espino_id_stage.\rf_wdata_o' from process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:139$51'.
+No latch inferred for signal `\espino_id_stage.\operand_a' from process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:104$39'.
+No latch inferred for signal `\espino_decoder.\rf_we_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\lsu_req_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\lsu_we_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\lsu_type_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\lsu_sign_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\illegal_insn_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\alu_operator_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\alu_op_a_sel_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\alu_op_b_sel_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\imm_operand_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\imm_target_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\rf_wd_sel_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\is_branch_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\is_jal_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_decoder.\is_jalr_o' from process `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+No latch inferred for signal `\espino_alu.\result_o' from process `\espino_alu.$proc$rtl/espino_core/espino_alu.v:63$14'.
+No latch inferred for signal `\espino_alu.\cmp_result_o' from process `\espino_alu.$proc$rtl/espino_core/espino_alu.v:50$10'.
+
+15.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\pochoco_periph.\rdata_o' using process `\pochoco_periph.$proc$rtl/pochoco_periph.v:88$119'.
+  created $adff cell `$procdff$874' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_periph.\led_q' using process `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+  created $adff cell `$procdff$879' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_periph.\cycles_q' using process `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+  created $adff cell `$procdff$884' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_periph.\digit_q' using process `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+  created $adff cell `$procdff$889' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\rdata_a_o' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$894' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\rdata_b_o' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$899' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\index' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$904' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[0]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $dff cell `$procdff$911' with positive edge clock.
+Creating register for signal `\espino_register_file.\regs_q[1]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$916' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[2]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$921' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[3]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$926' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[4]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$931' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[5]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$936' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[6]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$941' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[7]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$946' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[8]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$951' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[9]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$956' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[10]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$961' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[11]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$966' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[12]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$971' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[13]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$976' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[14]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$981' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.\regs_q[15]' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$986' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$991' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:35$83_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$996' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$1001' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_rd$\regs_q$rtl/espino_core/espino_register_file.v:36$84_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$1006' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_ADDR' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$1011' with positive edge clock and positive level reset.
+Creating register for signal `\espino_register_file.$mem2reg_wr$\regs_q$rtl/espino_core/espino_register_file.v:38$85_DATA' using process `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+  created $adff cell `$procdff$1016' with positive edge clock and positive level reset.
+Creating register for signal `\espino_load_store_unit.\busy_q' using process `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:48$67'.
+  created $adff cell `$procdff$1021' with positive edge clock and positive level reset.
+Creating register for signal `\espino_id_stage.\ops_valid_q' using process `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:63$37'.
+  created $adff cell `$procdff$1026' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.\pc_q' using process `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+  created $adff cell `$procdff$1031' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.\pc_id_q' using process `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+  created $adff cell `$procdff$1036' with positive edge clock and positive level reset.
+Creating register for signal `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.\valid_q' using process `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+  created $adff cell `$procdff$1041' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\rdata_o' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:109$178'.
+  created $adff cell `$procdff$1046' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\tx_hold' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:104$174'.
+  created $adff cell `$procdff$1051' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\price_q' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+  created $adff cell `$procdff$1056' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\new_price_q' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+  created $adff cell `$procdff$1061' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\rx_shift' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+  created $adff cell `$procdff$1066' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\tx_shift' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+  created $adff cell `$procdff$1071' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\bit_cnt' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+  created $adff cell `$procdff$1076' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\sclk_sync' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+  created $adff cell `$procdff$1081' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\mosi_sync' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+  created $adff cell `$procdff$1086' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_spi_slave.\cs_sync' using process `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+  created $adff cell `$procdff$1091' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_soc.\rd_is_per' using process `\pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+  created $adff cell `$procdff$1096' with positive edge clock and positive level reset.
+Creating register for signal `\pochoco_soc.\rd_is_spi' using process `\pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+  created $adff cell `$procdff$1101' with positive edge clock and positive level reset.
+
+15.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+15.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+Removing empty process `pochoco_periph.$proc$rtl/pochoco_periph.v:86$128'.
+Found and cleaned up 1 empty switch in `\pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+Removing empty process `pochoco_periph.$proc$rtl/pochoco_periph.v:85$123'.
+Found and cleaned up 2 empty switches in `\pochoco_periph.$proc$rtl/pochoco_periph.v:88$119'.
+Removing empty process `pochoco_periph.$proc$rtl/pochoco_periph.v:88$119'.
+Found and cleaned up 2 empty switches in `\pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+Removing empty process `pochoco_periph.$proc$rtl/pochoco_periph.v:40$115'.
+Found and cleaned up 4 empty switches in `\espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+Removing empty process `espino_register_file.$proc$rtl/espino_core/espino_register_file.v:25$86'.
+Found and cleaned up 1 empty switch in `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:80$79'.
+Removing empty process `espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:80$79'.
+Found and cleaned up 1 empty switch in `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:68$76'.
+Removing empty process `espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:68$76'.
+Found and cleaned up 1 empty switch in `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:59$73'.
+Removing empty process `espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:59$73'.
+Removing empty process `espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:48$67'.
+Found and cleaned up 1 empty switch in `\espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:43$64'.
+Removing empty process `espino_load_store_unit.$proc$rtl/espino_core/espino_load_store_unit.v:43$64'.
+Found and cleaned up 1 empty switch in `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:139$51'.
+Removing empty process `espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:139$51'.
+Found and cleaned up 1 empty switch in `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:104$39'.
+Removing empty process `espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:104$39'.
+Found and cleaned up 1 empty switch in `\espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:63$37'.
+Removing empty process `espino_id_stage.$proc$rtl/espino_core/espino_id_stage.v:63$37'.
+Found and cleaned up 9 empty switches in `\espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+Removing empty process `espino_decoder.$proc$rtl/espino_core/espino_decoder.v:102$29'.
+Found and cleaned up 1 empty switch in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+Removing empty process `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$proc$rtl/espino_core/espino_if_stage.v:37$183'.
+Found and cleaned up 1 empty switch in `\espino_alu.$proc$rtl/espino_core/espino_alu.v:63$14'.
+Removing empty process `espino_alu.$proc$rtl/espino_core/espino_alu.v:63$14'.
+Found and cleaned up 1 empty switch in `\espino_alu.$proc$rtl/espino_core/espino_alu.v:50$10'.
+Removing empty process `espino_alu.$proc$rtl/espino_core/espino_alu.v:50$10'.
+Found and cleaned up 2 empty switches in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:109$178'.
+Removing empty process `pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:109$178'.
+Found and cleaned up 1 empty switch in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:104$174'.
+Removing empty process `pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:104$174'.
+Found and cleaned up 3 empty switches in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+Removing empty process `pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:92$172'.
+Found and cleaned up 4 empty switches in `\pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+Removing empty process `pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:69$166'.
+Removing empty process `pochoco_spi_slave.$proc$rtl/pochoco_spi_slave.v:41$155'.
+Found and cleaned up 1 empty switch in `\pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+Removing empty process `pochoco_soc.$proc$rtl/pochoco_soc.v:62$145'.
+Cleaned up 40 empty switches.
+
+15.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pochoco_periph.
+<suppressed ~9 debug messages>
+Optimizing module espino_register_file.
+<suppressed ~56 debug messages>
+Optimizing module espino_load_store_unit.
+<suppressed ~5 debug messages>
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_id_stage.
+<suppressed ~5 debug messages>
+Optimizing module espino_decoder.
+<suppressed ~13 debug messages>
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+<suppressed ~9 debug messages>
+Optimizing module espino_controller.
+Optimizing module espino_alu.
+<suppressed ~1 debug messages>
+Optimizing module pochoco_spi_slave.
+<suppressed ~25 debug messages>
+Optimizing module pochoco_soc.
+<suppressed ~4 debug messages>
+
+15.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pochoco_periph.
+Optimizing module espino_register_file.
+Optimizing module espino_load_store_unit.
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_id_stage.
+Optimizing module espino_decoder.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_controller.
+Optimizing module espino_alu.
+Optimizing module pochoco_spi_slave.
+Optimizing module pochoco_soc.
+
+15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Finding unused cells or wires in module \pochoco_soc..
+Removed 69 unused cells and 358 unused wires.
+<suppressed ~81 debug messages>
+
+15.5. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000...
+Checking module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000...
+Checking module espino_alu...
+Checking module espino_controller...
+Checking module espino_decoder...
+Checking module espino_id_stage...
+Checking module espino_load_store_unit...
+Checking module espino_register_file...
+Checking module pochoco_periph...
+Checking module pochoco_soc...
+Checking module pochoco_spi_slave...
+Found and reported 0 problems.
+
+15.6. Executing OPT pass (performing simple optimizations).
+
+15.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 27 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Computing hashes of 26 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 164 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 66 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+<suppressed ~294 debug messages>
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 26 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 107 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 105 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+<suppressed ~6 debug messages>
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+<suppressed ~6 debug messages>
+Removed a total of 108 cells.
+
+15.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$482.
+    dead port 2/2 on $mux $procmux$675.
+    dead port 2/2 on $mux $procmux$597.
+    dead port 2/2 on $mux $procmux$489.
+    dead port 2/2 on $mux $procmux$527.
+    dead port 2/2 on $mux $procmux$497.
+    dead port 2/2 on $mux $procmux$540.
+    dead port 2/2 on $mux $procmux$616.
+    dead port 2/2 on $mux $procmux$553.
+    dead port 2/2 on $mux $procmux$635.
+    dead port 2/2 on $mux $procmux$566.
+    dead port 2/2 on $mux $procmux$512.
+    dead port 2/2 on $mux $procmux$655.
+    dead port 2/2 on $mux $procmux$581.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 16/17 on $pmux $procmux$218.
+    dead port 16/17 on $pmux $procmux$235.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 16 multiplexer ports.
+<suppressed ~190 debug messages>
+
+15.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+    New ctrl vector for $pmux cell $procmux$814: { $procmux$820_CMP $procmux$819_CMP $procmux$818_CMP $procmux$817_CMP $procmux$816_CMP $procmux$815_CMP }
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+    New ctrl vector for $pmux cell $procmux$694: { $auto$opt_reduce.cc:137:opt_pmux$1103 $procmux$541_CMP }
+    New ctrl vector for $pmux cell $procmux$680: $auto$opt_reduce.cc:137:opt_pmux$1105
+    New ctrl vector for $pmux cell $procmux$732: { $procmux$567_CMP $auto$opt_reduce.cc:137:opt_pmux$1107 }
+    New ctrl vector for $pmux cell $procmux$626: $auto$opt_reduce.cc:137:opt_pmux$1109
+    New ctrl vector for $pmux cell $procmux$549: $auto$opt_reduce.cc:137:opt_pmux$1111
+    New ctrl vector for $pmux cell $procmux$747: $auto$opt_reduce.cc:137:opt_pmux$1113
+    New ctrl vector for $pmux cell $procmux$563: $auto$opt_reduce.cc:137:opt_pmux$1115
+    New ctrl vector for $pmux cell $procmux$760: { $procmux$656_CMP $procmux$617_CMP $procmux$567_CMP $procmux$541_CMP $procmux$513_CMP $auto$opt_reduce.cc:137:opt_pmux$1117 $procmux$498_CMP $procmux$490_CMP $procmux$483_CMP }
+    New ctrl vector for $pmux cell $procmux$576: { $auto$opt_reduce.cc:137:opt_pmux$1121 $auto$opt_reduce.cc:137:opt_pmux$1119 }
+    New ctrl vector for $pmux cell $procmux$520: $auto$opt_reduce.cc:137:opt_pmux$1123
+    New ctrl vector for $pmux cell $procmux$666: $auto$opt_reduce.cc:137:opt_pmux$1125
+    New ctrl vector for $pmux cell $procmux$804: $auto$opt_reduce.cc:137:opt_pmux$1127
+    New ctrl vector for $pmux cell $procmux$591: $auto$opt_reduce.cc:137:opt_pmux$1129
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 14 changes.
+
+15.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 26 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 66 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 62 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 61 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+<suppressed ~15 debug messages>
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 105 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 5 cells.
+
+15.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 6 unused cells and 133 unused wires.
+<suppressed ~12 debug messages>
+
+15.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~174 debug messages>
+
+15.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+    New ctrl vector for $pmux cell $procmux$760: { $auto$opt_reduce.cc:137:opt_pmux$1133 $procmux$567_CMP $procmux$541_CMP $procmux$513_CMP $auto$opt_reduce.cc:137:opt_pmux$1117 $auto$opt_reduce.cc:137:opt_pmux$1131 }
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 1 changes.
+
+15.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~171 debug messages>
+
+15.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.6.23. Finished fast OPT passes. (There is nothing left to do.)
+
+15.7. Executing FSM pass (extract and optimize FSM).
+
+15.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+15.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+15.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+15.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+15.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+15.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+15.8. Executing OPT pass (performing simple optimizations).
+
+15.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~171 debug messages>
+
+15.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 100 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 23 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 23 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 44 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$1041 ($adff) from module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000 (D = \valid_d, Q = \valid_q).
+Adding EN signal on $procdff$1036 ($adff) from module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000 (D = \pc_q, Q = \pc_id_q).
+Adding EN signal on $procdff$1031 ($adff) from module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000 (D = \pc_next, Q = \pc_q).
+Adding EN signal on $procdff$986 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[15]).
+Adding EN signal on $procdff$981 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[14]).
+Adding EN signal on $procdff$976 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[13]).
+Adding EN signal on $procdff$971 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[12]).
+Adding EN signal on $procdff$966 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[11]).
+Adding EN signal on $procdff$961 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[10]).
+Adding EN signal on $procdff$956 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[9]).
+Adding EN signal on $procdff$951 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[8]).
+Adding EN signal on $procdff$946 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[7]).
+Adding EN signal on $procdff$941 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[6]).
+Adding EN signal on $procdff$936 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[5]).
+Adding EN signal on $procdff$931 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[4]).
+Adding EN signal on $procdff$926 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[3]).
+Adding EN signal on $procdff$921 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[2]).
+Adding EN signal on $procdff$916 ($adff) from module espino_register_file (D = \wdata_i, Q = \regs_q[1]).
+Adding EN signal on $procdff$889 ($adff) from module pochoco_periph (D = \wdata_i [7:0], Q = \digit_q).
+Adding EN signal on $procdff$879 ($adff) from module pochoco_periph (D = \wdata_i [3:0], Q = \led_q).
+Adding EN signal on $procdff$874 ($adff) from module pochoco_periph (D = $procmux$198_Y, Q = \rdata_o).
+Adding EN signal on $procdff$1101 ($adff) from module pochoco_soc (D = \spi_sel, Q = \rd_is_spi).
+Adding EN signal on $procdff$1096 ($adff) from module pochoco_soc (D = \per_sel, Q = \rd_is_per).
+Adding EN signal on $procdff$1076 ($adff) from module pochoco_spi_slave (D = $0\bit_cnt[3:0], Q = \bit_cnt).
+Adding EN signal on $procdff$1071 ($adff) from module pochoco_spi_slave (D = $0\tx_shift[7:0], Q = \tx_shift).
+Adding EN signal on $procdff$1066 ($adff) from module pochoco_spi_slave (D = { \rx_shift [6:0] \mosi_sync [1] }, Q = \rx_shift).
+Adding EN signal on $procdff$1061 ($adff) from module pochoco_spi_slave (D = $0\new_price_q[0:0], Q = \new_price_q).
+Adding EN signal on $procdff$1056 ($adff) from module pochoco_spi_slave (D = { \rx_shift [6:0] \mosi_sync [1] }, Q = \price_q).
+Adding EN signal on $procdff$1051 ($adff) from module pochoco_spi_slave (D = \wdata_i [7:0], Q = \tx_hold).
+Adding EN signal on $procdff$1046 ($adff) from module pochoco_spi_slave (D = $procmux$831_Y, Q = \rdata_o).
+
+15.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 46 unused cells and 46 unused wires.
+<suppressed ~51 debug messages>
+
+15.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+<suppressed ~3 debug messages>
+
+15.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~101 debug messages>
+
+15.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 20 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 48 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+15.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+15.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~101 debug messages>
+
+15.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 20 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.8.23. Finished fast OPT passes. (There is nothing left to do.)
+
+15.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 29 bits (of 32) from port B of cell $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.$add$rtl/espino_core/espino_if_stage.v:34$180 ($add).
+Removed top 1 bits (of 4) from port B of cell espino_alu.$procmux$817_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_alu.$procmux$818_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_alu.$procmux$819_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_alu.$procmux$820_CMP0 ($eq).
+Removed top 3 bits (of 4) from mux cell espino_decoder.$ternary$rtl/espino_core/espino_decoder.v:146$30 ($mux).
+Removed top 3 bits (of 4) from mux cell espino_decoder.$ternary$rtl/espino_core/espino_decoder.v:156$31 ($mux).
+Removed top 3 bits (of 7) from port B of cell espino_decoder.$procmux$490_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell espino_decoder.$procmux$510_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell espino_decoder.$procmux$541_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell espino_decoder.$procmux$550_CMP0 ($eq).
+Removed top 5 bits (of 7) from port B of cell espino_decoder.$procmux$567_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell espino_decoder.$procmux$612_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell espino_decoder.$procmux$617_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell espino_decoder.$procmux$656_CMP0 ($eq).
+Removed top 2 bits (of 7) from port B of cell espino_decoder.$procmux$686_CMP0 ($eq).
+Removed top 1 bits (of 7) from port B of cell espino_decoder.$procmux$687_CMP0 ($eq).
+Removed top 1 bits (of 32) from mux cell espino_decoder.$procmux$694 ($pmux).
+Removed top 12 bits (of 32) from mux cell espino_decoder.$procmux$740 ($mux).
+Removed top 3 bits (of 4) from wire espino_decoder.$ternary$rtl/espino_core/espino_decoder.v:146$30_Y.
+Removed top 3 bits (of 4) from wire espino_decoder.$ternary$rtl/espino_core/espino_decoder.v:156$31_Y.
+Removed top 29 bits (of 32) from port B of cell espino_id_stage.$add$rtl/espino_core/espino_id_stage.v:142$52 ($add).
+Removed top 1 bits (of 2) from port B of cell espino_id_stage.$procmux$470_CMP0 ($eq).
+Removed top 1 bits (of 2) from port B of cell espino_id_stage.$procmux$474_CMP0 ($eq).
+Removed top 3 bits (of 4) from port A of cell espino_load_store_unit.$shl$rtl/espino_core/espino_load_store_unit.v:61$74 ($shl).
+Removed top 1 bits (of 2) from port B of cell espino_load_store_unit.$procmux$454_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$227_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$228_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$229_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$230_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$231_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$232_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$233_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$244_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$245_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$246_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$247_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$248_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$249_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$250_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$330_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$344_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$359_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell espino_register_file.$procmux$375_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$392_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell espino_register_file.$procmux$410_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell espino_register_file.$procmux$429_CMP0 ($eq).
+Removed top 28 address bits (of 32) from memory init port pochoco_periph.$auto$mem.cc:351:emit$190 ($auto$proc_rom.cc:155:do_switch$188).
+Removed top 28 address bits (of 32) from memory init port pochoco_periph.$auto$mem.cc:351:emit$194 ($auto$proc_rom.cc:155:do_switch$192).
+Removed top 31 bits (of 32) from port B of cell pochoco_periph.$add$rtl/pochoco_periph.v:46$117 ($add).
+Removed top 4 bits (of 6) from port B of cell pochoco_periph.$procmux$199_CMP0 ($eq).
+Removed top 4 bits (of 6) from port B of cell pochoco_periph.$procmux$200_CMP0 ($eq).
+Removed top 5 bits (of 6) from port B of cell pochoco_periph.$procmux$209_CMP0 ($eq).
+Removed top 1 bits (of 8) from FF cell pochoco_spi_slave.$auto$ff.cc:337:slice$1205 ($adffe).
+Removed top 1 bits (of 2) from port B of cell pochoco_spi_slave.$auto$opt_dff.cc:235:make_patterns_logic$1193 ($ne).
+Removed top 1 bits (of 4) from port B of cell pochoco_spi_slave.$eq$rtl/pochoco_spi_slave.v:67$164 ($eq).
+Removed top 3 bits (of 4) from port B of cell pochoco_spi_slave.$add$rtl/pochoco_spi_slave.v:80$168 ($add).
+Removed top 5 bits (of 6) from port B of cell pochoco_spi_slave.$eq$rtl/pochoco_spi_slave.v:91$170 ($eq).
+Removed top 4 bits (of 6) from port B of cell pochoco_spi_slave.$eq$rtl/pochoco_spi_slave.v:106$176 ($eq).
+Removed top 24 bits (of 32) from mux cell pochoco_spi_slave.$procmux$831 ($pmux).
+Removed top 1 bits (of 3) from FF cell pochoco_spi_slave.$procdff$1086 ($adff).
+Removed top 24 bits (of 32) from wire pochoco_spi_slave.$procmux$831_Y.
+Removed top 1 bits (of 3) from wire pochoco_spi_slave.mosi_sync.
+Removed top 1 bits (of 8) from wire pochoco_spi_slave.rx_shift.
+Removed top 1 bits (of 3) from wire pochoco_spi_slave.sclk_sync.
+
+15.10. Executing PEEPOPT pass (run peephole optimizers).
+
+15.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~2 debug messages>
+
+15.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000:
+  creating $macc model for $add$rtl/espino_core/espino_if_stage.v:34$180 ($add).
+  creating $alu model for $macc $add$rtl/espino_core/espino_if_stage.v:34$180.
+  creating $alu cell for $add$rtl/espino_core/espino_if_stage.v:34$180: $auto$alumacc.cc:512:replace_alu$1224
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_alu:
+  creating $macc model for $add$rtl/espino_core/espino_alu.v:65$15 ($add).
+  creating $macc model for $sub$rtl/espino_core/espino_alu.v:66$16 ($sub).
+  creating $alu model for $macc $sub$rtl/espino_core/espino_alu.v:66$16.
+  creating $alu model for $macc $add$rtl/espino_core/espino_alu.v:65$15.
+  creating $alu model for $lt$rtl/espino_core/espino_alu.v:47$8 ($lt): merged with $sub$rtl/espino_core/espino_alu.v:66$16.
+  creating $alu model for $lt$rtl/espino_core/espino_alu.v:48$9 ($lt): merged with $sub$rtl/espino_core/espino_alu.v:66$16.
+  creating $alu model for $eq$rtl/espino_core/espino_alu.v:46$7 ($eq): merged with $sub$rtl/espino_core/espino_alu.v:66$16.
+  creating $alu cell for $add$rtl/espino_core/espino_alu.v:65$15: $auto$alumacc.cc:512:replace_alu$1227
+  creating $alu cell for $sub$rtl/espino_core/espino_alu.v:66$16, $lt$rtl/espino_core/espino_alu.v:47$8, $lt$rtl/espino_core/espino_alu.v:48$9, $eq$rtl/espino_core/espino_alu.v:46$7: $auto$alumacc.cc:512:replace_alu$1230
+  created 2 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_controller:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_decoder:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_id_stage:
+  creating $macc model for $add$rtl/espino_core/espino_id_stage.v:135$47 ($add).
+  creating $macc model for $add$rtl/espino_core/espino_id_stage.v:142$52 ($add).
+  creating $alu model for $macc $add$rtl/espino_core/espino_id_stage.v:142$52.
+  creating $alu model for $macc $add$rtl/espino_core/espino_id_stage.v:135$47.
+  creating $alu cell for $add$rtl/espino_core/espino_id_stage.v:135$47: $auto$alumacc.cc:512:replace_alu$1241
+  creating $alu cell for $add$rtl/espino_core/espino_id_stage.v:142$52: $auto$alumacc.cc:512:replace_alu$1244
+  created 2 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_load_store_unit:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module espino_register_file:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module pochoco_periph:
+  creating $macc model for $add$rtl/pochoco_periph.v:46$117 ($add).
+  creating $alu model for $macc $add$rtl/pochoco_periph.v:46$117.
+  creating $alu cell for $add$rtl/pochoco_periph.v:46$117: $auto$alumacc.cc:512:replace_alu$1247
+  created 1 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module pochoco_soc:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module pochoco_spi_slave:
+  creating $macc model for $add$rtl/pochoco_spi_slave.v:80$168 ($add).
+  creating $alu model for $macc $add$rtl/pochoco_spi_slave.v:80$168.
+  creating $alu cell for $add$rtl/pochoco_spi_slave.v:80$168: $auto$alumacc.cc:512:replace_alu$1250
+  created 1 $alu and 0 $macc cells.
+
+15.13. Executing SHARE pass (SAT-based resource sharing).
+
+15.14. Executing OPT pass (performing simple optimizations).
+
+15.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+<suppressed ~1 debug messages>
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 20 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~101 debug messages>
+
+15.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 63 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 62 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 20 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 1 cells.
+
+15.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 8 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 9 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 10 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 11 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 12 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 13 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 14 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 15 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 16 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 17 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 18 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 19 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 20 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 21 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 22 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 23 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 24 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 25 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 26 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 27 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 28 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 29 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 30 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+Setting constant 0-bit at position 31 on $auto$ff.cc:337:slice$1217 ($adffe) from module pochoco_spi_slave.
+
+15.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~2 debug messages>
+
+15.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~101 debug messages>
+
+15.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 62 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 21 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 21 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 20 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 46 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.14.16. Finished fast OPT passes. (There is nothing left to do.)
+
+15.15. Executing MEMORY pass.
+
+15.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+15.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+15.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+15.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+15.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `$auto$proc_rom.cc:155:do_switch$188'[0] in module `\pochoco_periph': no output FF found.
+Checking read port `$auto$proc_rom.cc:155:do_switch$192'[0] in module `\pochoco_periph': no output FF found.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$188'[0] in module `\pochoco_periph': address FF has async set and/or reset, not supported.
+Checking read port address `$auto$proc_rom.cc:155:do_switch$192'[0] in module `\pochoco_periph': address FF has async set and/or reset, not supported.
+
+15.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+15.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+15.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+15.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.17. Executing OPT pass (performing simple optimizations).
+
+15.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+<suppressed ~1 debug messages>
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+<suppressed ~16 debug messages>
+Optimizing module espino_id_stage.
+<suppressed ~2 debug messages>
+Optimizing module espino_load_store_unit.
+<suppressed ~1 debug messages>
+Optimizing module espino_register_file.
+<suppressed ~2 debug messages>
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+<suppressed ~7 debug messages>
+
+15.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 7 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 53 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 20 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 20 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 85 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 18 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 40 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $auto$ff.cc:337:slice$1136 ($adffe) from module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000 (D = \pc_next [1:0], Q = \pc_q [1:0]).
+
+15.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 3 unused cells and 20 unused wires.
+<suppressed ~8 debug messages>
+
+15.17.5. Rerunning OPT passes. (Removed registers in this run.)
+
+15.17.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+<suppressed ~1 debug messages>
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.17.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 10 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 9 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 52 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 20 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 20 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 18 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 40 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 1 cells.
+
+15.17.8. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+15.17.10. Finished fast OPT passes.
+
+15.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$188 in module \pochoco_periph:
+  created 16 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+Mapping memory $auto$proc_rom.cc:155:do_switch$192 in module \pochoco_periph:
+  created 16 $dff cells and 0 static cells of width 7.
+  read interface: 0 $dff and 15 $mux cells.
+  write interface: 0 write mux blocks.
+
+15.19. Executing OPT pass (performing simple optimizations).
+
+15.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 9 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 52 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 20 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 20 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 46 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 40 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~97 debug messages>
+
+15.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+    Consolidated identical input bits for $mux cell $procmux$740:
+      Old ports: A={ \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [7] \instr_i [30:25] \instr_i [11:8] 1'0 }, B={ \instr_i [19:12] \instr_i [20] \instr_i [30:21] 1'0 }, Y=\imm_target_o [19:0]
+      New ports: A={ \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [31] \instr_i [7] \instr_i [11:8] }, B={ \instr_i [19:12] \instr_i [20] \instr_i [24:21] }, Y={ \imm_target_o [19:11] \imm_target_o [4:1] }
+      New connections: { \imm_target_o [10:5] \imm_target_o [0] } = { \instr_i [30:25] 1'0 }
+    New ctrl vector for $pmux cell $procmux$760: { $procmux$567_CMP \lsu_we_o \is_branch_o $auto$opt_reduce.cc:137:opt_pmux$1357 $auto$opt_reduce.cc:137:opt_pmux$1131 }
+    New input vector for $reduce_or cell $auto$opt_reduce.cc:131:opt_pmux$1356: { $procmux$687_CMP $procmux$686_CMP $procmux$656_CMP $procmux$617_CMP \is_jal_o }
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+    Consolidated identical input bits for $pmux cell $procmux$457:
+      Old ports: A=\wdata_i, B={ \wdata_i [7:0] \wdata_i [7:0] \wdata_i [7:0] \wdata_i [7:0] \wdata_i [15:0] \wdata_i [15:0] }, Y=\data_wdata_o
+      New ports: A=\wdata_i [31:8], B={ \wdata_i [7:0] \wdata_i [7:0] \wdata_i [7:0] \wdata_i [15:0] \wdata_i [15:8] }, Y=\data_wdata_o [31:8]
+      New connections: \data_wdata_o [7:0] = \wdata_i [7:0]
+    Consolidated identical input bits for $mux cell $ternary$rtl/espino_core/espino_load_store_unit.v:62$75:
+      Old ports: A=4'0011, B=4'1100, Y=$ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y
+      New ports: A=2'01, B=2'10, Y={ $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [2] $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [0] }
+      New connections: { $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [3] $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [1] } = { $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [2] $ternary$rtl/espino_core/espino_load_store_unit.v:62$75_Y [0] }
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][6]$1350:
+      Old ports: A=7'0111001, B=7'1011110, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [6:2] = { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [1:0] 2'11 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][5]$1347:
+      Old ports: A=7'1110111, B=7'1111100, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [6:4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [2:1] } = { 4'1111 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][4]$1344:
+      Old ports: A=7'1111111, B=7'1101111, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327 [4]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327 [6:5] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327 [3:0] } = 6'111111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][3]$1341:
+      Old ports: A=7'1111101, B=7'0000111, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [1] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [6:4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [2] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [0] } = { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][2]$1338:
+      Old ports: A=7'1100110, B=7'1101101, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324
+      New ports: A=2'10, B=2'01, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324 [6:2] = { 3'110 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][1]$1335:
+      Old ports: A=7'1011011, B=7'1001111, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [2] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [6:5] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [1:0] } = 5'10111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][0]$1332:
+      Old ports: A=7'0111111, B=7'0000110, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [6:1] = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][6]$1305:
+      Old ports: A=7'0111001, B=7'1011110, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285
+      New ports: A=2'01, B=2'10, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [6:2] = { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [1:0] 2'11 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][5]$1302:
+      Old ports: A=7'1110111, B=7'1111100, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283
+      New ports: A=2'01, B=2'10, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [6:4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [2:1] } = { 4'1111 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][4]$1299:
+      Old ports: A=7'1111111, B=7'1101111, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282 [4]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282 [6:5] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282 [3:0] } = 6'111111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][3]$1296:
+      Old ports: A=7'1111101, B=7'0000111, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [1] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [6:4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [2] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [0] } = { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][2]$1293:
+      Old ports: A=7'1100110, B=7'1101101, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279
+      New ports: A=2'10, B=2'01, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279 [1:0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279 [6:2] = { 3'110 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][1]$1290:
+      Old ports: A=7'1011011, B=7'1001111, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277
+      New ports: A=2'10, B=2'01, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [2] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [6:5] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [1:0] } = 5'10111
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][0]$1287:
+      Old ports: A=7'0111111, B=7'0000110, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0]
+      New connections: $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [6:1] = { 1'0 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] 2'11 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][3][7]$1308:
+      Old ports: A=7'1111001, B=7'1110001, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286 [3]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286 [6:4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286 [2:0] } = 6'111001
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][3][7]$1353:
+      Old ports: A=7'1111001, B=7'1110001, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331
+      New ports: A=1'1, B=1'0, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331 [3]
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331 [6:4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331 [2:0] } = 6'111001
+  Optimizing cells in module \pochoco_periph.
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$1329:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330, B=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$a$1330 [1:0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][3]$b$1331 [3] 2'01 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [6] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [5:4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [2] } = { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [0] 1'1 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$b$1319 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$1326:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327, B=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$a$1327 [4] 2'11 }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][2]$b$1328 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318 [4:3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318 [6:5] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318 [2:1] } = { 3'111 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][1]$a$1318 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$1323:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324, B=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316
+      New ports: A={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324 [0] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$a$1324 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][1]$b$1325 [1] 1'1 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316 [5:3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316 [6] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316 [2] } = { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$b$1316 [5] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$1320:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321, B=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322, Y=$memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] 1'1 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$a$1321 [0] }, B={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][2][0]$b$1322 [2] 1'1 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [6:4] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [2] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [3] $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [1] } = { $memory$auto$proc_rom.cc:155:do_switch$192$rdmux[0][1][0]$a$1315 [0] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$1284:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285, B=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [1] 1'1 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$a$1285 [1:0] }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][3]$b$1286 [3] 2'01 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [6] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [5:4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [2] } = { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [0] 1'1 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$b$1274 [1] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$1281:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282, B=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273
+      New ports: A={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$a$1282 [4] 2'11 }, B={ 1'1 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][2]$b$1283 [0] }, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273 [4:3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273 [6:5] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273 [2:1] } = { 3'111 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][1]$a$1273 [0] }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$1278:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279, B=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271
+      New ports: A={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279 [0] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$a$1279 [1:0] }, B={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][1]$b$1280 [1] 1'1 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271 [5:3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271 [1:0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271 [6] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271 [2] } = { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$b$1271 [5] 1'1 }
+    Consolidated identical input bits for $mux cell $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$1275:
+      Old ports: A=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276, B=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277, Y=$memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270
+      New ports: A={ 1'0 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] 1'1 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$a$1276 [0] }, B={ 2'10 $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][2][0]$b$1277 [2] 1'1 }, Y={ $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [6:4] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [2] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [0] }
+      New connections: { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [3] $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [1] } = { $memory$auto$proc_rom.cc:155:do_switch$188$rdmux[0][1][0]$a$1270 [0] 1'1 }
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 29 changes.
+
+15.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 9 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 53 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 20 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 20 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 46 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Computing hashes of 36 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 40 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 10 cells.
+
+15.19.6. Executing OPT_SHARE pass.
+
+15.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 2 unused cells and 44 unused wires.
+<suppressed ~4 debug messages>
+
+15.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+<suppressed ~2 debug messages>
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+15.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_alu..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \espino_decoder..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_id_stage..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_load_store_unit..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \espino_register_file..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_periph..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_soc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \pochoco_spi_slave..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~99 debug messages>
+
+15.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+  Optimizing cells in module \espino_alu.
+  Optimizing cells in module \espino_controller.
+  Optimizing cells in module \espino_decoder.
+  Optimizing cells in module \espino_id_stage.
+  Optimizing cells in module \espino_load_store_unit.
+  Optimizing cells in module \espino_register_file.
+  Optimizing cells in module \pochoco_periph.
+  Optimizing cells in module \pochoco_soc.
+  Optimizing cells in module \pochoco_spi_slave.
+Performed a total of 0 changes.
+
+15.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 9 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 25 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 51 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 20 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 20 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 83 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 36 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 21 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 40 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Removed a total of 0 cells.
+
+15.19.14. Executing OPT_SHARE pass.
+
+15.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+
+15.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+Optimizing module espino_alu.
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+Optimizing module espino_id_stage.
+Optimizing module espino_load_store_unit.
+Optimizing module espino_register_file.
+Optimizing module pochoco_periph.
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+
+15.19.18. Finished fast OPT passes. (There is nothing left to do.)
+
+15.20. Executing TECHMAP pass (map to technology primitives).
+
+15.20.1. Executing Verilog-2005 frontend: /nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/4mjds051vd8w85hclkghhb9avl38l2k0-yosys-0.62/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+15.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $adffe.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$fc16b9f758000d363d24f130038bd99b46b4fa1b\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$6a42b6fefed750f8a1c58eab59479d960557103c\_90_alu for cells of type $alu.
+Using template $paramod$8fabc56b80a569262acfc42757a02ca0b8e91278\_90_pmux for cells of type $pmux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$f1fc4bc1d42e857fca43ce0fdd0da6ff25c612c4\_90_pmux for cells of type $pmux.
+Using template $paramod$constmap:66d421c313e4e958be776b99540ac2de3b59fdbc$paramod$77562a466236eb4a6d905351a0995599b75075cb\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$cc1e387d9d5ac1d3f6e6bed180038d9c0ac48d0c\_90_pmux for cells of type $pmux.
+Using template $paramod$bf2533632d512eac76dd186c0da49367e29b8e98\_90_pmux for cells of type $pmux.
+Using template $paramod$44a13d10af618e7fbe7b9aad2f6151ffcee1e2fa\_90_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000011110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using template $paramod$a13703aa027da371a1931fc542d213d7de559b19\_90_pmux for cells of type $pmux.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$33afdd83bf3811dac2de7a968d39eea5718691bc\_90_pmux for cells of type $pmux.
+Using template $paramod$f08cf4b531f7b2bd95251b79857dfb970a6679fc\_90_pmux for cells of type $pmux.
+Using template $paramod$c2e415ef15bc3ccd2723772353a6b450d3d76206\_90_pmux for cells of type $pmux.
+Using template $paramod$2407ada40cc3dda6c6015be2b49b748cddb5a800\_90_pmux for cells of type $pmux.
+Using template $paramod$c96def1cdcef2eee3c62e5dfb7ba2dd09c9f74dd\_90_pmux for cells of type $pmux.
+Using template $paramod$eaeb96106163dbf82031649d189817109fe07c69\_90_pmux for cells of type $pmux.
+No more expansions possible.
+<suppressed ~2549 debug messages>
+
+15.21. Executing OPT pass (performing simple optimizations).
+
+15.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000.
+Optimizing module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000.
+<suppressed ~257 debug messages>
+Optimizing module espino_alu.
+<suppressed ~435 debug messages>
+Optimizing module espino_controller.
+Optimizing module espino_decoder.
+<suppressed ~279 debug messages>
+Optimizing module espino_id_stage.
+<suppressed ~461 debug messages>
+Optimizing module espino_load_store_unit.
+<suppressed ~3 debug messages>
+Optimizing module espino_register_file.
+<suppressed ~236 debug messages>
+Optimizing module pochoco_periph.
+<suppressed ~359 debug messages>
+Optimizing module pochoco_soc.
+Optimizing module pochoco_spi_slave.
+<suppressed ~63 debug messages>
+
+15.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 5 cells of `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_core\BootAddr=32'00000000000000000000000000000000'.
+Finding identical cells in module `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 211 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Computing hashes of 210 cells of `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+Finding duplicate cells in `$paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\espino_alu'.
+Computing hashes of 1023 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Computing hashes of 887 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Computing hashes of 868 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Computing hashes of 865 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+Computing hashes of 864 cells of `\espino_alu'.
+Finding duplicate cells in `\espino_alu'.
+<suppressed ~477 debug messages>
+Finding identical cells in module `\espino_controller'.
+Computing hashes of 8 cells of `\espino_controller'.
+Finding duplicate cells in `\espino_controller'.
+Finding identical cells in module `\espino_decoder'.
+Computing hashes of 429 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 325 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 296 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+Computing hashes of 282 cells of `\espino_decoder'.
+Finding duplicate cells in `\espino_decoder'.
+<suppressed ~441 debug messages>
+Finding identical cells in module `\espino_id_stage'.
+Computing hashes of 658 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+Computing hashes of 657 cells of `\espino_id_stage'.
+Finding duplicate cells in `\espino_id_stage'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\espino_load_store_unit'.
+Computing hashes of 289 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Computing hashes of 222 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+Computing hashes of 198 cells of `\espino_load_store_unit'.
+Finding duplicate cells in `\espino_load_store_unit'.
+<suppressed ~273 debug messages>
+Finding identical cells in module `\espino_register_file'.
+Computing hashes of 2719 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 2621 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+Computing hashes of 2569 cells of `\espino_register_file'.
+Finding duplicate cells in `\espino_register_file'.
+<suppressed ~450 debug messages>
+Finding identical cells in module `\pochoco_periph'.
+Computing hashes of 384 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Computing hashes of 365 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+Computing hashes of 359 cells of `\pochoco_periph'.
+Finding duplicate cells in `\pochoco_periph'.
+<suppressed ~75 debug messages>
+Finding identical cells in module `\pochoco_soc'.
+Computing hashes of 83 cells of `\pochoco_soc'.
+Finding duplicate cells in `\pochoco_soc'.
+Finding identical cells in module `\pochoco_spi_slave'.
+Computing hashes of 148 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+Computing hashes of 139 cells of `\pochoco_spi_slave'.
+Finding duplicate cells in `\pochoco_spi_slave'.
+<suppressed ~27 debug messages>
+Removed a total of 583 cells.
+
+15.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+15.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000..
+Finding unused cells or wires in module \espino_alu..
+Finding unused cells or wires in module \espino_controller..
+Finding unused cells or wires in module \espino_decoder..
+Finding unused cells or wires in module \espino_id_stage..
+Finding unused cells or wires in module \espino_load_store_unit..
+Finding unused cells or wires in module \espino_register_file..
+Finding unused cells or wires in module \pochoco_periph..
+Finding unused cells or wires in module \pochoco_soc..
+Finding unused cells or wires in module \pochoco_spi_slave..
+Removed 164 unused cells and 2319 unused wires.
+<suppressed ~172 debug messages>
+
+15.21.5. Finished fast OPT passes.
+
+15.22. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `pochoco_soc'. Setting top module to pochoco_soc.
+
+15.22.1. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:     \pochoco_periph
+Used module:     \pochoco_spi_slave
+
+15.22.2. Analyzing design hierarchy..
+Top module:  \pochoco_soc
+Used module:     $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_controller
+Used module:         \espino_id_stage
+Used module:             \espino_alu
+Used module:             \espino_decoder
+Used module:         $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+Used module:         \espino_load_store_unit
+Used module:         \espino_register_file
+Used module:     \pochoco_periph
+Used module:     \pochoco_spi_slave
+Removed 0 unused modules.
+
+15.23. Printing statistics.
+
+=== $paramod\espino_core\BootAddr=32'00000000000000000000000000000000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       35 wires
+      451 wire bits
+       35 public wires
+      451 public wire bits
+       11 ports
+      169 port bits
+        5 submodules
+        1   $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+        1   espino_controller
+        1   espino_id_stage
+        1   espino_load_store_unit
+        1   espino_register_file
+
+=== $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       39 wires
+      312 wire bits
+       14 public wires
+      200 public wire bits
+        9 ports
+      102 port bits
+      179 cells
+       50   $_AND_
+       63   $_DFFE_PN0N_
+        2   $_DFFE_PN0P_
+       32   $_MUX_
+        3   $_NOT_
+       29   $_XOR_
+
+=== espino_alu ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      275 wires
+     1251 wire bits
+       11 public wires
+      173 public wire bits
+        5 ports
+      101 port bits
+      850 cells
+      362   $_AND_
+       33   $_MUX_
+       52   $_NOT_
+      275   $_OR_
+      128   $_XOR_
+
+=== espino_controller ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       13 wires
+       13 wire bits
+        8 public wires
+        8 public wire bits
+        7 ports
+        7 port bits
+        8 cells
+        4   $_AND_
+        2   $_NOT_
+        2   $_OR_
+
+=== espino_decoder ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      130 wires
+      634 wire bits
+       24 public wires
+      292 public wire bits
+       16 ports
+      115 port bits
+      282 cells
+       52   $_AND_
+       70   $_MUX_
+       36   $_NOT_
+      124   $_OR_
+
+=== espino_id_stage ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      186 wires
+     1006 wire bits
+       45 public wires
+      495 public wire bits
+       25 ports
+      314 port bits
+      577 cells
+      255   $_AND_
+        1   $_DFF_PN0_
+      128   $_MUX_
+       10   $_NOT_
+       91   $_OR_
+       92   $_XOR_
+        2 submodules
+        1   espino_alu
+        1   espino_decoder
+
+=== espino_load_store_unit ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       39 wires
+      500 wire bits
+       23 public wires
+      236 public wire bits
+       16 ports
+      206 port bits
+      198 cells
+       62   $_AND_
+        1   $_DFF_PN0_
+       88   $_MUX_
+        7   $_NOT_
+       40   $_OR_
+
+=== espino_register_file ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      343 wires
+     2630 wire bits
+       24 public wires
+      591 public wire bits
+        9 ports
+      111 port bits
+     2567 cells
+      912   $_AND_
+      480   $_DFFE_PN0P_
+       64   $_DFF_PN0_
+      128   $_MUX_
+       55   $_NOT_
+      928   $_OR_
+
+=== pochoco_periph ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       82 wires
+      520 wire bits
+       19 public wires
+      158 public wire bits
+       12 ports
+       99 port bits
+      323 cells
+       93   $_AND_
+       44   $_DFFE_PN0P_
+       32   $_DFF_PN0_
+       94   $_MUX_
+       10   $_NOT_
+       19   $_OR_
+       31   $_XOR_
+
+=== pochoco_soc ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       43 wires
+      408 wire bits
+       35 public wires
+      369 public wire bits
+       19 ports
+      195 port bits
+       80 cells
+       11   $_AND_
+        2   $_DFFE_PN0P_
+       64   $_MUX_
+        3   $_NOT_
+        3 submodules
+        1   $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+        1   pochoco_periph
+        1   pochoco_spi_slave
+
+=== pochoco_spi_slave ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       73 wires
+      239 wire bits
+       32 public wires
+      140 public wire bits
+       12 ports
+       81 port bits
+      136 cells
+       25   $_AND_
+       44   $_DFFE_PN0P_
+        5   $_DFF_PN0_
+        3   $_DFF_PN1_
+       21   $_MUX_
+       14   $_NOT_
+       21   $_OR_
+        3   $_XOR_
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+     5200 pochoco_soc
+      179   $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000
+        8   espino_controller
+      577   espino_id_stage
+      850     espino_alu
+      282     espino_decoder
+      198   espino_load_store_unit
+     2567   espino_register_file
+      323 pochoco_periph
+      136 pochoco_spi_slave
+
+        +----------Count including submodules.
+        | 
+     1258 wires
+     7964 wire bits
+      270 public wires
+     3113 public wire bits
+      141 ports
+     1500 port bits
+        - memories
+        - memory bits
+        - processes
+     5200 cells
+     1826   $_AND_
+       63   $_DFFE_PN0N_
+      572   $_DFFE_PN0P_
+      103   $_DFF_PN0_
+        3   $_DFF_PN1_
+      658   $_MUX_
+      192   $_NOT_
+     1500   $_OR_
+      283   $_XOR_
+        3 submodules
+        1   $paramod\espino_core\BootAddr=32'00000000000000000000000000000000
+        1   pochoco_periph
+        1   pochoco_spi_slave
+
+15.24. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000...
+Checking module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000...
+Checking module espino_alu...
+Checking module espino_controller...
+Checking module espino_decoder...
+Checking module espino_id_stage...
+Checking module espino_load_store_unit...
+Checking module espino_register_file...
+Checking module pochoco_periph...
+Checking module pochoco_soc...
+Checking module pochoco_spi_slave...
+Found and reported 0 problems.
+
+16. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\espino_core\BootAddr=32'00000000000000000000000000000000...
+Checking module $paramod\espino_if_stage\BootAddr=32'00000000000000000000000000000000...
+Checking module espino_alu...
+Checking module espino_controller...
+Checking module espino_decoder...
+Checking module espino_id_stage...
+Checking module espino_load_store_unit...
+Checking module espino_register_file...
+Checking module pochoco_periph...
+Checking module pochoco_soc...
+Checking module pochoco_spi_slave...
+Found and reported 0 problems.
+
+17. Executing JSON backend.

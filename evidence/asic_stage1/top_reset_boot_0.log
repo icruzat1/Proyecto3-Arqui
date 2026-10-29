@@ -1,0 +1,2 @@
+PASS top_reset executions=2 first_fetches=2 active_cycles_each=2000
+<PROJECT_ROOT>/sim/asic_stage1/tb_top_reset.v:80: $finish called at 401351000 (1ps)

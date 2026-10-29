@@ -1,0 +1,5 @@
+read_verilog -sv rtl/asic/btn_sync.v rtl/asic/reset_ctrl.v rtl/espino_core/espino_alu.v rtl/espino_core/espino_controller.v rtl/espino_core/espino_core.v rtl/espino_core/espino_decoder.v rtl/espino_core/espino_id_stage.v rtl/espino_core/espino_if_stage.v rtl/espino_core/espino_load_store_unit.v rtl/espino_core/espino_register_file.v rtl/pochoco_periph.v rtl/pochoco_soc.v rtl/pochoco_spi_slave.v
+hierarchy -check -top reset_ctrl
+synth -top reset_ctrl -noabc
+check -assert
+write_json build/asic_stage1_synthesis/reset_ctrl.json
