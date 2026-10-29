@@ -1,10 +1,10 @@
 # Cuaderno de estudio y defensa del Proyecto 3
 
-Actualizado el 29 de octubre de 2026. Reúne la preparación de las etapas 1 a 5 y las verificaciones realizadas en el Mac. La primera adaptación RTL de interfaz, reset y RF ya pasó sus pruebas de simulación. La síntesis genérica de bloques y de ambos macros A/B pasó. Las memorias reales ya están implementadas; el mapeo GF180 y la implementación física siguen pendientes. Las secciones históricas conservan los estados que tenían al redactarse. La prueba física completada corresponde al ejemplo oficial spm.
+Actualizado el 29 de octubre de 2026. Reúne las etapas históricas 1 a 5 y las verificaciones del Mac. El firmware ASIC de 95 instrucciones está recalibrado a 10 MHz; la partida completa y la comparación RTL/netlist genérica pasan en A/B. El mapeo GF180 y la implementación física siguen pendientes. Las secciones históricas conservan los estados que tenían al redactarse. La prueba física completada corresponde al ejemplo oficial spm.
 
 ## Estado actual y forma de estudiar
 
-Leer primero [Requisitos y evidencias](Requisitos_Proyecto3.md), que contrasta el plan con las tres páginas del enunciado. Después estudiar la arquitectura y el programa, y utilizar las preguntas de cada etapa para explicar las decisiones sin depender de memorizar el código.
+Leer primero [Requisitos y evidencias](Requisitos_Proyecto3.md), que contrasta el plan con las tres páginas del enunciado. Leer también [Juego a 10 MHz](Juego_10MHz.md) y la actualización al final de este cuaderno. Después estudiar la arquitectura y el programa, y utilizar las preguntas de cada etapa para explicar las decisiones sin depender de memorizar el código.
 
 La preparación anterior se conserva como una secuencia histórica. Los estados de ejecución de esas etapas describen el momento de su redacción; la sección de verificación en el Mac contiene los resultados posteriores. El original del cuaderno está archivado en referencias/Etapa5.
 
@@ -438,3 +438,38 @@ La síntesis comprobó cada bit de almacenamiento mediante su conductor FF.Q: 51
 Preguntas útiles: ¿por qué una ROM combinacional necesita salida registrada? Para conservar el protocolo de fetch. ¿Por qué el reset no necesita alcanzar cada bit de B? Porque el cargador los reescribe antes de liberar el core. ¿Qué prueba que B es RAM? Escrituras y lecturas comprobadas y comprobación de 4608 salidas FF independientes en netlist. ¿La diferencia de FF es la diferencia de área? No; falta mapear y realizar el flujo físico con las mismas condiciones.
 
 El mismo ensayo de interfaces pasó sobre RTL y netlists genéricas: 5800 ciclos, incluida reprogramación y restauración de B. Esto comprueba la conducta en los estímulos ensayados, no todas las secuencias posibles ni equivalencia formal. La prueba de juego RTL/netlist seguirá siendo necesaria con firmware y estímulos de rondas idénticos.
+
+
+## Juego a 10 MHz: resultados actuales y defensa
+
+El firmware de producción vive en `firmware/asic/game.s`; el assembler y la referencia FPGA se conservan. Tres segundos a 10 MHz equivalen a 30 000 000 ciclos y una décima a 1 000 000. La ROM usa ahora 95 instrucciones y 33 NOP; las capacidades ROM128/RAM16 y FF144 no cambiaron. El generador predeterminado toma esta copia ASIC. Se comprobaron los valores en las instrucciones codificadas, además de sus textos fuente.
+
+### Qué corregimos y qué demuestra la prueba
+
+La espera original comparaba instantes absolutos con signo. Un inicio 0x7FFFFFE0 más 30 000 000 produce un límite negativo 0x81C9C360; tras solo 24 ciclos el contador sigue siendo positivo y `BLT` deja de esperar. La copia ASIC guarda el inicio, resta módulo 2³² y compara el tiempo transcurrido. Añade una instrucción sin ampliar la ISA. Funciona para la duración configurada, menor que 2³¹, con sondeo continuo antes de ese transcurrido.
+
+Veinte casos con la ALU real de Espino incluyen los límites 2³¹ y 2³²: dos fallos del algoritmo anterior y cero del corregido. La comprobación también decodifica la secuencia del hex. Esto demuestra el defecto aritmético; no prueba que causara los cuelgues históricos de la FPGA. La división de reacciones de al menos 2³¹ ciclos conserva su limitación heredada: alrededor de 214,75 s a 10 MHz puede interpretarse como negativa.
+
+### Por qué hay dos pruebas del juego
+
+La partida completa usa `simulation`: espera 3000 ciclos y décima 100. Ambos umbrales se dividen por 10 000, mientras las instrucciones conservan sus latencias. Se comprueban diez aciertos, dos errores/reintentos, botón mantenido, una saturación a 99, suma 162, promedio entero 16 y tres resets. Las salidas lógicas coinciden ciclo a ciclo con la netlist genérica del macro completo, en A y B.
+
+La prueba `wait_only` responde específicamente a la autorización de acelerar solo la espera inicial: usa 3000 ciclos de espera, pero conserva 1 000 000 por décima. Verifica acierto/error/reintento y segundo acierto. Sus respuestas rápidas son cero décimas. Como escribir `00` no siempre cambia los segmentos, también compara solicitudes, direcciones y datos de MMIO y el ciclo de escritura del resultado. Se observaron 302 ciclos desde el LED activo al resultado correcto y 269 al resultado `EE`, iguales en RTL/netlist de cada arquitectura.
+
+La referencia de corrección semántica calcula el resultado con muestras del contador real, no supone que el retardo externo de pulsación sea idéntico al tiempo que mide el programa. El error no debe aumentar `x10` ni la suma `x12`; mantener el botón no debe avanzar otra ronda. El promedio se trunca: 162 dividido por diez da 16.
+
+### Cómo interpretar ciclos y flip-flops
+
+La partida completa dura 65 291 ciclos en A y 65 577 en B incluyendo cargas y resets. El ensayo wait_only dura 10 623/10 766. Eso no significa que la CPU B ejecute el juego más lentamente: B carga 144 palabras y A anuncia disponibilidad al primer flanco. La comparación pertinente es RTL A/netlist A y RTL B/netlist B, con el mismo reset y los mismos botones por ciclo.
+
+La síntesis de producción jerárquica registra 1329/5433 FF genéricos; las síntesis aplanadas con firmware de prueba registran 1327/5433. Cambian tanto las opciones como la ROM. No atribuimos los dos FF a una causa única ni interpretamos el conteo como área física. La capacidad de almacenamiento comprobada sigue siendo 512/4608 bits y los módulos de CPU, periféricos y memorias no cambiaron en esta etapa; la ROM sí se regeneró.
+
+### Preguntas que debemos poder responder
+
+1. ¿Qué prueba la comparación post-síntesis? Que para los estímulos ensayados el macro sintetizado conserva las salidas por ciclo; wait_only comprueba además los ciclos MMIO de las rondas. No es equivalencia formal ni cierre físico.
+2. ¿Por qué no afirmamos haber simulado tres segundos reales por espera? Las pruebas del juego usan perfiles acelerados; las constantes de producción sí se verifican en el hex.
+3. ¿Por qué conservar la unidad de reacción en una prueba separada? Porque la pauta permite acelerar la espera inicial; wait_only mantiene la décima de producción y comprueba acierto, error y reintento bajo esa condición.
+4. ¿Por qué queda trabajo después de estos PASS? Las netlists son genéricas y sin SDF. Debemos repetir la prueba tras mapear a GF180, medir timing/área y completar DRC, LVS, antenas y layout.
+5. ¿Qué sigue? Restricciones y mapeo, tres períodos, tres utilizaciones, mejora RTL de ruta crítica medida, cierre final a 100 ns/40 %, informe y defensa.
+
+El [informe del juego](Juego_10MHz.md) y el [resumen de evidencia](../evidence/asic_game/results.json) contienen los resultados vigentes. Los nueve casos del generador ROM, seis de perfiles, cuatro simulaciones de producción, cuatro síntesis y el ensayo de interfaces post-síntesis también pasaron. La checklist queda en 16/17; el cierre físico y la entrega siguen pendientes.

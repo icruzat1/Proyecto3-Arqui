@@ -1,0 +1,28 @@
+EVENT epoch=0 cycle=3246 attempt=1 active_led=2 wait=3023
+EVENT epoch=1 cycle=6498 attempt=1 active_led=2 wait=3023
+EVENT epoch=1 cycle=6713 correct=1 tenths=1 elapsed=164 sum=1
+EVENT epoch=1 cycle=10158 attempt=2 active_led=2 wait=3023
+EVENT epoch=1 cycle=10478 correct=2 tenths=2 elapsed=260 sum=3
+EVENT epoch=1 cycle=13923 attempt=3 active_led=2 wait=3023
+EVENT epoch=1 cycle=14192 wrong=1 correct=2 sum=3
+EVENT epoch=1 cycle=17635 attempt=4 active_led=2 wait=3023
+EVENT epoch=1 cycle=17904 wrong=2 correct=2 sum=3
+EVENT epoch=1 cycle=21347 attempt=5 active_led=2 wait=3023
+EVENT epoch=1 cycle=21780 correct=3 tenths=3 elapsed=364 sum=6
+EVENT epoch=1 cycle=25231 attempt=6 active_led=4 wait=3029
+EVENT epoch=1 cycle=25769 correct=4 tenths=4 elapsed=460 sum=10
+EVENT epoch=1 cycle=29221 attempt=7 active_led=8 wait=3030
+EVENT epoch=1 cycle=29872 correct=5 tenths=5 elapsed=564 sum=15
+EVENT epoch=1 cycle=33317 attempt=8 active_led=2 wait=3023
+EVENT epoch=1 cycle=34073 correct=6 tenths=6 elapsed=660 sum=21
+EVENT epoch=1 cycle=37525 attempt=9 active_led=8 wait=3030
+EVENT epoch=1 cycle=38944 correct=7 tenths=12 elapsed=1260 sum=33
+EVENT epoch=1 cycle=42383 attempt=10 active_led=1 wait=3017
+EVENT epoch=1 cycle=45014 correct=8 tenths=23 elapsed=2364 sum=56
+EVENT epoch=1 cycle=48466 attempt=11 active_led=8 wait=3030
+EVENT epoch=1 cycle=59663 correct=9 tenths=99 elapsed=10164 sum=155
+EVENT epoch=1 cycle=63108 attempt=12 active_led=2 wait=3023
+EVENT epoch=1 cycle=63977 correct=10 tenths=7 elapsed=764 sum=162
+EVENT epoch=1 cycle=64577 average=16 sum=162
+PASS full_game variant=1 cycles=65577 compared=65576 correct=10 wrong=2 attempts=12 capped=1 average=16 sum=162 held_checks=4800 resets=3 first_active=6498 last_result=63977 done=64577
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage3/tb_full_game.v:253: $finish called at 6557700000 (1ps)

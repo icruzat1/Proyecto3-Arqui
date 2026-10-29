@@ -1,0 +1,74 @@
+{
+  "scope": "Real ASIC memory A/B and RTL integration; production 10 MHz game startup only",
+  "all_passed": true,
+  "test_runs": [
+    {
+      "name": "memory_interfaces",
+      "passed": true,
+      "summary": "PASS memories cycles=5800 boot_edges=519 complete_boots=2 resets=5 words=144 masks=16 read_first_A=256 read_first_B=2304 invalid_accesses=40 req_disabled_writes=144 instruction_holds=288 unrequested_data_reads=3188\n/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_memories.v:318: $finish called at 63346000 (1ps)",
+      "log": "build/asic_stage2/memory_interfaces.log"
+    },
+    {
+      "name": "top_ab_game_startup",
+      "passed": true,
+      "summary": "PASS top_memories epochs=2 compared_cycles=20000 boot_offset_cycles=143 mmio_reads=1996 ordinary_ram_reads=0 ordinary_ram_writes=0\n/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_top_memories.v:118: $finish called at 2036551000 (1ps)",
+      "log": "build/asic_stage2/top_ab_game_startup.log"
+    },
+    {
+      "name": "top_io_0",
+      "passed": true,
+      "summary": "PASS top_io_real variant=0 display=A5 buttons=5 timer_reads=1 spi_rx=3c spi_tx=96 ram_readback=PASS success_led=6\n/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_top_io_real.v:83: $finish called at 24051000 (1ps)",
+      "log": "build/asic_stage2/top_io_0.log"
+    },
+    {
+      "name": "top_io_1",
+      "passed": true,
+      "summary": "PASS top_io_real variant=1 display=A5 buttons=5 timer_reads=1 spi_rx=3c spi_tx=96 ram_readback=PASS success_led=6\n/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_top_io_real.v:83: $finish called at 38351000 (1ps)",
+      "log": "build/asic_stage2/top_io_1.log"
+    }
+  ],
+  "generator_tests_log": "build/asic_stage2/generator_tests.log",
+  "production_source_manifest_complete": true,
+  "invalid_variant_rejected": true,
+  "program_words": 95,
+  "program_hex_sha256": "72e5e5b8cb6ed2da504c2d66742030d9ab1104cf75e59fc92abddf4009e24e89",
+  "capacities_words": {
+    "rom_a": 128,
+    "ram_a": 16,
+    "unified_b": 144
+  },
+  "full_game_verified": false,
+  "firmware_recalibrated_to_10mhz": true,
+  "post_synthesis_game_equivalence": false,
+  "physical_flow_run": false,
+  "input_sha256": {
+    "baseline/proyecto2/assembler/assemble.py": "5a68e359a31eb12fa801ea2ae679889f0be7f10dd1f9af2b01184f40655f8d83",
+    "config/rtl_asic.f": "c9ef0bca706c506d7f08f254a828c0239201f051228feb0741b8cec31ce1164e",
+    "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+    "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+    "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+    "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+    "rtl/asic/generated/asic_program_rom.v": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7",
+    "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+    "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+    "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+    "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+    "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+    "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+    "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+    "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+    "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+    "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+    "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+    "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+    "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+    "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+    "scripts/check_asic_memories.py": "8acac91d06d001ce88c7172a64f2a92d2c140ba55f8a8367dc17431d11234a82",
+    "scripts/generate_asic_memory.py": "14e66aea6f741d376d84b577b99ef74c94f7eb23cc85a1b065c28ac5000ced72",
+    "sim/asic_stage2/io_diagnostic.s": "04279886b29f71f87630a8e586a4476fe92d1a8be17f289c67bde05577617386",
+    "sim/asic_stage2/tb_memories.v": "a88178fee105778481d94d199018ae87387f977951fab585b01c6b89905f5ac5",
+    "sim/asic_stage2/tb_top_io_real.v": "0378dbb195a6e4394090505ee8c1c259a6c7a2d7ce520327cb8db8c555f3adb3",
+    "sim/asic_stage2/tb_top_memories.v": "56aae08521a26e2c30f25eccd1cde4d088a1f4c5869e0b45e9bf12c9506a35bc",
+    "sim/asic_stage2/test_generate_asic_memory.py": "293094e09e99f554ab040dbddd8a9e96cfb74658fc392b6388234d25ef5132e0"
+  }
+}

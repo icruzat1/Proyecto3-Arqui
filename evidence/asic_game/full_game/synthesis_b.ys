@@ -1,0 +1,9 @@
+read_verilog -sv rtl/asic/asic_memory.v rtl/asic/asic_top.v rtl/asic/btn_sync.v build/asic_full_game/firmware/asic_program_rom.v rtl/asic/memory_a.v rtl/asic/memory_b.v rtl/asic/reset_ctrl.v rtl/espino_core/espino_alu.v rtl/espino_core/espino_controller.v rtl/espino_core/espino_core.v rtl/espino_core/espino_decoder.v rtl/espino_core/espino_id_stage.v rtl/espino_core/espino_if_stage.v rtl/espino_core/espino_load_store_unit.v rtl/espino_core/espino_register_file.v rtl/pochoco_periph.v rtl/pochoco_soc.v rtl/pochoco_spi_slave.v
+chparam -set MemoryVariant 1 asic_top
+hierarchy -check -top asic_top
+flatten -noscopeinfo
+synth -top asic_top -noabc
+check -assert
+rename asic_top netlist_top
+write_json build/asic_full_game/synthesis_b.json
+write_verilog -noattr build/asic_full_game/synthesis_b.v

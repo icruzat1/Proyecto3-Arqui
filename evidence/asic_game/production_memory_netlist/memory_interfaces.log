@@ -1,0 +1,2 @@
+PASS memories cycles=5800 boot_edges=519 complete_boots=2 resets=5 words=144 masks=16 read_first_A=256 read_first_B=2304 invalid_accesses=40 req_disabled_writes=144 instruction_holds=288 unrequested_data_reads=3188
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/build/asic_memory_netlist/tb_memories_netlist.v:318: $finish called at 63346000 (1ps)

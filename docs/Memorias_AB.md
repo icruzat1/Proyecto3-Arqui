@@ -1,5 +1,7 @@
 # Memorias ASIC A/B: implementación y evidencia
 
+**Referencia histórica del commit `d867d619490d7abfec4a2ca989c819d17700666f`.** Las cifras y pendientes de este informe describen la etapa de memorias con firmware FPGA de 94 instrucciones. Se conservan sin reescribir sus resultados. El firmware ASIC vigente tiene 95 instrucciones, temporización de 10 MHz y pruebas del juego completo; consultar [Juego a 10 MHz y evidencia actual](Juego_10MHz.md). Los comandos de reproducción siguientes corresponden a la revisión histórica; en la revisión actual usan el firmware ASIC por defecto.
+
 29 de octubre de 2026. El top utiliza ahora memorias de producción. El programa sigue siendo el original de 94 instrucciones; la recalibración a 10 MHz y la verificación completa del juego se abordarán después de esta etapa.
 
 ## Arquitecturas implementadas

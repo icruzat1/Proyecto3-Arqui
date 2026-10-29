@@ -1,0 +1,68 @@
+{
+  "changed_word_indices": [
+    13,
+    14,
+    39,
+    40
+  ],
+  "corrected_algorithm_failures": 0,
+  "directed_alu_cases": 20,
+  "input_sha256": {
+    "baseline/proyecto2/assembler/assemble.py": "5a68e359a31eb12fa801ea2ae679889f0be7f10dd1f9af2b01184f40655f8d83",
+    "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+    "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+    "scripts/check_game_timing.py": "43e569bb183401d251b0299a45c532032361ebbc96ad04571b93efa1f0af88a9",
+    "scripts/generate_asic_memory.py": "14e66aea6f741d376d84b577b99ef74c94f7eb23cc85a1b065c28ac5000ced72",
+    "scripts/generate_game_firmware.py": "360047cdff4774176020012001372bf6ba0bb8626e09059c4e58f2c22bc3d9b5",
+    "sim/asic_stage3/tb_timer_compare.v": "6c59efbc71fcada4cb66b7e72885d6ea15e57e134a35f2b440b3c7152c53addb"
+  },
+  "limits": [
+    "This check is not a full CPU or post-synthesis netlist execution.",
+    "Elapsed signed comparison assumes duration below 2^31 and continuous polling before elapsed reaches 2^31.",
+    "Reaction-time division retains original signed behavior; reactions of 2^31 cycles or more are not verified."
+  ],
+  "log_sha256": {
+    "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "generate_production.log": "52842bf1a908df5df39a9bf320e2fcc17d25df7b6487e4775cb13bb21269f002",
+    "generate_simulation.log": "3ab26f1fcf067ca70ec7bbefbc9b892904b32889b2e94bed44c16da3b4f20bea",
+    "timer_compare.log": "3dff90691ce9892bb25acec61f5a841287952b529ee23b28511e877cfeb34a95"
+  },
+  "old_algorithm_failures_demonstrated": 2,
+  "only_timing_constants_differ_between_profiles": true,
+  "profiles": {
+    "production": {
+      "file_sha256": {
+        "asic_program_rom.v": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7",
+        "game.hex": "72e5e5b8cb6ed2da504c2d66742030d9ab1104cf75e59fc92abddf4009e24e89",
+        "game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+        "manifest.json": "fdf41bf5e1527669dd654cce6cbcab106ddcb950a2689774eca9ce51fcc7a1d7",
+        "timing.json": "1df00d4c74280843db7bc6c3de7d477d03fafab68a0d9aeba25d97409d2d55f2"
+      },
+      "reaction_divisor_machine_code_verified": true,
+      "tenth_ticks": 1000000,
+      "wait_machine_code_verified": true,
+      "wait_ticks": 30000000,
+      "word_count": 95
+    },
+    "simulation": {
+      "file_sha256": {
+        "asic_program_rom.v": "fc8be7687533c8a157e6076db93ba0eda13b24e4992d4f0fa768f70bfffb5e25",
+        "game.hex": "fadf557084f84da962bd8ff1d506190959145900efc76794765d32486d954482",
+        "game.s": "448291727fc265b1504803e7e08a3264b3cc76431f5eb0b333fd6cb9014c04e7",
+        "manifest.json": "2b3fda09ab34295e65ff61b5fcee6311877d270d6d9098f4cbcf151483f67832",
+        "timing.json": "48637f0595c4a041f1923babcd12c2c73a6e725b2883a41257231024afe0bcfa"
+      },
+      "reaction_divisor_machine_code_verified": true,
+      "tenth_ticks": 100,
+      "wait_machine_code_verified": true,
+      "wait_ticks": 3000,
+      "word_count": 95
+    }
+  },
+  "scope": "Decoded firmware constants/wait instructions and directed arithmetic using the production Espino ALU",
+  "tested_counter_origins": [
+    "0x00000010",
+    "0x7fffffe0",
+    "0xffffffe0"
+  ]
+}

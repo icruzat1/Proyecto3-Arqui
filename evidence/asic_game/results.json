@@ -1,0 +1,451 @@
+{
+  "all_passed": true,
+  "baseline_unchanged_from_head": true,
+  "compressed_traces": {
+    "build/asic_full_game/equivalence_a.trace.csv": {
+      "compressed_sha256": "80cd9a8d0ec13fe78a8c62ed3b85ca47c05e19c96f296f1d7d9281da67b01173",
+      "evidence": "evidence/asic_game/full_game/equivalence_a.trace.csv.gz",
+      "uncompressed_sha256": "88ed7ce3d422dcf2f51e79242b53d63722a9da6c256903f79b64d34bc2fc6b93"
+    },
+    "build/asic_full_game/equivalence_b.trace.csv": {
+      "compressed_sha256": "7cebd2ba9613a2c3d48f391ef3546393c0e1a6ee3260b464e8bc744b7b8efe19",
+      "evidence": "evidence/asic_game/full_game/equivalence_b.trace.csv.gz",
+      "uncompressed_sha256": "8c815e9d16b0f9aff95c9585d8d37f64db1d60079920f8d6a81aa798de28b3c9"
+    },
+    "build/asic_game_wait_only/equivalence_a.trace.csv": {
+      "compressed_sha256": "2ee1e3decc5a6df0482e599c6335910ab79db3b7c0b3b526a9cee2fc557c6de2",
+      "evidence": "evidence/asic_game/wait_only/equivalence_a.trace.csv.gz",
+      "uncompressed_sha256": "f5dbadd196cceedb2e226def902fb506d902e4194e12667bfbbf811a41c9f5ad"
+    },
+    "build/asic_game_wait_only/equivalence_b.trace.csv": {
+      "compressed_sha256": "13bbe61e6297b7116a6837b9f7f1ecec3d663099f7c4c5941a5f043dc764d1a0",
+      "evidence": "evidence/asic_game/wait_only/equivalence_b.trace.csv.gz",
+      "uncompressed_sha256": "d72a4651fef8c1fe6a335fa0c5add5b823fa723c6f34b8a3e6df762b5aa497d9"
+    }
+  },
+  "date_local": "2026-10-29",
+  "espino_physical_flow_run": false,
+  "evidence_files": {
+    "build/asic_full_game/compile_equivalence_a.log": {
+      "evidence": "evidence/asic_game/full_game/compile_equivalence_a.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_full_game/compile_equivalence_b.log": {
+      "evidence": "evidence/asic_game/full_game/compile_equivalence_b.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_full_game/compile_rtl_a.log": {
+      "evidence": "evidence/asic_game/full_game/compile_rtl_a.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_full_game/compile_rtl_b.log": {
+      "evidence": "evidence/asic_game/full_game/compile_rtl_b.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_full_game/equivalence_a.log": {
+      "evidence": "evidence/asic_game/full_game/equivalence_a.log",
+      "sha256": "4aa4ae618e34a0cb9ec5c6f6d70a6ba2abecbb4a89c8a283e4ea94b4e5c5196f"
+    },
+    "build/asic_full_game/equivalence_b.log": {
+      "evidence": "evidence/asic_game/full_game/equivalence_b.log",
+      "sha256": "007b5f6b25bc4ef417c63eef2813e08e11c238e7bc7dda0a6b504c4964366cb5"
+    },
+    "build/asic_full_game/firmware/asic_program_rom.v": {
+      "evidence": "evidence/asic_game/full_game/firmware/asic_program_rom.v",
+      "sha256": "fc8be7687533c8a157e6076db93ba0eda13b24e4992d4f0fa768f70bfffb5e25"
+    },
+    "build/asic_full_game/firmware/game.hex": {
+      "evidence": "evidence/asic_game/full_game/firmware/game.hex",
+      "sha256": "fadf557084f84da962bd8ff1d506190959145900efc76794765d32486d954482"
+    },
+    "build/asic_full_game/firmware/game.s": {
+      "evidence": "evidence/asic_game/full_game/firmware/game.s",
+      "sha256": "448291727fc265b1504803e7e08a3264b3cc76431f5eb0b333fd6cb9014c04e7"
+    },
+    "build/asic_full_game/firmware/manifest.json": {
+      "evidence": "evidence/asic_game/full_game/firmware/manifest.json",
+      "sha256": "2b3fda09ab34295e65ff61b5fcee6311877d270d6d9098f4cbcf151483f67832"
+    },
+    "build/asic_full_game/firmware/timing.json": {
+      "evidence": "evidence/asic_game/full_game/firmware/timing.json",
+      "sha256": "48637f0595c4a041f1923babcd12c2c73a6e725b2883a41257231024afe0bcfa"
+    },
+    "build/asic_full_game/generate_firmware.log": {
+      "evidence": "evidence/asic_game/full_game/generate_firmware.log",
+      "sha256": "ff274f767e0aafaa8fe2ed0c081933f073c48b6ad62368e0b0a69819943caa8d"
+    },
+    "build/asic_full_game/results.json": {
+      "evidence": "evidence/asic_game/full_game/results.json",
+      "sha256": "a04291c995ec278e7c829ea6546e1d0af2e2c3ded00890652d3bbb4e8c6a01b6"
+    },
+    "build/asic_full_game/rtl_a.log": {
+      "evidence": "evidence/asic_game/full_game/rtl_a.log",
+      "sha256": "4aa4ae618e34a0cb9ec5c6f6d70a6ba2abecbb4a89c8a283e4ea94b4e5c5196f"
+    },
+    "build/asic_full_game/rtl_b.log": {
+      "evidence": "evidence/asic_game/full_game/rtl_b.log",
+      "sha256": "007b5f6b25bc4ef417c63eef2813e08e11c238e7bc7dda0a6b504c4964366cb5"
+    },
+    "build/asic_full_game/synthesis_a.log": {
+      "evidence": "evidence/asic_game/full_game/synthesis_a.log",
+      "sha256": "2c07c967f4b2677db7cb7d5d7b5c317ac89f98e2ea64916806bd1e701497264f"
+    },
+    "build/asic_full_game/synthesis_a.ys": {
+      "evidence": "evidence/asic_game/full_game/synthesis_a.ys",
+      "sha256": "4e0bb0487ee5e5a2e583c2991d19dff0a3f18e28d8c1071b7f4c88417d1c176e"
+    },
+    "build/asic_full_game/synthesis_b.log": {
+      "evidence": "evidence/asic_game/full_game/synthesis_b.log",
+      "sha256": "3c3cbabdba4b693ba3185308cd10ce17c96a6408d5fcc92f2b6430258a38bbd7"
+    },
+    "build/asic_full_game/synthesis_b.ys": {
+      "evidence": "evidence/asic_game/full_game/synthesis_b.ys",
+      "sha256": "eb57527c170474a60fd8f404de230768cdde6ef0c0a304828b1dfe9fbc88dc79"
+    },
+    "build/asic_game_timing/compile.log": {
+      "evidence": "evidence/asic_game/timing/compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_game_timing/firmware_generator_tests.log": {
+      "evidence": "evidence/asic_game/timing/firmware_generator_tests.log",
+      "sha256": "b130fb2e0662531834d8e11fbbc73ddc0f8eb30a79df7a2c9d431fbb674d16b4"
+    },
+    "build/asic_game_timing/generate_production.log": {
+      "evidence": "evidence/asic_game/timing/generate_production.log",
+      "sha256": "52842bf1a908df5df39a9bf320e2fcc17d25df7b6487e4775cb13bb21269f002"
+    },
+    "build/asic_game_timing/generate_simulation.log": {
+      "evidence": "evidence/asic_game/timing/generate_simulation.log",
+      "sha256": "3ab26f1fcf067ca70ec7bbefbc9b892904b32889b2e94bed44c16da3b4f20bea"
+    },
+    "build/asic_game_timing/production/asic_program_rom.v": {
+      "evidence": "evidence/asic_game/firmware_profiles/production/asic_program_rom.v",
+      "sha256": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7"
+    },
+    "build/asic_game_timing/production/game.hex": {
+      "evidence": "evidence/asic_game/firmware_profiles/production/game.hex",
+      "sha256": "72e5e5b8cb6ed2da504c2d66742030d9ab1104cf75e59fc92abddf4009e24e89"
+    },
+    "build/asic_game_timing/production/game.s": {
+      "evidence": "evidence/asic_game/firmware_profiles/production/game.s",
+      "sha256": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2"
+    },
+    "build/asic_game_timing/production/manifest.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/production/manifest.json",
+      "sha256": "fdf41bf5e1527669dd654cce6cbcab106ddcb950a2689774eca9ce51fcc7a1d7"
+    },
+    "build/asic_game_timing/production/timing.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/production/timing.json",
+      "sha256": "1df00d4c74280843db7bc6c3de7d477d03fafab68a0d9aeba25d97409d2d55f2"
+    },
+    "build/asic_game_timing/results.json": {
+      "evidence": "evidence/asic_game/timing/results.json",
+      "sha256": "b144940846811307c189ddfbfaa3edd1c840a2cf6d2a1241c6e789d98080f80c"
+    },
+    "build/asic_game_timing/simulation/asic_program_rom.v": {
+      "evidence": "evidence/asic_game/firmware_profiles/simulation/asic_program_rom.v",
+      "sha256": "fc8be7687533c8a157e6076db93ba0eda13b24e4992d4f0fa768f70bfffb5e25"
+    },
+    "build/asic_game_timing/simulation/game.hex": {
+      "evidence": "evidence/asic_game/firmware_profiles/simulation/game.hex",
+      "sha256": "fadf557084f84da962bd8ff1d506190959145900efc76794765d32486d954482"
+    },
+    "build/asic_game_timing/simulation/game.s": {
+      "evidence": "evidence/asic_game/firmware_profiles/simulation/game.s",
+      "sha256": "448291727fc265b1504803e7e08a3264b3cc76431f5eb0b333fd6cb9014c04e7"
+    },
+    "build/asic_game_timing/simulation/manifest.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/simulation/manifest.json",
+      "sha256": "2b3fda09ab34295e65ff61b5fcee6311877d270d6d9098f4cbcf151483f67832"
+    },
+    "build/asic_game_timing/simulation/timing.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/simulation/timing.json",
+      "sha256": "48637f0595c4a041f1923babcd12c2c73a6e725b2883a41257231024afe0bcfa"
+    },
+    "build/asic_game_timing/timer_compare.log": {
+      "evidence": "evidence/asic_game/timing/timer_compare.log",
+      "sha256": "3dff90691ce9892bb25acec61f5a841287952b529ee23b28511e877cfeb34a95"
+    },
+    "build/asic_game_wait_only/compile_equivalence_a.log": {
+      "evidence": "evidence/asic_game/wait_only/compile_equivalence_a.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_game_wait_only/compile_equivalence_b.log": {
+      "evidence": "evidence/asic_game/wait_only/compile_equivalence_b.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_game_wait_only/compile_rtl_a.log": {
+      "evidence": "evidence/asic_game/wait_only/compile_rtl_a.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_game_wait_only/compile_rtl_b.log": {
+      "evidence": "evidence/asic_game/wait_only/compile_rtl_b.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_game_wait_only/equivalence_a.log": {
+      "evidence": "evidence/asic_game/wait_only/equivalence_a.log",
+      "sha256": "aead91275e906c1539ec6965461521ef2cf84473ea1d2e94b12ba9e3028a40de"
+    },
+    "build/asic_game_wait_only/equivalence_b.log": {
+      "evidence": "evidence/asic_game/wait_only/equivalence_b.log",
+      "sha256": "22fa93fdd557150cd4b8e33c255cd42cd23406182e94d0fb026b266d62a2d965"
+    },
+    "build/asic_game_wait_only/firmware/asic_program_rom.v": {
+      "evidence": "evidence/asic_game/firmware_profiles/wait_only/asic_program_rom.v",
+      "sha256": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935"
+    },
+    "build/asic_game_wait_only/firmware/game.hex": {
+      "evidence": "evidence/asic_game/firmware_profiles/wait_only/game.hex",
+      "sha256": "7aa66ed0f2ef6b8d12e952f8e4118d22c6af607b82fc68c30ace62120a471ac4"
+    },
+    "build/asic_game_wait_only/firmware/game.s": {
+      "evidence": "evidence/asic_game/firmware_profiles/wait_only/game.s",
+      "sha256": "1ceaf4d599fabf8087f51b7df9c760ca96098bdbd61407ab8d8df57a45b096e1"
+    },
+    "build/asic_game_wait_only/firmware/manifest.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/wait_only/manifest.json",
+      "sha256": "d344a3d049dcb90e8393f4949f23ddbe85bd3c749ffd53bd383d9b48b59600ad"
+    },
+    "build/asic_game_wait_only/firmware/timing.json": {
+      "evidence": "evidence/asic_game/firmware_profiles/wait_only/timing.json",
+      "sha256": "c01a7b4bb697457910f2e5a2914d436ae0989c184c22993e1bc5a21a93eedaaa"
+    },
+    "build/asic_game_wait_only/generate_firmware.log": {
+      "evidence": "evidence/asic_game/wait_only/generate_firmware.log",
+      "sha256": "bbb39b18fb56cfa105acddf3a7c22c5353cdb566a658010df03a69b7bd6103b3"
+    },
+    "build/asic_game_wait_only/results.json": {
+      "evidence": "evidence/asic_game/wait_only/results.json",
+      "sha256": "56ace1b916b765ba6551895caa3003cc6732054ea9a063dc399d74205d9180cb"
+    },
+    "build/asic_game_wait_only/rtl_a.log": {
+      "evidence": "evidence/asic_game/wait_only/rtl_a.log",
+      "sha256": "aead91275e906c1539ec6965461521ef2cf84473ea1d2e94b12ba9e3028a40de"
+    },
+    "build/asic_game_wait_only/rtl_b.log": {
+      "evidence": "evidence/asic_game/wait_only/rtl_b.log",
+      "sha256": "22fa93fdd557150cd4b8e33c255cd42cd23406182e94d0fb026b266d62a2d965"
+    },
+    "build/asic_game_wait_only/synthesis_a.log": {
+      "evidence": "evidence/asic_game/wait_only/synthesis_a.log",
+      "sha256": "275fe3f437acd502cd2eebe40fe57beb1d83abd122e48b60d916f5e52887c938"
+    },
+    "build/asic_game_wait_only/synthesis_a.ys": {
+      "evidence": "evidence/asic_game/wait_only/synthesis_a.ys",
+      "sha256": "3b972517f2c85a14dbcf486fad8d4ddd0fa5738810180e64f698680a7908a68c"
+    },
+    "build/asic_game_wait_only/synthesis_b.log": {
+      "evidence": "evidence/asic_game/wait_only/synthesis_b.log",
+      "sha256": "eac3f2d048cc0754ee79a307d2480e9c82d9f2a0a6d4c7060f32a520f520282e"
+    },
+    "build/asic_game_wait_only/synthesis_b.ys": {
+      "evidence": "evidence/asic_game/wait_only/synthesis_b.ys",
+      "sha256": "1ccf9d7be6811d56409c45b369a84dceff535140e232cb91a0da017b388c3719"
+    },
+    "build/asic_memory_netlist/compile.log": {
+      "evidence": "evidence/asic_game/production_memory_netlist/compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_memory_netlist/memory_interfaces.log": {
+      "evidence": "evidence/asic_game/production_memory_netlist/memory_interfaces.log",
+      "sha256": "0def55e9cfd89a6cf02c919a6efb4d1dd5956885a72456930a1c402c3c4dccc0"
+    },
+    "build/asic_memory_netlist/results.json": {
+      "evidence": "evidence/asic_game/production_memory_netlist/results.json",
+      "sha256": "cc4d23e9633e432ed381bd38dfecdebb217449ea9871985dc42a965011a3c5b2"
+    },
+    "build/asic_memory_synthesis/asic_top_a.log": {
+      "evidence": "evidence/asic_game/production_synthesis/asic_top_a.log",
+      "sha256": "65178923c76237cf1603c0114bb5bcca97bcb5b76c38f284ab4f46e28143f704"
+    },
+    "build/asic_memory_synthesis/asic_top_a.ys": {
+      "evidence": "evidence/asic_game/production_synthesis/asic_top_a.ys",
+      "sha256": "f431cc5ccd1d0979abe05ac538d513ee653c61be1df24e6d65cbd7d4a5f7174c"
+    },
+    "build/asic_memory_synthesis/asic_top_b.log": {
+      "evidence": "evidence/asic_game/production_synthesis/asic_top_b.log",
+      "sha256": "e620825bd100faccdd06035eef081239d0765915f8a01ddb4be6e497bd82a2b1"
+    },
+    "build/asic_memory_synthesis/asic_top_b.ys": {
+      "evidence": "evidence/asic_game/production_synthesis/asic_top_b.ys",
+      "sha256": "f966f2edb5eae36e5fedf2181efcc95619cdeb6d2e179419d3be446f083ec6a1"
+    },
+    "build/asic_memory_synthesis/generator_check.log": {
+      "evidence": "evidence/asic_game/production_synthesis/generator_check.log",
+      "sha256": "9e9cd7996e01d9e8c69f15852eadc724d19f7a3ae44c818212f7f55ead8a1612"
+    },
+    "build/asic_memory_synthesis/memory_a.log": {
+      "evidence": "evidence/asic_game/production_synthesis/memory_a.log",
+      "sha256": "3e4369799e4a548ba51ca38efe2f928722f52b2632c79d2d5279782409c0a0c9"
+    },
+    "build/asic_memory_synthesis/memory_a.ys": {
+      "evidence": "evidence/asic_game/production_synthesis/memory_a.ys",
+      "sha256": "a67b8da0295d7fd27ae865f5b488dc69e3c6774f25de69f52dc8d60700544577"
+    },
+    "build/asic_memory_synthesis/memory_b.log": {
+      "evidence": "evidence/asic_game/production_synthesis/memory_b.log",
+      "sha256": "e10287858d2a6bd2a1a6d94a5ea01cebffd1ab1bdd6b16d97b58b6ad7787a544"
+    },
+    "build/asic_memory_synthesis/memory_b.ys": {
+      "evidence": "evidence/asic_game/production_synthesis/memory_b.ys",
+      "sha256": "33e0086ad153d31c7ac256e51847febbde32fd4d1035a0be38f0c46e1f3652a8"
+    },
+    "build/asic_memory_synthesis/results.json": {
+      "evidence": "evidence/asic_game/production_synthesis/results.json",
+      "sha256": "877601a7334c25c6138032859966c8a3fad304443bdd042e0c2461487b4daf7f"
+    },
+    "build/asic_stage2/compile_memory_interfaces.log": {
+      "evidence": "evidence/asic_game/production_memories/compile_memory_interfaces.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_stage2/compile_top_ab_game_startup.log": {
+      "evidence": "evidence/asic_game/production_memories/compile_top_ab_game_startup.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_stage2/compile_top_io_0.log": {
+      "evidence": "evidence/asic_game/production_memories/compile_top_io_0.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_stage2/compile_top_io_1.log": {
+      "evidence": "evidence/asic_game/production_memories/compile_top_io_1.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/asic_stage2/generate_io_diagnostic.log": {
+      "evidence": "evidence/asic_game/production_memories/generate_io_diagnostic.log",
+      "sha256": "0b2d791269d5b4316475485d964d3e4cd8dcc7adefb70152ef633b2f97618ca4"
+    },
+    "build/asic_stage2/generated_check.log": {
+      "evidence": "evidence/asic_game/production_memories/generated_check.log",
+      "sha256": "9e9cd7996e01d9e8c69f15852eadc724d19f7a3ae44c818212f7f55ead8a1612"
+    },
+    "build/asic_stage2/generator_tests.log": {
+      "evidence": "evidence/asic_game/production_memories/generator_tests.log",
+      "sha256": "851bd0f787b8e87139c1ce8ff42a64af04827f677748cdd28f6eae81ddd6d4c7"
+    },
+    "build/asic_stage2/invalid_variant.log": {
+      "evidence": "evidence/asic_game/production_memories/invalid_variant.log",
+      "sha256": "4d2f4e728cf270c37952d16c493714e3308c7443cd7c1479833eb529a23c01c7"
+    },
+    "build/asic_stage2/memory_interfaces.log": {
+      "evidence": "evidence/asic_game/production_memories/memory_interfaces.log",
+      "sha256": "370b743b92561ccef3111b85fffdca207431ab449ad58eb52c58a7effb9b4b1f"
+    },
+    "build/asic_stage2/results.json": {
+      "evidence": "evidence/asic_game/production_memories/results.json",
+      "sha256": "898d3d63d6b7c130b9f49d97b72a7ef49694ff2925cc90915057b457030d8ffd"
+    },
+    "build/asic_stage2/top_ab_game_startup.log": {
+      "evidence": "evidence/asic_game/production_memories/top_ab_game_startup.log",
+      "sha256": "9eb527325146a33d4b78a8ae41c980ea60b6a1db879c4cf0f9fedc5500bde23a"
+    },
+    "build/asic_stage2/top_io_0.log": {
+      "evidence": "evidence/asic_game/production_memories/top_io_0.log",
+      "sha256": "f63f75f6f625b72ae9ea4e54edea8163d07c2d269f7584074567774c3321441c"
+    },
+    "build/asic_stage2/top_io_1.log": {
+      "evidence": "evidence/asic_game/production_memories/top_io_1.log",
+      "sha256": "caa01930b21940a39aa4e03dd1b730c4ee87c82fe8d6b6a2b35eb5eca8e984b2"
+    }
+  },
+  "firmware_profile_unit_tests": 6,
+  "formal_equivalence": false,
+  "full_game": {
+    "a": {
+      "attempts": 12,
+      "average": 16,
+      "capped": 1,
+      "compared": 65290,
+      "correct": 10,
+      "cycles": 65291,
+      "done": 64291,
+      "first_active": 6212,
+      "held_checks": 4800,
+      "last_result": 63691,
+      "resets": 3,
+      "sum": 162,
+      "variant": 0,
+      "wrong": 2
+    },
+    "b": {
+      "attempts": 12,
+      "average": 16,
+      "capped": 1,
+      "compared": 65576,
+      "correct": 10,
+      "cycles": 65577,
+      "done": 64577,
+      "first_active": 6498,
+      "held_checks": 4800,
+      "last_result": 63977,
+      "resets": 3,
+      "sum": 162,
+      "variant": 1,
+      "wrong": 2
+    }
+  },
+  "memory_generator_unit_tests": 9,
+  "original_proyecto2_files_verified_unchanged": 38,
+  "pdk_mapped_netlist": false,
+  "production_clock_period_ns": 100,
+  "production_firmware_source": "firmware/asic/game.s",
+  "production_firmware_source_sha256": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+  "production_game_at_real_time_simulated": false,
+  "production_generic_ff": {
+    "asic_top_a": 1329,
+    "asic_top_b": 5433,
+    "memory_a": 577,
+    "memory_b": 4681
+  },
+  "production_hex_sha256": "72e5e5b8cb6ed2da504c2d66742030d9ab1104cf75e59fc92abddf4009e24e89",
+  "production_tenth_ticks": 1000000,
+  "production_wait_ticks": 30000000,
+  "program_words": 95,
+  "remaining": "Repeat functional netlist checks after GF180 mapping, then clock/floorplan sweeps, critical-path RTL improvement, physical signoff and final report.",
+  "reserved_program_words": 33,
+  "scope": "ASIC 10 MHz firmware; generic whole-macro functional RTL/netlist tests for both memory architectures",
+  "sdf_timing": false,
+  "source_hashes": {
+    "sim/asic_stage3/tb_full_game.v": "8d7fdbc33ecd7d09fbd2072713b9cdac095935361bda37064736a3ac9dffc67b",
+    "sim/asic_stage3/tb_game_wait_only.v": "498bc18a9f9e5c67823c5099d6064c53d49c442578a628fdebf28954cabf1bc9",
+    "sim/asic_stage3/tb_timer_compare.v": "6c59efbc71fcada4cb66b7e72885d6ea15e57e134a35f2b440b3c7152c53addb",
+    "sim/asic_stage3/test_generate_game_firmware.py": "6a9eba19e7d4337856bf067d3463d4a93df9cc6c1c83647b46160fb0c1221e9f"
+  },
+  "wait_only": {
+    "a": {
+      "attempts": 3,
+      "compared": 10622,
+      "correct": 2,
+      "cycles": 10623,
+      "first_correct": 3360,
+      "first_round_cycles": 302,
+      "held_checks": 600,
+      "ram_accesses": 0,
+      "requests": 1118,
+      "second_correct": 10423,
+      "second_round_cycles": 302,
+      "stores": 11,
+      "variant": 0,
+      "wrong": 1,
+      "wrong_cycle": 6876,
+      "wrong_round_cycles": 269
+    },
+    "b": {
+      "attempts": 3,
+      "compared": 10765,
+      "correct": 2,
+      "cycles": 10766,
+      "first_correct": 3503,
+      "first_round_cycles": 302,
+      "held_checks": 600,
+      "ram_accesses": 0,
+      "requests": 1118,
+      "second_correct": 10566,
+      "second_round_cycles": 302,
+      "stores": 11,
+      "variant": 1,
+      "wrong": 1,
+      "wrong_cycle": 7019,
+      "wrong_round_cycles": 269
+    }
+  }
+}

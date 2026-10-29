@@ -176,7 +176,7 @@ def main():
     inputs = sources + ["config/rtl_asic.f", "config/environment.lock.json",
                         "scripts/generate_asic_memory.py", "scripts/check_asic_memory_synthesis.py",
                         "rtl/asic/generated/manifest.json", "rtl/asic/generated/game.hex",
-                        "baseline/proyecto2/assembler/assemble.py", "baseline/proyecto2/assembler/game.s"]
+                        "baseline/proyecto2/assembler/assemble.py", "firmware/asic/game.s"]
     results = {
         "scope": "Generic synthesis and FF-storage verification of memory A/B and both complete macro variants",
         "container_image": image,

@@ -12,26 +12,26 @@ La corrida final exige CLOCK_PERIOD de 100 ns y FP_CORE_UTIL de 40 por ciento. C
 
 | Sección | Requisito y evidencia | Estado en Espino |
 |---|---|---|
-| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz y memorias reales probadas; ambos macros pasan síntesis genérica. Flujo físico y sus mensajes finales pendientes. Ver Memorias_AB.md. |
+| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz y memorias reales probadas; ambos macros pasan síntesis genérica. Flujo físico y sus mensajes finales pendientes. Ver Juego_10MHz.md; Memorias_AB.md conserva la etapa anterior. |
 | 3.2 | A: ROM combinacional generada automáticamente por el assembler desde game.s y RAM reducida. B: memoria unificada en FF dimensionada por uso real. Comparar área de celdas, FF, utilización y Fmax. | A/B implementadas y probadas; 512/4608 bits de almacenamiento FF confirmados. Área/utilización/Fmax físicos pendientes. |
 | 3.3 | Cinco celdas más usadas y explicación; módulo dominante; fracción de área del contador. Trazar RF, ALU y contador aun si se aplana la jerarquía. Comparar expectativas con síntesis. | Pendiente. |
-| 3.4 | Al menos tres períodos incluyendo 100 ns; WNS/TNS de setup y hold en corner típico y más lento. Identificar extremos y función de ruta crítica. Implementar una mejora RTL y medir slack y área. Recalibrar game.s y regenerarlo. | Cálculos disponibles; barridos, modificación y pruebas pendientes. |
+| 3.4 | Al menos tres períodos incluyendo 100 ns; WNS/TNS de setup y hold en corner típico y más lento. Identificar extremos y función de ruta crítica. Implementar una mejora RTL y medir slack y área. Recalibrar game.s y regenerarlo. | Recalibración 10 MHz y corrección de espera probadas. Barridos físicos, ruta crítica y mejora RTL de esa ruta pendientes. |
 | 3.5 | Al menos tres utilizaciones o tamaños de die; área mínima exitosa; gráfico utilización frente a violaciones o congestión; justificar terminales y alimentación. Estimar costo con el factor didáctico indicado. | Pendiente. |
 | 3.6 | Reportes finales DRC, LVS y antena. Describir una violación observada, si la hubo, con ubicación y solución. Capturas de layout con RF, ALU y contador identificados. | Pendiente para Espino. |
-| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | Arranque y diagnóstico con A/B probados; 20000 ciclos iniciales comparados. Juego completo y equivalencia RTL/netlist del juego pendientes. |
+| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | PASS genérico en A/B: partida completa y prueba separada con solo la espera acelerada, ciclos de acierto/error y reintento coincidentes. Repetir con las netlists mapeadas GF180 del flujo final. Ver Juego_10MHz.md. |
 | 4 y 5 | Informe PDF, código y README reproducible; todos los integrantes deben poder defender RTL, assembler e informe. | Cuaderno integrado y guion de estudio disponibles; entrega final pendiente. |
 
 ## Memorias y programa
 
 El enunciado recomienda como máximo 256 palabras de instrucciones y 64 de datos. Son recomendaciones de alcance; superar alguna requiere justificación previa a la comparación final. El bootloader SPI es opcional y no sustituye A y B.
 
-El programa actual tiene 94 instrucciones. El análisis estático recuperado identifica cero palabras de RAM ordinaria accedidas por el juego; sus cargas y escrituras se destinan a MMIO. Falta respaldar el uso dinámico con las pruebas completas. Se implementaron 128 palabras de programa y 16 de datos como capacidad provisionada, no impuesta por la pauta.
+El firmware ASIC actual tiene 95 instrucciones; la referencia FPGA conservada tiene 94. La corrección de la espera añade una instrucción. Se implementaron 128 palabras de programa y 16 de datos como capacidad provisionada, no impuesta por la pauta. El análisis estático identifica cero palabras de RAM ordinaria requeridas por el juego y las pruebas dinámicas comprueban sus transacciones MMIO; el ensayo wait_only registra cero accesos a RAM ordinaria. Un diagnóstico independiente escribe y lee la RAM para demostrar que funciona aunque el juego no la utilice.
 
 ## Tiempo del juego
 
-Con T de 100 ns, la frecuencia es 10 MHz: tres segundos equivalen a 30000000 ciclos y una décima a 1000000. El programa original usa 75000000 y 2500000, coherentes con 25 MHz. Hay que modificar una copia ASIC y regenerar el programa, conservando la base FPGA. Aumentar o reducir el período solicitado al flujo puede cambiar área, buffering y placement; Fmax se deriva del menor período probado que cierra en todos los corners exigidos.
+Con T de 100 ns, la frecuencia es 10 MHz: tres segundos equivalen a 30000000 ciclos y una décima a 1000000. El programa original usa 75000000 y 2500000, coherentes con 25 MHz. La copia firmware/asic/game.s ya utiliza las constantes de 10 MHz y regenera automáticamente la ROM, conservando la base FPGA. Aumentar o reducir el período solicitado al flujo puede cambiar área, buffering y placement; Fmax se deriva del menor período probado que cierra en todos los corners exigidos.
 
-Para acelerar la simulación se permite reducir la espera, siempre con el cambio documentado y la misma configuración en RTL y netlist. La simulación post-PnR con SDF es opcional.
+Para acelerar la simulación se permite reducir la espera, siempre con el cambio documentado y la misma configuración en RTL y netlist. La prueba wait_only conserva 1 000 000 ciclos por décima y reduce únicamente la espera a 3000. La partida completa usa además un perfil de cobertura con ambos umbrales reducidos por 10 000; se informa por separado. Las netlists actuales son genéricas sin SDF, con pendientes de mapeo GF180 y cierre físico. La simulación post-PnR con SDF es opcional.
 
 ## Área y costo
 

@@ -1,0 +1,2 @@
+PASS top_memories epochs=2 compared_cycles=20000 boot_offset_cycles=143 mmio_reads=1996 ordinary_ram_reads=0 ordinary_ram_writes=0
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_top_memories.v:118: $finish called at 2036551000 (1ps)

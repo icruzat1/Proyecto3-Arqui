@@ -11,6 +11,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import runpy
 
 
 SOURCE_ROOT = Path(__file__).resolve().parents[2]
@@ -27,6 +28,7 @@ class MemoryGeneratorTests(unittest.TestCase):
         # Test isolated roots exercise the real CLI and immutable input files.
         for relative in (
             "scripts/generate_asic_memory.py",
+            "firmware/asic/game.s",
             "baseline/proyecto2/assembler/assemble.py",
             "baseline/proyecto2/assembler/game.s",
             "baseline/proyecto2/assembler/game.hex",
@@ -61,12 +63,15 @@ class MemoryGeneratorTests(unittest.TestCase):
 
     def test_default_program_and_reproducibility_without_writes(self):
         self.command()
-        baseline = (self.root / "baseline/proyecto2/assembler/game.hex").read_bytes()
-        self.assertEqual((self.output / "game.hex").read_bytes(), baseline)
+        assemble = runpy.run_path(str(self.root / "baseline/proyecto2/assembler/assemble.py"))["assemble"]
+        words = assemble((self.root / "firmware/asic/game.s").read_text())
+        expected = ("\n".join(words) + "\n").encode()
+        self.assertEqual((self.output / "game.hex").read_bytes(), expected)
         manifest = json.loads((self.output / "manifest.json").read_text())
-        self.assertEqual(manifest["program_words"], 94)
-        self.assertEqual(manifest["reserved_program_words"], 34)
-        self.assertEqual(manifest["program_hex_sha256"], hashlib.sha256(baseline).hexdigest())
+        self.assertEqual(manifest["program_words"], len(words))
+        self.assertEqual(manifest["source"]["path"], "firmware/asic/game.s")
+        self.assertEqual(manifest["reserved_program_words"], 128-len(words))
+        self.assertEqual(manifest["program_hex_sha256"], hashlib.sha256(expected).hexdigest())
         self.assertEqual(manifest["rom_verilog_sha256"], hashlib.sha256((self.output / "asic_program_rom.v").read_bytes()).hexdigest())
         self.assertNotIn(str(self.root), (self.output / "manifest.json").read_text())
         before = self.snapshot_tree(self.output)
@@ -126,12 +131,17 @@ class MemoryGeneratorTests(unittest.TestCase):
                 self.assertEqual(self.snapshot_tree(self.output), before)
                 path.write_bytes(original)
 
-    def test_default_game_reference_mismatch_is_rejected_before_output(self):
+    def test_explicit_baseline_matches_original_hex(self):
+        self.command("--source", self.root / "baseline/proyecto2/assembler/game.s")
+        self.assertEqual((self.output / "game.hex").read_bytes(),
+                         (self.root / "baseline/proyecto2/assembler/game.hex").read_bytes())
+
+    def test_baseline_reference_mismatch_is_rejected_before_output(self):
         # This test deliberately changes the isolated fixture, never real P2.
         reference = self.root / "baseline/proyecto2/assembler/game.hex"
         reference.write_text("00000013\n")
         self.baseline_before = self.snapshot_tree(self.root / "baseline")
-        result = self.command(success=False)
+        result = self.command("--source", self.root / "baseline/proyecto2/assembler/game.s", success=False)
         self.assertIn("does not match", result.stderr)
         self.assertFalse(self.output.exists())
 

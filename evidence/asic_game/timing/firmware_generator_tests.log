@@ -1,0 +1,11 @@
+test_check_detects_each_stale_file_without_writing (test_generate_game_firmware.GameFirmwareTests) ... ok
+test_deterministic_outputs_and_exact_provenance (test_generate_game_firmware.GameFirmwareTests) ... ok
+test_modified_or_duplicate_markers_fail_before_outputs (test_generate_game_firmware.GameFirmwareTests) ... ok
+test_profiles_encode_exact_constants_and_same_control_flow (test_generate_game_firmware.GameFirmwareTests) ... ok
+test_protected_paths_and_simulation_rtl_guard (test_generate_game_firmware.GameFirmwareTests) ... ok
+test_wait_only_changes_only_wait_and_preserves_production_reaction_unit (test_generate_game_firmware.GameFirmwareTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 2.028s
+
+OK

@@ -9,6 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import runpy
 import shutil
 import subprocess
 import sys
@@ -104,14 +105,15 @@ def main():
     test_copy.write_text(test_source)
 
     # The expected program is independent of the synthesized ROM structure.
-    # This stage deliberately retains the original, unrecalibrated firmware.
-    baseline_hex = root / 'baseline/proyecto2/assembler/game.hex'
-    words = baseline_hex.read_text().split()
+    # Assemble the current production source independently of ROM outputs.
+    firmware_source = root / 'firmware/asic/game.s'
+    assemble = runpy.run_path(str(root / 'baseline/proyecto2/assembler/assemble.py'))['assemble']
+    words = assemble(firmware_source.read_text())
     if not words or len(words) > 128 or any(not re.fullmatch(r'[0-9a-fA-F]{8}', w) for w in words):
-        raise SystemExit('Invalid baseline program image for the 128-word ROM window')
+        raise SystemExit('Invalid production program image for the 128-word ROM window')
     generated_hex = root / 'rtl/asic/generated/game.hex'
     if words != generated_hex.read_text().split():
-        raise SystemExit('Generated firmware differs from the baseline golden image')
+        raise SystemExit('Generated firmware differs from the independently assembled source')
     golden = build / 'golden_program.padded.hex'
     golden.write_text('\n'.join(words + ['00000013'] * (128 - len(words))) + '\n')
     executable = build / 'memories.vvp'
@@ -122,7 +124,7 @@ def main():
     if len(summaries) != 1:
         raise SystemExit('The post-synthesis memory test did not produce its unique PASS result')
     coverage = {key: int(value) for key, value in re.findall(r'(\w+)=(\d+)', summaries[0])}
-    tracked = [testbench, baseline_hex, generated_hex, Path(__file__).resolve()]
+    tracked = [testbench, firmware_source, root / 'baseline/proyecto2/assembler/assemble.py', generated_hex, Path(__file__).resolve()]
     result = {
         'scope': 'Functional interface tests of generic memory A/B netlists, without delays',
         'all_passed': True,

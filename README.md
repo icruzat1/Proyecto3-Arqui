@@ -4,7 +4,9 @@ Adaptación ASIC del procesador Espino y del juego del Proyecto 2, con LibreLane
 
 ## Estado
 
-La base FPGA portable reproduce las 94 instrucciones del juego y supera una simulación de arranque de 2000 ciclos. Docker Desktop funciona en ARM64 y el ejemplo oficial spm completó el flujo GF180MCU con GDS. La primera adaptación RTL de interfaz/reset/RF pasó siete pruebas, incluida una comparación de 10000 ciclos con el RF FPGA. La síntesis genérica de reset, botones, RF y SoC con memoria externa pasó; el RF contiene 544 FF genéricos. Las memorias A/B ya están implementadas y sus macros completos pasaron síntesis genérica. A conserva 512 bits de RAM y B 4608 bits reescribibles comprobados en netlist. El mapeo a GF180 y la validación física de Espino siguen pendientes.
+El firmware ASIC está recalibrado a 10 MHz y ocupa 95 instrucciones. A usa ROM128 + RAM16 y B una memoria FF144 con carga de 144 ciclos. Ambas arquitecturas pasaron la partida completa y la comparación por ciclo entre RTL y netlists genéricas del macro completo. Una prueba adicional conserva la décima de producción y acelera únicamente la espera inicial, comprobando los ciclos de acierto, error y reintento. Ver [Juego a 10 MHz](docs/Juego_10MHz.md) y [resultados](evidence/asic_game/results.json).
+
+La base FPGA conservada reproduce sus 94 instrucciones originales. La comprobación de almacenamiento confirma 512 bits FF de RAM en A y 4608 bits reescribibles en B. El mapeo GF180, los barridos físicos, Fmax y signoff de Espino siguen pendientes. La prueba física ya completada corresponde exclusivamente al ejemplo oficial spm.
 
 ## Archivos
 
@@ -13,7 +15,9 @@ La base FPGA portable reproduce las 94 instrucciones del juego y supera una simu
 - `scripts/check_baseline.py`: regeneración del programa y simulación con un modelo iCE40 oficial de Yosys.
 - `docs`: cuadernos de estudio y continuidad, y checklist.
 - `evidence`: resultados y huellas del original.
-- `rtl`: interfaz, reset, sincronización de botones, RF portable y pipeline/periféricos conservados.
+- `rtl`: interfaz ASIC, memorias A/B, ROM de producción generada, reset, sincronización de botones, RF portable y pipeline/periféricos conservados.
+- `firmware/asic/game.s`: copia ASIC a 10 MHz; no modifica el programa original.
+- `sim/asic_stage3`: pruebas de temporización, perfiles y juego antes/después de síntesis.
 - `config/rtl_asic.f`: manifiesto completo; asic_top.MemoryVariant=0 selecciona A y 1 selecciona B.
 - `config/rtl_stage1.f`: subconjunto de regresión para aislar la memoria de simulación de la primera etapa.
 - `sim/asic_stage1` y `scripts/check_asic_stage1.py`: pruebas de la primera adaptación.
@@ -22,7 +26,7 @@ La base FPGA portable reproduce las 94 instrucciones del juego y supera una simu
 
 Ejecutar `python3 scripts/check_baseline.py --ice40-model RUTA_AL_MODELO_CELLS_SIM_V` desde esta carpeta. El modelo puede obtenerse de `share/yosys/ice40/cells_sim.v` de OSS CAD Suite o Yosys. La prueba utiliza Icarus Verilog y crea sus salidas en `build/baseline`.
 
-El archivo del programa contiene 94 palabras para una memoria de 512. Icarus informa esa diferencia durante la carga; la prueba de arranque comprueba las instrucciones utilizadas. Todavía falta definir el contenido del resto de la memoria y verificar todas las rondas.
+En la referencia FPGA, el archivo contiene 94 palabras para una memoria de 512; su prueba de arranque comprueba las instrucciones utilizadas. La implementación ASIC actual tiene 95 palabras de programa y 33 NOP explícitos en una ROM128; sus rondas se verifican con los comandos del informe del juego.
 
 Consultar `docs/Checklist.md` para los pasos pendientes. No ejecutar el Makefile FPGA por defecto: su destino final intenta programar la placa.
 
@@ -46,10 +50,25 @@ Ejecutar `python3 scripts/check_asic_stage1.py --ice40-model RUTA_AL_MODELO_CELL
 La comprobación genérica `python3 scripts/check_asic_stage1_synthesis.py` pasó para los cuatro bloques, con Yosys 0.62 de la imagen fijada. No descarga imágenes ni ejecuta el flujo físico; utiliza red deshabilitada. `evidence/asic_stage1_synthesis` conserva logs, scripts de síntesis, conteos y huellas. Estos conteos son de lógica genérica, no área ni celdas GF180 mapeadas.
 
 
-## Memorias A/B
+## Memorias A/B y firmware vigente
 
-El [informe de memorias](docs/Memorias_AB.md) explica mapa, tiempos de carga, pruebas y conteos genéricos. El programa original no se modificó. Regenerar con `python3 scripts/generate_asic_memory.py`; comprobar archivos generados con `--check`; ejecutar `python3 scripts/check_asic_memories.py` y `python3 scripts/check_asic_memory_synthesis.py` para validar las interfaces, integración y almacenamiento real. La primera orden de pruebas también ejecuta ocho casos del generador.
+El [informe histórico de memorias](docs/Memorias_AB.md) conserva la etapa del commit d867d61. El [informe actual del juego](docs/Juego_10MHz.md) documenta firmware, perfiles, pruebas y resultados vigentes.
 
-A usa ROM128 + RAM16; B usa un arreglo FF144 con carga secuencial de 144 ciclos. El diagnóstico verifica RAM y MMIO en ambas variantes. Se compararon 20000 ciclos iniciales del juego, alineados al inicio de la CPU. La recalibración a 10 MHz, las rondas completas y la equivalencia de juego RTL/netlist siguen pendientes.
+Regenerar la ROM de producción con `python3 scripts/generate_asic_memory.py`; comprobar sus archivos con `python3 scripts/generate_asic_memory.py --check`. El origen predeterminado es `firmware/asic/game.s`, con 30 000 000 ciclos de espera y 1 000 000 por décima. El assembler original permanece sin modificaciones.
 
-Después de sintetizar, `python3 scripts/check_memory_netlist.py` ejecuta el mismo ensayo de interfaces sobre las netlists genéricas; pasó con 5800 ciclos. Todavía no es la equivalencia de rondas completas exigida por el enunciado.
+Ejecutar `python3 scripts/check_asic_memories.py`, `python3 scripts/check_asic_memory_synthesis.py` y `python3 scripts/check_memory_netlist.py` para validar interfaces, integración y almacenamiento. La primera orden incluye nueve pruebas del generador. Estas regresiones también pasaron con el firmware recalibrado; la evidencia preservada está en [evidence/asic_game](evidence/asic_game/README.md).
+
+## Juego y comparación post-síntesis
+
+```sh
+python3 -m unittest discover -s sim/asic_stage3 -p 'test_generate_game_firmware.py' -v
+python3 scripts/check_game_timing.py
+python3 scripts/check_full_game.py
+python3 scripts/check_game_wait_only.py
+```
+
+El generador de perfiles pasó seis pruebas. El ensayo temporal comprueba código máquina y 20 casos dirigidos con la ALU de Espino: reproduce dos fallos del límite absoluto anterior y ninguno con tiempo transcurrido. La partida completa cubre diez aciertos, dos errores, botón mantenido, saturación, promedio y resets. Usa un perfil con ambos umbrales divididos por 10 000. La prueba `wait_only` conserva la décima de producción y acelera solo la espera, para comprobar la sección 3.7.
+
+Ambas pruebas de juego sintetizan y comparan A/B con estímulos idénticos por ciclo. Requieren Python, Icarus y Docker Desktop con la imagen fijada en `config/environment.lock.json`; no descargan imágenes ni usan red dentro del contenedor. La opción `--rtl-only` permite ejecutar únicamente la parte RTL y no demuestra comparación post-síntesis. Los artefactos de trabajo se generan en `build`, y las evidencias seleccionadas incluyen huellas, logs y resultados.
+
+Son netlists del macro completo con celdas genéricas, sin mapeo GF180 ni SDF. Debe repetirse la comprobación tras el mapeo del flujo final. La configuración final exigida es 100 ns y 40 %; sus restricciones, barridos, mejora de ruta crítica y cierre físico son el siguiente bloque de trabajo.

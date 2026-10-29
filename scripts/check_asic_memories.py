@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import runpy
 import shutil
 import subprocess
 import sys
@@ -44,7 +45,9 @@ def main():
             raise SystemExit(f'FPGA/file-startup dependency in {source}')
     rom=root/'rtl/asic/generated/asic_program_rom.v'
     memories=[root/'rtl/asic/memory_a.v',root/'rtl/asic/memory_b.v',rom]
-    words=(root/'baseline/proyecto2/assembler/game.hex').read_text().split()
+    # Assemble the source independently of the ROM generator's outputs.
+    assemble=runpy.run_path(str(root/'baseline/proyecto2/assembler/assemble.py'))['assemble']
+    words=assemble((root/'firmware/asic/game.s').read_text())
     golden=build/'golden_program.padded.hex'
     golden.write_text('\n'.join(words+['00000013']*(128-len(words)))+'\n')
 
@@ -72,13 +75,13 @@ def main():
     tracked=sources+list((root/'sim/asic_stage2').glob('*.v'))+list((root/'sim/asic_stage2').glob('*.s'))+[
         root/'sim/asic_stage2/test_generate_asic_memory.py',Path(__file__).resolve(),
         root/'scripts/generate_asic_memory.py',root/'config/rtl_asic.f',
-        root/'baseline/proyecto2/assembler/game.s',root/'baseline/proyecto2/assembler/assemble.py']
-    result={'scope':'Real ASIC memory A/B and RTL integration; original unrecalibrated game startup only',
+        root/'firmware/asic/game.s',root/'baseline/proyecto2/assembler/assemble.py']
+    result={'scope':'Real ASIC memory A/B and RTL integration; production 10 MHz game startup only',
             'all_passed':True,'test_runs':cases,'generator_tests_log':'build/asic_stage2/generator_tests.log',
             'production_source_manifest_complete':True,'invalid_variant_rejected':True,
             'program_words':len(words),'program_hex_sha256':sha(root/'rtl/asic/generated/game.hex'),
             'capacities_words':{'rom_a':128,'ram_a':16,'unified_b':144},
-            'full_game_verified':False,'firmware_recalibrated_to_10mhz':False,
+            'full_game_verified':False,'firmware_recalibrated_to_10mhz':True,
             'post_synthesis_game_equivalence':False,'physical_flow_run':False,
             'input_sha256':{str(p.relative_to(root)):sha(p) for p in sorted(set(tracked))}}
     (build/'results.json').write_text(json.dumps(result,indent=2)+'\n')

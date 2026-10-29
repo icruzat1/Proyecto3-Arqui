@@ -113,7 +113,7 @@ module tb_top_memories;
     aligned_boot;
     compare_game;
     if (mmio_reads < 100 || ram_reads != 0 || ram_writes != 0)
-      $fatal(1,"Unexpected memory use in sampled original game interval");
+      $fatal(1,"Unexpected memory use in sampled production game interval");
     $display("PASS top_memories epochs=%0d compared_cycles=%0d boot_offset_cycles=143 mmio_reads=%0d ordinary_ram_reads=%0d ordinary_ram_writes=%0d",epochs,cycles,mmio_reads,ram_reads,ram_writes);
     $finish;
   end

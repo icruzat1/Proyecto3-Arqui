@@ -1,6 +1,6 @@
 # Cuaderno de continuidad del Proyecto 3
 
-Estado al 29 de octubre de 2026, zona horaria America/Santiago. Objetivo: desarrollar el Proyecto 3 ASIC a partir del Proyecto 2 de Espino y del juego de reacción, conservando el original.
+Estado al 29 de octubre de 2026, zona horaria America/Santiago. Objetivo: desarrollar el Proyecto 3 ASIC a partir del Proyecto 2 de Espino y del juego de reacción, conservando el original. Estado vigente: firmware a 10 MHz, juego completo y comparación RTL/netlist genérica A/B aprobados; checklist 16/17. El mapeo GF180 y cierre físico siguen pendientes. Las secciones de preparación y memorias conservan sus antecedentes históricos; consultar la actualización al final.
 
 ## Ubicaciones y procedencia
 
@@ -40,11 +40,11 @@ Plan recuperado: memorias A con ROM y RAM, B unificada con flip-flops y controla
 
 El enunciado confirma 100 ns y 40 por ciento para la corrida final y exige GF180MCU; no impone una variante ni una biblioteca concretas. Se mantiene para el desarrollo gf180mcuD y gf180mcu_fd_sc_mcu7t5v0 con las versiones ya fijadas. La matriz docs/Requisitos_Proyecto3.md registra las exigencias completas.
 
-Las constantes del juego corresponden a 25 MHz. El enunciado exige recalibrar para T de 100 ns: 30000000 ciclos para tres segundos y 1000000 por décima, en la copia ASIC. La corrección todavía no está implementada. Investigar además las comparaciones con signo alrededor de 2^31 ciclos.
+La referencia FPGA conserva sus constantes de 25 MHz. La copia ASIC ya cumple la recalibración exigida para 100 ns: 30000000 ciclos por espera y 1000000 por décima. Se corrigió la comparación de espera alrededor de 2^31 mediante tiempo transcurrido; ver actualización actual e informe Juego_10MHz.md.
 
 ## Siguiente trabajo
 
-Primera adaptación RTL implementada y probada; ver la actualización al final y docs/Adaptacion_RTL_Etapa1.md. El usuario volvió, los permisos fueron concedidos y los cuatro bloques pasaron la síntesis genérica. A/B, carga real y generación automática ya se implementaron; ver actualización al final. La próxima etapa es recalibración a 10 MHz, juego completo y equivalencia RTL/netlist; conversar su alcance antes de iniciarla. No redactar prompts futuros.
+Preparar restricciones y mapeo GF180 con firmware de producción, repetir la comparación funcional sobre las netlists mapeadas y avanzar al floorplan. Después ejecutar barridos de al menos tres períodos y tres utilizaciones, identificar y mejorar una ruta crítica RTL, medir resultados y cerrar timing/DRC/LVS/antenas. El punto final exigido es 100 ns y 40 %. Faltan layout anotado, área/costo e informe y defensa. No redactar prompts futuros.
 
 ## Entorno instalado y versiones fijadas
 
@@ -141,3 +141,20 @@ config/rtl_asic.f es el manifiesto completo de producción. Los scripts verifica
 Checklist 15/17: pendientes juego completo/equivalencia y experimentos/signoff/informe. El original Proyecto 2 y baseline se conservan. Mantener memoria de las preguntas a la conversación anterior para cuando sean necesarias, sin preparar prompts por adelantado.
 
 La prueba scripts/check_memory_netlist.py también pasó sobre las netlists genéricas de memory_a y memory_b: misma cobertura de 5800 ciclos y cinco resets que el ensayo RTL. Verifica huellas antes de ejecutar, y guarda resultados en evidence/asic_memory_netlist. No es equivalencia formal ni prueba post-síntesis del juego; ese requisito sigue pendiente.
+
+
+## Actualización vigente: firmware y juego verificados
+
+Se implementó `firmware/asic/game.s`: 10 MHz, espera 30000000, décima 1000000. La espera utiliza tiempo transcurrido módulo 2^32; se añadió una instrucción y el programa tiene 95, con 33 NOP de relleno. El assembler original y los módulos de CPU, periféricos y memorias no cambiaron; la ROM se regeneró. `generate_asic_memory.py` usa la fuente ASIC por defecto y permite pedir explícitamente la referencia FPGA; la regresión conserva esa comparación histórica.
+
+`generate_game_firmware.py` produce tres perfiles trazables: production 30000000/1000000; simulation 3000/100, ambos umbrales acelerados 10000 veces; wait_only 3000/1000000, solo espera acelerada. Los perfiles de prueba no pueden escribirse bajo rtl. La generación ROM pasó nueve pruebas y los perfiles seis. `check_game_timing.py` verifica instrucciones codificadas y veinte casos de la ALU real, con dos fallos demostrados del algoritmo anterior y ninguno del corregido. No atribuir ese hallazgo al fallo físico histórico ni dar por resuelta la limitación de reacciones >=2^31 ciclos.
+
+La regresión de producción pasó cuatro simulaciones de memorias/integración, cuatro síntesis genéricas y el ensayo de interfaces sobre netlists. `check_full_game.py` pasó RTL y comparación por ciclo con netlists genéricas completas en A/B: 65291/65577 ciclos, diez aciertos, dos errores, doce intentos, 4800 comprobaciones de botón mantenido, una saturación a 99, suma 162/promedio 16 y tres resets.
+
+`check_game_wait_only.py` pasó A/B con solo la espera inicial acelerada: 10623/10766 ciclos, dos aciertos/un error/tres intentos, 600 comprobaciones de botón mantenido, 1118 solicitudes MMIO, once escrituras y cero accesos a RAM ordinaria. Compara terminales y también reset interno/transacciones MMIO de las netlists aplanadas. La ronda correcta desde escritura del LED al resultado toma 302 ciclos y el error 269, con coincidencia RTL/netlist. Es la prueba específica de sección 3.7; la partida completa con ambas escalas es cobertura adicional.
+
+Las síntesis de producción jerárquicas cuentan 1329/5433 FF; las del juego aplanadas con firmware de prueba 1327/5433. Cambian opciones e imagen ROM: no atribuir la diferencia a una sola causa ni usar esos conteos como área física. El almacenamiento sigue en 512/4608 bits y la carga B en 144 ciclos.
+
+La evidencia de esta etapa se conserva bajo evidence/asic_game: full_game, wait_only, timing, production_memories, production_synthesis, production_memory_netlist y firmware_profiles, con resumen results.json e índice README.md. Los resultados históricos de d867d61 siguen documentados en Memorias_AB.md; no sustituirlos por cifras nuevas. Los artefactos grandes están en build y se identifican mediante huellas.
+
+El documento visible para seguir esta etapa en VS Code es docs/Juego_10MHz.md. Checklist 16/17: simulación genérica completa, cierre físico pendiente. Ningún PASS de esta etapa implica mapeo GF180, área, Fmax, STA o signoff. La próxima corrida física debe usar la ROM production y config/rtl_asic.f, nunca el fixture de etapa 1. Las operaciones remotas siguen limitadas a icruzat1 mediante VS Code; no usar el conector de oficina. Consultar git log y seguimiento origin/main para confirmar el commit publicado, sin asumir que preparar los archivos equivale a subirlos.

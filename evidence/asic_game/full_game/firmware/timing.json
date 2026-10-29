@@ -1,0 +1,39 @@
+{
+  "acceleration_factor": 10000,
+  "clock_hz": 10000000,
+  "clock_period_ns": 100,
+  "generated_source_sha256": "448291727fc265b1504803e7e08a3264b3cc76431f5eb0b333fd6cb9014c04e7",
+  "labels": {
+    "_start": 0,
+    "avg": 308,
+    "avg_d": 324,
+    "bcd1": 212,
+    "bcd1d": 228,
+    "bcd2": 336,
+    "bcd2d": 352,
+    "div_d": 184,
+    "div_l": 168,
+    "done": 296,
+    "hang": 376,
+    "nocap": 196,
+    "round": 32,
+    "show_led": 124,
+    "wait3": 68,
+    "wait_press": 132,
+    "wait_rel": 256,
+    "wait_rel_b": 284,
+    "wrong": 268
+  },
+  "nominal_tenth_seconds": 0.1,
+  "nominal_wait_seconds": 3,
+  "production_source": {
+    "path": "firmware/asic/game.s",
+    "sha256": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2"
+  },
+  "profile": "simulation",
+  "schema_version": 1,
+  "tenth_ticks": 100,
+  "wait_assumptions": "0 < wait_ticks < 2^31; continuous polling before elapsed reaches 2^31 ticks",
+  "wait_comparison": "signed((timer - start) modulo 2^32) < wait_ticks",
+  "wait_ticks": 3000
+}

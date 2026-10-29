@@ -1,0 +1,2 @@
+PASS top_io_real variant=0 display=A5 buttons=5 timer_reads=1 spi_rx=3c spi_tx=96 ram_readback=PASS success_led=6
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage2/tb_top_io_real.v:83: $finish called at 24051000 (1ps)

@@ -12,17 +12,17 @@
     "program_byte_start": 0,
     "word_bytes": 4
   },
-  "program_bytes": 376,
+  "program_bytes": 380,
   "program_capacity_words": 128,
-  "program_hex_sha256": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+  "program_hex_sha256": "72e5e5b8cb6ed2da504c2d66742030d9ab1104cf75e59fc92abddf4009e24e89",
   "program_padding_word": "00000013",
-  "program_words": 94,
-  "reserved_program_words": 34,
-  "rom_verilog_sha256": "4c4a6528a5295695621d077bef47d9356d3aa59b065c799f9b2eb451ecf3c8ba",
+  "program_words": 95,
+  "reserved_program_words": 33,
+  "rom_verilog_sha256": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7",
   "schema_version": 1,
   "source": {
-    "path": "baseline/proyecto2/assembler/game.s",
-    "sha256": "f15cd22bb43172fc818828edcb78571d20f1a90e4bfd78fc170816d26f291e2a"
+    "path": "firmware/asic/game.s",
+    "sha256": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2"
   },
   "unified_capacity_words": 144
 }

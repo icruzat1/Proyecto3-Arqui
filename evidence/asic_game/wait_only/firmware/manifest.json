@@ -1,0 +1,34 @@
+{
+  "assembler": {
+    "path": "baseline/proyecto2/assembler/assemble.py",
+    "sha256": "5a68e359a31eb12fa801ea2ae679889f0be7f10dd1f9af2b01184f40655f8d83"
+  },
+  "data_boot_word": "00000000",
+  "data_capacity_words": 16,
+  "firmware_profile": "wait_only",
+  "memory_map": {
+    "data_byte_end_inclusive": 575,
+    "data_byte_start": 512,
+    "program_byte_end_inclusive": 511,
+    "program_byte_start": 0,
+    "word_bytes": 4
+  },
+  "production_source": {
+    "path": "firmware/asic/game.s",
+    "sha256": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2"
+  },
+  "program_bytes": 380,
+  "program_capacity_words": 128,
+  "program_hex_sha256": "7aa66ed0f2ef6b8d12e952f8e4118d22c6af607b82fc68c30ace62120a471ac4",
+  "program_padding_word": "00000013",
+  "program_words": 95,
+  "reserved_program_words": 33,
+  "rom_verilog_sha256": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935",
+  "schema_version": 1,
+  "source": {
+    "path": "game.s",
+    "sha256": "1ceaf4d599fabf8087f51b7df9c760ca96098bdbd61407ab8d8df57a45b096e1"
+  },
+  "timing_json_sha256": "c01a7b4bb697457910f2e5a2914d436ae0989c184c22993e1bc5a21a93eedaaa",
+  "unified_capacity_words": 144
+}

@@ -1,0 +1,22 @@
+CASE start=00000010 duration=30000000 delta=24 counter=00000028 deadline=01c9c390 old_wait=1 elapsed_wait=1 expected=1
+CASE start=00000010 duration=30000000 delta=29999999 counter=01c9c38f deadline=01c9c390 old_wait=1 elapsed_wait=1 expected=1
+CASE start=00000010 duration=30000000 delta=30000000 counter=01c9c390 deadline=01c9c390 old_wait=0 elapsed_wait=0 expected=0
+CASE start=00000010 duration=30000000 delta=30000024 counter=01c9c3a8 deadline=01c9c390 old_wait=0 elapsed_wait=0 expected=0
+CASE start=7fffffe0 duration=30000000 delta=24 counter=7ffffff8 deadline=81c9c360 old_wait=0 elapsed_wait=1 expected=1
+CASE start=7fffffe0 duration=30000000 delta=48 counter=80000010 deadline=81c9c360 old_wait=1 elapsed_wait=1 expected=1
+CASE start=7fffffe0 duration=30000000 delta=29999999 counter=81c9c35f deadline=81c9c360 old_wait=1 elapsed_wait=1 expected=1
+CASE start=7fffffe0 duration=30000000 delta=30000000 counter=81c9c360 deadline=81c9c360 old_wait=0 elapsed_wait=0 expected=0
+CASE start=7fffffe0 duration=30000000 delta=30000024 counter=81c9c378 deadline=81c9c360 old_wait=0 elapsed_wait=0 expected=0
+CASE start=ffffffe0 duration=30000000 delta=24 counter=fffffff8 deadline=01c9c360 old_wait=1 elapsed_wait=1 expected=1
+CASE start=ffffffe0 duration=30000000 delta=48 counter=00000010 deadline=01c9c360 old_wait=1 elapsed_wait=1 expected=1
+CASE start=ffffffe0 duration=30000000 delta=29999999 counter=01c9c35f deadline=01c9c360 old_wait=1 elapsed_wait=1 expected=1
+CASE start=ffffffe0 duration=30000000 delta=30000000 counter=01c9c360 deadline=01c9c360 old_wait=0 elapsed_wait=0 expected=0
+CASE start=ffffffe0 duration=30000000 delta=30000024 counter=01c9c378 deadline=01c9c360 old_wait=0 elapsed_wait=0 expected=0
+CASE start=7fffffe0 duration=3000 delta=24 counter=7ffffff8 deadline=80000b98 old_wait=0 elapsed_wait=1 expected=1
+CASE start=7fffffe0 duration=3000 delta=2999 counter=80000b97 deadline=80000b98 old_wait=1 elapsed_wait=1 expected=1
+CASE start=7fffffe0 duration=3000 delta=3000 counter=80000b98 deadline=80000b98 old_wait=0 elapsed_wait=0 expected=0
+CASE start=ffffffe0 duration=3000 delta=24 counter=fffffff8 deadline=00000b98 old_wait=1 elapsed_wait=1 expected=1
+CASE start=ffffffe0 duration=3000 delta=2999 counter=00000b97 deadline=00000b98 old_wait=1 elapsed_wait=1 expected=1
+CASE start=ffffffe0 duration=3000 delta=3000 counter=00000b98 deadline=00000b98 old_wait=0 elapsed_wait=0 expected=0
+PASS timer_compare checks=20 old_algorithm_failures=2 corrected_algorithm_failures=0
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/asic_stage3/tb_timer_compare.v:64: $finish called at 100000 (1ps)

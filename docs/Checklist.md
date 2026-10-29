@@ -1,6 +1,6 @@
 # Checklist del Proyecto 3 en el Mac
 
-Actualizada el 29 de octubre de 2026. Progreso comprobado: 15 de 17 pasos completos. Las instalaciones y la creación del repositorio privado ya están autorizadas.
+Actualizada el 29 de octubre de 2026. Progreso comprobado: 16 de 17 pasos completos. Las instalaciones y la creación del repositorio privado ya están autorizadas.
 
 - [x] Comprobar hardware, macOS, herramientas y espacio disponible.
 - [x] Crear Proyecto 3 e inicializar Git local sin modificar Proyecto 2.
@@ -17,17 +17,15 @@ Actualizada el 29 de octubre de 2026. Progreso comprobado: 15 de 17 pasos comple
 - [x] Completar una prueba física mínima con GF180MCU.
 - [x] Implementar y verificar interfaz ASIC, reset y RF portable: simulación RTL y síntesis genérica de bloques.
 - [x] Implementar y verificar las memorias A y B, su carga real y almacenamiento FF en síntesis genérica.
-- [ ] Verificar juego completo y comparar RTL con netlist por arquitectura.
+- [x] Verificar juego completo y comparar RTL con netlist genérica por arquitectura; repetir con netlists GF180 en el cierre final.
 - [ ] Completar barridos de reloj y floorplan, mejora RTL de ruta crítica, métricas, signoff, layout anotado, informe y defensa.
 
-El enunciado y la rúbrica están revisados en Requisitos_Proyecto3.md. La recalibración temporal a 10 MHz está calculada y todavía debe implementarse y probarse. Mantener los dos cuadernos después de cada resultado relevante. No redactar prompts futuros.
+El enunciado y la rúbrica están revisados en [Requisitos_Proyecto3.md](Requisitos_Proyecto3.md). Mantener ambos cuadernos tras cada resultado relevante y no redactar prompts futuros.
 
-Docker Desktop y hello-world funcionan en ARM64. El ejemplo oficial de LibreLane 3.0.17 con GF180MCU completó el flujo y generó GDS: Magic DRC, LVS y antenas sin errores; KLayout DRC omitido por falta de configuración. El repositorio privado fue creado y la rama main se subió desde VS Code. El kit y el enunciado están incorporados. La primera adaptación RTL pasó siete pruebas. La síntesis genérica de cuatro bloques también pasó después de resolver los permisos de Docker. Las memorias A/B y el macro completo en ambas variantes también pasaron síntesis genérica.
+El firmware de producción está recalibrado a 10 MHz, con 95 instrucciones y espera por tiempo transcurrido. Se comprobaron las constantes codificadas, 20 casos dirigidos de la ALU, nueve pruebas del generador ROM y seis de perfiles. La regresión con firmware de producción pasó cuatro simulaciones, cuatro síntesis genéricas y las interfaces de memoria sobre netlist.
 
-La primera adaptación queda como referencia histórica; la etapa A/B añade memorias reales y síntesis genérica del macro completo, todavía sin flujo físico GF180. Ver Adaptacion_RTL_Etapa1.md, evidence/asic_stage1/results.json y evidence/asic_stage1_synthesis/results.json.
+El juego completo pasó en A/B: diez aciertos, dos errores/reintentos, botones mantenidos, saturación, promedio y reset. Las salidas coinciden ciclo a ciclo entre RTL y netlists genéricas del macro completo. Una prueba adicional conserva la décima de producción, acelera solo la espera inicial y comprueba también los ciclos MMIO de acierto/error/reintento. Ver [Juego_10MHz.md](Juego_10MHz.md) y [evidencia](../evidence/asic_game/results.json).
 
-El usuario volvió y concedió los permisos de Docker y Git. La cuenta personal icruzat1 de VS Code se verificó nuevamente para publicar el avance. El siguiente paso técnico es recalibrar el juego a 10 MHz y verificar rondas completas y equivalencia de juego RTL/netlist.
+El siguiente bloque corresponde al diseño físico: restricciones, mapeo GF180, barridos de período y utilización, mejora RTL de la ruta crítica, repetición funcional con netlists mapeadas, cierre temporal/físico y documentación final. No se han medido todavía área, Fmax ni signoff de Espino. El flujo físico aprobado anteriormente corresponde al ejemplo oficial spm: Magic DRC, LVS y antenas limpios; KLayout DRC omitido por falta de configuración.
 
-Memorias A/B: generador con ocho pruebas, cuatro simulaciones de interfaces/integración y cuatro corridas de síntesis. B carga 144 palabras en 144 ciclos; se verificaron 4608 bits FF reescribibles. Ver Memorias_AB.md.
-
-También pasó el ensayo funcional post-síntesis de las interfaces de memoria. No marca como completada la prueba de juego RTL/netlist, que es más amplia y sigue pendiente.
+El repositorio privado personal fue creado y se publica exclusivamente mediante icruzat1 en VS Code. Proyecto 2 y la base FPGA se conservan. Los informes de la primera adaptación y de memorias mantienen sus resultados históricos; el estado vigente está en el informe del juego.

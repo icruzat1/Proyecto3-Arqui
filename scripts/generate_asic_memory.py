@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Generate one combinational program ROM for memory A and the loader of B.
 
-The assembler and the default game remain the Proyecto 2 baseline. This script
-executes that assembler's assemble() function; it does not duplicate encoding.
+The assembler remains the Proyecto 2 baseline; the default game is the ASIC
+firmware at 10 MHz. This executes assemble(); it does not duplicate encoding.
 The generated ROM contains constants and requires no power-on file loading.
 """
 import argparse
@@ -113,7 +113,7 @@ def generate(root, source):
 def main():
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", type=Path, default=root / "baseline/proyecto2/assembler/game.s")
+    parser.add_argument("--source", type=Path, default=root / "firmware/asic/game.s")
     parser.add_argument("--output-dir", type=Path, default=root / "rtl/asic/generated")
     parser.add_argument("--check", action="store_true", help="Compare all three outputs byte-for-byte without writing")
     args = parser.parse_args()
