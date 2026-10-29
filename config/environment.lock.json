@@ -6,7 +6,7 @@
   "pdk_variant_for_environment_test": "gf180mcuD",
   "pdk_revision": "54435919abffb937387ec956209f9cf5fd2dfbee",
   "standard_cell_library_for_environment_test": "gf180mcu_fd_sc_mcu7t5v0",
-  "final_pdk_and_library_require_enunciado_confirmation": true,
+  "final_pdk_and_library_require_enunciado_confirmation": false,
   "pdk_root_relative": ".pdk",
   "docker_desktop_download_version": "4.97.0",
   "docker_desktop_dmg_sha256": "94e4ccec4a035b7dcdf67cfff0520d4b46ee873ae04b155abc0d22b333cc90ad",
@@ -21,5 +21,6 @@
   "disk_limit_gib_displayed": 460.4,
   "disk_reduction_cancelled_to_preserve_data": true,
   "container_python": "3.13.9",
-  "container_ciel": "2.4.0"
+  "container_ciel": "2.4.0",
+  "assignment_does_not_prescribe_variant_or_scl": true
 }

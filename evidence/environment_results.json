@@ -14,9 +14,7 @@
   "docker_engine_verified": true,
   "gf180_physical_smoke_test_passed": true,
   "private_github_repository_created": true,
-  "blockers": [
-    "Faltan el kit Etapa 5 y el enunciado del Proyecto 3 para continuar la implementación ASIC."
-  ],
+  "blockers": [],
   "docker_desktop_version": "4.97.0",
   "docker_engine_version": "29.9.2",
   "docker_engine_architecture": "aarch64",
@@ -31,5 +29,7 @@
   "container_project_mount": "/work",
   "container_image_digest": "sha256:24640bd645ae992fa22d4a3e18fde10d728763c78fb140184f9975aa6c7d3e5e",
   "github_private_option_confirmed_in_vscode": true,
-  "github_initial_upload_verified_commit": "db4e93373b5d2ff493555a52296acfb0db7fe942"
+  "github_initial_upload_verified_commit": "db4e93373b5d2ff493555a52296acfb0db7fe942",
+  "stage5_kit_integrated": true,
+  "assignment_reviewed": true
 }

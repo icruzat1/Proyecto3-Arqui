@@ -8,7 +8,7 @@ La carpeta de trabajo es /Users/ics/Desktop/Universidad/UAndes/Segundo Semestre 
 
 La copia portable está en baseline/proyecto2. Se excluyeron el historial Git, el informe PDF y el log de síntesis antiguo. El único cambio de RTL es la ruta de game.hex en game_top.v; evidence/portabilidad.patch registra la diferencia. evidence/proyecto2_original_sha256.json contiene las huellas de 38 archivos originales.
 
-La conversación de procedencia se llama Planificar proyecto ASIC, identificador 6ae35b1c-d08c-83e9-8b83-fdcd6ec80b13. Se recuperaron sus mensajes recientes. Falta incorporar Kit_Continuidad_Proyecto3_Etapa5.zip y el enunciado del Proyecto 3 para preservar íntegramente la auditoría, las especificaciones y los cuadernos anteriores.
+La conversación de procedencia se llama Planificar proyecto ASIC, identificador 6ae35b1c-d08c-83e9-8b83-fdcd6ec80b13. Se recuperaron sus mensajes recientes y el usuario aportó Proyecto3_Todos_los_Archivos.zip. El kit Etapa 5 y los documentos originales están incorporados en docs/referencias; las diez huellas de su manifiesto coinciden.
 
 ## Restricciones y autorizaciones
 
@@ -34,23 +34,23 @@ scripts/check_baseline.py reproduce el programa y ejecuta sim/tb_proyecto2_start
 
 La comparación de las 38 huellas confirmó que el original no cambió durante la preparación y las pruebas.
 
-## Decisiones técnicas que deben revalidarse con el enunciado
+## Decisiones técnicas y requisitos confirmados
 
 Plan recuperado: memorias A con ROM y RAM, B unificada con flip-flops y controlador de carga; reset externo activo en bajo, liberación sincronizada, botones sincronizados; conservar latencia síncrona del banco de registros. Una arquitectura por corrida física.
 
-El plan previo señala 100 ns de período y 40 por ciento de utilización final. La documentación de LibreLane identifica gf180mcuD como variante por defecto de GF180MCU. Falta confirmar biblioteca, versión de LibreLane y revisión del PDK con el enunciado, y fijarlas para reproducibilidad. Referencia: [PDK en LibreLane](https://librelane.readthedocs.io/en/stable/usage/about_pdks.html).
+El enunciado confirma 100 ns y 40 por ciento para la corrida final y exige GF180MCU; no impone una variante ni una biblioteca concretas. Se mantiene para el desarrollo gf180mcuD y gf180mcu_fd_sc_mcu7t5v0 con las versiones ya fijadas. La matriz docs/Requisitos_Proyecto3.md registra las exigencias completas.
 
-Las constantes del juego están calibradas a 25 MHz. Antes de adaptar RTL o programa, resolver su relación con el objetivo de 10 MHz. También investigar comparaciones con signo alrededor de 2^31 ciclos.
+Las constantes del juego corresponden a 25 MHz. El enunciado exige recalibrar para T de 100 ns: 30000000 ciclos para tres segundos y 1000000 por décima, en la copia ASIC. La corrección todavía no está implementada. Investigar además las comparaciones con signo alrededor de 2^31 ciclos.
 
 ## Siguiente trabajo
 
-Incorporar Kit_Continuidad_Proyecto3_Etapa5.zip y el enunciado del Proyecto 3. Revalidar las especificaciones de memorias y reloj antes de implementar la adaptación ASIC. El entorno Linux ARM64 y la prueba física GF180MCU ya funcionan.
+Conversar y preparar la tarea inmediata de adaptación ASIC antes de modificar RTL. Empezar por interfaz superior, reset y banco de registros, preservando las latencias. Las arquitecturas A/B, su carga, la ROM automática y la recalibración del programa se implementarán y verificarán por etapas. No redactar prompts futuros.
 
 ## Entorno instalado y versiones fijadas
 
 LibreLane 3.0.17 y Ciel 2.6.1 están instalados en .venv con Python 3.13.15. La comprobación de dependencias pasó. config/requirements-macos-arm64.lock.txt registra todas las versiones y config/environment.lock.json fija las principales.
 
-Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. La biblioteca final se confirmará con el enunciado. La prueba física del ejemplo ya se completó; sus resultados se detallan al final de este cuaderno.
+Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. El enunciado permite la biblioteca fijada para el desarrollo; habrá que documentar la empleada en las corridas finales. La prueba física del ejemplo ya se completó; sus resultados se detallan al final de este cuaderno.
 
 ## Docker Desktop instalado
 
@@ -89,3 +89,15 @@ KLayout DRC se omitió porque el PDK no define KLAYOUT_DRC_RUNSET; no se present
 La imagen Linux contiene Python 3.13.9 y Ciel 2.4.0; el entorno de administración del Mac usa Python 3.13.15 y Ciel 2.6.1. LibreLane es 3.0.17 en ambos. La huella de la imagen fija sus herramientas internas.
 
 El repositorio es https://github.com/icruzat1/Proyecto3-Arqui y se creó con la opción privada de VS Code. Todas las operaciones remotas se realizaron desde esa sesión personal; el conector GitHub de oficina no se usó.
+
+## Integración del kit y requisitos
+
+El kit Etapa 5 pasó la comprobación de integridad y sus diez entradas de manifiesto coinciden. Se compararon 30 archivos de código con Proyecto 2, sin diferencias. Se conservaron los documentos fuente sin modificar en docs/referencias/Etapa5 y el kit íntegro en docs/referencias. Sus instrucciones y estados antiguos son históricos; no sustituyen las preferencias actuales del usuario ni esta continuidad.
+
+El cuaderno de estudio combina las cinco etapas anteriores y la verificación del Mac, con un guion provisional de ocho partes. Se corrigió una errata de hash en la copia integrada. La matriz de requisitos recoge las secciones 3.1 a 3.7 y la rúbrica completa. El informe anterior del Proyecto 2 tiene cero bytes tanto en el ZIP como en el Mac; no bloquear la implementación por ese informe, pero incorporarlo si el usuario dispone de una copia legible.
+
+La entrega y defensa están fijadas para el 4 de noviembre de 2026 a las 10:30. El enunciado exige una mejora implementada de la ruta crítica, al menos tres puntos de reloj y tres utilizaciones o tamaños de die. Deben reportarse WNS y TNS de setup y hold en el corner típico y el más lento, además de cumplir los corners requeridos por el flujo. Fmax solo puede deducirse del menor período probado que cierre. La estimación 23000 USD/mm² es un supuesto didáctico, no una cotización.
+
+La propuesta A de 128 instrucciones y 16 datos y la B de 144 palabras son capacidades provisionales. El enunciado recomienda máximos de 256 instrucciones y 64 datos; cualquier exceso debe justificarse. El SPI bootloader y la simulación SDF son opcionales. El programa actual tiene 94 instrucciones y cero palabras de RAM ordinaria observadas estáticamente; hay que aportar evidencia de ejecución y conservar las dos estrategias exigidas.
+
+No se modificó RTL, assembler, configuración física ni firmware durante esta integración. No se prepararon prompts por adelantado. La checklist queda en 13 de 17 pasos; faltan adaptación ASIC, memorias A/B, pruebas completas y equivalencia, y los experimentos e informe finales.

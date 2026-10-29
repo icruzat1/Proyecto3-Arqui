@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "outer_zip_sha256": "72a71d6082b52fc87c77ad94fe79e44f2cb42aa2d2c49c5d86478fd314cdfaa0",
+  "stage5_zip_sha256": "cece47bf6952b74188be16f406e86277da31fe41fb9a430883383d2a826066bd",
+  "manifest_entries_verified": 10,
+  "code_files_compared_to_original_mac": 30,
+  "code_differences": [],
+  "original_project2_report_bytes": 0,
+  "reference_files_sha256": {
+    "Adaptacion_FPGA_a_ASIC_Proyecto3.md": "63fda531f57ace2a146af372785b7b746883657824d8ca31b6f645621e0fb005",
+    "Cuaderno_Proyecto3_Acumulativo.md": "898a5d42ee0cc230d82b7b015bf5ec455549f15cd4bc13357cbae09586c62c60",
+    "Cuaderno_Continuidad_Proyecto3.md": "5e5683210353489f80633d2de14c4a7a1e012dedc99f039a9beac165ed5222b7",
+    "Proyecto_3_arquitectura.pdf": "77fe5938687e837130ec118f11bf0050fc74a8fc4a3324855cdb13c87e3ed047",
+    "Plan_Pruebas_Experimentos_Proyecto3.md": "bedf3378c0aeb4231be525cec931f3a140d544ccbbad46e1a5f0f9ac794aec87",
+    "Diseno_Memorias_ASIC_Proyecto3.md": "618a6c9ccad2cee46348e53cc4f70caef30de4f0d1b9eb250e53e0c8dab3fd89",
+    "MANIFEST_Continuidad_Proyecto3.sha256": "196a8fb5f3abe0c7d15f0a3a98a602c36f7440e11d189c24306ce644f11869c7",
+    "Auditoria_Proyecto2_Etapa1.md": "e932b38f68172998eb5be721b000baaf9696acd05462a138019b25e3845805b4",
+    "LEEME_Continuidad_Proyecto3.txt": "bf762dadb26ff5967113ccc21a7bb5393d6cb79a3b756a8e005767206f1a9647"
+  }
+}

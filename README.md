@@ -30,3 +30,7 @@ Docker Desktop debe estar iniciado. Ejecutar `python3 scripts/run_librelane.py -
 El ejemplo oficial de prueba está en build/environment/spm. Se ejecuta con sus propios parámetros de 24 ns y 38 por ciento de utilización; es una comprobación del entorno, separada de la implementación ASIC del Proyecto 3.
 
 La prueba del entorno terminó con cero errores de Magic DRC, LVS y antena. KLayout DRC se omitió por falta de configuración del PDK. Consultar evidence/gf180_environment_summary.json para los resultados y límites de esa prueba.
+
+## Documentación y enunciado
+
+Los cuadernos principales integran las etapas 1 a 5 y las verificaciones del Mac. docs/Requisitos_Proyecto3.md relaciona las exigencias con la evidencia pendiente. Los originales y el kit recuperado están en docs/referencias. Entrega y defensa: 4 de noviembre de 2026, 10:30.
