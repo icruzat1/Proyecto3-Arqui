@@ -40,3 +40,7 @@ El contador tiene 32 bits y el programa usa comparaciones con signo. El umbral 2
 - ¿Qué demuestra la primera simulación? El arranque FPGA definido dentro del alcance indicado; todavía no el juego completo.
 - ¿Por qué no basta con sintetizar el código FPGA? Contiene primitivas y supuestos de inicialización que deben sustituirse para GF180MCU.
 - ¿Cómo se compararán las memorias A y B? Con el mismo programa, estímulos y referencia temporal definida, y resultados físicos separados por arquitectura.
+
+## Versiones y comprobación física
+
+LibreLane 3.0.17 y su revisión compatible de GF180MCU están descargados. Fijar versiones permite comparar corridas hechas con las mismas herramientas y bibliotecas. La instalación de LibreLane y la presencia de los archivos del PDK todavía no demuestran que el flujo físico funcione: necesitamos Docker activo y una corrida mínima GF180MCU completa.

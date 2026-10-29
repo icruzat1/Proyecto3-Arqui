@@ -1,0 +1,24 @@
+{
+  "librelane": "3.0.17",
+  "ciel": "2.6.1",
+  "python": "3.13.15",
+  "pip_check_passed": true,
+  "pdk_downloaded": true,
+  "pdk_variant_for_environment_test": "gf180mcuD",
+  "pdk_revision": "54435919abffb937387ec956209f9cf5fd2dfbee",
+  "standard_cell_library_for_environment_test": "gf180mcu_fd_sc_mcu7t5v0",
+  "pdk_configuration_files_present": true,
+  "legacy_configuration_directory": "libs.tech/openlane, compatible fallback in LibreLane config.py",
+  "docker_download_sha256_verified": true,
+  "docker_installed": false,
+  "docker_engine_verified": false,
+  "gf180_physical_smoke_test_passed": false,
+  "private_github_repository_created": false,
+  "blockers": [
+    "Permiso para /Applications/Docker.app no concedido; sin motivo detallado.",
+    "No se pudo montar el instalador desde esta sesión.",
+    "Control visual falló con ScreenCaptureKit -3811.",
+    "VS Code en actualización por el usuario.",
+    "Kit Etapa 5 y enunciado Proyecto 3 pendientes."
+  ]
+}

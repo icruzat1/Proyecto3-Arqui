@@ -16,7 +16,7 @@ Usar exclusivamente GitHub icruzat1 desde su sesión de VS Code. La interfaz de 
 
 El usuario autorizó Docker Desktop para Apple Silicon, LibreLane y GF180MCU, y crear icruzat1/Proyecto3-Arqui privado. Los términos de Docker se presentarán antes de aceptarlos. Para nuevas acciones externas o cambios importantes, preguntar o comprobar según el alcance autorizado.
 
-No modificar el Proyecto 2 original ni la configuración global de Git. El repositorio nuevo tiene main, sin commit inicial todavía. Su identidad local de commits usa icruzat1 y su dirección GitHub noreply basada en el identificador público 321519839. Se desactivó en este repositorio la reutilización de ayudantes globales de credenciales; las operaciones remotas se harán mediante VS Code personal.
+No modificar el Proyecto 2 original ni la configuración global de Git. El repositorio nuevo tiene main y el commit inicial a52aaa3, con la copia FPGA portable y la prueba de arranque. Su identidad local de commits usa icruzat1 y su dirección GitHub noreply basada en el identificador público 321519839. Se desactivó en este repositorio la reutilización de ayudantes globales de credenciales; las operaciones remotas se harán mediante VS Code personal.
 
 No preparar prompts por adelantado. Conversar cada tarea y redactar su prompt justo antes de ejecutarla cuando sea necesario. Mantener ambos cuadernos y la checklist, y terminar las respuestas con una recomendación breve de potencia de pensamiento.
 
@@ -45,3 +45,25 @@ Las constantes del juego están calibradas a 25 MHz. Antes de adaptar RTL o prog
 ## Siguiente trabajo
 
 Completar Docker Desktop, confirmar su acuerdo, asignar inicialmente 4 CPU y 12 GB de RAM, verificar Linux ARM64, instalar LibreLane en un entorno aislado y fijar GF180MCU. Crear y comprobar el repositorio privado mediante VS Code. Recuperar kit y enunciado antes de implementar la adaptación ASIC.
+
+## Entorno instalado y versiones fijadas
+
+LibreLane 3.0.17 y Ciel 2.6.1 están instalados en .venv con Python 3.13.15. La comprobación de dependencias pasó. config/requirements-macos-arm64.lock.txt registra todas las versiones y config/environment.lock.json fija las principales.
+
+Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. La biblioteca final se confirmará con el enunciado. La prueba física sigue pendiente.
+
+## Docker y acceso visual pendientes
+
+Docker Desktop 4.97.0 para Apple Silicon está descargado entre los outputs del chat. Su SHA256 coincide con la huella oficial: 94e4ccec4a035b7dcdf67cfff0520d4b46ee873ae04b155abc0d22b333cc90ad.
+
+La revisión automática no concedió escribir en /Applications/Docker.app y no indicó un motivo detallado. hdiutil y diskutil tampoco pudieron montar el instalador desde esta sesión. El control visual de Finder y VS Code falló con ScreenCaptureKit -3811. Docker no está instalado, no se aceptó su acuerdo y no se verificó Linux ni una corrida física.
+
+El usuario está actualizando VS Code. El repositorio remoto se creará únicamente desde icruzat1 en VS Code cuando esté disponible. Su creación privada ya está autorizada; no repetir la pregunta. No se llamó al conector GitHub de oficina.
+
+El usuario renombró la carpeta original a Proyecto 2. Las 38 huellas coinciden desde la nueva ubicación y Git no muestra cambios de contenido.
+
+## Modelo y aviso de aprobación
+
+Para configurar el entorno se recomienda GPT-6.1 Sol con High. Para memorias, reset, equivalencia y depuración ASIC difícil, Astra con Extra High, si está disponible. Estas son recomendaciones; no se cambió el selector del usuario. Fuente: [Modelos en ChatGPT Work](https://learn.chatgpt.com/docs/models).
+
+El usuario vio un aviso de aprobación pendiente sin una solicitud visible. El estado de este chat devolvió activo con activeFlags vacío. No quedó una solicitud abierta del agente. La causa del aviso no está confirmada. Los procesos locales de instalación terminaron antes de guardar este estado.
