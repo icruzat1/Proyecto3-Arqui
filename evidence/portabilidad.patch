@@ -1,0 +1,11 @@
+--- Proyecto2-Arqui/pochoco_soc-main/rtl/game_top.v
++++ baseline/proyecto2/pochoco_soc-main/rtl/game_top.v
+@@ -15,7 +15,7 @@
+ );
+ 
+   pochoco_soc #(
+-    .MemFile("C:/Users/wille/Proyecto2/pochoco_soc-main/sw/game.hex")
++    .MemFile("sw/game.hex")
+   ) u_pochoco (
+     .i_Clk(i_Clk),
+     .o_LED(o_LED),

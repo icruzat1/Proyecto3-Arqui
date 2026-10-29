@@ -1,0 +1,3 @@
+WARNING: /Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/baseline/proyecto2/pochoco_soc-main/rtl/pochoco_ram.v:36: $readmemh(sw/game.hex): Not enough words in the file for the requested range [0:511].
+PASS: game.hex cargado, reset liberado, PC definido, cuatro LED y contador activo en 2000 ciclos
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/sim/tb_proyecto2_startup.v:32: $finish called at 80000000 (1ps)

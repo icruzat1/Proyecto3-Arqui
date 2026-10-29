@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-29",
+  "source": "/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 2",
+  "target": "/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3",
+  "source_commit": "4d94b4e2f63c91d248e68350cdf640c3f7a86356",
+  "file_hashes_count": 38,
+  "assembler_words": 94,
+  "assembler_hex_match": {
+    "assembler/game.hex": true,
+    "pochoco_soc-main/sw/game.hex": true
+  },
+  "generated_hex_sha256": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+  "portable_change": "game_top.v: ruta absoluta Windows sustituida por sw/game.hex",
+  "original_unchanged": true,
+  "remote_repository_created": false,
+  "container_installed": false,
+  "iverilog_elaboration_exit_code": 0,
+  "ice40_model_source": "/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Arquitectura Extras/oss-cad-suite-darwin-arm64-20260826.tar!oss-cad-suite/share/yosys/ice40/cells_sim.v",
+  "startup_simulation_exit_code": 0,
+  "startup_simulation_cycles": 2000,
+  "startup_simulation_scope": "Carga de instrucciones, reset FPGA, PC definido, encendido inicial LED y contador. No valida rondas ni equivalencia ASIC.",
+  "source_directory_renamed_by_user": true
+}
