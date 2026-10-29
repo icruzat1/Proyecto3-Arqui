@@ -1,0 +1,8 @@
+{
+  "OSType": "linux",
+  "Architecture": "aarch64",
+  "NCPU": 4,
+  "MemTotal": 12481122304,
+  "ServerVersion": "29.9.2",
+  "DockerRootDir": "/var/lib/docker"
+}

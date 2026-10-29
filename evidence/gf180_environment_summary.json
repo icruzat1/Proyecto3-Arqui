@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-29",
+  "design": "spm",
+  "purpose": "Comprobar el entorno; no es la implementación ASIC de Espino",
+  "flow": "Classic",
+  "flow_completed": true,
+  "pdk": "gf180mcuD",
+  "scl": "gf180mcu_fd_sc_mcu7t5v0",
+  "clock_period_ns": 24.0,
+  "target_core_utilization_percent": 38.0,
+  "magic_drc_errors": 0,
+  "lvs_errors": 0,
+  "antenna_violating_nets": 0,
+  "route_drc_errors": 0,
+  "setup_worst_slack_ns": 0.441099613764501,
+  "hold_worst_slack_ns": 0.3787660847728578,
+  "klayout_drc": "Omitido por ausencia de KLAYOUT_DRC_RUNSET en el PDK",
+  "gds_generated": true,
+  "gds_sha256": "ceadcfc9512105b7ccae6ca1704d48296a18a4e0e459093a0688bb082c34be17",
+  "run_directory_relative": "build/environment/spm/runs/environment_gf180_first",
+  "flow_log_sha256": "992bcc4804e730ff18746817f6512e3667efce803fbb59f0bb1edf389fcec9f5",
+  "other_warnings": [
+    "Bibliotecas de tiempo repetidas al cargar algunos corners.",
+    "Dos redes flotantes informadas durante optimización.",
+    "Reglas LEF58_ENCLOSURE sin CUTCLASS no admitidas por el enrutador.",
+    "Comprobador de longitud de cables omitido por falta de umbral.",
+    "Análisis IR drop sin VSRC_LOC_FILES."
+  ]
+}

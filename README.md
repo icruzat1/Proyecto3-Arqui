@@ -4,7 +4,7 @@ Adaptación ASIC del procesador Espino y del juego del Proyecto 2, con LibreLane
 
 ## Estado
 
-La base FPGA portable reproduce las 94 instrucciones del juego y supera una simulación de arranque de 2000 ciclos. La implementación ASIC y su validación física están pendientes.
+La base FPGA portable reproduce las 94 instrucciones del juego y supera una simulación de arranque de 2000 ciclos. Docker Desktop funciona en ARM64 y el ejemplo oficial spm completó el flujo GF180MCU con GDS. La implementación ASIC de Espino y su validación física están pendientes.
 
 ## Archivos
 
@@ -22,3 +22,11 @@ Ejecutar `python3 scripts/check_baseline.py --ice40-model RUTA_AL_MODELO_CELLS_S
 El archivo del programa contiene 94 palabras para una memoria de 512. Icarus informa esa diferencia durante la carga; la prueba de arranque comprueba las instrucciones utilizadas. Todavía falta definir el contenido del resto de la memoria y verificar todas las rondas.
 
 Consultar `docs/Checklist.md` para los pasos pendientes. No ejecutar el Makefile FPGA por defecto: su destino final intenta programar la placa.
+
+## LibreLane mediante Docker
+
+Docker Desktop debe estar iniciado. Ejecutar `python3 scripts/run_librelane.py --pdk gf180mcuD --scl gf180mcu_fd_sc_mcu7t5v0 ruta/relativa/config.yaml` desde el proyecto. El lanzador utiliza la imagen ARM64 fijada en config/environment.lock.json y monta esta carpeta como /work, evitando problemas con espacios en las rutas del Mac.
+
+El ejemplo oficial de prueba está en build/environment/spm. Se ejecuta con sus propios parámetros de 24 ns y 38 por ciento de utilización; es una comprobación del entorno, separada de la implementación ASIC del Proyecto 3.
+
+La prueba del entorno terminó con cero errores de Magic DRC, LVS y antena. KLayout DRC se omitió por falta de configuración del PDK. Consultar evidence/gf180_environment_summary.json para los resultados y límites de esa prueba.

@@ -43,4 +43,18 @@ El contador tiene 32 bits y el programa usa comparaciones con signo. El umbral 2
 
 ## Versiones y comprobación física
 
-LibreLane 3.0.17 y su revisión compatible de GF180MCU están descargados. Fijar versiones permite comparar corridas hechas con las mismas herramientas y bibliotecas. La instalación de LibreLane y la presencia de los archivos del PDK todavía no demuestran que el flujo físico funcione: necesitamos Docker activo y una corrida mínima GF180MCU completa.
+LibreLane 3.0.17 y su revisión compatible de GF180MCU están descargados. Fijar versiones permite comparar corridas hechas con las mismas herramientas y bibliotecas. Docker ya ejecutó el ejemplo oficial spm con GF180MCU hasta generar GDS. Esa corrida comprueba el flujo físico para el ejemplo; Espino aún requiere implementación y verificación propias.
+
+## Primera prueba de Docker
+
+Docker Desktop 4.97.0 ejecutó hello-world correctamente como linux/arm64. Su motor informa Linux aarch64 y 4 CPU. Esto confirma que el entorno Linux funciona en la arquitectura del M4. Una prueba hello-world no verifica las herramientas de síntesis y diseño físico: para eso se ejecuta por separado el ejemplo oficial spm con GF180MCU.
+
+Los espacios en las rutas provocaron un error al leer la configuración de GF180MCU. El lanzador del proyecto utiliza /work dentro del contenedor para ofrecer rutas sencillas a las herramientas. El proyecto conserva su ubicación habitual en el Mac.
+
+## Resultado físico del ejemplo oficial
+
+El ejemplo spm terminó con cero errores en Magic DRC, LVS, antena y enrutamiento. Setup y hold tuvieron márgenes positivos de aproximadamente 0,4411 ns y 0,3788 ns. El flujo generó GDS usando 24 ns de reloj y 38 por ciento de utilización objetivo.
+
+DRC comprueba reglas geométricas; LVS compara la conectividad del layout con el circuito de referencia; antena analiza estructuras que pueden acumular carga durante fabricación. La revisión DRC de KLayout se omitió por falta de configuración en este PDK, por lo que no debe contarse como aprobada.
+
+Estos resultados pertenecen al ejemplo de instalación. La comparación de las arquitecturas A y B de Espino, sus ciclos, áreas y condiciones finales de 100 ns y 40 por ciento sigue pendiente de implementar y cotejar con el enunciado.

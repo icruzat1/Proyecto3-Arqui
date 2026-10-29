@@ -44,7 +44,7 @@ Las constantes del juego están calibradas a 25 MHz. Antes de adaptar RTL o prog
 
 ## Siguiente trabajo
 
-Completar Docker Desktop, confirmar su acuerdo, asignar inicialmente 4 CPU y 12 GB de RAM, verificar Linux ARM64, instalar LibreLane en un entorno aislado y fijar GF180MCU. Crear y comprobar el repositorio privado mediante VS Code. Recuperar kit y enunciado antes de implementar la adaptación ASIC.
+Incorporar Kit_Continuidad_Proyecto3_Etapa5.zip y el enunciado del Proyecto 3. Revalidar las especificaciones de memorias y reloj antes de implementar la adaptación ASIC. El entorno Linux ARM64 y la prueba física GF180MCU ya funcionan.
 
 ## Entorno instalado y versiones fijadas
 
@@ -52,18 +52,40 @@ LibreLane 3.0.17 y Ciel 2.6.1 están instalados en .venv con Python 3.13.15. La 
 
 Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. La biblioteca final se confirmará con el enunciado. La prueba física sigue pendiente.
 
-## Docker y acceso visual pendientes
+## Docker Desktop instalado
 
-Docker Desktop 4.97.0 para Apple Silicon está descargado entre los outputs del chat. Su SHA256 coincide con la huella oficial: 94e4ccec4a035b7dcdf67cfff0520d4b46ee873ae04b155abc0d22b333cc90ad.
+Docker Desktop 4.97.0 está instalado en Aplicaciones. El usuario trasladó la aplicación desde el instalador y completó el inicio de sesión. El motor Docker 29.9.2 devuelve Linux aarch64 y 4 CPU. Se configuraron aproximadamente 12 GiB de memoria; el motor informa 12481122304 bytes disponibles. La prueba hello-world pasó en linux/arm64.
 
-La revisión automática no concedió escribir en /Applications/Docker.app y no indicó un motivo detallado. hdiutil y diskutil tampoco pudieron montar el instalador desde esta sesión. El control visual de Finder y VS Code falló con ScreenCaptureKit -3811. Docker no está instalado, no se aceptó su acuerdo y no se verificó Linux ni una corrida física.
+Se conservó el límite de disco mostrado por Docker, 460,4 GiB asignados según el uso. La propuesta de reducirlo a 80 GiB mostró una advertencia de borrado de imágenes, contenedores y volúmenes; esa reducción se canceló.
 
-El usuario está actualizando VS Code. El repositorio remoto se creará únicamente desde icruzat1 en VS Code cuando esté disponible. Su creación privada ya está autorizada; no repetir la pregunta. No se llamó al conector GitHub de oficina.
+La imagen LibreLane 3.0.17 está descargada y su arquitectura es arm64. Su huella es sha256:24640bd645ae992fa22d4a3e18fde10d728763c78fb140184f9975aa6c7d3e5e. config/environment.lock.json fija esa imagen para las ejecuciones posteriores.
 
-El usuario renombró la carpeta original a Proyecto 2. Las 38 huellas coinciden desde la nueva ubicación y Git no muestra cambios de contenido.
+## Ruta del contenedor y prueba física de entorno
+
+El lanzador predeterminado intentó utilizar la carpeta PDK predeterminada del usuario. Al indicar el PDK local apareció una incompatibilidad de la configuración antigua GF180MCU con los espacios de las rutas del Mac. Se resolvió preparando scripts/run_librelane.py: monta únicamente Proyecto 3 como /work dentro de Linux y utiliza /work/.pdk. No se modificaron LibreLane ni los archivos del PDK.
+
+Se completó una corrida del ejemplo oficial spm de LibreLane 3.0.17, con gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. El ejemplo usa 24 ns y 38 por ciento de utilización. Sus resultados verifican el entorno y no corresponden al procesador Espino ni a las condiciones finales del curso. Los archivos están en build/environment/spm, excluidos de Git.
+
+## Repositorio personal
+
+VS Code mostró de nuevo la única cuenta icruzat1 (GitHub). Se eligió explícitamente Publish to GitHub private repository para icruzat1/Proyecto3-Arqui, y VS Code creó el remoto origin con esa URL. La subida inicial pidió una contraseña.
+
+Se retiró la opción local que imponía el nombre de usuario en las consultas de credenciales, para que el proveedor de autenticación de VS Code gestione su propia sesión. El ayudante global de credenciales permanece desactivado para este repositorio. La rama main se subió correctamente desde VS Code. El seguimiento origin/main está activado y se verificó que el commit inicial publicado coincide con el local: db4e93373b5d2ff493555a52296acfb0db7fe942. No se llamó al conector GitHub de oficina.
+
+El original se llama Proyecto 2 por decisión del usuario. Sus 38 huellas se conservaron al renombrarlo.
 
 ## Modelo y aviso de aprobación
 
 Para configurar el entorno se recomienda GPT-6.1 Sol con High. Para memorias, reset, equivalencia y depuración ASIC difícil, Astra con Extra High, si está disponible. Estas son recomendaciones; no se cambió el selector del usuario. Fuente: [Modelos en ChatGPT Work](https://learn.chatgpt.com/docs/models).
 
 El usuario vio un aviso de aprobación pendiente sin una solicitud visible. El estado de este chat devolvió activo con activeFlags vacío. No quedó una solicitud abierta del agente. La causa del aviso no está confirmada. Los procesos locales de instalación terminaron antes de guardar este estado.
+
+## Resultado de la corrida GF180MCU
+
+El flujo Classic del ejemplo spm completó su ejecución y generó GDS. El informe final aprobó antena, LVS y DRC mediante las comprobaciones disponibles. Magic DRC, LVS, antenas y DRC de enrutamiento terminaron con cero errores o redes infractoras. El peor margen setup fue 0,4411 ns y el peor margen hold fue 0,3788 ns.
+
+KLayout DRC se omitió porque el PDK no define KLAYOUT_DRC_RUNSET; no se presenta como una comprobación aprobada. También se conservaron las otras advertencias del ejemplo en evidence/gf180_environment_summary.json. evidence/gf180_environment_metrics.json contiene las métricas completas y evidence/gf180_manufacturability.rpt conserva el informe final.
+
+La imagen Linux contiene Python 3.13.9 y Ciel 2.4.0; el entorno de administración del Mac usa Python 3.13.15 y Ciel 2.6.1. LibreLane es 3.0.17 en ambos. La huella de la imagen fija sus herramientas internas.
+
+El repositorio es https://github.com/icruzat1/Proyecto3-Arqui y se creó con la opción privada de VS Code. Todas las operaciones remotas se realizaron desde esa sesión personal; el conector GitHub de oficina no se usó.

@@ -1,0 +1,6 @@
+{
+  "python": "3.13.9",
+  "architecture": "aarch64",
+  "librelane": "3.0.17",
+  "ciel": "2.4.0"
+}
