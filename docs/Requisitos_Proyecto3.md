@@ -12,13 +12,13 @@ La corrida final exige CLOCK_PERIOD de 100 ns y FP_CORE_UTIL de 40 por ciento. C
 
 | Sección | Requisito y evidencia | Estado en Espino |
 |---|---|---|
-| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz y memorias reales probadas; ambos macros pasan síntesis genérica. Flujo físico y sus mensajes finales pendientes. Ver Juego_10MHz.md; Memorias_AB.md conserva la etapa anterior. |
-| 3.2 | A: ROM combinacional generada automáticamente por el assembler desde game.s y RAM reducida. B: memoria unificada en FF dimensionada por uso real. Comparar área de celdas, FF, utilización y Fmax. | A/B implementadas y probadas; 512/4608 bits de almacenamiento FF confirmados. Área/utilización/Fmax físicos pendientes. |
-| 3.3 | Cinco celdas más usadas y explicación; módulo dominante; fracción de área del contador. Trazar RF, ALU y contador aun si se aplana la jerarquía. Comparar expectativas con síntesis. | Pendiente. |
+| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz y memorias reales probadas; ambos macros pasan síntesis genérica. Primer mapeo/floorplan ejecutados; 13 avisos lint archivados. Mensajes finales de signoff pendientes. Ver Juego_10MHz.md; Memorias_AB.md conserva la etapa anterior. |
+| 3.2 | A: ROM combinacional generada automáticamente por el assembler desde game.s y RAM reducida. B: memoria unificada en FF dimensionada por uso real. Comparar área de celdas, FF, utilización y Fmax. | A/B implementadas y probadas; 512/4608 bits de almacenamiento FF confirmados. Área mapeada y die inicial medidos; comparación final de utilización y Fmax pendiente. |
+| 3.3 | Cinco celdas más usadas y explicación; módulo dominante; fracción de área del contador. Trazar RF, ALU y contador aun si se aplana la jerarquía. Comparar expectativas con síntesis. | Cinco celdas dominantes registradas; atribución por módulo/contador pendiente. |
 | 3.4 | Al menos tres períodos incluyendo 100 ns; WNS/TNS de setup y hold en corner típico y más lento. Identificar extremos y función de ruta crítica. Implementar una mejora RTL y medir slack y área. Recalibrar game.s y regenerarlo. | Recalibración 10 MHz y corrección de espera probadas. Barridos físicos, ruta crítica y mejora RTL de esa ruta pendientes. |
 | 3.5 | Al menos tres utilizaciones o tamaños de die; área mínima exitosa; gráfico utilización frente a violaciones o congestión; justificar terminales y alimentación. Estimar costo con el factor didáctico indicado. | Pendiente. |
 | 3.6 | Reportes finales DRC, LVS y antena. Describir una violación observada, si la hubo, con ubicación y solución. Capturas de layout con RF, ALU y contador identificados. | Pendiente para Espino. |
-| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | PASS genérico en A/B: partida completa y prueba separada con solo la espera acelerada, ciclos de acierto/error y reintento coincidentes. Repetir con las netlists mapeadas GF180 del flujo final. Ver Juego_10MHz.md. |
+| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | PASS genérico en A/B: partida completa y prueba separada con solo la espera acelerada, ciclos de acierto/error y reintento coincidentes. Prueba acierto/error/reintento con GF180 mapeado también aprobada; repetir tras cambios finales. Ver Juego_10MHz.md. |
 | 4 y 5 | Informe PDF, código y README reproducible; todos los integrantes deben poder defender RTL, assembler e informe. | Cuaderno integrado y guion de estudio disponibles; entrega final pendiente. |
 
 ## Memorias y programa
@@ -52,3 +52,6 @@ El factor del ejercicio es 23000 USD por mm², bajo el supuesto de costo lineal.
 | Total | 6,0 |
 
 El README final debe permitir instalar LibreLane, reproducir la corrida final, regenerar game.s y conocer versiones exactas de herramientas, revisión del PDK y biblioteca. La defensa no requiere explícitamente diapositivas en la pauta; el guion y las ayudas visuales pueden apoyar el estudio.
+
+
+Primer punto físico 100 ns/40 % completado hasta terminales: [Mapeo y floorplan](Mapeo_Floorplan.md). No es cierre temporal ni signoff. Faltan los otros puntos del barrido y la mejora RTL medida.

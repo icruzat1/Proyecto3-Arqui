@@ -158,3 +158,18 @@ Las síntesis de producción jerárquicas cuentan 1329/5433 FF; las del juego ap
 La evidencia de esta etapa se conserva bajo evidence/asic_game: full_game, wait_only, timing, production_memories, production_synthesis, production_memory_netlist y firmware_profiles, con resumen results.json e índice README.md. Los resultados históricos de d867d61 siguen documentados en Memorias_AB.md; no sustituirlos por cifras nuevas. Los artefactos grandes están en build y se identifican mediante huellas.
 
 El documento visible para seguir esta etapa en VS Code es docs/Juego_10MHz.md. Checklist 16/17: simulación genérica completa, cierre físico pendiente. Ningún PASS de esta etapa implica mapeo GF180, área, Fmax, STA o signoff. La próxima corrida física debe usar la ROM production y config/rtl_asic.f, nunca el fixture de etapa 1. Las operaciones remotas siguen limitadas a icruzat1 mediante VS Code; no usar el conector de oficina. Consultar git log y seguimiento origin/main para confirmar el commit publicado, sin asumir que preparar los archivos equivale a subirlos.
+
+
+## Estado vigente tras primer floorplan GF180
+
+El usuario autorizó renovar permisos y continuar mientras salía; luego volvió. Se concedieron escritura en Proyecto 3 y .git, socket Docker y comunicación para este turno. No hubo nuevas decisiones pendientes. Proyecto 2, baseline y RTL de producción se conservan.
+
+Se agregaron config/gf180/a.json,b.json,constraints.sdc,pin_order.cfg. LibreLane3.0.17 usa SYNTH_PARAMETERS, no VERILOG_PARAMETERS; rutas dir:: relativas a config/gf180, por lo que no pasar --design-dir . a estas configuraciones. Scripts/run_gf180_stage4.py ejecutó stage4_100ns_u40_floorplan_a/b hasta Odb.CustomIOPlacement (incluye PDN y terminales). Runs bajo config/gf180/runs, excluidos de Git. El lanzador Docker usa --pull=never, --network=none, 4 CPU y 8 GiB por contenedor.
+
+A/B: áreas de síntesis 202151,5776/755052,2112 µm²; die 0,537649/1,949600 mm²; FF mapeados 1327/5433; cero violaciones de conectividad PDN; 28 terminales de señal más VDD/VSS. Ver docs/Mapeo_Floorplan.md y evidence/gf180_stage4/results.json. La síntesis con ABC elimina nombres de redes internas; conservar trazabilidad y no asumir nombres genéricos al escribir comprobadores.
+
+Las corridas separadas stage4_100ns_u40_wait_only_a/b produjeron netlists con espera 3000/décima 1000000. scripts/check_gf180_mapped_game.py pasó modelos PDK FUNCTIONAL sin SDF, A 10623/B 10766 ciclos. Compara salidas, no bus MMIO interno purgado. Segundo acierto después de EE observable en 302 ciclos; error 269. No sustituir la ROM production con estos perfiles.
+
+Problema pendiente: timing prePNR no cierra, WNS máximo ss −58,7269/−63,2206 ns y WNS mínimo ss −0,6939 ns. En A se trazó FF_11632_/Q→core_rst_ni→_10485_/RN, fanout 747. Corresponde a recuperación, antes de colocar/reparar; no declarar Fmax ni mejora RTL de ALU. Se conservaron 13 avisos lint por variante, sin errores, latches ni celdas sin mapear. Signoff DRC/LVS/antenas no ejecutado.
+
+Próximo trabajo: colocación y reparación de redes, CTS/ruteo y reevaluación temporal; barridos de tres períodos y tres ocupaciones, atribución de área por módulo/contador, mejora RTL medida y cierre final. Mantener 16/17 en checklist; el último bloque sigue siendo amplio. scripts/summarize_gf180_stage4.py archiva evidencias y la figura derivada del DEF del tag inicial. Publicar solo con icruzat1 desde VS Code; verificar HEAD/origin antes de afirmar la subida.

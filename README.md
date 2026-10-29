@@ -6,7 +6,7 @@ Adaptación ASIC del procesador Espino y del juego del Proyecto 2, con LibreLane
 
 El firmware ASIC está recalibrado a 10 MHz y ocupa 95 instrucciones. A usa ROM128 + RAM16 y B una memoria FF144 con carga de 144 ciclos. Ambas arquitecturas pasaron la partida completa y la comparación por ciclo entre RTL y netlists genéricas del macro completo. Una prueba adicional conserva la décima de producción y acelera únicamente la espera inicial, comprobando los ciclos de acierto, error y reintento. Ver [Juego a 10 MHz](docs/Juego_10MHz.md) y [resultados](evidence/asic_game/results.json).
 
-La base FPGA conservada reproduce sus 94 instrucciones originales. La comprobación de almacenamiento confirma 512 bits FF de RAM en A y 4608 bits reescribibles en B. El mapeo GF180, los barridos físicos, Fmax y signoff de Espino siguen pendientes. La prueba física ya completada corresponde exclusivamente al ejemplo oficial spm.
+La base FPGA conservada reproduce sus 94 instrucciones originales. La comprobación de almacenamiento confirma 512 bits FF de RAM en A y 4608 bits reescribibles en B. El primer mapeo GF180 y floorplan A/B están completados y pasó una prueba funcional con celdas GF180. El timing previo a colocación no cierra; barridos físicos, Fmax y signoff siguen pendientes. Ver [Mapeo y floorplan](docs/Mapeo_Floorplan.md). La prueba física ya completada corresponde exclusivamente al ejemplo oficial spm.
 
 ## Archivos
 

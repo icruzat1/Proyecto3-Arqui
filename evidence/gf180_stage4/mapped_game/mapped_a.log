@@ -1,0 +1,8 @@
+EVENT cycle=3058 attempt=1 active_led=2 wait_ticks=3023
+EVENT cycle=3360 correct=1 reaction_ticks=260 divisor=1000000 result=00 round_cycles=302
+EVENT cycle=6607 attempt=2 active_led=2 wait_ticks=3023
+EVENT cycle=6876 wrong=1 correct=1 result=EE round_cycles=269
+EVENT cycle=10121 attempt=3 active_led=2 wait_ticks=3023
+EVENT cycle=10423 correct=2 reaction_ticks=260 divisor=1000000 result=00 round_cycles=302
+PASS game_wait_only variant=0 cycles=10623 compared=10622 correct=2 wrong=1 attempts=3 held_checks=600 requests=1118 stores=11 ram_accesses=0 first_correct=3360 wrong_cycle=6876 second_correct=10423 first_round_cycles=302 wrong_round_cycles=269 second_round_cycles=302
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/build/gf180_mapped_game/tb_game_wait_only_mapped.v:174: $finish called at 1062300000 (1ps)

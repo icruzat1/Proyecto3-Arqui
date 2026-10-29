@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640">
+<rect width="1100" height="640" fill="#f7f9fc"/>
+<g font-family="Arial,sans-serif" fill="#15243b">
+<text x="40" y="35" font-size="24">Primer floorplan GF180 · A y B a la misma escala</text>
+<text x="40" y="61" font-size="14">Contorno, núcleo y terminales extraídos del DEF. No muestra colocación ni ruteo de señales.</text>
+<text x="90" y="284.58979999999997" font-size="21">Memoria A</text>
+<text x="90" y="305.58979999999997" font-size="13">724.34 × 742.26 µm</text>
+<rect x="90" y="319.58979999999997" width="195.57180000000002" height="200.4102" fill="#e2eaf3" stroke="#15243b" stroke-width="2"/>
+<rect x="91.8144" y="324.19599999999997" width="191.8728" height="191.57040000000003" fill="white" stroke="#94a3b8" stroke-dasharray="4 3"/>
+<rect x="91.8144" y="345.6205" width="191.8728" height="0.43200000000000005" fill="#e35d6a" opacity=".65"/>
+<rect x="91.8144" y="386.9791" width="191.8728" height="0.4319999999999985" fill="#e35d6a" opacity=".65"/>
+<rect x="91.8144" y="428.33770000000004" width="191.8728" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="91.8144" y="469.6963" width="191.8728" height="0.43199999999999084" fill="#e35d6a" opacity=".65"/>
+<rect x="91.8144" y="511.0549" width="191.8728" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="261.8928000000001" y="324.115" width="0.43199999999999084" height="191.7324" fill="#e35d6a" opacity=".65"/>
+<rect x="220.4208" y="324.115" width="0.4319999999999985" height="191.7324" fill="#e35d6a" opacity=".65"/>
+<rect x="178.9488" y="324.115" width="0.43200000000000044" height="191.7324" fill="#e35d6a" opacity=".65"/>
+<rect x="137.47680000000003" y="324.115" width="0.4319999999999985" height="191.7324" fill="#e35d6a" opacity=".65"/>
+<rect x="96.0048" y="324.115" width="0.43200000000000616" height="191.7324" fill="#e35d6a" opacity=".65"/>
+<rect x="91.8144" y="344.72950000000003" width="191.8728" height="0.43200000000000005" fill="#397fb8" opacity=".65"/>
+<rect x="91.8144" y="386.0881" width="191.8728" height="0.4319999999999985" fill="#397fb8" opacity=".65"/>
+<rect x="91.8144" y="427.44669999999996" width="191.8728" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="91.8144" y="468.8053" width="191.8728" height="0.43199999999999084" fill="#397fb8" opacity=".65"/>
+<rect x="91.8144" y="510.16389999999996" width="191.8728" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="262.78380000000004" y="324.115" width="0.43200000000000616" height="191.7324" fill="#397fb8" opacity=".65"/>
+<rect x="221.3118" y="324.115" width="0.4320000000000023" height="191.7324" fill="#397fb8" opacity=".65"/>
+<rect x="179.83980000000003" y="324.115" width="0.43200000000000044" height="191.7324" fill="#397fb8" opacity=".65"/>
+<rect x="138.36780000000002" y="324.115" width="0.4319999999999985" height="191.7324" fill="#397fb8" opacity=".65"/>
+<rect x="96.89580000000001" y="324.115" width="0.43200000000000616" height="191.7324" fill="#397fb8" opacity=".65"/>
+<circle cx="90.0756" cy="505.1068" r="2.8" fill="#163f63"><title>btn_i[0]</title></circle>
+<circle cx="90.0756" cy="476.6812" r="2.8" fill="#163f63"><title>btn_i[1]</title></circle>
+<circle cx="90.0756" cy="448.25559999999996" r="2.8" fill="#163f63"><title>btn_i[2]</title></circle>
+<circle cx="90.0756" cy="419.83" r="2.8" fill="#163f63"><title>btn_i[3]</title></circle>
+<circle cx="138.762" cy="319.6654" r="2.8" fill="#163f63"><title>clk_i</title></circle>
+<circle cx="285.4962" cy="499.6636" r="2.8" fill="#163f63"><title>leds_o[0]</title></circle>
+<circle cx="285.4962" cy="459.7468" r="2.8" fill="#163f63"><title>leds_o[1]</title></circle>
+<circle cx="285.4962" cy="419.83" r="2.8" fill="#163f63"><title>leds_o[2]</title></circle>
+<circle cx="285.4962" cy="379.91319999999996" r="2.8" fill="#163f63"><title>leds_o[3]</title></circle>
+<circle cx="236.43720000000002" cy="319.6654" r="2.8" fill="#163f63"><title>rst_ni</title></circle>
+<circle cx="97.3332" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[0]</title></circle>
+<circle cx="111.2436" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[1]</title></circle>
+<circle cx="125.154" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[2]</title></circle>
+<circle cx="139.0644" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[3]</title></circle>
+<circle cx="152.97480000000002" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[4]</title></circle>
+<circle cx="166.8852" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[5]</title></circle>
+<circle cx="180.79559999999998" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[6]</title></circle>
+<circle cx="194.70600000000002" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[0]</title></circle>
+<circle cx="208.6164" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[1]</title></circle>
+<circle cx="222.5268" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[2]</title></circle>
+<circle cx="236.43720000000002" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[3]</title></circle>
+<circle cx="250.3476" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[4]</title></circle>
+<circle cx="264.25800000000004" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[5]</title></circle>
+<circle cx="278.1684" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[6]</title></circle>
+<circle cx="90.0756" cy="391.4044" r="2.8" fill="#163f63"><title>spi_cs_n_i</title></circle>
+<circle cx="285.4962" cy="339.9964" r="2.8" fill="#163f63"><title>spi_miso_o</title></circle>
+<circle cx="90.0756" cy="334.55319999999995" r="2.8" fill="#163f63"><title>spi_mosi_i</title></circle>
+<circle cx="90.0756" cy="362.9788" r="2.8" fill="#163f63"><title>spi_sclk_i</title></circle>
+<text x="90" y="552" font-size="16">Die: 0.538 mm² · objetivo 40 %</text>
+<text x="550" y="105.57709999999997" font-size="21">Memoria B</text>
+<text x="550" y="126.57709999999997" font-size="13">1387.35 × 1405.27 µm</text>
+<rect x="550" y="140.57709999999997" width="374.5845" height="379.4229" fill="#e2eaf3" stroke="#15243b" stroke-width="2"/>
+<rect x="551.8144" y="145.32639999999998" width="370.89360000000005" height="370.44" fill="white" stroke="#94a3b8" stroke-dasharray="4 3"/>
+<rect x="551.8144" y="180.1861" width="370.89360000000005" height="0.43200000000000005" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="221.54470000000003" width="370.89360000000005" height="0.4319999999999985" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="262.9033" width="370.89360000000005" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="304.26189999999997" width="370.89360000000005" height="0.43199999999999084" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="345.6205" width="370.89360000000005" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="386.9791" width="370.89360000000005" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="428.3377" width="370.89360000000005" height="0.43200000000000616" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="469.6963" width="370.89360000000005" height="0.43199999999997546" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="511.05490000000003" width="370.89360000000005" height="0.43199999999997546" fill="#e35d6a" opacity=".65"/>
+<rect x="887.7808" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="846.3088" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="804.8368" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="763.3648000000001" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="721.8928" y="145.24539999999996" width="0.43200000000000044" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="680.4208" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="638.9488" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="597.4768" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="556.0047999999999" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#e35d6a" opacity=".65"/>
+<rect x="551.8144" y="179.2951" width="370.89360000000005" height="0.43200000000000005" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="220.65369999999996" width="370.89360000000005" height="0.4319999999999985" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="262.0123" width="370.89360000000005" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="303.3709" width="370.89360000000005" height="0.43199999999999084" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="344.72950000000003" width="370.89360000000005" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="386.08810000000005" width="370.89360000000005" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="427.4467" width="370.89360000000005" height="0.43200000000000616" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="468.80530000000005" width="370.89360000000005" height="0.43199999999997546" fill="#397fb8" opacity=".65"/>
+<rect x="551.8144" y="510.16390000000007" width="370.89360000000005" height="0.43199999999997546" fill="#397fb8" opacity=".65"/>
+<rect x="888.6718000000001" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="847.1998000000001" y="145.24539999999996" width="0.43199999999999084" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="805.7278" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="764.2558" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="722.7837999999999" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="681.3118" y="145.24539999999996" width="0.4319999999999985" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="639.8398" y="145.24539999999996" width="0.43199999999999084" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="598.3678" y="145.24539999999996" width="0.43199999999997546" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<rect x="556.8958" y="145.24539999999996" width="0.43200000000000616" height="370.6020000000001" fill="#397fb8" opacity=".65"/>
+<circle cx="550.0756" cy="492.7084" r="2.8" fill="#163f63"><title>btn_i[0]</title></circle>
+<circle cx="550.0756" cy="438.5788" r="2.8" fill="#163f63"><title>btn_i[1]</title></circle>
+<circle cx="550.0756" cy="384.4492" r="2.8" fill="#163f63"><title>btn_i[2]</title></circle>
+<circle cx="550.0756" cy="330.3196" r="2.8" fill="#163f63"><title>btn_i[3]</title></circle>
+<circle cx="643.5172" cy="140.65269999999998" r="2.8" fill="#163f63"><title>clk_i</title></circle>
+<circle cx="924.5089" cy="482.1244" r="2.8" fill="#163f63"><title>leds_o[0]</title></circle>
+<circle cx="924.5089" cy="406.222" r="2.8" fill="#163f63"><title>leds_o[1]</title></circle>
+<circle cx="924.5089" cy="330.3196" r="2.8" fill="#163f63"><title>leds_o[2]</title></circle>
+<circle cx="924.5089" cy="254.41719999999998" r="2.8" fill="#163f63"><title>leds_o[3]</title></circle>
+<circle cx="830.7028" cy="140.65269999999998" r="2.8" fill="#163f63"><title>rst_ni</title></circle>
+<circle cx="564.2884" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[0]</title></circle>
+<circle cx="590.8996" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[1]</title></circle>
+<circle cx="617.5108" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[2]</title></circle>
+<circle cx="644.1220000000001" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[3]</title></circle>
+<circle cx="670.7332" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[4]</title></circle>
+<circle cx="697.3444" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[5]</title></circle>
+<circle cx="723.9556" cy="519.9244" r="2.8" fill="#163f63"><title>seg1_o[6]</title></circle>
+<circle cx="750.5668000000001" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[0]</title></circle>
+<circle cx="777.178" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[1]</title></circle>
+<circle cx="803.7892" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[2]</title></circle>
+<circle cx="830.4004" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[3]</title></circle>
+<circle cx="857.0116" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[4]</title></circle>
+<circle cx="883.6228000000001" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[5]</title></circle>
+<circle cx="910.234" cy="519.9244" r="2.8" fill="#163f63"><title>seg2_o[6]</title></circle>
+<circle cx="550.0756" cy="276.19" r="2.8" fill="#163f63"><title>spi_cs_n_i</title></circle>
+<circle cx="924.5089" cy="178.51479999999998" r="2.8" fill="#163f63"><title>spi_miso_o</title></circle>
+<circle cx="550.0756" cy="167.93079999999998" r="2.8" fill="#163f63"><title>spi_mosi_i</title></circle>
+<circle cx="550.0756" cy="222.06039999999996" r="2.8" fill="#163f63"><title>spi_sclk_i</title></circle>
+<text x="550" y="552" font-size="16">Die: 1.950 mm² · objetivo 40 %</text>
+<text x="40" y="595" font-size="14">Rojo: terminales de VDD · azul: terminales de VSS · puntos: 28 señales · núcleo: línea discontinua.</text>
+<text x="40" y="620" font-size="14">La red de alimentación no tiene violaciones de conectividad reportadas; timing y signoff siguen pendientes.</text>
+</g></svg>

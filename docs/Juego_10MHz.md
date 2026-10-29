@@ -2,6 +2,8 @@
 
 29 de octubre de 2026. Esta etapa adapta las constantes de tiempo y verifica una partida completa en las memorias A y B antes de comenzar el floorplan.
 
+Actualización posterior: ya se ejecutó el primer mapeo y floorplan y una prueba con celdas GF180; ver [Mapeo y floorplan](Mapeo_Floorplan.md). El resto de este informe conserva la evidencia de la etapa genérica.
+
 ## Estado comprobado
 
 El firmware ASIC está recalibrado y el macro completo pasó las pruebas del juego en ambas arquitecturas, antes y después de síntesis genérica. Se verificaron una partida de diez rondas y, por separado, acierto/error/reintento acelerando únicamente la espera inicial. La implementación física y la repetición con netlists mapeadas a GF180 siguen pendientes. [Resumen verificable](../evidence/asic_game/results.json).

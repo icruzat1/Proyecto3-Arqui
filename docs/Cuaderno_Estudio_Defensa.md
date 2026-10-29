@@ -473,3 +473,22 @@ La síntesis de producción jerárquica registra 1329/5433 FF genéricos; las s�
 5. ¿Qué sigue? Restricciones y mapeo, tres períodos, tres utilizaciones, mejora RTL de ruta crítica medida, cierre final a 100 ns/40 %, informe y defensa.
 
 El [informe del juego](Juego_10MHz.md) y el [resumen de evidencia](../evidence/asic_game/results.json) contienen los resultados vigentes. Los nueve casos del generador ROM, seis de perfiles, cuatro simulaciones de producción, cuatro síntesis y el ensayo de interfaces post-síntesis también pasaron. La checklist queda en 16/17; el cierre físico y la entrega siguen pendientes.
+
+
+## Primer mapeo y floorplan GF180
+
+El [informe físico inicial](Mapeo_Floorplan.md) incluye tablas, figura a escala, rutas temporales y límites. A y B ya se mapearon a celdas reales GF180 y llegaron a alimentación y terminales a 100 ns/40 %. La imagen muestra geometría extraída de DEF, todavía sin colocación lógica ni ruteo.
+
+Para defender el área hay que distinguir: suma de celdas lógicas (202151,5776/755052,2112 µm²), núcleo disponible (504213/1884690 µm²) y die con márgenes (0,537649/1,949600 mm²). Añadir taps/endcaps cambia el área de instancias. El 40 % solicitado no es una medición de ocupación final. B usa 4608 FF sin reset directo para la memoria y muchos multiplexores; esa diferencia se refleja en área física, además del conteo genérico anterior.
+
+La simulación con modelos funcionales GF180 pasó en A/B: dos aciertos, un error y reintento, con idénticas salidas por ciclo. Se conserva la décima de 1000000 ciclos y solo se reduce la espera inicial. Tras mostrar EE, el segundo acierto vuelve a 00 a los mismos 302 ciclos desde el LED activo. Las señales internas MMIO se optimizan durante mapeo; no se afirma compararlas en esta prueba. Las trazas genéricas anteriores sí las comparaban. No usamos SDF ni simulación eléctrica de alimentación.
+
+El análisis temporal previo a colocación **no pasó**. En la esquina lenta el WNS máximo es −58,7269 ns en A y −63,2206 ns en B; también hay violaciones mínimas. La peor ruta de A parte del registro de liberación del reset y llega al pin RN de un FF. La red core_rst_ni tiene 747 cargas y todavía no fue reparada después de colocación. No confundir una ruta de recuperación del reset con la ruta ALU ni esconderla mediante una excepción para mejorar el reporte.
+
+Preguntas de práctica:
+
+1. ¿Por qué puede pasar la simulación y fallar timing? La simulación funcional sin retardos comprueba valores y ciclos; no mide el tiempo eléctrico de propagación ni recuperación de un FF.
+2. ¿Por qué el floorplan terminó si hay slack negativo? Detuvimos el flujo antes de los pasos finales que exigen cierre; terminar esta etapa no significa tener un chip listo.
+3. ¿Cero violaciones de alimentación significa signoff? No: solo es la conectividad comprobada por esa etapa, sin equivaler a caída IR, DRC o LVS completos.
+4. ¿Qué debemos hacer antes de cambiar RTL por timing? Colocar y reparar las redes, estudiar las rutas resultantes y recién entonces medir una mejora RTL contra la misma referencia.
+5. ¿Qué significan los 13 avisos de lint? Hay bits MMIO ignorados, señales redundantes y límites heredados de la ISA/traps; los logs guardan archivo y línea, sin ocultarlos con supresiones nuevas.

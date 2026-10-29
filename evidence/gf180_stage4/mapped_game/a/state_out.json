@@ -1,0 +1,14 @@
+{
+    "json_h": "/work/config/gf180/runs/stage4_100ns_u40_wait_only_a/05-yosys-jsonheader/asic_top.h.json",
+    "nl": "/work/config/gf180/runs/stage4_100ns_u40_wait_only_a/06-yosys-synthesis/asic_top.nl.v",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 13,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 6438,
+        "design__instance__area": 203624.5568,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}

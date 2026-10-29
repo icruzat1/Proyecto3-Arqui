@@ -19,7 +19,8 @@ for key in ["GITHUB_TOKEN", "GH_TOKEN"]:
 docker = shutil.which("docker", path=env.get("PATH"))
 if not docker:
     raise SystemExit("No se encuentra Docker. Abre Docker Desktop y comprueba su instalación.")
-command = [docker, "run", "--rm", "--platform", "linux/arm64", "--user", f"{os.getuid()}:{os.getgid()}",
+command = [docker, "run", "--rm", "--pull=never", "--network=none", "--cpus", "4", "--memory", "8g",
+           "--platform", "linux/arm64", "--user", f"{os.getuid()}:{os.getgid()}",
            "--mount", f"type=bind,source={root},target=/work", "--workdir", "/work",
            "--env", "PDK_ROOT=/work/.pdk", lock["container_image"],
            "python3", "-m", "librelane", *sys.argv[1:]]

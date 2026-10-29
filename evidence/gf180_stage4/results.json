@@ -1,0 +1,901 @@
+{
+  "scope": "Initial mapped synthesis and floorplan through custom IO placement; no placement/CTS/routing signoff",
+  "clock_period_ns": 100,
+  "target_core_utilization_percent": 40,
+  "physical_signoff": false,
+  "timing_closed": false,
+  "floorplan_runs_passed": true,
+  "runs": {
+    "a": {
+      "input_sha256": {
+        "config/environment.lock.json": "37b4900a9add88afcf7d6969bc7cce5050df6695e2df4871f728a035daef77d2",
+        "config/gf180/a.json": "c019fff23b6241deba33d33259955987cc23add0d31a3d3b0d498fd1f31808f3",
+        "config/gf180/constraints.sdc": "586bdd8441a5176e32e0a4ef2ac8becc9938a1b6ce415a9f129811e4bc5d7e84",
+        "config/gf180/pin_order.cfg": "a839325155e7fc7b85ed8ba8650a1202b50bab8e008802c5a16cd4e3c04a7a2a",
+        "config/rtl_asic.f": "c9ef0bca706c506d7f08f254a828c0239201f051228feb0741b8cec31ce1164e",
+        "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+        "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+        "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+        "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+        "rtl/asic/generated/asic_program_rom.v": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7",
+        "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+        "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+        "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+        "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+        "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+        "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+        "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+        "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+        "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+        "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+        "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+        "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+        "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+        "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+        "scripts/run_gf180_stage4.py": "bff07f2c4c816a98759be60918c475b8725fe629aaab09fc588253345dc0dc93",
+        "scripts/run_librelane.py": "9cfcd1bfd90155bf0b80529a0e353954a6adbaa7bbdf76ab711ef724c5cd9be5"
+      },
+      "synthesis_cell_count": 6564,
+      "synthesis_cell_area_um2": 202151.5776,
+      "mapped_sequential_cells": 1327,
+      "top_five_cells_by_count": [
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__dffrnq_1",
+          "count": 1323,
+          "cell_area_um2": 74.6368
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__nand2_1",
+          "count": 1000,
+          "cell_area_um2": 10.976
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__mux2_2",
+          "count": 805,
+          "cell_area_um2": 32.928
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__oai21_1",
+          "count": 565,
+          "cell_area_um2": 17.5616
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__aoi22_1",
+          "count": 551,
+          "cell_area_um2": 19.7568
+        }
+      ],
+      "floorplan_metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 13,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 10222,
+        "design__instance__area": 218212,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0,
+        "design__max_slew_violation__count__corner:nom_tt_025C_5v00": 5843,
+        "design__max_fanout_violation__count__corner:nom_tt_025C_5v00": 511,
+        "design__max_cap_violation__count__corner:nom_tt_025C_5v00": 145,
+        "power__internal__total": 0.009327888488769531,
+        "power__switching__total": 4.466119935386814e-05,
+        "power__leakage__total": 1.496032155046123e-06,
+        "power__total": 0.009374045766890049,
+        "clock__skew__worst_hold__corner:nom_tt_025C_5v00": -1.3039258930550996,
+        "clock__skew__worst_setup__corner:nom_tt_025C_5v00": 1.3039258930550996,
+        "timing__hold__ws__corner:nom_tt_025C_5v00": -0.4848593885846199,
+        "timing__setup__ws__corner:nom_tt_025C_5v00": 9.650378547204298,
+        "timing__hold__tns__corner:nom_tt_025C_5v00": -3.5957018380519847,
+        "timing__setup__tns__corner:nom_tt_025C_5v00": 0,
+        "timing__hold__wns__corner:nom_tt_025C_5v00": -0.4848593885846199,
+        "timing__setup__wns__corner:nom_tt_025C_5v00": 0,
+        "timing__hold_vio__count__corner:nom_tt_025C_5v00": 9,
+        "timing__hold_r2r__ws__corner:nom_tt_025C_5v00": 0.249517,
+        "timing__hold_r2r_vio__count__corner:nom_tt_025C_5v00": 0,
+        "timing__setup_vio__count__corner:nom_tt_025C_5v00": 0,
+        "timing__setup_r2r__ws__corner:nom_tt_025C_5v00": 9.650378,
+        "timing__setup_r2r_vio__count__corner:nom_tt_025C_5v00": 0,
+        "design__max_slew_violation__count__corner:nom_ss_125C_4v50": 7756,
+        "design__max_fanout_violation__count__corner:nom_ss_125C_4v50": 511,
+        "design__max_cap_violation__count__corner:nom_ss_125C_4v50": 149,
+        "clock__skew__worst_hold__corner:nom_ss_125C_4v50": -2.03718736535076,
+        "clock__skew__worst_setup__corner:nom_ss_125C_4v50": 2.03718736535076,
+        "timing__hold__ws__corner:nom_ss_125C_4v50": -0.6938962378870501,
+        "timing__setup__ws__corner:nom_ss_125C_4v50": -58.72692720567182,
+        "timing__hold__tns__corner:nom_ss_125C_4v50": -4.467881302500366,
+        "timing__setup__tns__corner:nom_ss_125C_4v50": -86125.53454275853,
+        "timing__hold__wns__corner:nom_ss_125C_4v50": -0.6938962378870501,
+        "timing__setup__wns__corner:nom_ss_125C_4v50": -58.72692720567182,
+        "timing__hold_vio__count__corner:nom_ss_125C_4v50": 9,
+        "timing__hold_r2r__ws__corner:nom_ss_125C_4v50": 0.716908,
+        "timing__hold_r2r_vio__count__corner:nom_ss_125C_4v50": 0,
+        "timing__setup_vio__count__corner:nom_ss_125C_4v50": 1928,
+        "timing__setup_r2r__ws__corner:nom_ss_125C_4v50": -58.726929,
+        "timing__setup_r2r_vio__count__corner:nom_ss_125C_4v50": 1928,
+        "design__max_slew_violation__count__corner:nom_ff_n40C_5v50": 5123,
+        "design__max_fanout_violation__count__corner:nom_ff_n40C_5v50": 511,
+        "design__max_cap_violation__count__corner:nom_ff_n40C_5v50": 143,
+        "clock__skew__worst_hold__corner:nom_ff_n40C_5v50": -0.9630421177549202,
+        "clock__skew__worst_setup__corner:nom_ff_n40C_5v50": 0.9630421177549202,
+        "timing__hold__ws__corner:nom_ff_n40C_5v50": -0.3938811055467965,
+        "timing__setup__ws__corner:nom_ff_n40C_5v50": 37.15598600630451,
+        "timing__hold__tns__corner:nom_ff_n40C_5v50": -3.2129388947662862,
+        "timing__setup__tns__corner:nom_ff_n40C_5v50": 0,
+        "timing__hold__wns__corner:nom_ff_n40C_5v50": -0.3938811055467965,
+        "timing__setup__wns__corner:nom_ff_n40C_5v50": 0,
+        "timing__hold_vio__count__corner:nom_ff_n40C_5v50": 9,
+        "timing__hold_r2r__ws__corner:nom_ff_n40C_5v50": 0.051642,
+        "timing__hold_r2r_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "timing__setup_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "timing__setup_r2r__ws__corner:nom_ff_n40C_5v50": 37.155987,
+        "timing__setup_r2r_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "design__max_slew_violation__count": 7756,
+        "design__max_fanout_violation__count": 511,
+        "design__max_cap_violation__count": 149,
+        "clock__skew__worst_hold": -0.9630421177549202,
+        "clock__skew__worst_setup": 0.9630421177549202,
+        "timing__hold__ws": -0.6938962378870501,
+        "timing__setup__ws": -58.72692720567182,
+        "timing__hold__tns": -4.467881302500366,
+        "timing__setup__tns": -86125.53454275853,
+        "timing__hold__wns": -0.6938962378870501,
+        "timing__setup__wns": -58.72692720567182,
+        "timing__hold_vio__count": 27,
+        "timing__hold_r2r__ws": 0.051642,
+        "timing__hold_r2r_vio__count": 0,
+        "timing__setup_vio__count": 1928,
+        "timing__setup_r2r__ws": -58.726929,
+        "timing__setup_r2r_vio__count": 1928,
+        "design__die__bbox": "0.0 0.0 724.34 742.26",
+        "design__core__bbox": "6.72 15.68 717.36 725.2",
+        "design__io": 30,
+        "design__die__area": 537649,
+        "design__core__area": 504213,
+        "design__instance__count__stdcell": 10222,
+        "design__instance__area__stdcell": 218212,
+        "design__instance__count__macros": 0,
+        "design__instance__area__macros": 0,
+        "design__instance__count__padcells": 0,
+        "design__instance__area__padcells": 0,
+        "design__instance__count__cover": 0,
+        "design__instance__area__cover": 0,
+        "design__instance__utilization": 0.432776,
+        "design__instance__utilization__stdcell": 0.432776,
+        "design__rows": 181,
+        "design__rows:GF018hv5v_mcu_sc7": 181,
+        "design__sites": 229689,
+        "design__sites:GF018hv5v_mcu_sc7": 229689,
+        "design__instance__count__class:tie_cell": 2,
+        "design__instance__area__class:tie_cell": 17.5616,
+        "design__instance__count__class:inverter": 240,
+        "design__instance__area__class:inverter": 2107.39,
+        "design__instance__count__class:sequential_cell": 1327,
+        "design__instance__area__class:sequential_cell": 99060.6,
+        "design__instance__count__class:multi_input_combinational_cell": 4995,
+        "design__instance__area__class:multi_input_combinational_cell": 100966,
+        "flow__warnings__count": 1,
+        "flow__errors__count": 0,
+        "flow__warnings__count:ODB-0220": 1,
+        "flow__warnings__type_count": 1,
+        "flow__warnings__count:ORD-0039": 1,
+        "design__instance__count__class:endcap_cell": 362,
+        "design__instance__area__class:endcap_cell": 1589.32,
+        "design__instance__count__class:tap_cell": 3296,
+        "design__instance__area__class:tap_cell": 14470.8,
+        "design__power_grid_violation__count__net:VSS": 0,
+        "design__power_grid_violation__count__net:VDD": 0,
+        "design__power_grid_violation__count": 0
+      },
+      "signal_terminals": 28,
+      "power_terminals": 2,
+      "synthesis_netlist_sha256": "6a417b628f50153c3d5370401715075656abc36c8d4f5108488564578fbb1c05",
+      "floorplan_def_sha256": "28b0437d45fbfd8815386ed0d152f9f932b250fc933b2a092b2823712c50edd4",
+      "warning_count": 13
+    },
+    "b": {
+      "input_sha256": {
+        "config/environment.lock.json": "37b4900a9add88afcf7d6969bc7cce5050df6695e2df4871f728a035daef77d2",
+        "config/gf180/b.json": "bcc840bcfaab6b859443aef4602fd224a827b3a9344c62ef10d964d74955fdcf",
+        "config/gf180/constraints.sdc": "586bdd8441a5176e32e0a4ef2ac8becc9938a1b6ce415a9f129811e4bc5d7e84",
+        "config/gf180/pin_order.cfg": "a839325155e7fc7b85ed8ba8650a1202b50bab8e008802c5a16cd4e3c04a7a2a",
+        "config/rtl_asic.f": "c9ef0bca706c506d7f08f254a828c0239201f051228feb0741b8cec31ce1164e",
+        "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+        "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+        "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+        "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+        "rtl/asic/generated/asic_program_rom.v": "51c23d14318cfff4b0198c4dbd0fcafa447bed3e800d6fb4f12e0734330a8bd7",
+        "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+        "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+        "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+        "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+        "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+        "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+        "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+        "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+        "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+        "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+        "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+        "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+        "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+        "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+        "scripts/run_gf180_stage4.py": "bff07f2c4c816a98759be60918c475b8725fe629aaab09fc588253345dc0dc93",
+        "scripts/run_librelane.py": "9cfcd1bfd90155bf0b80529a0e353954a6adbaa7bbdf76ab711ef724c5cd9be5"
+      },
+      "synthesis_cell_count": 22861,
+      "synthesis_cell_area_um2": 755052.2112,
+      "mapped_sequential_cells": 5433,
+      "top_five_cells_by_count": [
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__mux2_2",
+          "count": 4686,
+          "cell_area_um2": 32.928
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__dffq_1",
+          "count": 4608,
+          "cell_area_um2": 63.6608
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__oai21_1",
+          "count": 2163,
+          "cell_area_um2": 17.5616
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__oai22_1",
+          "count": 1706,
+          "cell_area_um2": 21.952
+        },
+        {
+          "cell": "gf180mcu_fd_sc_mcu7t5v0__nand2_1",
+          "count": 1575,
+          "cell_area_um2": 10.976
+        }
+      ],
+      "floorplan_metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 13,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 35885,
+        "design__instance__area": 812233,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0,
+        "design__max_slew_violation__count__corner:nom_tt_025C_5v00": 40102,
+        "design__max_fanout_violation__count__corner:nom_tt_025C_5v00": 1066,
+        "design__max_cap_violation__count__corner:nom_tt_025C_5v00": 161,
+        "power__internal__total": 0.03536158800125122,
+        "power__switching__total": 5.142964801052585e-05,
+        "power__leakage__total": 5.78579511056887e-06,
+        "power__total": 0.0354188047349453,
+        "clock__skew__worst_hold__corner:nom_tt_025C_5v00": -4.389313037271632,
+        "clock__skew__worst_setup__corner:nom_tt_025C_5v00": 4.389313037271632,
+        "timing__hold__ws__corner:nom_tt_025C_5v00": -0.4848593885846199,
+        "timing__setup__ws__corner:nom_tt_025C_5v00": 9.540972726371429,
+        "timing__hold__tns__corner:nom_tt_025C_5v00": -3.5957018380519847,
+        "timing__setup__tns__corner:nom_tt_025C_5v00": 0,
+        "timing__hold__wns__corner:nom_tt_025C_5v00": -0.4848593885846199,
+        "timing__setup__wns__corner:nom_tt_025C_5v00": 0,
+        "timing__hold_vio__count__corner:nom_tt_025C_5v00": 9,
+        "timing__hold_r2r__ws__corner:nom_tt_025C_5v00": 0.249517,
+        "timing__hold_r2r_vio__count__corner:nom_tt_025C_5v00": 0,
+        "timing__setup_vio__count__corner:nom_tt_025C_5v00": 0,
+        "timing__setup_r2r__ws__corner:nom_tt_025C_5v00": 9.540973,
+        "timing__setup_r2r_vio__count__corner:nom_tt_025C_5v00": 0,
+        "design__max_slew_violation__count__corner:nom_ss_125C_4v50": 43347,
+        "design__max_fanout_violation__count__corner:nom_ss_125C_4v50": 1066,
+        "design__max_cap_violation__count__corner:nom_ss_125C_4v50": 162,
+        "clock__skew__worst_hold__corner:nom_ss_125C_4v50": -7.239182791453814,
+        "clock__skew__worst_setup__corner:nom_ss_125C_4v50": 7.239182791453814,
+        "timing__hold__ws__corner:nom_ss_125C_4v50": -0.6938962378870501,
+        "timing__setup__ws__corner:nom_ss_125C_4v50": -63.22060565110197,
+        "timing__hold__tns__corner:nom_ss_125C_4v50": -4.467881302500366,
+        "timing__setup__tns__corner:nom_ss_125C_4v50": -147205.5051431638,
+        "timing__hold__wns__corner:nom_ss_125C_4v50": -0.6938962378870501,
+        "timing__setup__wns__corner:nom_ss_125C_4v50": -63.22060565110197,
+        "timing__hold_vio__count__corner:nom_ss_125C_4v50": 9,
+        "timing__hold_r2r__ws__corner:nom_ss_125C_4v50": 0.716908,
+        "timing__hold_r2r_vio__count__corner:nom_ss_125C_4v50": 0,
+        "timing__setup_vio__count__corner:nom_ss_125C_4v50": 5436,
+        "timing__setup_r2r__ws__corner:nom_ss_125C_4v50": -63.220604,
+        "timing__setup_r2r_vio__count__corner:nom_ss_125C_4v50": 5436,
+        "design__max_slew_violation__count__corner:nom_ff_n40C_5v50": 37612,
+        "design__max_fanout_violation__count__corner:nom_ff_n40C_5v50": 1066,
+        "design__max_cap_violation__count__corner:nom_ff_n40C_5v50": 158,
+        "clock__skew__worst_hold__corner:nom_ff_n40C_5v50": -3.055235262371798,
+        "clock__skew__worst_setup__corner:nom_ff_n40C_5v50": 3.055235262371798,
+        "timing__hold__ws__corner:nom_ff_n40C_5v50": -0.3938811055467965,
+        "timing__setup__ws__corner:nom_ff_n40C_5v50": 37.08154954720108,
+        "timing__hold__tns__corner:nom_ff_n40C_5v50": -3.2129388947662862,
+        "timing__setup__tns__corner:nom_ff_n40C_5v50": 0,
+        "timing__hold__wns__corner:nom_ff_n40C_5v50": -0.3938811055467965,
+        "timing__setup__wns__corner:nom_ff_n40C_5v50": 0,
+        "timing__hold_vio__count__corner:nom_ff_n40C_5v50": 9,
+        "timing__hold_r2r__ws__corner:nom_ff_n40C_5v50": 0.051642,
+        "timing__hold_r2r_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "timing__setup_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "timing__setup_r2r__ws__corner:nom_ff_n40C_5v50": 37.081551,
+        "timing__setup_r2r_vio__count__corner:nom_ff_n40C_5v50": 0,
+        "design__max_slew_violation__count": 43347,
+        "design__max_fanout_violation__count": 1066,
+        "design__max_cap_violation__count": 162,
+        "clock__skew__worst_hold": -3.055235262371798,
+        "clock__skew__worst_setup": 3.055235262371798,
+        "timing__hold__ws": -0.6938962378870501,
+        "timing__setup__ws": -63.22060565110197,
+        "timing__hold__tns": -4.467881302500366,
+        "timing__setup__tns": -147205.5051431638,
+        "timing__hold__wns": -0.6938962378870501,
+        "timing__setup__wns": -63.22060565110197,
+        "timing__hold_vio__count": 27,
+        "timing__hold_r2r__ws": 0.051642,
+        "timing__hold_r2r_vio__count": 0,
+        "timing__setup_vio__count": 5436,
+        "timing__setup_r2r__ws": -63.220604,
+        "timing__setup_r2r_vio__count": 5436,
+        "design__die__bbox": "0.0 0.0 1387.35 1405.27",
+        "design__core__bbox": "6.72 15.68 1380.4 1387.68",
+        "design__io": 30,
+        "design__die__area": 1949600,
+        "design__core__area": 1884690,
+        "design__instance__count__stdcell": 35885,
+        "design__instance__area__stdcell": 812233,
+        "design__instance__count__macros": 0,
+        "design__instance__area__macros": 0,
+        "design__instance__count__padcells": 0,
+        "design__instance__area__padcells": 0,
+        "design__instance__count__cover": 0,
+        "design__instance__area__cover": 0,
+        "design__instance__utilization": 0.430964,
+        "design__instance__utilization__stdcell": 0.430964,
+        "design__rows": 350,
+        "design__rows:GF018hv5v_mcu_sc7": 350,
+        "design__sites": 858550,
+        "design__sites:GF018hv5v_mcu_sc7": 858550,
+        "design__instance__count__class:tie_cell": 1,
+        "design__instance__area__class:tie_cell": 8.7808,
+        "design__instance__count__class:inverter": 432,
+        "design__instance__area__class:inverter": 3793.31,
+        "design__instance__count__class:sequential_cell": 5433,
+        "design__instance__area__class:sequential_cell": 354951,
+        "design__instance__count__class:multi_input_combinational_cell": 16995,
+        "design__instance__area__class:multi_input_combinational_cell": 396299,
+        "flow__warnings__count": 1,
+        "flow__errors__count": 0,
+        "flow__warnings__count:ODB-0220": 1,
+        "flow__warnings__type_count": 1,
+        "flow__warnings__count:ORD-0039": 1,
+        "design__instance__count__class:endcap_cell": 700,
+        "design__instance__area__class:endcap_cell": 3073.28,
+        "design__instance__count__class:tap_cell": 12324,
+        "design__instance__area__class:tap_cell": 54107.3,
+        "design__power_grid_violation__count__net:VSS": 0,
+        "design__power_grid_violation__count__net:VDD": 0,
+        "design__power_grid_violation__count": 0
+      },
+      "signal_terminals": 28,
+      "power_terminals": 2,
+      "synthesis_netlist_sha256": "b54310802480a595e46ebae1f99b0fe5b06353b50b7867cca3ec4179bca3c4f9",
+      "floorplan_def_sha256": "3a2efd1fc06044f7ca874272ee9908d5d205e5c25c41e9786f8fdf54fe67df37",
+      "warning_count": 13
+    }
+  },
+  "mapped_game": {
+    "all_passed": true,
+    "pdk_mapped_netlist": true,
+    "sdf_timing": false,
+    "power_aware": false,
+    "scope": "Wait-only game terminal equivalence; two correct rounds and one incorrect single-button retry",
+    "internal_mmio_nets_compared": false,
+    "second_correct_result_visible_after_error": true,
+    "clock_period_ns": 100,
+    "wait_ticks": 3000,
+    "tenth_ticks": 1000000,
+    "input_sha256": {
+      "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+      "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+      "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+      "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+      "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+      "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+      "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+      "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+      "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+      "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+      "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+      "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+      "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+      "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+      "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+      "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+      "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+      "build/gf180_game/firmware/asic_program_rom.v": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935",
+      ".pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/primitives.v": "ccc0f447f71ce35c635e08d49eb0ed77aa2ec91cf31d8e3e45a246114d3cae92",
+      ".pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/gf180mcu_fd_sc_mcu7t5v0.v": "9a21c5f98200acfe77d8ba52067164e0802284dc1c1e117f0e64fb6ac42eb64b",
+      "sim/asic_stage3/tb_game_wait_only.v": "498bc18a9f9e5c67823c5099d6064c53d49c442578a628fdebf28954cabf1bc9",
+      "scripts/check_gf180_mapped_game.py": "cf009bc24adbddb39ffb61bc2d6ac10e26ca4bf7f85049084a21d3b88c48efae"
+    },
+    "testbench_copy_sha256": "f6e49fe081d4c28485fd776668dbb60599623d6b6e281cd75113c21e2cae62ad",
+    "runs": {
+      "a": {
+        "passed": true,
+        "coverage": {
+          "variant": 0,
+          "cycles": 10623,
+          "compared": 10622,
+          "correct": 2,
+          "wrong": 1,
+          "attempts": 3,
+          "held_checks": 600,
+          "requests": 1118,
+          "stores": 11,
+          "ram_accesses": 0,
+          "first_correct": 3360,
+          "wrong_cycle": 6876,
+          "second_correct": 10423,
+          "first_round_cycles": 302,
+          "wrong_round_cycles": 269,
+          "second_round_cycles": 302
+        },
+        "netlist": "config/gf180/runs/stage4_100ns_u40_wait_only_a/06-yosys-synthesis/asic_top.nl.v",
+        "netlist_sha256": "58a831a7cf7a8d31848e3b39731ead2ae87c2de09375083c8518f9eb1d2c51ef",
+        "trace_sha256": "f5dbadd196cceedb2e226def902fb506d902e4194e12667bfbbf811a41c9f5ad",
+        "synthesis_input_sha256": {
+          "build/gf180_game/firmware/asic_program_rom.v": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935",
+          "build/gf180_game/firmware/game.hex": "7aa66ed0f2ef6b8d12e952f8e4118d22c6af607b82fc68c30ace62120a471ac4",
+          "build/gf180_game/firmware/game.s": "1ceaf4d599fabf8087f51b7df9c760ca96098bdbd61407ab8d8df57a45b096e1",
+          "build/gf180_game/firmware/manifest.json": "d344a3d049dcb90e8393f4949f23ddbe85bd3c749ffd53bd383d9b48b59600ad",
+          "build/gf180_game/firmware/timing.json": "c01a7b4bb697457910f2e5a2914d436ae0989c184c22993e1bc5a21a93eedaaa",
+          "config/environment.lock.json": "37b4900a9add88afcf7d6969bc7cce5050df6695e2df4871f728a035daef77d2",
+          "config/gf180/a.json": "c019fff23b6241deba33d33259955987cc23add0d31a3d3b0d498fd1f31808f3",
+          "config/gf180/a_wait_only.json": "4591af1c88e61c240839889298b55308ce1037a87d10f4adee9e3f09bb5c7359",
+          "config/gf180/constraints.sdc": "586bdd8441a5176e32e0a4ef2ac8becc9938a1b6ce415a9f129811e4bc5d7e84",
+          "config/gf180/pin_order.cfg": "a839325155e7fc7b85ed8ba8650a1202b50bab8e008802c5a16cd4e3c04a7a2a",
+          "config/rtl_asic.f": "c9ef0bca706c506d7f08f254a828c0239201f051228feb0741b8cec31ce1164e",
+          "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+          "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+          "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+          "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+          "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+          "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+          "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+          "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+          "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+          "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+          "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+          "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+          "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+          "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+          "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+          "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+          "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+          "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+          "scripts/run_gf180_stage4.py": "bff07f2c4c816a98759be60918c475b8725fe629aaab09fc588253345dc0dc93",
+          "scripts/run_librelane.py": "9cfcd1bfd90155bf0b80529a0e353954a6adbaa7bbdf76ab711ef724c5cd9be5"
+        }
+      },
+      "b": {
+        "passed": true,
+        "coverage": {
+          "variant": 1,
+          "cycles": 10766,
+          "compared": 10765,
+          "correct": 2,
+          "wrong": 1,
+          "attempts": 3,
+          "held_checks": 600,
+          "requests": 1118,
+          "stores": 11,
+          "ram_accesses": 0,
+          "first_correct": 3503,
+          "wrong_cycle": 7019,
+          "second_correct": 10566,
+          "first_round_cycles": 302,
+          "wrong_round_cycles": 269,
+          "second_round_cycles": 302
+        },
+        "netlist": "config/gf180/runs/stage4_100ns_u40_wait_only_b/06-yosys-synthesis/asic_top.nl.v",
+        "netlist_sha256": "f2d96497e008578a1a3120a75ecef3ef75eb410daa9102d3516357964c61cea8",
+        "trace_sha256": "d72a4651fef8c1fe6a335fa0c5add5b823fa723c6f34b8a3e6df762b5aa497d9",
+        "synthesis_input_sha256": {
+          "build/gf180_game/firmware/asic_program_rom.v": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935",
+          "build/gf180_game/firmware/game.hex": "7aa66ed0f2ef6b8d12e952f8e4118d22c6af607b82fc68c30ace62120a471ac4",
+          "build/gf180_game/firmware/game.s": "1ceaf4d599fabf8087f51b7df9c760ca96098bdbd61407ab8d8df57a45b096e1",
+          "build/gf180_game/firmware/manifest.json": "d344a3d049dcb90e8393f4949f23ddbe85bd3c749ffd53bd383d9b48b59600ad",
+          "build/gf180_game/firmware/timing.json": "c01a7b4bb697457910f2e5a2914d436ae0989c184c22993e1bc5a21a93eedaaa",
+          "config/environment.lock.json": "37b4900a9add88afcf7d6969bc7cce5050df6695e2df4871f728a035daef77d2",
+          "config/gf180/b.json": "bcc840bcfaab6b859443aef4602fd224a827b3a9344c62ef10d964d74955fdcf",
+          "config/gf180/b_wait_only.json": "d1f778904090cbab61202911079290916c5b9acff03a6607f2209653658ec131",
+          "config/gf180/constraints.sdc": "586bdd8441a5176e32e0a4ef2ac8becc9938a1b6ce415a9f129811e4bc5d7e84",
+          "config/gf180/pin_order.cfg": "a839325155e7fc7b85ed8ba8650a1202b50bab8e008802c5a16cd4e3c04a7a2a",
+          "config/rtl_asic.f": "c9ef0bca706c506d7f08f254a828c0239201f051228feb0741b8cec31ce1164e",
+          "firmware/asic/game.s": "3048505810618c39a332c0a6db06441a0de0454c9d1e671da8fe530c2e1a22f2",
+          "rtl/asic/asic_memory.v": "993cacf3ddc141d264e9d79a1c3021945d3430fd1d40fa0a72a28207284f5330",
+          "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+          "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+          "rtl/asic/memory_a.v": "fab9a20212a22b2c860d6bd9cfacf1de88a0796beeaf153d2f411910cfbc7d1c",
+          "rtl/asic/memory_b.v": "7a34a7026077e92628d15447d1a0d1afc2d1ee94b3d45245a7245032e5b2a7b6",
+          "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+          "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+          "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+          "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+          "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+          "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+          "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+          "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+          "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+          "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+          "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+          "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+          "scripts/run_gf180_stage4.py": "bff07f2c4c816a98759be60918c475b8725fe629aaab09fc588253345dc0dc93",
+          "scripts/run_librelane.py": "9cfcd1bfd90155bf0b80529a0e353954a6adbaa7bbdf76ab711ef724c5cd9be5"
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/config.json": {
+      "archived": "evidence/gf180_stage4/a/06-yosys-synthesis/config.json",
+      "sha256": "48464067aa43fe6f88e41bfd4bda19062a1bd171911056171784d58807dab154"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/state_out.json": {
+      "archived": "evidence/gf180_stage4/a/06-yosys-synthesis/state_out.json",
+      "sha256": "a8129949d41f7bd3e19d5fef7577460479005d090e61cb4292aae073ffb9ea80"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/COMMANDS": {
+      "archived": "evidence/gf180_stage4/a/06-yosys-synthesis/COMMANDS",
+      "sha256": "ce8c137c89aa24c7a8b278ecec885631c3c54c1be9664ce137db138165e0b207"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/yosys-synthesis.log": {
+      "archived": "evidence/gf180_stage4/a/06-yosys-synthesis/yosys-synthesis.log",
+      "sha256": "8bac8ce144263e08f63537aa584c920505007613e44663eb90f9b7d8886a0298"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/26-odb-customioplacement/config.json": {
+      "archived": "evidence/gf180_stage4/a/26-odb-customioplacement/config.json",
+      "sha256": "46f764a8376f094b680e817f1f9dd6d9533b01ac7790b5ba5d7606cbc4c95c72"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/26-odb-customioplacement/state_out.json": {
+      "archived": "evidence/gf180_stage4/a/26-odb-customioplacement/state_out.json",
+      "sha256": "11472c36d1d396d5a94fdf2358d41ecf4cd498792d22306f9c4bffd4e2f39a6d"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/26-odb-customioplacement/COMMANDS": {
+      "archived": "evidence/gf180_stage4/a/26-odb-customioplacement/COMMANDS",
+      "sha256": "c0b515d005cf3438b2b36519cca0540456d61f7bd1ea935649165d5c9cb0a9aa"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/26-odb-customioplacement/odb-customioplacement.log": {
+      "archived": "evidence/gf180_stage4/a/26-odb-customioplacement/odb-customioplacement.log",
+      "sha256": "ab4e24e04909ec10dbe612ff66fa4f12133190ef9228c77783b5d9c5ed2e1179"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/21-openroad-generatepdn/config.json": {
+      "archived": "evidence/gf180_stage4/a/21-openroad-generatepdn/config.json",
+      "sha256": "69332c59f57f2b4c15180039c2d57d0d30b9cacdf8bfafa1560105f2a2ab5e5e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/21-openroad-generatepdn/state_out.json": {
+      "archived": "evidence/gf180_stage4/a/21-openroad-generatepdn/state_out.json",
+      "sha256": "0b81535f901e2085b7a02fe914d8ea7a4a5d48949595dfd870efe92eb29a6654"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/21-openroad-generatepdn/COMMANDS": {
+      "archived": "evidence/gf180_stage4/a/21-openroad-generatepdn/COMMANDS",
+      "sha256": "93dd2015e19100ab853bc70575e96da48553469d2e1d2237f12e78e76c166bce"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/21-openroad-generatepdn/openroad-generatepdn.log": {
+      "archived": "evidence/gf180_stage4/a/21-openroad-generatepdn/openroad-generatepdn.log",
+      "sha256": "0ca2fae4eeb7f5dd3f862cf8114413c8ec7b2f667cc11649d7101ad453d32113"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/wns.max.rpt",
+      "sha256": "029f124d66320922960e026645f216915662479957b5e1c366e81eebe5a547ef"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/wns.min.rpt",
+      "sha256": "ab9089b94da64336d68dcbb076848d1d0069b13f7fcdc7a4e026b92dd9bf5af7"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/tns.max.rpt",
+      "sha256": "fcaa488a4fe46782e558fa04e87d465c4a882da2dd11c944a78240227c61e133"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/tns.min.rpt",
+      "sha256": "73ffe0597a4598b6225f1667eb3791b277a18fcd852695b791da0468beae0ec2"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/ws.max.rpt",
+      "sha256": "7b1c2a6f80828dde7458d161a998b47066e974ebefda6e53b23992d759eead6e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/ws.min.rpt",
+      "sha256": "ab6c8806e071f942c4fc20b4b8cb4d59e626b9c589782a3953cd857c7affdb0b"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_tt_025C_5v00/checks.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_tt_025C_5v00/checks.rpt",
+      "sha256": "619d3cd77ee863e5d22b12a0d20c46e4dbce9a7c158bc0a3e52bbae78d0f4289"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/wns.max.rpt",
+      "sha256": "fd2ca2af36de9532b831ca4252d874cb3f7a583b81675dc30283a732bf7c27da"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/wns.min.rpt",
+      "sha256": "868186cebc33aca15a5f600991d993f70c326c08d87b5ac4d402eb3bd10438ac"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/tns.max.rpt",
+      "sha256": "7dde5cd13d713156351b73e35e95a8697b51a15079009c5f926d53f987a77371"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/tns.min.rpt",
+      "sha256": "72a1c4845cd169f5516b2d8b03b9f1dca207567fae0e2379bab04ce203b7da9e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/ws.max.rpt",
+      "sha256": "cacd6fb4d5bf4b13ac4088203e30410a0ecc363e477b55110880758d1b62eeab"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/ws.min.rpt",
+      "sha256": "5e5b76d8d782ed68969a7bbdbb9027d14b86f0bda44278270bd992356fb9415f"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ss_125C_4v50/checks.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ss_125C_4v50/checks.rpt",
+      "sha256": "5f9d9781c91c7125cb202ce3474f783a57fddbe7e4d10be9c961d14b619ad32b"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/wns.max.rpt",
+      "sha256": "e623d99ba3e4d8daf17929f9d2be96c28acc310dd594e2fe81afcd10e7b07f1f"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/wns.min.rpt",
+      "sha256": "528ccee5451c57dc5b3ac2071cbd54d1cc633ac20dcdfebfd8189f276aae0bc7"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/tns.max.rpt",
+      "sha256": "632dcb45b325e7584a8fe83730489f7f18faeedbfcb35b6a9e10ae4aabd2560c"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/tns.min.rpt",
+      "sha256": "56f95585f6a9b9800c078a6c26d0780ace04e7e34548750c8919ffd7c5ba4a99"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/ws.max.rpt",
+      "sha256": "6eb0a823435d34b6c705e32624f38bbe59dfbabd51128f74955e49068e35a1ad"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/ws.min.rpt",
+      "sha256": "ce5d15480658ad2b8814a356ea503b16b55b7e07892a4737a046c5fc2ac03884"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/12-openroad-staprepnr/nom_ff_n40C_5v50/checks.rpt": {
+      "archived": "evidence/gf180_stage4/a/pre_pnr_sta/nom_ff_n40C_5v50/checks.rpt",
+      "sha256": "433fa45c1ed459cf51c6333ed12504c3b630bbbc21f81c1644a5d459e40f6738"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/01-verilator-lint/verilator-lint.log": {
+      "archived": "evidence/gf180_stage4/a/lint.log",
+      "sha256": "a05e5c649139e1b8bb655f694860a0763b1ddac0139f0f2f53121d42e7833bef"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/input_sha256.json": {
+      "archived": "evidence/gf180_stage4/a/input_sha256.json",
+      "sha256": "315f931b82165ecdd47be7226a4c3499b993674e1b9a6dd59e392665dc208cb0"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/asic_top.nl.v": {
+      "archived": "evidence/gf180_stage4/a/asic_top.nl.v.gz",
+      "uncompressed_sha256": "6a417b628f50153c3d5370401715075656abc36c8d4f5108488564578fbb1c05",
+      "compressed_sha256": "36b877cf35661b6ac51ce11543df1a693cbd56a4322d5c2f33e86eec53ed5ef9"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/26-odb-customioplacement/asic_top.def": {
+      "archived": "evidence/gf180_stage4/a/asic_top.def.gz",
+      "uncompressed_sha256": "28b0437d45fbfd8815386ed0d152f9f932b250fc933b2a092b2823712c50edd4",
+      "compressed_sha256": "5ca3f6ad0b898aeb5f6d58fc7d91027848df0f7f5db9a583019e615f0ef5448e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/06-yosys-synthesis/config.json": {
+      "archived": "evidence/gf180_stage4/b/06-yosys-synthesis/config.json",
+      "sha256": "3add0cd9105bdeb1f349f6ec17bfa79f541ba7a26fb2e6ae5d65a56bbba67e20"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/06-yosys-synthesis/state_out.json": {
+      "archived": "evidence/gf180_stage4/b/06-yosys-synthesis/state_out.json",
+      "sha256": "5570b72fa05ebfd1ec978cfcf571ec8cbc4ac527ac794134911a92828b1fa2d4"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/06-yosys-synthesis/COMMANDS": {
+      "archived": "evidence/gf180_stage4/b/06-yosys-synthesis/COMMANDS",
+      "sha256": "fd7a9fc8b714fc957483b69de7e51076ed62c8b549e28b60981790f7e913b1fa"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/06-yosys-synthesis/yosys-synthesis.log": {
+      "archived": "evidence/gf180_stage4/b/06-yosys-synthesis/yosys-synthesis.log",
+      "sha256": "0013412e32c25e9ec317714fc14a5ae73ad1d4228e9f54800252d996eb0b2424"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/26-odb-customioplacement/config.json": {
+      "archived": "evidence/gf180_stage4/b/26-odb-customioplacement/config.json",
+      "sha256": "46f764a8376f094b680e817f1f9dd6d9533b01ac7790b5ba5d7606cbc4c95c72"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/26-odb-customioplacement/state_out.json": {
+      "archived": "evidence/gf180_stage4/b/26-odb-customioplacement/state_out.json",
+      "sha256": "78b53d0029543a797d1b2c0554bcf482a30c18aa82a0046b9d7b69e5d36d37dd"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/26-odb-customioplacement/COMMANDS": {
+      "archived": "evidence/gf180_stage4/b/26-odb-customioplacement/COMMANDS",
+      "sha256": "53ca3a69b5384c23292dd6d0909900f59fb9274734f33b073f1b9e519894575a"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/26-odb-customioplacement/odb-customioplacement.log": {
+      "archived": "evidence/gf180_stage4/b/26-odb-customioplacement/odb-customioplacement.log",
+      "sha256": "c9add47cd5fa0bf418e2f2f52ec31204c9f384a031ec21ad4405abf4cf229876"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/21-openroad-generatepdn/config.json": {
+      "archived": "evidence/gf180_stage4/b/21-openroad-generatepdn/config.json",
+      "sha256": "69332c59f57f2b4c15180039c2d57d0d30b9cacdf8bfafa1560105f2a2ab5e5e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/21-openroad-generatepdn/state_out.json": {
+      "archived": "evidence/gf180_stage4/b/21-openroad-generatepdn/state_out.json",
+      "sha256": "2298864dbf2292625f79499259a86f9da6b56b7102af0b03408ea6e33775a3c3"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/21-openroad-generatepdn/COMMANDS": {
+      "archived": "evidence/gf180_stage4/b/21-openroad-generatepdn/COMMANDS",
+      "sha256": "688c1685123e9148b3610aff4198a8b2403a41f13aa1566569abb3121d55c874"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/21-openroad-generatepdn/openroad-generatepdn.log": {
+      "archived": "evidence/gf180_stage4/b/21-openroad-generatepdn/openroad-generatepdn.log",
+      "sha256": "dda1be4a3cf5fe3a31302c00692bb7240246340bb599942558a2b29ac913c175"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/wns.max.rpt",
+      "sha256": "029f124d66320922960e026645f216915662479957b5e1c366e81eebe5a547ef"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/wns.min.rpt",
+      "sha256": "ab9089b94da64336d68dcbb076848d1d0069b13f7fcdc7a4e026b92dd9bf5af7"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/tns.max.rpt",
+      "sha256": "fcaa488a4fe46782e558fa04e87d465c4a882da2dd11c944a78240227c61e133"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/tns.min.rpt",
+      "sha256": "73ffe0597a4598b6225f1667eb3791b277a18fcd852695b791da0468beae0ec2"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/ws.max.rpt",
+      "sha256": "8ef150dd9c5a626b19e932977cae92ba1cf5d38fd0c8541f170462fe808c1a63"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/ws.min.rpt",
+      "sha256": "ab6c8806e071f942c4fc20b4b8cb4d59e626b9c589782a3953cd857c7affdb0b"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_tt_025C_5v00/checks.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_tt_025C_5v00/checks.rpt",
+      "sha256": "59633d8d7b50428ec1761b6dd8fb9e7525f64cc38b4ec848b127bad99636cb37"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/wns.max.rpt",
+      "sha256": "c26cd2f2e391fac87fe344d5bcc7bbf6a684db104163c5b1cc739b1c72ab569c"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/wns.min.rpt",
+      "sha256": "868186cebc33aca15a5f600991d993f70c326c08d87b5ac4d402eb3bd10438ac"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/tns.max.rpt",
+      "sha256": "6f1bf8c48766ca38bd740ffd505b335fc37d9fde6244d02e132269bc70daca3e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/tns.min.rpt",
+      "sha256": "72a1c4845cd169f5516b2d8b03b9f1dca207567fae0e2379bab04ce203b7da9e"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/ws.max.rpt",
+      "sha256": "5ad977b2d5fe8b775787b42a50150eec756cdf1c9062e14e6ce7df3adee1627d"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/ws.min.rpt",
+      "sha256": "5e5b76d8d782ed68969a7bbdbb9027d14b86f0bda44278270bd992356fb9415f"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ss_125C_4v50/checks.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ss_125C_4v50/checks.rpt",
+      "sha256": "93d76e02cbd427fe99fc5f66f44bd58b4d724a32b8d90da0a19a617b45a010cd"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/wns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/wns.max.rpt",
+      "sha256": "e623d99ba3e4d8daf17929f9d2be96c28acc310dd594e2fe81afcd10e7b07f1f"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/wns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/wns.min.rpt",
+      "sha256": "528ccee5451c57dc5b3ac2071cbd54d1cc633ac20dcdfebfd8189f276aae0bc7"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/tns.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/tns.max.rpt",
+      "sha256": "632dcb45b325e7584a8fe83730489f7f18faeedbfcb35b6a9e10ae4aabd2560c"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/tns.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/tns.min.rpt",
+      "sha256": "56f95585f6a9b9800c078a6c26d0780ace04e7e34548750c8919ffd7c5ba4a99"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/ws.max.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/ws.max.rpt",
+      "sha256": "7f485f6f2babe22a07fb0899d188a64f7a27dbf06f4c7226b412478ea817c3ce"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/ws.min.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/ws.min.rpt",
+      "sha256": "ce5d15480658ad2b8814a356ea503b16b55b7e07892a4737a046c5fc2ac03884"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/12-openroad-staprepnr/nom_ff_n40C_5v50/checks.rpt": {
+      "archived": "evidence/gf180_stage4/b/pre_pnr_sta/nom_ff_n40C_5v50/checks.rpt",
+      "sha256": "0f0365ed0949c5cc0dda72a4f32ed972235a6c09c334386465aad6367ed2da06"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/01-verilator-lint/verilator-lint.log": {
+      "archived": "evidence/gf180_stage4/b/lint.log",
+      "sha256": "cd2ccb3a089240fa856d0192a1772023f983846cbc41a3f305a237689faffecd"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/input_sha256.json": {
+      "archived": "evidence/gf180_stage4/b/input_sha256.json",
+      "sha256": "e7909f4283deeab875d0267573e09e90fbd25e10c04d2fe4427d16c57016ee3b"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/06-yosys-synthesis/asic_top.nl.v": {
+      "archived": "evidence/gf180_stage4/b/asic_top.nl.v.gz",
+      "uncompressed_sha256": "b54310802480a595e46ebae1f99b0fe5b06353b50b7867cca3ec4179bca3c4f9",
+      "compressed_sha256": "4775a90554f7b0ba8b026ab6bf22d11105d17f2b261d2d0191dfb16e6e62c204"
+    },
+    "config/gf180/runs/stage4_100ns_u40_floorplan_b/26-odb-customioplacement/asic_top.def": {
+      "archived": "evidence/gf180_stage4/b/asic_top.def.gz",
+      "uncompressed_sha256": "3a2efd1fc06044f7ca874272ee9908d5d205e5c25c41e9786f8fdf54fe67df37",
+      "compressed_sha256": "0eb0f1ba0af79b9cfec1981ff6fba37fc2aa6e7ac53e0ce00d94324cc83b5f77"
+    },
+    "build/gf180_mapped_game/results.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/results.json",
+      "sha256": "8fb88866d6c6334d993754bb17107cd48b0f9809eeb9b655bf42439331fb8f17"
+    },
+    "build/gf180_mapped_game/mapped_b.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/mapped_b.log",
+      "sha256": "86d4a62bb3c023b05fb112f701ea3d5c2c94dadfebf7abeee14f36eb6836e8f4"
+    },
+    "build/gf180_mapped_game/mapped_a.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/mapped_a.log",
+      "sha256": "ab1b80a4939e8d4b27a72385893803c0be9268743b71be872d07c86119579e45"
+    },
+    "build/gf180_mapped_game/compile_a.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/compile_a.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/gf180_mapped_game/compile_b.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/compile_b.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_a/06-yosys-synthesis/config.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/a/config.json",
+      "sha256": "9a9140374e3f079d16ec3cc6fe3e5f58fc6c2a1568c0ea3c04f7f77ff4a64a5b"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_a/06-yosys-synthesis/state_out.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/a/state_out.json",
+      "sha256": "dd4abede608da01c9854a953db516e649ce2ac38022114202b342a6fdc360249"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_a/06-yosys-synthesis/yosys-synthesis.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/a/yosys-synthesis.log",
+      "sha256": "fa934f762dcb1e0656e505a8d9901c07e0e49d57f81410321eb537340921b517"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_b/06-yosys-synthesis/config.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/b/config.json",
+      "sha256": "ad61b87011388e28a2e5ee15da8f59aed96e406f633792ed3d3b83426c94e8f0"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_b/06-yosys-synthesis/state_out.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/b/state_out.json",
+      "sha256": "3ee8fa1e4c79789dcda7cc6e3102c8bdd09955933f37ac0a5ce2b2f155ffd0e6"
+    },
+    "config/gf180/runs/stage4_100ns_u40_wait_only_b/06-yosys-synthesis/yosys-synthesis.log": {
+      "archived": "evidence/gf180_stage4/mapped_game/b/yosys-synthesis.log",
+      "sha256": "c516b7a32d6e3d4d6d38007f51536866c5263ad6eafb8cb845ff091728beb388"
+    },
+    "build/gf180_game/firmware/timing.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/firmware/timing.json",
+      "sha256": "c01a7b4bb697457910f2e5a2914d436ae0989c184c22993e1bc5a21a93eedaaa"
+    },
+    "build/gf180_game/firmware/asic_program_rom.v": {
+      "archived": "evidence/gf180_stage4/mapped_game/firmware/asic_program_rom.v",
+      "sha256": "0f61643393663cce3475d82ec90c75a41f4c264ce3a1e2ddfa8b4e7f44573935"
+    },
+    "build/gf180_game/firmware/game.hex": {
+      "archived": "evidence/gf180_stage4/mapped_game/firmware/game.hex",
+      "sha256": "7aa66ed0f2ef6b8d12e952f8e4118d22c6af607b82fc68c30ace62120a471ac4"
+    },
+    "build/gf180_game/firmware/game.s": {
+      "archived": "evidence/gf180_stage4/mapped_game/firmware/game.s",
+      "sha256": "1ceaf4d599fabf8087f51b7df9c760ca96098bdbd61407ab8d8df57a45b096e1"
+    },
+    "build/gf180_game/firmware/manifest.json": {
+      "archived": "evidence/gf180_stage4/mapped_game/firmware/manifest.json",
+      "sha256": "d344a3d049dcb90e8393f4949f23ddbe85bd3c749ffd53bd383d9b48b59600ad"
+    }
+  }
+}
