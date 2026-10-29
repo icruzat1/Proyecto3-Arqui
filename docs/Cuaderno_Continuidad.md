@@ -50,7 +50,7 @@ Incorporar Kit_Continuidad_Proyecto3_Etapa5.zip y el enunciado del Proyecto 3. R
 
 LibreLane 3.0.17 y Ciel 2.6.1 están instalados en .venv con Python 3.13.15. La comprobación de dependencias pasó. config/requirements-macos-arm64.lock.txt registra todas las versiones y config/environment.lock.json fija las principales.
 
-Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. La biblioteca final se confirmará con el enunciado. La prueba física sigue pendiente.
+Ciel descargó y habilitó GF180MCU 54435919abffb937387ec956209f9cf5fd2dfbee, revisión que requiere LibreLane 3.0.17. Para la prueba de entorno se prepararon gf180mcuD y gf180mcu_fd_sc_mcu7t5v0. Se comprobó la presencia de configuración, bibliotecas de tiempo, LEF, GDS y LEF tecnológico. Este PDK conserva la carpeta libs.tech/openlane; LibreLane admite explícitamente esa ubicación alternativa. La biblioteca final se confirmará con el enunciado. La prueba física del ejemplo ya se completó; sus resultados se detallan al final de este cuaderno.
 
 ## Docker Desktop instalado
 
@@ -78,7 +78,7 @@ El original se llama Proyecto 2 por decisión del usuario. Sus 38 huellas se con
 
 Para configurar el entorno se recomienda GPT-6.1 Sol con High. Para memorias, reset, equivalencia y depuración ASIC difícil, Astra con Extra High, si está disponible. Estas son recomendaciones; no se cambió el selector del usuario. Fuente: [Modelos en ChatGPT Work](https://learn.chatgpt.com/docs/models).
 
-El usuario vio un aviso de aprobación pendiente sin una solicitud visible. El estado de este chat devolvió activo con activeFlags vacío. No quedó una solicitud abierta del agente. La causa del aviso no está confirmada. Los procesos locales de instalación terminaron antes de guardar este estado.
+El usuario vio un aviso de aprobación pendiente sin una solicitud visible. El estado de este chat devolvió activo con activeFlags vacío. No quedó una solicitud abierta del agente. La causa del aviso no está confirmada. Ese aviso se investigó durante la preparación inicial; las pruebas y publicaciones posteriores se registran en sus secciones correspondientes.
 
 ## Resultado de la corrida GF180MCU
 
