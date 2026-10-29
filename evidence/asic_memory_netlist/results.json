@@ -1,0 +1,67 @@
+{
+  "all_passed": true,
+  "compile_log": "evidence/asic_memory_netlist/compile.log",
+  "coverage": {
+    "boot_edges": 519,
+    "complete_boots": 2,
+    "cycles": 5800,
+    "instruction_holds": 288,
+    "invalid_accesses": 40,
+    "masks": 16,
+    "read_first_A": 256,
+    "read_first_B": 2304,
+    "req_disabled_writes": 144,
+    "resets": 5,
+    "unrequested_data_reads": 3188,
+    "words": 144
+  },
+  "formal_equivalence": false,
+  "full_game_verified": false,
+  "golden_padded_sha256": "6f900f171696b596f6c9531be99bd8f1626574cb53251e1ffcb34c78cefac4d0",
+  "golden_words": 94,
+  "input_sha256": {
+    "baseline/proyecto2/assembler/game.hex": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+    "rtl/asic/generated/game.hex": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+    "scripts/check_memory_netlist.py": "07d396153e1343283aadf827a87217fc6911c227ae40fbc46a06b57debcdd65b",
+    "sim/asic_stage2/tb_memories.v": "a88178fee105778481d94d199018ae87387f977951fab585b01c6b89905f5ac5"
+  },
+  "netlists": {
+    "memory_a": {
+      "json": "build/asic_memory_synthesis/memory_a.json",
+      "json_sha256": "3f7cb53cce3591a9d562322dade259a4def82813736d7cb91642b61ef7ea89da",
+      "renamed_module_definitions": {
+        "asic_program_rom": "syn_a_asic_program_rom",
+        "memory_a": "syn_a_memory_a"
+      },
+      "simulation_copy_sha256": "fc0110fc6b4f3cbece13770d6cde5e3610c4474b55a4cff14dd38ff7e291ce93",
+      "source": "build/asic_memory_synthesis/memory_a.v",
+      "source_sha256": "de5455a3b65989f71e545f00ce250a4cdffa51e52e481dcec94fb84b04287c74",
+      "yosys_version": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)"
+    },
+    "memory_b": {
+      "json": "build/asic_memory_synthesis/memory_b.json",
+      "json_sha256": "4fb40cff5c534579edec833cbc14fabcf1d4e36f3a51573361585727fc65d864",
+      "renamed_module_definitions": {
+        "asic_program_rom": "syn_b_asic_program_rom",
+        "memory_b": "syn_b_memory_b"
+      },
+      "simulation_copy_sha256": "70bc3fa365939a8cc78557fc5ae03e12f0717f76eff26202d31ed2456dc71aed",
+      "source": "build/asic_memory_synthesis/memory_b.v",
+      "source_sha256": "32aaed87b652c0b50f545e1d42dd135e448031c31f56c06a2ac4c16fdece9fea",
+      "yosys_version": "Yosys 0.62 (git sha1 7326bb7d6641500ecb285c291a54a662cb1e76cf, clang++ 21.1.2 -fPIC -O3)"
+    }
+  },
+  "pdk_mapped_netlist": false,
+  "post_synthesis_game_equivalence": false,
+  "post_synthesis_memory_interface_test_passed": true,
+  "scope": "Functional interface tests of generic memory A/B netlists, without delays",
+  "sdf_timing": false,
+  "simulation_log": "evidence/asic_memory_netlist/memory_interfaces.log",
+  "summary": "PASS memories cycles=5800 boot_edges=519 complete_boots=2 resets=5 words=144 masks=16 read_first_A=256 read_first_B=2304 invalid_accesses=40 req_disabled_writes=144 instruction_holds=288 unrequested_data_reads=3188",
+  "synthesis_input_hashes_verified": 26,
+  "synthesis_results": "build/asic_memory_synthesis/results.json",
+  "synthesis_results_sha256": "2caaba894d6758d3f0edb6f48c2dcdad351d360ac30d98bc063a20b73ada1fd0",
+  "testbench": "sim/asic_stage2/tb_memories.v",
+  "testbench_simulation_copy_sha256": "fda8709c8abbec772d7f581faa5ea4a14d6828adc1aea8fcdd12e653c236d5d2",
+  "verification_date": "2026-10-29"
+}

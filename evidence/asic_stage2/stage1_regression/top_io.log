@@ -1,0 +1,2 @@
+PASS top_io display=A5 leds=A buttons=5 timer_reads=1 spi_rx=3c spi_tx=96
+<PROJECT_ROOT>/sim/asic_stage1/tb_top_io.v:69: $finish called at 22251000 (1ps)

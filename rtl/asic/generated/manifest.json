@@ -1,0 +1,28 @@
+{
+  "assembler": {
+    "path": "baseline/proyecto2/assembler/assemble.py",
+    "sha256": "5a68e359a31eb12fa801ea2ae679889f0be7f10dd1f9af2b01184f40655f8d83"
+  },
+  "data_boot_word": "00000000",
+  "data_capacity_words": 16,
+  "memory_map": {
+    "data_byte_end_inclusive": 575,
+    "data_byte_start": 512,
+    "program_byte_end_inclusive": 511,
+    "program_byte_start": 0,
+    "word_bytes": 4
+  },
+  "program_bytes": 376,
+  "program_capacity_words": 128,
+  "program_hex_sha256": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+  "program_padding_word": "00000013",
+  "program_words": 94,
+  "reserved_program_words": 34,
+  "rom_verilog_sha256": "4c4a6528a5295695621d077bef47d9356d3aa59b065c799f9b2eb451ecf3c8ba",
+  "schema_version": 1,
+  "source": {
+    "path": "baseline/proyecto2/assembler/game.s",
+    "sha256": "f15cd22bb43172fc818828edcb78571d20f1a90e4bfd78fc170816d26f291e2a"
+  },
+  "unified_capacity_words": 144
+}

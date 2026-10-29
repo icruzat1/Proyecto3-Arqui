@@ -1,0 +1,98 @@
+{
+  "scope": "RTL stage 1 only: interface/reset/RF with simulation memory",
+  "physical_flow_run": false,
+  "uses_production_asic_memory": false,
+  "full_game_verified": false,
+  "post_synthesis_equivalence": false,
+  "all_passed": true,
+  "test_runs": [
+    {
+      "name": "register_file",
+      "passed": true,
+      "summary": "PASS register_file cycles=1903 legacy_cycles=1872 collisions_a=102 collisions_b=93 x0_writes=51\n<PROJECT_ROOT>/sim/asic_stage1/tb_register_file.v:173: $finish called at 19076000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/register_file.log"
+    },
+    {
+      "name": "reset_buttons",
+      "passed": true,
+      "summary": "PASS reset/buttons: 73 state checks, 54 rising edges; async assertion, exact release, boot interruption, button latency/pulses/restarts\n<PROJECT_ROOT>/sim/asic_stage1/tb_reset_buttons.v:157: $finish called at 608000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/reset_buttons.log"
+    },
+    {
+      "name": "top_reset_boot_0",
+      "passed": true,
+      "summary": "PASS top_reset executions=2 first_fetches=2 active_cycles_each=2000\n<PROJECT_ROOT>/sim/asic_stage1/tb_top_reset.v:80: $finish called at 401351000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/top_reset_boot_0.log"
+    },
+    {
+      "name": "top_reset_boot_5",
+      "passed": true,
+      "summary": "PASS top_reset executions=2 first_fetches=2 active_cycles_each=2000\n<PROJECT_ROOT>/sim/asic_stage1/tb_top_reset.v:80: $finish called at 402351000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/top_reset_boot_5.log"
+    },
+    {
+      "name": "top_reset_boot_144",
+      "passed": true,
+      "summary": "PASS top_reset executions=2 first_fetches=2 active_cycles_each=2000\n<PROJECT_ROOT>/sim/asic_stage1/tb_top_reset.v:80: $finish called at 430151000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/top_reset_boot_144.log"
+    },
+    {
+      "name": "top_io",
+      "passed": true,
+      "summary": "PASS top_io display=A5 leds=A buttons=5 timer_reads=1 spi_rx=3c spi_tx=96\n<PROJECT_ROOT>/sim/asic_stage1/tb_top_io.v:69: $finish called at 22251000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/top_io.log"
+    },
+    {
+      "name": "pipeline_lockstep",
+      "passed": true,
+      "summary": "PASS pipeline_lockstep cycles=10000 rf_commit_cycles=2505 read_request_cycles=1247 write_request_cycles=2\n<PROJECT_ROOT>/sim/asic_stage1/tb_pipeline_lockstep.v:72: $finish called at 1000900000 (1ps)",
+      "log": "evidence/asic_stage2/stage1_regression/pipeline_lockstep.log"
+    }
+  ],
+  "core_peripheral_files_identical_to_baseline": [
+    "rtl/espino_core/espino_alu.v",
+    "rtl/espino_core/espino_controller.v",
+    "rtl/espino_core/espino_core.v",
+    "rtl/espino_core/espino_decoder.v",
+    "rtl/espino_core/espino_id_stage.v",
+    "rtl/espino_core/espino_if_stage.v",
+    "rtl/espino_core/espino_load_store_unit.v",
+    "rtl/pochoco_periph.v",
+    "rtl/pochoco_spi_slave.v"
+  ],
+  "production_sources_have_no_fpga_primitives_or_file_initialization": true,
+  "missing_asic_memory_rejected": true,
+  "simulation_memory_requires_explicit_define": true,
+  "original_game_words": 94,
+  "game_hex_sha256": "e5aca0ab29440ddbe4898a54ba2b0c3d79f43ca19bab1a78cafc0b0b1c3d28d6",
+  "ice40_model_sha256": "b5b2bcd86c0d6eea269015aaebff1d5fb66e7ec3f7eded0bde07406e5ac99527",
+  "iverilog_version": "Icarus Verilog version 13.0 (stable) (v13_0)",
+  "input_sha256": {
+    "baseline/proyecto2/assembler/assemble.py": "5a68e359a31eb12fa801ea2ae679889f0be7f10dd1f9af2b01184f40655f8d83",
+    "baseline/proyecto2/assembler/game.s": "f15cd22bb43172fc818828edcb78571d20f1a90e4bfd78fc170816d26f291e2a",
+    "baseline/proyecto2/pochoco_soc-main/rtl/espino_core/espino_register_file.v": "a19d94587e54d05373a257c95e515979d2f7910328ec8920f649d280bc07b212",
+    "config/rtl_stage1.f": "1f712dec0df318da48241054baf0b8191c0d139af9380a4fa7a63301eae62f11",
+    "rtl/asic/asic_top.v": "0dec829645f0edf86f4cce820bac565abbff98dc830aa64c306116c477f83784",
+    "rtl/asic/btn_sync.v": "108e00472ab0a1bff0b99c516082c3a474306c34c556038c3808b28fdf7abd38",
+    "rtl/asic/reset_ctrl.v": "6c7c14bf93bc1eb0851b12411970930353066ba39cda5c64cc9aefa54155e454",
+    "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601",
+    "rtl/espino_core/espino_controller.v": "bd82d8404d8f09de2a6968da87e6a7e9c750af9138a4b74c43b3ec89a742c215",
+    "rtl/espino_core/espino_core.v": "9e3e3cae616a4ff057ddcb01728bf8f912eab721d26e3a5fe68daf1c68e9905c",
+    "rtl/espino_core/espino_decoder.v": "33e913fec63d9fc899e27a10a31493b3bcb634a86cc0fc10d70ed391febf7ad3",
+    "rtl/espino_core/espino_id_stage.v": "740698037d1e4372e3e26c3a828143debb71b62992d7a69e21ed3b6fc128c704",
+    "rtl/espino_core/espino_if_stage.v": "4734ae2fb9cd60c8f5019be50303504e50e6d25bc09d09a3f06d396d1c5902f4",
+    "rtl/espino_core/espino_load_store_unit.v": "76051d9aba219452dc4e80fd47f306d024c40aea47050dd59fc3c821ea7f5954",
+    "rtl/espino_core/espino_register_file.v": "7c6c3c7476a295002126f7044971f499b54f55664a4f076924f158cdb6395ea1",
+    "rtl/pochoco_periph.v": "3fb3cd50e8f3076056a90fff48f08c0b26d8c857db136e64c276c9c6d991c731",
+    "rtl/pochoco_soc.v": "628150b03d42f6314078703735966d52c8afe50031e7472e136d21ba3a6f7bc8",
+    "rtl/pochoco_spi_slave.v": "dab33af8b2cb654590bc708afd3f68f46a6121705cee21f7bc33bb6b61e7e443",
+    "scripts/check_asic_stage1.py": "eac44fdbace0fe9d327b41b3c729b88b5933ccda11f41e50f8940b3fb9582482",
+    "sim/asic_stage1/asic_memory.v": "6c29513a3b70ea112320e71cd3346a0e903f2ad7e447babd067932b64b719bd3",
+    "sim/asic_stage1/io_diagnostic.s": "52d1a31c2b00a91e2fab16df6c19acef2a72bbbb1f505ba673f082b364b6c4b6",
+    "sim/asic_stage1/tb_pipeline_lockstep.v": "c089b49179f41b199ee35ebdbf85ed7d63263d3d09ff5c6b68f6acb9ad3dc7f2",
+    "sim/asic_stage1/tb_register_file.v": "38d80e2cd20abc7a9fc3b5bb79e5602dd716b627a5c0ee496776033d3748b9f7",
+    "sim/asic_stage1/tb_reset_buttons.v": "4a205dc39b628f07451fe4fa78f7d961c995ca9d4a8aab9706fa7273e23ed43d",
+    "sim/asic_stage1/tb_top_io.v": "ccb890317a5eb23be283f311fd5b6ca7edb21bb2ff39600a8928e4820457e6a4",
+    "sim/asic_stage1/tb_top_reset.v": "a21b7e931cfcc09ebba4569da8eee7e913ded6cbe21c188c38bd91c455471f64"
+  }
+}

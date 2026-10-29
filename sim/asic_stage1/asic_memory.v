@@ -2,7 +2,7 @@
 // TEST FIXTURE ONLY. Never include this source in an ASIC synthesis list.
 // Legacy-sized storage preserves the original read timing. A delayed ready
 // signal exercises the future A/B loader handshake; it does not implement B.
-module asic_memory (
+module asic_memory #(parameter integer MemoryVariant = 0) (
   input wire clk_i, rst_ni,
   output reg boot_done_o,
   input wire a_req_i,

@@ -9,9 +9,11 @@
 // - Nicolás Villegas <navillegas@miuandes.cl>
 
 // Logical macro terminals: no package pads or board polarity inversion.
-// asic_memory is the stage-2 integration boundary. Stage-1 simulation
-// explicitly supplies sim/asic_stage1/asic_memory.v; it is NOT ASIC storage.
-module asic_top (
+// MemoryVariant is chosen at elaboration: 0 = ROM + data RAM, 1 = unified FF.
+// A synthesis run contains one memory architecture, never both at runtime.
+module asic_top #(
+  parameter integer MemoryVariant = 0
+) (
   input  wire       clk_i,
   input  wire       rst_ni,
   input  wire [3:0] btn_i,
@@ -46,7 +48,7 @@ module asic_top (
     .ram_req_o(data_req), .ram_we_o(data_we), .ram_be_o(data_be),
     .ram_addr_o(data_addr), .ram_wdata_o(data_wdata), .ram_rdata_i(data_rdata)
   );
-  asic_memory u_mem (
+  asic_memory #(.MemoryVariant(MemoryVariant)) u_mem (
     .clk_i(clk_i), .rst_ni(rst_sync_ni), .boot_done_o(mem_boot_done),
     .a_req_i(instr_req), .a_addr_i(instr_addr), .a_rdata_o(instr_rdata),
     .b_req_i(data_req), .b_we_i(data_we), .b_be_i(data_be),

@@ -1,0 +1,5 @@
+<PROJECT_ROOT>/rtl/asic/asic_memory.v:37: error: Unknown module type: ASIC_MEMORY_VARIANT_MUST_BE_0_OR_1
+1 error(s) during elaboration.
+*** These modules were missing:
+        ASIC_MEMORY_VARIANT_MUST_BE_0_OR_1 referenced 1 times.
+***

@@ -1,5 +1,7 @@
 # Adaptación RTL a ASIC: primera etapa implementada
 
+Registro histórico del avance publicado en el commit 17456d4. Las referencias a memoria pendiente describen esa etapa. La implementación posterior está documentada en [Memorias A/B](Memorias_AB.md).
+
 Verificación del 29 de octubre de 2026. Alcance: interfaz lógica, reset, botones y banco de registros. Se completó la elaboración y simulación con una memoria de prueba. **Las memorias ASIC A/B todavía no están implementadas; se sintetizaron genéricamente cuatro bloques, incluido el SoC con memoria externa. El macro completo y su implementación física siguen pendientes.**
 
 ## Cambios y procedencia

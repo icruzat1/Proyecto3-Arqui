@@ -1,6 +1,6 @@
 # Cuaderno de estudio y defensa del Proyecto 3
 
-Actualizado el 29 de octubre de 2026. Reúne la preparación de las etapas 1 a 5 y las verificaciones realizadas en el Mac. La primera adaptación RTL de interfaz, reset y RF ya pasó sus pruebas de simulación. La síntesis genérica de cuatro bloques pasó; las memorias A/B, el mapeo GF180 y la implementación física de Espino siguen pendientes. La prueba física completada corresponde al ejemplo oficial spm.
+Actualizado el 29 de octubre de 2026. Reúne la preparación de las etapas 1 a 5 y las verificaciones realizadas en el Mac. La primera adaptación RTL de interfaz, reset y RF ya pasó sus pruebas de simulación. La síntesis genérica de bloques y de ambos macros A/B pasó. Las memorias reales ya están implementadas; el mapeo GF180 y la implementación física siguen pendientes. Las secciones históricas conservan los estados que tenían al redactarse. La prueba física completada corresponde al ejemplo oficial spm.
 
 ## Estado actual y forma de estudiar
 
@@ -405,7 +405,7 @@ Los botones atraviesan dos FF sin introducir antirrebote. Esta latencia se ensay
 
 Pasaron siete ejecuciones: RF, reset/botones, tres casos de arranque, diagnóstico de entradas/salidas y comparación de pipeline. El RF pasó 1903 ciclos de modelo independiente y 1872 comparaciones contra iCE40. El pipeline pasó 10000 ciclos iniciales del juego con el RF antiguo y el nuevo, sin diferencias observadas en control, operandos válidos, escrituras y periféricos. Los archivos originales de Proyecto 2 conservan sus 38 huellas.
 
-La comparación comparte wrapper y memoria de simulación: aísla la sustitución del RF. No prueba rondas completas, netlist, timing, DRC o LVS. La memoria ASIC todavía no existe; el modelo de pruebas usa un archivo y no debe llegar al flujo físico. El script rechaza esa inclusión accidental sin una opción explícita de simulación.
+La comparación comparte wrapper y memoria de simulación: aísla la sustitución del RF. No prueba rondas completas, netlist, timing, DRC o LVS. En esa primera etapa todavía no existía la memoria ASIC; su modelo de pruebas usa un archivo y no debe llegar al flujo físico. Las memorias reales se implementaron después, como se describe a continuación. El script rechaza esa inclusión accidental sin una opción explícita de simulación.
 
 La comprobación de síntesis genérica se completó después de resolver los permisos: reset, botones, RF y SoC con memoria externa pasaron con Yosys 0.62. El RF produjo 480 FF con habilitación y 64 FF de salida, confirmando los 544 bits previstos. Reset produjo tres FF y botones ocho. Son FF genéricos antes del mapeo a la biblioteca GF180; todavía no determinan área física, frecuencia o consumo.
 
@@ -422,4 +422,19 @@ La comprobación de síntesis genérica se completó después de resolver los pe
 
 La advertencia «Replacing memory regs_q with list of registers» indica que Yosys convirtió el arreglo del RF a registros, coherente con nuestra decisión de usar FF. No significa que se haya inferido una memoria FPGA. Está conservada con archivo y línea en el informe de etapa. Las comprobaciones no detectaron latches, primitivas SB ni cajas negras.
 
-Es necesario distinguir tres niveles: descripción y simulación RTL; síntesis genérica, completada para estos bloques; y mapeo/implementación física GF180 del macro completo, todavía pendiente. No usar el recuento de FF para inventar área o timing. Los resultados A/B se medirán cuando existan sus memorias y se ejecute el flujo completo.
+Es necesario distinguir tres niveles: descripción y simulación RTL; síntesis genérica, completada para estos bloques; y mapeo/implementación física GF180 del macro completo, todavía pendiente. No usar el recuento de FF para inventar área o timing. En esa primera síntesis faltaban las memorias A/B. Su síntesis genérica posterior se describe a continuación; las mediciones físicas siguen pendientes.
+
+
+## Memorias A/B implementadas: argumentos para la defensa
+
+Consultar [Memorias A/B](Memorias_AB.md) para la evidencia actual. A separa constantes de programa y datos; B almacena ambos en el mismo arreglo de FF. El juego utiliza 94 instrucciones; las capacidades provisionadas son 128 instrucciones y 16 datos. Las 34 posiciones de reserva contienen NOP. No afirmar que las 16 palabras de datos son una demanda medida del juego: las pruebas de su intervalo inicial observaron solo MMIO.
+
+La ROM se genera automáticamente desde game.s mediante el assembler original. En A esa función combinacional alimenta una salida registrada para preservar la latencia del procesador. En B, la ROM solo proporciona palabras al cargador; las instrucciones ejecutadas después salen del arreglo que permite escrituras por bytes. Una prueba modifica las 144 palabras de B, verifica lo escrito y comprueba que el reset reconstruya programa y datos.
+
+B carga una palabra por ciclo durante 144 ciclos. Eso evita resetear directamente todos sus 4608 bits; aun así hay lógica, control y multiplexores que deben medirse. El contador del juego espera a la CPU. La prueba comparativa alinea sus ejecuciones con 143 ciclos de diferencia entre resets externos y comprueba 20000 ciclos sin diferencias. Esto no demuestra todas las rondas ni equivalencia formal.
+
+La síntesis comprobó cada bit de almacenamiento mediante su conductor FF.Q: 512 en A y 4608 en B, sin constantes o alias. Además de almacenamiento, A tiene 64 FF de salida y uno de disponibilidad; B añade 64 de salida, ocho de índice y uno de disponibilidad. Totales aislados 577/4681 y macros 1329/5433. Son FF genéricos. La lógica combinacional, los buffers y la colocación pueden cambiar la comparación de área; todavía no hay un ganador físico medido.
+
+Preguntas útiles: ¿por qué una ROM combinacional necesita salida registrada? Para conservar el protocolo de fetch. ¿Por qué el reset no necesita alcanzar cada bit de B? Porque el cargador los reescribe antes de liberar el core. ¿Qué prueba que B es RAM? Escrituras y lecturas comprobadas y comprobación de 4608 salidas FF independientes en netlist. ¿La diferencia de FF es la diferencia de área? No; falta mapear y realizar el flujo físico con las mismas condiciones.
+
+El mismo ensayo de interfaces pasó sobre RTL y netlists genéricas: 5800 ciclos, incluida reprogramación y restauración de B. Esto comprueba la conducta en los estímulos ensayados, no todas las secuencias posibles ni equivalencia formal. La prueba de juego RTL/netlist seguirá siendo necesaria con firmware y estímulos de rondas idénticos.

@@ -44,7 +44,7 @@ Las constantes del juego corresponden a 25 MHz. El enunciado exige recalibrar pa
 
 ## Siguiente trabajo
 
-Primera adaptación RTL implementada y probada; ver la actualización al final y docs/Adaptacion_RTL_Etapa1.md. El usuario volvió, los permisos fueron concedidos y los cuatro bloques pasaron la síntesis genérica. La siguiente etapa de diseño es implementar A/B, carga real y generación automática desde el assembler; conversar su alcance antes de iniciarla. No redactar prompts futuros.
+Primera adaptación RTL implementada y probada; ver la actualización al final y docs/Adaptacion_RTL_Etapa1.md. El usuario volvió, los permisos fueron concedidos y los cuatro bloques pasaron la síntesis genérica. A/B, carga real y generación automática ya se implementaron; ver actualización al final. La próxima etapa es recalibración a 10 MHz, juego completo y equivalencia RTL/netlist; conversar su alcance antes de iniciarla. No redactar prompts futuros.
 
 ## Entorno instalado y versiones fijadas
 
@@ -103,11 +103,11 @@ La propuesta A de 128 instrucciones y 16 datos y la B de 144 palabras son capaci
 No se modificó RTL, assembler, configuración física ni firmware durante esta integración. No se prepararon prompts por adelantado. Al terminar esa integración documental, la checklist quedó en 13 de 17 pasos. El avance posterior de RTL se registra a continuación.
 
 
-## Primera etapa RTL: resultado actual
+## Primera etapa RTL: registro histórico (commit 17456d4)
 
 El usuario cambió a Astra Ultra y autorizó continuar con la primera adaptación. Se implementaron asic_top, reset_ctrl, btn_sync, el SoC con interfaz de memoria externa y el RF portable. Los siete archivos restantes del core y los dos periféricos son idénticos a baseline. No se modificaron firmware, assembler, original Proyecto 2, configuración global de Git ni las referencias del kit.
 
-La memoria asic_memory de producción queda pendiente de A/B. Para elaborar y simular el top se añade explícitamente sim/asic_stage1/asic_memory.v, protegido con ASIC_STAGE1_SIM. No sintetizar ese modelo ni interpretar su demora como carga real de B. El manifiesto config/rtl_stage1.f contiene solo producción y falla al elaborar asic_top sin una memoria real.
+En esa primera etapa, la memoria asic_memory de producción quedó pendiente de A/B; la implementación posterior se registra al final. Para elaborar y simular el top se añade explícitamente sim/asic_stage1/asic_memory.v, protegido con ASIC_STAGE1_SIM. No sintetizar ese modelo ni interpretar su demora como carga real de B. El manifiesto config/rtl_stage1.f contiene solo producción y falla al elaborar asic_top sin una memoria real.
 
 scripts/check_asic_stage1.py pasó siete pruebas: RF (1903 ciclos, 1872 diferenciales contra iCE40), reset/botones (73 comprobaciones), arranque con demoras 0/5/144 (dos arranques de 2000 ciclos por caso), diagnóstico MMIO/SPI y comparación de pipeline de 10000 ciclos. La comparación usa el mismo wrapper y sustituye solamente RF; no es post-síntesis ni juego completo. evidence/asic_stage1 conserva logs, hashes y resultados. El programa original sigue teniendo 94 instrucciones idénticas. Las 38 huellas del original coinciden y baseline no tiene diferencias Git.
 
@@ -115,10 +115,29 @@ scripts/check_asic_stage1_synthesis.py se ejecutó con éxito al regresar el usu
 
 La advertencia de convertir regs_q a lista de registros es esperada; aparece en línea 52 de los cuatro logs porque se leen todos los fuentes antes de podar jerarquía. evidence/asic_stage1_synthesis conserva los logs, scripts Yosys, resultados, versión y hashes. Los conteos son genéricos por definición de módulo, no área GF180 ni timing. No se sintetizó el macro completo con memoria A/B, ni se comprobó equivalencia post-síntesis.
 
-La checklist continúa en 14/17, ahora con simulación y síntesis genérica del primer bloque de adaptación terminadas. El siguiente trabajo técnico es la memoria A/B. El riesgo previo de SPI (byte_done sin condicionar por cs_active) sigue documentado y sin modificar; requiere reproducción dirigida antes de decidir una corrección.
+Al cerrar esa primera etapa, la checklist quedó en 14/17 y el trabajo siguiente eran las memorias A/B. El riesgo previo de SPI (byte_done sin condicionar por cs_active) sigue documentado y sin modificar; requiere reproducción dirigida antes de decidir una corrección.
 
 ### Permisos y publicación
 
 Mientras el usuario estuvo AFK se guardaron las solicitudes y no se enviaron otras. Al volver autorizó explícitamente los permisos pendientes, la síntesis y la subida al repositorio personal. Ya se concedieron escritura para Proyecto 3 y .git, acceso al socket local y comunicación. Docker Engine 29.9.2 respondió correctamente; no fue necesario reinstalar ni cambiar su configuración.
 
 Los errores anteriores de acceso se conservan en evidence/asic_stage1/*_access_probe.log como antecedentes históricos. No deben interpretarse como bloqueos actuales. La cuenta icruzat1 (GitHub) se volvió a comprobar en VS Code. El commit de esta etapa incorpora RTL, pruebas, evidencias y documentación; todas las operaciones remotas se realizan mediante esa sesión personal. Consultar el historial de main y su seguimiento origin/main para identificar el commit publicado. La conexión de oficina permanece excluida.
+
+
+## Memorias A/B implementadas
+
+El usuario autorizó continuar con A/B y pidió ver el trabajo en VS Code. Se abrió primero asic_top.v y después docs/Memorias_AB.md, que muestra resultados y decisiones. El usuario puede ver los cambios cuando se guardan archivos; no se simula escritura letra por letra.
+
+Se implementaron rtl/asic/memory_a.v, memory_b.v y el selector asic_memory.v. asic_top ahora recibe MemoryVariant, 0=A y 1=B. A contiene ROM de 128 palabras y RAM de 16; B un único arreglo mem_ff de 144 palabras reescribible, con carga secuencial de 144 ciclos. La misma ROM generada alimenta A y el cargador de B. Las lecturas de B en operación normal salen siempre de su arreglo FF. Se mantienen latencias, byte enables, read-first, reset y MMIO. Direcciones inválidas no crean alias; puerto de datos A puede leer ROM pero no escribirla; B puede reescribir y ejecutar cualquiera de sus 144 palabras.
+
+scripts/generate_asic_memory.py invoca el assembler original sin modificarlo. Genera ROM, game.hex y manifiesto en rtl/asic/generated. El juego conserva 94 palabras idénticas a los hex originales; todavía usa constantes de 25 MHz. Se corrigió una salida indefinida del primer generador combinacional en Icarus, sustituyendo always@* por función+assign; la regresión mantiene índices constantes 0/127. El generador pasó ocho pruebas.
+
+scripts/check_asic_memories.py pasó cuatro simulaciones: interfaces de memorias de 5800 ciclos con cinco resets; top A/B dos épocas de 10000 ciclos alineadas con desfase de reset de 143 ciclos; y diagnóstico CPU RAM/MMIO/SPI para A y B. El intervalo de juego observado tuvo 2494 lecturas MMIO y cero accesos a RAM ordinaria, sin demostrar todavía su comportamiento completo. Las siete pruebas históricas de etapa 1 también pasan; su manifiesto es ahora un subconjunto explícito que sustituye las memorias reales por fixture.
+
+scripts/check_asic_memory_synthesis.py pasó cuatro corridas: memory_a, memory_b, asic_top A y asic_top B. Yosys 0.62 de la imagen fijada; sin ABC ni mapeo PDK. Comprobación bit por bit del conductor FF.Q: 512 bits independientes A y 4608 en B, dentro y fuera del macro. FF genéricos totales: A 577/B 4681 aisladas; top A 1329/top B 5433. Sin latches, memorias sin mapear, SB ni cajas negras; solo la arquitectura elegida en cada top. Evidencia en evidence/asic_stage2 y evidence/asic_memory_synthesis. No interpretar estas cifras como área, Fmax o cierre físico.
+
+config/rtl_asic.f es el manifiesto completo de producción. Los scripts verifican que incluya todas las fuentes y el generador esté actualizado. Las netlists genéricas voluminosas están en build/asic_memory_synthesis; sus hashes, logs y conteos se registran. No ejecutar el flujo físico con el fixture de sim/asic_stage1.
+
+Checklist 15/17: pendientes juego completo/equivalencia y experimentos/signoff/informe. El original Proyecto 2 y baseline se conservan. Mantener memoria de las preguntas a la conversación anterior para cuando sean necesarias, sin preparar prompts por adelantado.
+
+La prueba scripts/check_memory_netlist.py también pasó sobre las netlists genéricas de memory_a y memory_b: misma cobertura de 5800 ciclos y cinco resets que el ensayo RTL. Verifica huellas antes de ejecutar, y guarda resultados en evidence/asic_memory_netlist. No es equivalencia formal ni prueba post-síntesis del juego; ese requisito sigue pendiente.

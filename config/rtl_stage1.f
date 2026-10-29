@@ -1,5 +1,5 @@
-# Stage 1: production RTL, without the pending ASIC memory A/B.
-# This list alone must fail top elaboration until stage 2 supplies asic_memory.
+# Stage-1 isolation regression: deliberately omits the real memory A/B.
+# Add its simulation fixture explicitly; full production uses rtl_asic.f.
 rtl/asic/asic_top.v
 rtl/asic/btn_sync.v
 rtl/asic/reset_ctrl.v

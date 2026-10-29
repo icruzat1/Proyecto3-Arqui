@@ -1,0 +1,2 @@
+PASS register_file cycles=1903 legacy_cycles=1872 collisions_a=102 collisions_b=93 x0_writes=51
+<PROJECT_ROOT>/sim/asic_stage1/tb_register_file.v:173: $finish called at 19076000 (1ps)

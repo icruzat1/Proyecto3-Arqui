@@ -12,20 +12,20 @@ La corrida final exige CLOCK_PERIOD de 100 ns y FP_CORE_UTIL de 40 por ciento. C
 
 | Sección | Requisito y evidencia | Estado en Espino |
 |---|---|---|
-| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz/reset/RF probados y síntesis genérica de bloques aprobada; memorias reales y flujo físico completo pendientes. Ver Adaptacion_RTL_Etapa1.md. |
-| 3.2 | A: ROM combinacional generada automáticamente por el assembler desde game.s y RAM reducida. B: memoria unificada en FF dimensionada por uso real. Comparar área de celdas, FF, utilización y Fmax. | Diseños propuestos; implementación y métricas pendientes. |
+| 3.1 | asic_top con reloj, reset, LED, botones, displays y SPI. Identificar dependencias FPGA y registrar log y línea de cada warning/error; si no hubo aviso, explicar el problema físico. | Interfaz y memorias reales probadas; ambos macros pasan síntesis genérica. Flujo físico y sus mensajes finales pendientes. Ver Memorias_AB.md. |
+| 3.2 | A: ROM combinacional generada automáticamente por el assembler desde game.s y RAM reducida. B: memoria unificada en FF dimensionada por uso real. Comparar área de celdas, FF, utilización y Fmax. | A/B implementadas y probadas; 512/4608 bits de almacenamiento FF confirmados. Área/utilización/Fmax físicos pendientes. |
 | 3.3 | Cinco celdas más usadas y explicación; módulo dominante; fracción de área del contador. Trazar RF, ALU y contador aun si se aplana la jerarquía. Comparar expectativas con síntesis. | Pendiente. |
 | 3.4 | Al menos tres períodos incluyendo 100 ns; WNS/TNS de setup y hold en corner típico y más lento. Identificar extremos y función de ruta crítica. Implementar una mejora RTL y medir slack y área. Recalibrar game.s y regenerarlo. | Cálculos disponibles; barridos, modificación y pruebas pendientes. |
 | 3.5 | Al menos tres utilizaciones o tamaños de die; área mínima exitosa; gráfico utilización frente a violaciones o congestión; justificar terminales y alimentación. Estimar costo con el factor didáctico indicado. | Pendiente. |
 | 3.6 | Reportes finales DRC, LVS y antena. Describir una violación observada, si la hubo, con ubicación y solución. Capturas de layout con RF, ALU y contador identificados. | Pendiente para Espino. |
-| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | Arranque RTL ASIC y comparación de RF/pipeline probados; juego completo y equivalencia post-síntesis pendientes. |
+| 3.7 | Netlist post-síntesis sin retardos: misma cantidad de ciclos que RTL en una ronda correcta; pulsación errónea reinicia la ronda. Mismo firmware y estímulos por ciclo. | Arranque y diagnóstico con A/B probados; 20000 ciclos iniciales comparados. Juego completo y equivalencia RTL/netlist del juego pendientes. |
 | 4 y 5 | Informe PDF, código y README reproducible; todos los integrantes deben poder defender RTL, assembler e informe. | Cuaderno integrado y guion de estudio disponibles; entrega final pendiente. |
 
 ## Memorias y programa
 
 El enunciado recomienda como máximo 256 palabras de instrucciones y 64 de datos. Son recomendaciones de alcance; superar alguna requiere justificación previa a la comparación final. El bootloader SPI es opcional y no sustituye A y B.
 
-El programa actual tiene 94 instrucciones. El análisis estático recuperado identifica cero palabras de RAM ordinaria accedidas por el juego; sus cargas y escrituras se destinan a MMIO. Falta respaldar el uso dinámico con las pruebas completas. La reserva previa de 128 palabras de programa y 16 de datos es una propuesta, no una capacidad impuesta por la pauta.
+El programa actual tiene 94 instrucciones. El análisis estático recuperado identifica cero palabras de RAM ordinaria accedidas por el juego; sus cargas y escrituras se destinan a MMIO. Falta respaldar el uso dinámico con las pruebas completas. Se implementaron 128 palabras de programa y 16 de datos como capacidad provisionada, no impuesta por la pauta.
 
 ## Tiempo del juego
 
