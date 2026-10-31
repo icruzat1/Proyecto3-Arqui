@@ -1,0 +1,96 @@
+{
+  "reviewed_at_utc": "2026-10-30T23:47:49.056259+00:00",
+  "scope": "Read-only audit of existing final physical and functional evidence; no physical rerun",
+  "variants": {
+    "a": {
+      "run": "stage13_final_traceable_a",
+      "status": "PASS",
+      "archived_artifacts_verified": 354,
+      "final_views_verified": 11,
+      "fresh_raw_corners_verified": 9,
+      "functional_samples": 21295,
+      "functional_scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+      "netlist_sha256": "0925584f9f5998f0de3116233d24cd5f926b22b0d848bedf79c235cdea8071bf",
+      "checkpoint_crc_and_sha_verified": true,
+      "setup_slack_ns": 46.59729445302585,
+      "hold_slack_ns": 0.13082246767280262,
+      "omissions": [
+        "KLayout DRC has no configured runset; skipped is not PASS",
+        "Formal EQY equivalence disabled or unsupported for GF180",
+        "LVS extraction uses DEF/LEF; not complete transistor-level GDS extraction",
+        "IR-drop analysis has no explicit supply-source locations; report is not power-integrity signoff"
+      ],
+      "all_functional_block_groups": 14,
+      "captures_verified": 15,
+      "alu_cells_identified": 589,
+      "mapped_game_coverage": {
+        "variant": 0,
+        "cycles": 10623,
+        "compared": 10622,
+        "correct": 2,
+        "wrong": 1,
+        "attempts": 3,
+        "held_checks": 600,
+        "requests": 1118,
+        "stores": 11,
+        "ram_accesses": 0,
+        "first_correct": 3360,
+        "wrong_cycle": 6876,
+        "second_correct": 10423,
+        "first_round_cycles": 302,
+        "wrong_round_cycles": 269,
+        "second_round_cycles": 302
+      },
+      "game_scope": "Wait-only game terminal equivalence; two correct rounds and one incorrect single-button retry"
+    },
+    "b": {
+      "run": "stage12_electrical_route_b",
+      "status": "PASS",
+      "archived_artifacts_verified": 360,
+      "final_views_verified": 11,
+      "fresh_raw_corners_verified": 9,
+      "functional_samples": 21295,
+      "functional_scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+      "netlist_sha256": "ec1f8b4916ae876a1e8c6005beaf8919803b3c36e8566a262c9e65c2107d8d27",
+      "checkpoint_crc_and_sha_verified": true,
+      "setup_slack_ns": 22.614664558871187,
+      "hold_slack_ns": 0.2930769043739347,
+      "omissions": [
+        "KLayout DRC has no configured runset; skipped is not PASS",
+        "Formal EQY equivalence disabled or unsupported for GF180",
+        "LVS extraction uses DEF/LEF; not complete transistor-level GDS extraction",
+        "IR-drop analysis has no explicit supply-source locations; report is not power-integrity signoff"
+      ],
+      "all_functional_block_groups": 12,
+      "captures_verified": 13,
+      "alu_cells_identified": 589,
+      "mapped_game_coverage": {
+        "variant": 1,
+        "cycles": 10766,
+        "compared": 10765,
+        "correct": 2,
+        "wrong": 1,
+        "attempts": 3,
+        "held_checks": 600,
+        "requests": 1118,
+        "stores": 11,
+        "ram_accesses": 0,
+        "first_correct": 3503,
+        "wrong_cycle": 7019,
+        "second_correct": 10566,
+        "first_round_cycles": 302,
+        "wrong_round_cycles": 269,
+        "second_round_cycles": 302
+      },
+      "game_scope": "Wait-only game terminal equivalence; two correct rounds and one incorrect single-button retry"
+    }
+  },
+  "sweeps_complete": true,
+  "sweeps_count": 8,
+  "remaining_outside_implementation": [
+    "Informe PDF aplazado por el usuario",
+    "Preparaci\u00f3n oral del equipo",
+    "Publicaci\u00f3n mediante VS Code personal pendiente"
+  ],
+  "local_cleanup_record": "evidence/storage_cleanup/cleanup.json"
+}

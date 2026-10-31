@@ -1,0 +1,53 @@
+{
+  "variant": "b",
+  "source_state": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/state_out.json",
+  "source_state_sha256": "71b208b198690b6310cdef9be692a75f6c20778f516edaf99fab51baa749f438",
+  "config": "config/gf180/b_academic_final.json",
+  "config_sha256": "634eab1899545efe37555535c96f9aa01b38d28f0f224a60f196ea3200b6d7cf",
+  "from_step": "Odb.RemoveRoutingObstructions",
+  "scope": "Existing routed checkpoint; replays extraction/STA/export/checks, not synthesis or routing from RTL.",
+  "files": {
+    "views/00_asic_top.h.json": {
+      "source": "config/gf180/runs/stage7_trace_ref_b/05-yosys-jsonheader/asic_top.h.json",
+      "sha256": "fd7d02cc3a71877697621180008c6c6424a0449216b25062a504a5fba27d2b4d"
+    },
+    "views/01_asic_top.nl.v": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/asic_top.nl.v",
+      "sha256": "9333966c68b97044bb11ac49c77293c8ba1bdb356c1de7f6ccb7b5af36e6fd45"
+    },
+    "views/02_asic_top__nom_tt_025C_5v00.sdf": {
+      "source": "config/gf180/runs/stage7_trace_ref_b/12-openroad-staprepnr/nom_tt_025C_5v00/asic_top__nom_tt_025C_5v00.sdf",
+      "sha256": "d080047142cb9898b068fbb011be52d470c896178250eca6491077bb7f13d605"
+    },
+    "views/03_asic_top__nom_ss_125C_4v50.sdf": {
+      "source": "config/gf180/runs/stage7_trace_ref_b/12-openroad-staprepnr/nom_ss_125C_4v50/asic_top__nom_ss_125C_4v50.sdf",
+      "sha256": "ee9647d52e65e34e39de12ae766c6b457198d7d60ac93797f571766d5f99c4c8"
+    },
+    "views/04_asic_top__nom_ff_n40C_5v50.sdf": {
+      "source": "config/gf180/runs/stage7_trace_ref_b/12-openroad-staprepnr/nom_ff_n40C_5v50/asic_top__nom_ff_n40C_5v50.sdf",
+      "sha256": "294f8a8046aacdcd3d8fe71256f917bc5a502299fde9d451e7cb922717a45496"
+    },
+    "views/05_asic_top.odb": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/asic_top.odb",
+      "sha256": "341b9a3bcb1da69fe00c5dbecab8cd2088eaa7cda29017fb978915dd102bfd8d"
+    },
+    "views/06_asic_top.def": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/asic_top.def",
+      "sha256": "728f245a9c26ba6583ee811c170110118de0f2bf688d2d6135315e70cac73d5b"
+    },
+    "views/07_asic_top.sdc": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/asic_top.sdc",
+      "sha256": "61e00d8ff22bb2616ef6fa652e76d3adde37e38492309c90d160c03922767114"
+    },
+    "views/08_asic_top.pnl.v": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting/asic_top.pnl.v",
+      "sha256": "429951d3cd3b8dbce0ea4bd1f1f19bb700f2b93a42a728b405eacccb2afe0dca"
+    },
+    "views/09_asic_top.vh": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/17-odb-writeverilogheader/asic_top.vh",
+      "sha256": "dd79caee1fa1dff6c258ab6f35d1b6ed4423ec722e31fd96cb27d9b39c706e23"
+    }
+  },
+  "archive_sha256": "6ab32cef1e0f90c9e7e13c1c93551342d6253fa3b7f66504bc3fceabca58bc91",
+  "archive_bytes": 20919191
+}

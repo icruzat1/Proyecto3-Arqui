@@ -1,0 +1,48 @@
+{
+  "commands": [
+    [
+      "/Applications/Docker.app/Contents/Resources/bin/docker",
+      "run",
+      "--rm",
+      "--pull=never",
+      "--network=none",
+      "--cpus",
+      "1",
+      "--memory",
+      "2g",
+      "--user",
+      "501:20",
+      "--mount",
+      "type=bind,source=/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3,target=/work",
+      "--workdir",
+      "/work",
+      "--env",
+      "QT_QPA_PLATFORM=offscreen",
+      "--env",
+      "XDG_CACHE_HOME=/tmp",
+      "ghcr.io/librelane/librelane@sha256:24640bd645ae992fa22d4a3e18fde10d728763c78fb140184f9975aa6c7d3e5e",
+      "klayout",
+      "-z",
+      "-nc",
+      "-r",
+      "scripts/klayout_capture_regions.py",
+      "-rd",
+      "capture_dir=evidence/layout_captures/stage7_trace_physical_candidate_a"
+    ]
+  ],
+  "source_hashes_verified": true,
+  "input_sha256": {
+    "scripts/extract_gf180_capture_regions.py": "7080d9ebb3df42c910c3d883a68e4bf34d73130da1bfdbd04100e5f92a1e99b9",
+    "scripts/klayout_capture_regions.py": "f720a9d18f20e3556f82bd1322e1499c6657c0fd024d3abe7c4e0d53429698d5",
+    "scripts/capture_gf180_layout.py": "dd7b22b82fe4f2a023a708796890b236b81099a296450adf5ddfdc399238fcd5",
+    "config/environment.lock.json": "37b4900a9add88afcf7d6969bc7cce5050df6695e2df4871f728a035daef77d2",
+    "evidence/layout_captures/stage7_trace_physical_candidate_a/regions.json": "965a78772dc38deb36ac5fac0ba124219fc2e5b7a4ea505c636a76ba4e391fc7"
+  },
+  "images": {
+    "alu.png": "9f33824f36dd899dbfbb1a4ef72a0506981309fa04c5329be4152d64990235b5",
+    "counter.png": "4d77e25a81f9d676677f04b035c9b13da18bc39f4f9e723052b85160a5c0a192",
+    "overview.png": "84e973c71ad00da88379b3b1bfb8ebded65c609f4db727f2753d8c886b6f1e59",
+    "rf.png": "4007ced660bc225f79ab445e9851eee97c13a9c4579f8f05f1ccc17220ce3f00"
+  },
+  "scope": "Actual KLayout GUI viewport exports with overlays; no GDS modifications."
+}

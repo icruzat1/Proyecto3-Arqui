@@ -1,0 +1,296 @@
+[22:24:54] [I] Loading the design configuration file has generated config.py:740
+               the following warnings:                                          
+[22:24:54] [W] The configuration variable 'PL_TARGET_DENSITY' is   config.py:744
+               deprecated. Please check the docs for the usage on               
+               the replacement variable 'PL_TARGET_DENSITY_PCT'.                
+[22:24:54] [I] Starting a new run of the 'Classic' flow with the tag flow.py:654
+               'stage5_100ns_u40_cts_a'.                                        
+[22:24:54] [I] Starting…                                       sequential.py:339
+[22:24:54] [I] Skipping step 'Verilator Lint'…                 sequential.py:370
+[22:24:54] [I] Skipping step 'Lint Timing Error Checker'…      sequential.py:370
+[22:24:54] [I] Skipping step 'Lint Errors Checker'…            sequential.py:370
+[22:24:54] [I] Skipping step 'Lint Warnings Checker'…          sequential.py:370
+[22:24:54] [I] Skipping step 'Generate JSON Header'…           sequential.py:370
+[22:24:54] [I] Skipping step 'Synthesis'…                      sequential.py:370
+[22:24:54] [I] Skipping step 'Unmapped Cells Checker'…         sequential.py:370
+[22:24:54] [I] Skipping step 'Yosys Synth Checks'…             sequential.py:370
+[22:24:54] [I] Skipping step 'Netlist Assign Statement         sequential.py:370
+               Checker'…                                                        
+[22:24:54] [I] Skipping step 'Check SDC Files'…                sequential.py:370
+[22:24:54] [I] Skipping step 'Check Macro Instances'…          sequential.py:370
+[22:24:54] [I] Skipping step 'STA (Pre-PnR)'…                  sequential.py:370
+[22:24:54] [I] Skipping step 'Floorplan Init'…                 sequential.py:370
+[22:24:54] [I] Skipping step 'Dump RC Values'…                 sequential.py:370
+[22:24:54] [I] Skipping step 'Check Antenna Properties of      sequential.py:370
+               Macros Pins in Their LEF Views'…                                 
+[22:24:54] [I] Skipping step 'Set Power Connections'…          sequential.py:370
+[22:24:54] [I] Skipping step 'Manual Macro Placement'…         sequential.py:370
+[22:24:54] [I] Skipping step 'Cut Rows'…                       sequential.py:370
+[22:24:54] [I] Skipping step 'Tap/Decap Insertion'…            sequential.py:370
+[22:24:54] [I] Skipping step 'Add PDN obstructions'…           sequential.py:370
+[22:24:54] [I] Skipping step 'Generate PDN'…                   sequential.py:370
+[22:24:54] [I] Skipping step 'Remove PDN obstructions'…        sequential.py:370
+[22:24:54] [I] Skipping step 'Add Obstructions'…               sequential.py:370
+[22:24:54] [I] Skipping step 'Global Placement Skip IO'…       sequential.py:370
+[22:24:54] [I] Skipping step 'I/O Placement'…                  sequential.py:370
+[22:24:54] [I] Skipping step 'Custom I/O Placement'…           sequential.py:370
+[22:24:54] [V] Running 'Odb.ApplyDEFTemplate' at                    step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/01-odb-app             
+               lydeftemplate'…                                                  
+[22:24:54] [I] No DEF template provided, skipping                     odb.py:302
+               'Odb.ApplyDEFTemplate'…                                          
+[22:24:54] [V] Running 'OpenROAD.GlobalPlacement' at                step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/02-openroa             
+               d-globalplacement'…                                              
+[22:24:54] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/02-openroa             
+               d-globalplacement/openroad-globalplacement.log'…                 
+[22:24:54] [W] [GPL-0302] Target density 0.4500 is too low for   openroad.py:314
+               the available free area.                                         
+[22:24:55] [W] [GRT-0281] Net clk_i has a large fanout of 1328   openroad.py:314
+               terminals.                                                       
+[22:24:56] [V] Running 'Odb.WriteVerilogHeader' at                  step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/03-odb-wri             
+               teverilogheader'…                                                
+[22:24:56] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/03-odb-wri             
+               teverilogheader/odb-writeverilogheader.log'…                     
+[22:24:56] [V] Running 'Checker.PowerGridViolations' at             step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/04-checker             
+               -powergridviolations'…                                           
+[22:24:56] [I] Check for power grid violations (as reported by    checker.py:131
+               OpenROAD PSM- you may ignore these if LVS passes)                
+               clear.                                                           
+[22:24:56] [V] Running 'OpenROAD.STAMidPNR' at                      step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/05-openroa             
+               d-stamidpnr'…                                                    
+[22:24:56] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/05-openroa             
+               d-stamidpnr/openroad-stamidpnr.log'…                             
+[22:25:00] [V] Running 'OpenROAD.RepairDesignPostGPL' at            step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/06-openroa             
+               d-repairdesignpostgpl'…                                          
+[22:25:00] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/06-openroa             
+               d-repairdesignpostgpl/openroad-repairdesignpostgpl.l             
+               og'…                                                             
+[22:25:00] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:01] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:01] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:01] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:02] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:02] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:09] [W] [RSZ-0020] found 2 floating nets.                 openroad.py:314
+[22:25:10] [V] Running 'Odb.ManualGlobalPlacement' at               step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/07-odb-man             
+               ualglobalplacement'…                                             
+[22:25:10] [I] 'MANUAL_GLOBAL_PLACEMENTS' not set. Skipping          odb.py:1033
+               'Odb.ManualGlobalPlacement'…                                     
+[22:25:10] [V] Running 'OpenROAD.DetailedPlacement' at              step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/08-openroa             
+               d-detailedplacement'…                                            
+[22:25:10] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/08-openroa             
+               d-detailedplacement/openroad-detailedplacement.log'…             
+[22:25:11] [V] Running 'OpenROAD.CTS' at                            step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/09-openroa             
+               d-cts'…                                                          
+[22:25:11] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/09-openroa             
+               d-cts/openroad-cts.log'…                                         
+[22:25:12] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:12] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:12] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:13] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:13] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:13] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:22] [V] Running 'OpenROAD.STAMidPNR-1' at                    step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/10-openroa             
+               d-stamidpnr-1'…                                                  
+[22:25:22] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/10-openroa             
+               d-stamidpnr-1/openroad-stamidpnr-1.log'…                         
+[22:25:26] [V] Running 'OpenROAD.ResizerTimingPostCTS' at           step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/11-openroa             
+               d-resizertimingpostcts'…                                         
+[22:25:26] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/11-openroa             
+               d-resizertimingpostcts/openroad-resizertimingpostcts             
+               .log'…                                                           
+[22:25:26] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[22:25:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[22:25:28] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:28] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[22:25:34] [V] Running 'OpenROAD.STAMidPNR-2' at                    step.py:1138
+               'config/gf180/runs/stage5_100ns_u40_cts_a/12-openroa             
+               d-stamidpnr-2'…                                                  
+[22:25:34] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage5_100ns_u40_cts_a/12-openroa             
+               d-stamidpnr-2/openroad-stamidpnr-2.log'…                         
+[22:25:37] [I] Skipping step 'Global Routing'…                 sequential.py:370
+[22:25:37] [I] Skipping step 'Check Antennas'…                 sequential.py:370
+[22:25:37] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.RepairDesignPostGRT' set to 'False'-                   
+               the step will be skipped.                                        
+[22:25:37] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Routing)'…                                                       
+[22:25:37] [I] Skipping step 'Diodes on Ports'…                sequential.py:370
+[22:25:37] [I] Gating variable for step                        sequential.py:362
+               'Odb.HeuristicDiodeInsertion' set to 'False'-                    
+               the step will be skipped.                                        
+[22:25:37] [I] Skipping step 'Heuristic Diode Insertion'…      sequential.py:370
+[22:25:37] [I] Skipping step 'Antenna Repair'…                 sequential.py:370
+[22:25:37] [I] Gating variable for step                        sequential.py:362
+               'OpenROAD.ResizerTimingPostGRT' set to 'False'-                  
+               the step will be skipped.                                        
+[22:25:37] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Global Routing)'…                                          
+[22:25:37] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[22:25:37] [I] Skipping step 'Detailed Routing'…               sequential.py:370
+[22:25:37] [I] Skipping step 'Remove Obstructions'…            sequential.py:370
+[22:25:37] [I] Skipping step 'Check Antennas'…                 sequential.py:370
+[22:25:37] [I] Skipping step 'Routing DRC Checker'…            sequential.py:370
+[22:25:37] [I] Skipping step 'Report Disconnected Pins'…       sequential.py:370
+[22:25:37] [I] Skipping step 'Disconnected Pins Checker'…      sequential.py:370
+[22:25:37] [I] Skipping step 'Report Wire Length'…             sequential.py:370
+[22:25:37] [I] Skipping step 'Wire Length Threshold Checker'…  sequential.py:370
+[22:25:37] [I] Skipping step 'Fill Insertion'…                 sequential.py:370
+[22:25:37] [I] Skipping step 'Generate Cell Frequency Tables'… sequential.py:370
+[22:25:37] [I] Skipping step 'Parasitics (RC) Extraction'…     sequential.py:370
+[22:25:37] [I] Skipping step 'STA (Post-PnR)'…                 sequential.py:370
+[22:25:37] [I] Skipping step 'IR Drop Report'…                 sequential.py:370
+[22:25:37] [I] Skipping step 'GDSII Stream Out (Magic)'…       sequential.py:370
+[22:25:37] [I] Skipping step 'GDSII Stream Out (KLayout)'…     sequential.py:370
+[22:25:37] [I] Skipping step 'Render Image (w/ KLayout)'…      sequential.py:370
+[22:25:37] [I] Skipping step 'Write LEF (Magic)'…              sequential.py:370
+[22:25:37] [I] Skipping step 'Check Antenna Properties of Pins sequential.py:370
+               in The Generated Design LEF view'…                               
+[22:25:37] [I] Skipping step 'KLayout vs. Magic XOR'…          sequential.py:370
+[22:25:37] [I] Skipping step 'XOR Difference Checker'…         sequential.py:370
+[22:25:37] [I] Skipping step 'DRC'…                            sequential.py:370
+[22:25:37] [I] Skipping step 'Design Rule Check (KLayout)'…    sequential.py:370
+[22:25:37] [I] Skipping step 'Magic DRC Checker'…              sequential.py:370
+[22:25:37] [I] Skipping step 'KLayout DRC Checker'…            sequential.py:370
+[22:25:37] [I] Skipping step 'SPICE Extraction'…               sequential.py:370
+[22:25:37] [I] Skipping step 'Illegal Overlap Checker'…        sequential.py:370
+[22:25:37] [I] Skipping step 'Netgen LVS'…                     sequential.py:370
+[22:25:37] [I] Skipping step 'LVS Error Checker'…              sequential.py:370
+[22:25:37] [I] Gating variable for step 'Yosys.EQY' set to     sequential.py:362
+               'False'- the step will be skipped.                               
+[22:25:37] [I] Skipping step 'Equivalence Check'…              sequential.py:370
+[22:25:37] [I] Skipping step 'Setup Timing Violations          sequential.py:370
+               Checker'…                                                        
+[22:25:37] [I] Skipping step 'Hold Timing Violations Checker'… sequential.py:370
+[22:25:37] [I] Skipping step 'Max Slew Violations Checker'…    sequential.py:370
+[22:25:37] [I] Skipping step 'Max Cap Violations Checker'…     sequential.py:370
+[22:25:37] [I] Skipping step 'Report Manufacturability'…       sequential.py:370
+[22:25:37] [I] Saving views to                                      state.py:209
+               '/work/config/gf180/runs/stage5_100ns_u40_cts_a/fina             
+               l'…                                                              
+[22:25:37] [I] Flow complete.                                  sequential.py:413
+
+
+[22:25:37] [W] The following warnings were generated by the flow:    flow.py:699
+[22:25:37] [W] [OpenROAD.GlobalPlacement] [GPL-0302] Target density  flow.py:701
+               0.4500 is too low for the available free area.                   
+[22:25:37] [W] [OpenROAD.GlobalPlacement] [GRT-0281] Net clk_i has a flow.py:701
+               large fanout of 1328 terminals.                                  
+[22:25:37] [W] [OpenROAD.RepairDesignPostGPL] [STA-1140]             flow.py:701
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0            
+               /lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line              
+               17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50                
+               already exists. (and 17 similar warnings)                        
+[22:25:37] [W] [OpenROAD.RepairDesignPostGPL] [RSZ-0020] found 2     flow.py:701
+               floating nets.                                                   

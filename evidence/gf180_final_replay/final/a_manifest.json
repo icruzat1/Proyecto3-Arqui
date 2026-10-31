@@ -1,0 +1,41 @@
+{
+  "variant": "a",
+  "source_state": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/state_out.json",
+  "source_state_sha256": "85a878fb8e353b94cc5620d29afc88d8e97265d1e3d172872cf8651f84f34322",
+  "config": "config/gf180/a_final_traceable.json",
+  "config_sha256": "2c72cdae68e31f0237f229b4eca237f2ae6029eaf57059f2e1b358ca813d53de",
+  "from_step": "Odb.RemoveRoutingObstructions",
+  "scope": "Existing routed checkpoint; replays extraction/STA/export/checks, not synthesis or routing from RTL.",
+  "files": {
+    "views/00_asic_top.h.json": {
+      "source": "config/gf180/runs/stage7_trace_ref_a/05-yosys-jsonheader/asic_top.h.json",
+      "sha256": "f6b9ec1bcb9a703559e1b46cfb55a6c1c51540589cb9f9bfe7425990aa90901c"
+    },
+    "views/01_asic_top.odb": {
+      "source": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/asic_top.odb",
+      "sha256": "946e45d873029956cfe0cafa45caf17a99d5209e451f6914e4b17c8cf3bb74ea"
+    },
+    "views/02_asic_top.def": {
+      "source": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/asic_top.def",
+      "sha256": "b3900d7ffe8ea0f26a68de30031372825059344b66e7867de3a85e46162d4a35"
+    },
+    "views/03_asic_top.sdc": {
+      "source": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/asic_top.sdc",
+      "sha256": "61e00d8ff22bb2616ef6fa652e76d3adde37e38492309c90d160c03922767114"
+    },
+    "views/04_asic_top.vh": {
+      "source": "config/gf180/runs/stage7_trace_physical_ref_a/17-odb-writeverilogheader/asic_top.vh",
+      "sha256": "dd79caee1fa1dff6c258ab6f35d1b6ed4423ec722e31fd96cb27d9b39c706e23"
+    },
+    "views/05_asic_top.nl.v": {
+      "source": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/asic_top.nl.v",
+      "sha256": "ed9d933dcd2a75843178aa4b0e2951956f273eae6c8f55a2d407d4aae4bb5de5"
+    },
+    "views/06_asic_top.pnl.v": {
+      "source": "config/gf180/runs/stage13_final_traceable_a/01-openroad-detailedrouting/asic_top.pnl.v",
+      "sha256": "9f17c21b864f4223d4113d653feddb5f87f49ff731bdca9593e87a797eb3e156"
+    }
+  },
+  "archive_sha256": "6ab3731f51254bae088bebe06e78234d9d4a6edc689e500212e0886bad330c96",
+  "archive_bytes": 4321717
+}

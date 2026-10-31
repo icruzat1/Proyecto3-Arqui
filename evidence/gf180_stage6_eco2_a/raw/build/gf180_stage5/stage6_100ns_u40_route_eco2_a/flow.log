@@ -1,0 +1,496 @@
+[02:51:38] [I] Loading the design configuration file has generated config.py:740
+               the following warnings:                                          
+[02:51:38] [W] The configuration variable 'PL_TARGET_DENSITY' is   config.py:744
+               deprecated. Please check the docs for the usage on               
+               the replacement variable 'PL_TARGET_DENSITY_PCT'.                
+[02:51:38] [I] Starting a new run of the 'Classic' flow with the tag flow.py:654
+               'stage6_100ns_u40_route_eco2_a'.                                 
+[02:51:38] [I] Starting…                                       sequential.py:339
+[02:51:38] [I] Skipping step 'Verilator Lint'…                 sequential.py:370
+[02:51:38] [I] Skipping step 'Lint Timing Error Checker'…      sequential.py:370
+[02:51:38] [I] Skipping step 'Lint Errors Checker'…            sequential.py:370
+[02:51:38] [I] Skipping step 'Lint Warnings Checker'…          sequential.py:370
+[02:51:38] [I] Skipping step 'Generate JSON Header'…           sequential.py:370
+[02:51:38] [I] Skipping step 'Synthesis'…                      sequential.py:370
+[02:51:38] [I] Skipping step 'Unmapped Cells Checker'…         sequential.py:370
+[02:51:38] [I] Skipping step 'Yosys Synth Checks'…             sequential.py:370
+[02:51:38] [I] Skipping step 'Netlist Assign Statement         sequential.py:370
+               Checker'…                                                        
+[02:51:38] [I] Skipping step 'Check SDC Files'…                sequential.py:370
+[02:51:38] [I] Skipping step 'Check Macro Instances'…          sequential.py:370
+[02:51:38] [I] Skipping step 'STA (Pre-PnR)'…                  sequential.py:370
+[02:51:38] [I] Skipping step 'Floorplan Init'…                 sequential.py:370
+[02:51:38] [I] Skipping step 'Dump RC Values'…                 sequential.py:370
+[02:51:38] [I] Skipping step 'Check Antenna Properties of      sequential.py:370
+               Macros Pins in Their LEF Views'…                                 
+[02:51:38] [I] Skipping step 'Set Power Connections'…          sequential.py:370
+[02:51:38] [I] Skipping step 'Manual Macro Placement'…         sequential.py:370
+[02:51:38] [I] Skipping step 'Cut Rows'…                       sequential.py:370
+[02:51:38] [I] Skipping step 'Tap/Decap Insertion'…            sequential.py:370
+[02:51:38] [I] Skipping step 'Add PDN obstructions'…           sequential.py:370
+[02:51:38] [I] Skipping step 'Generate PDN'…                   sequential.py:370
+[02:51:38] [I] Skipping step 'Remove PDN obstructions'…        sequential.py:370
+[02:51:38] [I] Skipping step 'Add Obstructions'…               sequential.py:370
+[02:51:38] [I] Skipping step 'Global Placement Skip IO'…       sequential.py:370
+[02:51:38] [I] Skipping step 'I/O Placement'…                  sequential.py:370
+[02:51:38] [I] Skipping step 'Custom I/O Placement'…           sequential.py:370
+[02:51:38] [I] Skipping step 'Apply DEF Template'…             sequential.py:370
+[02:51:38] [I] Skipping step 'Global Placement'…               sequential.py:370
+[02:51:38] [I] Skipping step 'Write Verilog Header'…           sequential.py:370
+[02:51:38] [I] Skipping step 'Power Grid Violation Checker'…   sequential.py:370
+[02:51:38] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[02:51:38] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Placement)'…                                                     
+[02:51:38] [I] Skipping step 'Manual Global Placement'…        sequential.py:370
+[02:51:38] [I] Skipping step 'Detailed Placement'…             sequential.py:370
+[02:51:38] [I] Skipping step 'Clock Tree Synthesis'…           sequential.py:370
+[02:51:38] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[02:51:38] [I] Skipping step 'Resizer Timing Optimizations     sequential.py:370
+               (Post-Clock Tree Synthesis)'…                                    
+[02:51:38] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[02:51:38] [I] Skipping step 'Global Routing'…                 sequential.py:370
+[02:51:38] [I] Skipping step 'Check Antennas'…                 sequential.py:370
+[02:51:38] [V] Running 'OpenROAD.RepairDesignPostGRT' at            step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/01-             
+               openroad-repairdesignpostgrt'…                                   
+[02:51:38] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/01-             
+               openroad-repairdesignpostgrt/openroad-repairdesignpo             
+               stgrt.log'…                                                      
+[02:51:39] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[02:51:39] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[02:51:40] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[02:51:40] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[02:51:40] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[02:51:41] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[02:51:50] [V] Running 'Odb.DiodesOnPorts' at                       step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/02-             
+               odb-diodesonports'…                                              
+[02:51:50] [I] 'DIODE_ON_PORTS' is set to 'none': skipping            odb.py:820
+               'Odb.DiodesOnPorts'…                                             
+[02:51:50] [I] Gating variable for step                        sequential.py:362
+               'Odb.HeuristicDiodeInsertion' set to 'False'-                    
+               the step will be skipped.                                        
+[02:51:50] [I] Skipping step 'Heuristic Diode Insertion'…      sequential.py:370
+[02:51:50] [V] Running 'OpenROAD.RepairAntennas' at                 step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/03-             
+               openroad-repairantennas'…                                        
+[02:51:50] [V] Running 'OpenROAD.DiodeInsertion' at                 step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/03-             
+               openroad-repairantennas/1-openroad-diodeinsertion'…              
+[02:51:50] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/03-             
+               openroad-repairantennas/1-openroad-diodeinsertion/op             
+               enroad-diodeinsertion.log'…                                      
+[02:52:01] [V] Running 'OpenROAD.CheckAntennas' at                  step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/03-             
+               openroad-repairantennas/2-openroad-checkantennas'…               
+[02:52:01] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/03-             
+               openroad-repairantennas/2-openroad-checkantennas/ope             
+               nroad-checkantennas.log'…                                        
+[02:52:05] [V] Running 'OpenROAD.ResizerTimingPostGRT' at           step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/04-             
+               openroad-resizertimingpostgrt'…                                  
+[02:52:05] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/04-             
+               openroad-resizertimingpostgrt/openroad-resizertiming             
+               postgrt.log'…                                                    
+[02:52:05] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[02:52:06] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[02:52:06] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[02:52:06] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[02:52:07] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[02:52:07] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[02:52:35] [V] Running 'OpenROAD.STAMidPNR-3' at                    step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/05-             
+               openroad-stamidpnr-3'…                                           
+[02:52:35] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/05-             
+               openroad-stamidpnr-3/openroad-stamidpnr-3.log'…                  
+[02:52:39] [V] Running 'OpenROAD.DetailedRouting' at                step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/06-             
+               openroad-detailedrouting'…                                       
+[02:52:39] [I] Running TritonRoute with 4 threads…              openroad.py:2004
+[02:52:39] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/06-             
+               openroad-detailedrouting/openroad-detailedrouting.lo             
+               g'…                                                              
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via1                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via1                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via2                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via2                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via3                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via3                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via4                           
+[02:52:39] [W] [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is    openroad.py:314
+               not supported. Skipping for layer Via4                           
+[02:54:17] [V] Running 'Odb.RemoveRoutingObstructions' at           step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/07-             
+               odb-removeroutingobstructions'…                                  
+[02:54:17] [I] 'ROUTING_OBSTRUCTIONS' is not defined. Skipping        odb.py:589
+               'Odb.RemoveRoutingObstructions'…                                 
+[02:54:17] [V] Running 'OpenROAD.CheckAntennas-1' at                step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/08-             
+               openroad-checkantennas-1'…                                       
+[02:54:17] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/08-             
+               openroad-checkantennas-1/openroad-checkantennas-1.lo             
+               g'…                                                              
+[02:54:20] [V] Running 'Checker.TrDRC' at                           step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/09-             
+               checker-trdrc'…                                                  
+[02:54:20] [I] Check for Routing DRC errors clear.                checker.py:131
+[02:54:20] [V] Running 'Odb.ReportDisconnectedPins' at              step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/10-             
+               odb-reportdisconnectedpins'…                                     
+[02:54:20] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/10-             
+               odb-reportdisconnectedpins/odb-reportdisconnectedpin             
+               s.log'…                                                          
+[02:54:20] [V] Running 'Checker.DisconnectedPins' at                step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/11-             
+               checker-disconnectedpins'…                                       
+[02:54:20] [I] Check for critical disconnected pins clear.        checker.py:131
+[02:54:20] [V] Running 'Odb.ReportWireLength' at                    step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/12-             
+               odb-reportwirelength'…                                           
+[02:54:20] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/12-             
+               odb-reportwirelength/odb-reportwirelength.log'…                  
+[02:54:21] [V] Running 'Checker.WireLength' at                      step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/13-             
+               checker-wirelength'…                                             
+[02:54:21] [W] Threshold for Threshold-surpassing long wires is   checker.py:108
+               not set. The checker will be skipped.                            
+[02:54:21] [V] Running 'OpenROAD.FillInsertion' at                  step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/14-             
+               openroad-fillinsertion'…                                         
+[02:54:21] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/14-             
+               openroad-fillinsertion/openroad-fillinsertion.log'…              
+[02:54:22] [V] Running 'Odb.CellFrequencyTables' at                 step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/15-             
+               odb-cellfrequencytables'…                                        
+[02:54:22] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/15-             
+               odb-cellfrequencytables/buffer_list.txt'…                        
+[02:54:23] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/15-             
+               odb-cellfrequencytables/odb-cellfrequencytables.log'             
+               …                                                                
+[02:54:23] [V] Running 'OpenROAD.RCX' at                            step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/16-             
+               openroad-rcx'…                                                   
+[02:54:23] [I] Running RCX for corners matching nom_*           openroad.py:2147
+               (/work/config/gf180/runs/stage6_100ns_u40_route_                 
+               eco2_a/16-openroad-rcx/nom/rcx.log)…                             
+[02:54:23] [I] Running RCX for corners matching min_*           openroad.py:2147
+               (/work/config/gf180/runs/stage6_100ns_u40_route_                 
+               eco2_a/16-openroad-rcx/min/rcx.log)…                             
+[02:54:23] [I] Running RCX for corners matching max_*           openroad.py:2147
+               (/work/config/gf180/runs/stage6_100ns_u40_route_                 
+               eco2_a/16-openroad-rcx/max/rcx.log)…                             
+[02:54:23] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/16-             
+               openroad-rcx/nom/rcx.log'…                                       
+[02:54:23] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/16-             
+               openroad-rcx/max/rcx.log'…                                       
+[02:54:23] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/16-             
+               openroad-rcx/min/rcx.log'…                                       
+[02:54:25] [I] Finished RCX for corners matching nom_*.         openroad.py:2156
+[02:54:25] [I] Finished RCX for corners matching max_*.         openroad.py:2156
+[02:54:25] [I] Finished RCX for corners matching min_*.         openroad.py:2156
+[02:54:25] [V] Running 'OpenROAD.STAPostPNR' at                     step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr'…                                            
+[02:54:25] [I] Starting STA for the nom_tt_025C_5v00 timing      openroad.py:749
+               corner…                                                          
+[02:54:25] [I] Starting STA for the nom_ss_125C_4v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:25] [I] Starting STA for the nom_ff_n40C_5v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:25] [I] Starting STA for the min_tt_025C_5v00 timing      openroad.py:749
+               corner…                                                          
+[02:54:25] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_tt_025C_5v00/sta.log'…                   
+[02:54:25] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_ss_125C_4v50/sta.log'…                   
+[02:54:25] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_tt_025C_5v00/sta.log'…                   
+[02:54:25] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_ff_n40C_5v50/sta.log'…                   
+[02:54:32] [I] Finished STA for the nom_ss_125C_4v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:32] [I] Finished STA for the nom_ff_n40C_5v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:32] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_ss_125C_4v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:32] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_ff_n40C_5v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:33] [I] Finished STA for the nom_tt_025C_5v00 timing      openroad.py:764
+               corner.                                                          
+[02:54:33] [I] Finished STA for the min_tt_025C_5v00 timing      openroad.py:764
+               corner.                                                          
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/nom_tt_025C_5v00/filter_unannota             
+               ted.log'…                                                        
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_tt_025C_5v00/filter_unannota             
+               ted.log'…                                                        
+[02:54:33] [I] Starting STA for the min_ss_125C_4v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:33] [I] Starting STA for the min_ff_n40C_5v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_ss_125C_4v50/sta.log'…                   
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_ff_n40C_5v50/sta.log'…                   
+[02:54:33] [I] Starting STA for the max_tt_025C_5v00 timing      openroad.py:749
+               corner…                                                          
+[02:54:33] [I] Starting STA for the max_ss_125C_4v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_tt_025C_5v00/sta.log'…                   
+[02:54:33] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_ss_125C_4v50/sta.log'…                   
+[02:54:41] [I] Finished STA for the min_ff_n40C_5v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:41] [I] Finished STA for the min_ss_125C_4v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:41] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_ss_125C_4v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:41] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/min_ff_n40C_5v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:41] [I] Starting STA for the max_ff_n40C_5v50 timing      openroad.py:749
+               corner…                                                          
+[02:54:41] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_ff_n40C_5v50/sta.log'…                   
+[02:54:42] [I] Finished STA for the max_ss_125C_4v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:42] [I] Finished STA for the max_tt_025C_5v00 timing      openroad.py:764
+               corner.                                                          
+[02:54:42] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_tt_025C_5v00/filter_unannota             
+               ted.log'…                                                        
+[02:54:42] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_ss_125C_4v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:46] [I] Finished STA for the max_ff_n40C_5v50 timing      openroad.py:764
+               corner.                                                          
+[02:54:46] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/17-             
+               openroad-stapostpnr/max_ff_n40C_5v50/filter_unannota             
+               ted.log'…                                                        
+[02:54:47] [V] Running 'OpenROAD.IRDropReport' at                   step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/18-             
+               openroad-irdropreport'…                                          
+[02:54:47] [W] 'VSRC_LOC_FILES' was not given a value, which    openroad.py:2249
+               may make the results of IR drop analysis                         
+               inaccurate. If you are not integrating a                         
+               top-level chip for manufacture, you may ignore                   
+               this warning, otherwise, see the documentation                   
+               for 'VSRC_LOC_FILES'.                                            
+[02:54:47] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/18-             
+               openroad-irdropreport/openroad-irdropreport.log'…                
+[02:54:54] [V] + analyze_power_grid -net VDD -voltage_file      openroad.py:2261
+               /work/config/gf180/runs/stage6_100ns_u40_route_e                 
+               co2_a/18-openroad-irdropreport/net-VDD.csv                       
+               [INFO PSM-0040] All shapes on net VDD are                        
+               connected.                                                       
+               ########## IR report #################                           
+               Net              : VDD                                           
+               Corner           : nom_tt_025C_5v00                              
+               Total power      : 2.92e-02 W                                    
+               Supply voltage   : 5.00e+00 V                                    
+               Worstcase voltage: 5.00e+00 V                                    
+               Average voltage  : 5.00e+00 V                                    
+               Average IR drop  : 6.54e-05 V                                    
+               Worstcase IR drop: 1.72e-04 V                                    
+               Percentage drop  : 0.00 %                                        
+               ######################################                           
+               + analyze_power_grid -net VSS -voltage_file                      
+               /work/config/gf180/runs/stage6_100ns_u40_route_e                 
+               co2_a/18-openroad-irdropreport/net-VSS.csv                       
+               [INFO PSM-0040] All shapes on net VSS are                        
+               connected.                                                       
+               ########## IR report #################                           
+               Net              : VSS                                           
+               Corner           : nom_tt_025C_5v00                              
+               Total power      : 2.92e-02 W                                    
+               Supply voltage   : 0.00e+00 V                                    
+               Worstcase voltage: 1.79e-04 V                                    
+               Average voltage  : 6.33e-05 V                                    
+               Average IR drop  : 6.33e-05 V                                    
+               Worstcase IR drop: 1.79e-04 V                                    
+               Percentage drop  : 0.00 %                                        
+               ######################################                           
+                                                                                
+[02:54:54] [V] Running 'Magic.StreamOut' at                         step.py:1138
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/19-             
+               magic-streamout'…                                                
+[02:54:54] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage6_100ns_u40_route_eco2_a/19-             
+               magic-streamout/magic-streamout.log'…                            
+
+[02:54:56] [W] The following warnings were generated by the flow:    flow.py:699
+[02:54:56] [W] [OpenROAD.RepairDesignPostGRT] [STA-1140]             flow.py:701
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0            
+               /lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line              
+               17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50                
+               already exists. (and 11 similar warnings)                        
+[02:54:56] [W] [OpenROAD.DetailedRouting] [DRT-0349] LEF58_ENCLOSURE flow.py:701
+               with no CUTCLASS is not supported. Skipping for layer            
+               Via1 (and 7 similar warnings)                                    
+[02:54:56] [W] [Checker.WireLength] Threshold for                    flow.py:701
+               Threshold-surpassing long wires is not set. The                  
+               checker will be skipped.                                         
+[02:54:56] [W] [OpenROAD.IRDropReport] 'VSRC_LOC_FILES' was not      flow.py:701
+               given a value, which may make the results of IR drop             
+               analysis inaccurate. If you are not integrating a                
+               top-level chip for manufacture, you may ignore this              
+               warning, otherwise, see the documentation for                    
+               'VSRC_LOC_FILES'.                                                
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/__main__.py", line 484, in <module>
+    cli()
+    ~~~^^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/click/core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/click/core.py", line 1363, in main
+    rv = self.invoke(ctx)
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/click/core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/click/core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/flows/cli.py", line 560, in pdk_resolve_wrapper
+    return f(*args, pdk_root=pdk_root, pdk=pdk, scl=scl, pad=pad, **kwargs)
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/click/decorators.py", line 34, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/__main__.py", line 479, in cli
+    run(ctx, **run_kwargs)
+    ~~~^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/__main__.py", line 173, in run
+    state_out = flow.start(
+        tag=tag,
+    ...<7 lines>...
+        overwrite=overwrite,
+    )
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/flows/flow.py", line 683, in start
+    final_state, step_objects = self.run(
+                                ~~~~~~~~^
+        initial_state=initial_state,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        starting_ordinal=starting_ordinal,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/flows/sequential.py", line 383, in run
+    current_state = step.start(
+        toolbox=self.toolbox,
+        step_dir=self.dir_for_step(step),
+    )
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/steps/step.py", line 1166, in start
+    views_updates, metrics_updates = self.run(state_in_result, **kwargs)
+                                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/steps/magic.py", line 374, in run
+    magic_gds_out = str(views_updates[DesignFormat.MAG_GDS])
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+KeyError: DesignFormat(id='mag_gds', extension='magic.gds', full_name='GDSII Stream (Magic)', alts=['MAG_GDS'], folder_override=None, multiple=False, _instance_optional=False)

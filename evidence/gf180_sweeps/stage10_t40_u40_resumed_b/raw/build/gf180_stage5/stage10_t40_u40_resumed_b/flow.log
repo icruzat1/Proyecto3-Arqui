@@ -1,0 +1,90 @@
+[19:06:25] [I] Loading the design configuration file has generated config.py:740
+               the following warnings:                                          
+[19:06:25] [W] The configuration variable 'PL_TARGET_DENSITY' is   config.py:744
+               deprecated. Please check the docs for the usage on               
+               the replacement variable 'PL_TARGET_DENSITY_PCT'.                
+[19:06:25] [I] Starting a new run of the 'Classic' flow with the tag flow.py:654
+               'stage10_t40_u40_resumed_b'.                                     
+[19:06:25] [I] Starting…                                       sequential.py:339
+[19:06:25] [I] Skipping step 'Verilator Lint'…                 sequential.py:370
+[19:06:25] [I] Skipping step 'Lint Timing Error Checker'…      sequential.py:370
+[19:06:25] [I] Skipping step 'Lint Errors Checker'…            sequential.py:370
+[19:06:25] [I] Skipping step 'Lint Warnings Checker'…          sequential.py:370
+[19:06:25] [I] Skipping step 'Generate JSON Header'…           sequential.py:370
+[19:06:25] [I] Skipping step 'Synthesis'…                      sequential.py:370
+[19:06:25] [I] Skipping step 'Unmapped Cells Checker'…         sequential.py:370
+[19:06:25] [I] Skipping step 'Yosys Synth Checks'…             sequential.py:370
+[19:06:25] [I] Skipping step 'Netlist Assign Statement         sequential.py:370
+               Checker'…                                                        
+[19:06:25] [I] Skipping step 'Check SDC Files'…                sequential.py:370
+[19:06:25] [I] Skipping step 'Check Macro Instances'…          sequential.py:370
+[19:06:25] [I] Skipping step 'STA (Pre-PnR)'…                  sequential.py:370
+[19:06:26] [I] Skipping step 'Floorplan Init'…                 sequential.py:370
+[19:06:26] [I] Skipping step 'Dump RC Values'…                 sequential.py:370
+[19:06:26] [I] Skipping step 'Check Antenna Properties of      sequential.py:370
+               Macros Pins in Their LEF Views'…                                 
+[19:06:26] [I] Skipping step 'Set Power Connections'…          sequential.py:370
+[19:06:26] [I] Skipping step 'Manual Macro Placement'…         sequential.py:370
+[19:06:26] [I] Skipping step 'Cut Rows'…                       sequential.py:370
+[19:06:26] [I] Skipping step 'Tap/Decap Insertion'…            sequential.py:370
+[19:06:26] [I] Skipping step 'Add PDN obstructions'…           sequential.py:370
+[19:06:26] [I] Skipping step 'Generate PDN'…                   sequential.py:370
+[19:06:26] [I] Skipping step 'Remove PDN obstructions'…        sequential.py:370
+[19:06:26] [I] Skipping step 'Add Obstructions'…               sequential.py:370
+[19:06:26] [I] Skipping step 'Global Placement Skip IO'…       sequential.py:370
+[19:06:26] [I] Skipping step 'I/O Placement'…                  sequential.py:370
+[19:06:26] [I] Skipping step 'Custom I/O Placement'…           sequential.py:370
+[19:06:26] [I] Skipping step 'Apply DEF Template'…             sequential.py:370
+[19:06:26] [I] Skipping step 'Global Placement'…               sequential.py:370
+[19:06:26] [I] Skipping step 'Write Verilog Header'…           sequential.py:370
+[19:06:26] [I] Skipping step 'Power Grid Violation Checker'…   sequential.py:370
+[19:06:26] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[19:06:26] [I] Skipping step 'Repair Design (Post-Global       sequential.py:370
+               Placement)'…                                                     
+[19:06:26] [I] Skipping step 'Manual Global Placement'…        sequential.py:370
+[19:06:26] [I] Skipping step 'Detailed Placement'…             sequential.py:370
+[19:06:26] [I] Skipping step 'Clock Tree Synthesis'…           sequential.py:370
+[19:06:26] [I] Skipping step 'STA (Mid-PnR)'…                  sequential.py:370
+[19:06:26] [V] Running 'OpenROAD.ResizerTimingPostCTS' at           step.py:1138
+               'config/gf180/runs/stage10_t40_u40_resumed_b/01-open             
+               road-resizertimingpostcts'…                                      
+[19:06:26] [I] Logging subprocess to                                step.py:1336
+               'config/gf180/runs/stage10_t40_u40_resumed_b/01-open             
+               road-resizertimingpostcts/openroad-resizertimingpost             
+               cts.log'…                                                        
+[19:06:26] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[19:06:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[19:06:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already                    
+               exists.                                                          
+[19:06:27] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already                    
+               exists.                                                          
+[19:06:28] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          
+[19:06:28] [W] [STA-1140]                                        openroad.py:314
+               /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7                
+               t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.li                
+               b line 17, library                                               
+               gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already                    
+               exists.                                                          

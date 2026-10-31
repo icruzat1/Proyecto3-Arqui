@@ -1,0 +1,8 @@
+{
+  "sources": {
+    "config/gf180/runs/stage8_t100_u40_b/42-openroad-fillinsertion/asic_top.nl.v": "1418cae9d53b3756a8c6103d90b1b625762265175978ed74cb607af09be10aea",
+    "config/gf180/runs/stage8_t100_u40_b/45-openroad-stapostpnr/nom_tt_025C_5v00/checks.rpt": "159d5a56fb52002e00186c2858be50ef4781eb5e6451c1a1649c2696b5cadbf5"
+  },
+  "result_sha256": "27e1f3a3aac2721ed03200a50fec7d40b7616cf340040d8f1fa72318719ff87f",
+  "method": "Parse reported fanout pins; count connected antenna instances in final netlist by exact net name."
+}

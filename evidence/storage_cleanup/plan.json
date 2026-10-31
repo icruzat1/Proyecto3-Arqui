@@ -1,0 +1,537 @@
+{
+  "verified_utc": "2026-10-30T23:45:12Z",
+  "runs": [
+    {
+      "run": "stage10_t40_u40_resumed_b",
+      "archive": "build/local_archive/runs/stage10_t40_u40_resumed_b.tar.zst",
+      "archive_sha256": "1c8d4ef74fad23003d51383b081689b25e89a7068188c5e6eb0b5d7583e66337",
+      "archive_bytes": 436924325,
+      "uncompressed_regular_bytes": 3857968188,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage11_electrical_prepared_b",
+      "archive": "build/local_archive/runs/stage11_electrical_prepared_b.tar.zst",
+      "archive_sha256": "e359359cee393e5fd961909a902c01138e772ea31fef7f80e1bacd6494960beb",
+      "archive_bytes": 15650786,
+      "uncompressed_regular_bytes": 104837067,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage11_electrical_route_b",
+      "archive": "build/local_archive/runs/stage11_electrical_route_b.tar.zst",
+      "archive_sha256": "a34933d5b7ae5b03037f841bce3c61a17f2a1293c02e793c80c9790184c71bb2",
+      "archive_bytes": 393214995,
+      "uncompressed_regular_bytes": 3497418956,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage11_electrical_unrouted_b",
+      "archive": "build/local_archive/runs/stage11_electrical_unrouted_b.tar.zst",
+      "archive_sha256": "37d7b404d71cfddfdbff829a63e6118f0ad50233dcada952b205e0d3feeb2bc7",
+      "archive_bytes": 7438730,
+      "uncompressed_regular_bytes": 40682280,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage12_incremental_prepared_b",
+      "archive": "build/local_archive/runs/stage12_incremental_prepared_b.tar.zst",
+      "archive_sha256": "d756abbd6b8324788f2a852c4e1eb9d841c0c5c19648f886f2e2bbac6ec440bc",
+      "archive_bytes": 13336,
+      "uncompressed_regular_bytes": 126752,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage12_incremental_prepared_v2_b",
+      "archive": "build/local_archive/runs/stage12_incremental_prepared_v2_b.tar.zst",
+      "archive_sha256": "43f9a00c3c47b186f4d9e759ac2e5cf02fdf3bc3f1e480b2ab516b565f89d5d4",
+      "archive_bytes": 15474461,
+      "uncompressed_regular_bytes": 89980564,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage13_reset_prepared_a",
+      "archive": "build/local_archive/runs/stage13_reset_prepared_a.tar.zst",
+      "archive_sha256": "99baf21802e2afaeb2f671f12c07df0659e7baad9148a649d1588e1659b78e81",
+      "archive_bytes": 14009,
+      "uncompressed_regular_bytes": 131875,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage13_reset_prepared_v2_a",
+      "archive": "build/local_archive/runs/stage13_reset_prepared_v2_a.tar.zst",
+      "archive_sha256": "cef495cac31072182989e8fadb990887f48e643e20607c416d4711a83fcbda83",
+      "archive_bytes": 4238909,
+      "uncompressed_regular_bytes": 24694105,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage4_100ns_u40_floorplan_a",
+      "archive": "build/local_archive/runs/stage4_100ns_u40_floorplan_a.tar.zst",
+      "archive_sha256": "1fcebc5d234b885ebb4208939bfcd2ba627aefd1999d538f88cc8db00627ade2",
+      "archive_bytes": 14372844,
+      "uncompressed_regular_bytes": 197497471,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage4_100ns_u40_floorplan_b",
+      "archive": "build/local_archive/runs/stage4_100ns_u40_floorplan_b.tar.zst",
+      "archive_sha256": "f10756586a2876325ab1605424e2ffa3f3a03052bee32e01d62ca17dc710888b",
+      "archive_bytes": 39387927,
+      "uncompressed_regular_bytes": 482356121,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage4_100ns_u40_wait_only_a",
+      "archive": "build/local_archive/runs/stage4_100ns_u40_wait_only_a.tar.zst",
+      "archive_sha256": "a97248a1d44cd2c481da012986351ec21aed600ebe733ae01becc11ae609196a",
+      "archive_bytes": 3024750,
+      "uncompressed_regular_bytes": 26122384,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage4_100ns_u40_wait_only_b",
+      "archive": "build/local_archive/runs/stage4_100ns_u40_wait_only_b.tar.zst",
+      "archive_sha256": "93945c2bc496ec6146cbd13f4a1fbcca6de9b3fc2d00ab4d5fe3a8d52308938b",
+      "archive_bytes": 3700629,
+      "uncompressed_regular_bytes": 42839620,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_clockv2_a",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_clockv2_a.tar.zst",
+      "archive_sha256": "2c5a6bd9c7e92caf8b4884f4dbe87ee529bf53429ac05790afb03a2118530c9a",
+      "archive_bytes": 11731656,
+      "uncompressed_regular_bytes": 249206151,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_clockv2_b",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_clockv2_b.tar.zst",
+      "archive_sha256": "66b910cdb6c89fd3c3a0b316b43dbba289e9d2cd2a2818a55cfd58a3c418d062",
+      "archive_bytes": 31818289,
+      "uncompressed_regular_bytes": 501944119,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_clockv3_a",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_clockv3_a.tar.zst",
+      "archive_sha256": "6f0ad1da306a9bc40b34b200b9a232ca6d79393ccafe77391f45a57948d2d48b",
+      "archive_bytes": 37633899,
+      "uncompressed_regular_bytes": 1207686349,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_clockv3_b",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_clockv3_b.tar.zst",
+      "archive_sha256": "65ec7f8168cbf02a3b915d20b001e71a0d6f20bb43dfd41d901834d6f8eb07f7",
+      "archive_bytes": 69802456,
+      "uncompressed_regular_bytes": 1756954511,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_cts_a",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_cts_a.tar.zst",
+      "archive_sha256": "2c8a32c9e218462bd16e0828b9c98a538be7b3c310526ff9a40c68d2b7eebf40",
+      "archive_bytes": 30907709,
+      "uncompressed_regular_bytes": 965576819,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage5_100ns_u40_cts_b",
+      "archive": "build/local_archive/runs/stage5_100ns_u40_cts_b.tar.zst",
+      "archive_sha256": "07a1f3c0736c84833a62ccfdf5c7b0cd43c5234132851257009e76c195e58ebe",
+      "archive_bytes": 63476176,
+      "uncompressed_regular_bytes": 1316821281,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_drivers_input_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_drivers_input_b.tar.zst",
+      "archive_sha256": "a8a017aca1e9c41a64add22ab8ced9c0843ef13333f3045f215da16a4f71cc73",
+      "archive_bytes": 9829205,
+      "uncompressed_regular_bytes": 45384618,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_final_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_final_a.tar.zst",
+      "archive_sha256": "2a44b0efa6512248e9535a68a3b3c5339811f9497ca54ce74fc7a0af25db7ff3",
+      "archive_bytes": 125220686,
+      "uncompressed_regular_bytes": 1490417178,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_geometry_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_geometry_a.tar.zst",
+      "archive_sha256": "ab75e886051c5433af57490e88d7f380fcd4339975f44ca181790c6e5b7493c8",
+      "archive_bytes": 5323,
+      "uncompressed_regular_bytes": 28078,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_geometry_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_geometry_b.tar.zst",
+      "archive_sha256": "ee21807693384ca86b59b9cb392486cd6046ce4e8da7c829389f6e8232f10a40",
+      "archive_bytes": 4770,
+      "uncompressed_regular_bytes": 23724,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_librarylimits_trial_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_librarylimits_trial_a.tar.zst",
+      "archive_sha256": "27b154fecbd82865492773b0d1cf1890e2863262d6915aecef80379d6d5acd07",
+      "archive_bytes": 63853552,
+      "uncompressed_regular_bytes": 1187809632,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_librarylimits_trial_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_librarylimits_trial_b.tar.zst",
+      "archive_sha256": "9ebaf7b6179184d75ab48c85ea67e54ff011ffaf699ff609e44f34e7621a7fc0",
+      "archive_bytes": 172194513,
+      "uncompressed_regular_bytes": 2105651339,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_a.tar.zst",
+      "archive_sha256": "e36541c94e69217a2e5a52250f14617a772c48a808073d238fc3d67423df61a6",
+      "archive_bytes": 148024270,
+      "uncompressed_regular_bytes": 1700606589,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_b.tar.zst",
+      "archive_sha256": "d68cf28af9282cc5ba7059b9c57c4812a5c5b366c5e936442adbc10ec79d3bb9",
+      "archive_bytes": 500066754,
+      "uncompressed_regular_bytes": 3898401737,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_eco1_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_eco1_a.tar.zst",
+      "archive_sha256": "7c4a1d125842b374bbec09dc471477753ebc4f08c05b8fe6b97f588f976ee35a",
+      "archive_bytes": 20095440,
+      "uncompressed_regular_bytes": 201128480,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_eco2_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_eco2_a.tar.zst",
+      "archive_sha256": "dbcedba64fa8ff4fcbebdbb5e65c395751358503ad950d234cc04af8d04ca4d4",
+      "archive_bytes": 93369360,
+      "uncompressed_regular_bytes": 1468610446,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_eco3_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_eco3_a.tar.zst",
+      "archive_sha256": "4c3f7cd9a07732f37f8d8b247124edd49da82783fd9e253884a60fa6b690ec4c",
+      "archive_bytes": 153443236,
+      "uncompressed_regular_bytes": 1729937937,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_route_eco3_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_route_eco3_b.tar.zst",
+      "archive_sha256": "d4431b9c7a7708c1ec7585a813e32e2854c46d8e578e14ca1cf56c20697d8f2d",
+      "archive_bytes": 566381286,
+      "uncompressed_regular_bytes": 4146472896,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_b.tar.zst",
+      "archive_sha256": "09fdfac39764dc7868c3b887cd8833a31dd2c680e5e509214193484c644b5358",
+      "archive_bytes": 503730658,
+      "uncompressed_regular_bytes": 3833221202,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_prepared_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_prepared_b.tar.zst",
+      "archive_sha256": "7441ed18eaf695fe1360e12d471f7645b71d755d43a0c6d0f73fa1dd4656f80a",
+      "archive_bytes": 976,
+      "uncompressed_regular_bytes": 1679,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_prepared_v2_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_prepared_v2_b.tar.zst",
+      "archive_sha256": "d753bf99cfe7e638de6114c803ca6a6d9d3e6f96cb11e5d13229cae4ffe02873",
+      "archive_bytes": 1003646,
+      "uncompressed_regular_bytes": 9705113,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_prepared_v3_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_prepared_v3_b.tar.zst",
+      "archive_sha256": "b24e20cc9bf9218533d5362f6889ec328902123ac844828fc36a18444f906130",
+      "archive_bytes": 8976,
+      "uncompressed_regular_bytes": 43438,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_prepared_v4_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_prepared_v4_b.tar.zst",
+      "archive_sha256": "aca2da13547921fa0988dc9f19fa8a8b95a37378ddb9cf322d917c32011ba68a",
+      "archive_bytes": 9237,
+      "uncompressed_regular_bytes": 44561,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_targeted_prepared_v5_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_targeted_prepared_v5_b.tar.zst",
+      "archive_sha256": "c3480549019c0c80557df67d928b21f6d31defa8152867d006353445f535bd0b",
+      "archive_bytes": 20366987,
+      "uncompressed_regular_bytes": 106910125,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_unrouted_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_unrouted_a.tar.zst",
+      "archive_sha256": "264872fa3f809db6ea53595af3ef937bdda738bf670c957c66cd6de84b75c1c6",
+      "archive_bytes": 5865,
+      "uncompressed_regular_bytes": 15251,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_unrouted_v2_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_unrouted_v2_a.tar.zst",
+      "archive_sha256": "c5cc2913931065ed3f07c1714966732382cbbe8d976b86b3af19e925da6aee94",
+      "archive_bytes": 2671965,
+      "uncompressed_regular_bytes": 12777424,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_unrouted_v3_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_unrouted_v3_a.tar.zst",
+      "archive_sha256": "b5176aa24b2dea1e2185c5b52d37cc0d146866af95301393e18f395c45c1c997",
+      "archive_bytes": 2681991,
+      "uncompressed_regular_bytes": 12799366,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_unrouted_v3_b",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_unrouted_v3_b.tar.zst",
+      "archive_sha256": "de903158c95f3949531de396df3ef1c376066d9b74fff6006ed554a9491d341b",
+      "archive_bytes": 9327074,
+      "uncompressed_regular_bytes": 43613892,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage6_100ns_u40_unrouted_v4_a",
+      "archive": "build/local_archive/runs/stage6_100ns_u40_unrouted_v4_a.tar.zst",
+      "archive_sha256": "1470a01ec98f3e00e3850f970fedb76b45d794470588f1911ac3942c92f75c9a",
+      "archive_bytes": 2679698,
+      "uncompressed_regular_bytes": 12852593,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage7_trace_candidate_a",
+      "archive": "build/local_archive/runs/stage7_trace_candidate_a.tar.zst",
+      "archive_sha256": "37b1129e23a7bf63fd78a7865b8eb949b33b2e3062f08396d52b32ad7864159d",
+      "archive_bytes": 6144476,
+      "uncompressed_regular_bytes": 153022383,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage7_trace_candidate_b",
+      "archive": "build/local_archive/runs/stage7_trace_candidate_b.tar.zst",
+      "archive_sha256": "9dcfa4718c25f5a29ef80b1b539f33c7c3d5727dba7e141152efe1d91a93326c",
+      "archive_bytes": 14122824,
+      "uncompressed_regular_bytes": 385031115,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage7_trace_physical_candidate_a",
+      "archive": "build/local_archive/runs/stage7_trace_physical_candidate_a.tar.zst",
+      "archive_sha256": "d2900929d80382e6dac4df5271c9e8850a63d7430a1e0f5cc4f419262b487a1b",
+      "archive_bytes": 138087512,
+      "uncompressed_regular_bytes": 1818240076,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage7_trace_physical_ref_a",
+      "archive": "build/local_archive/runs/stage7_trace_physical_ref_a.tar.zst",
+      "archive_sha256": "a3d3c531031280528cae61974e63800a52a175f3981c1e5cf2df8160d1bdd4a2",
+      "archive_bytes": 134263752,
+      "uncompressed_regular_bytes": 1820938294,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_synth_t40_a",
+      "archive": "build/local_archive/runs/stage8_synth_t40_a.tar.zst",
+      "archive_sha256": "bad87caeacf6a425913893f93550d45042f84a1ac832828e506e3360509d1318",
+      "archive_bytes": 6149952,
+      "uncompressed_regular_bytes": 157357052,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_synth_t40_b",
+      "archive": "build/local_archive/runs/stage8_synth_t40_b.tar.zst",
+      "archive_sha256": "f45e65e701b6ff16a32ed71d9281b0a3ce219a4c66a303fba4176190884d7927",
+      "archive_bytes": 14163566,
+      "uncompressed_regular_bytes": 388323336,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_synth_t60_a",
+      "archive": "build/local_archive/runs/stage8_synth_t60_a.tar.zst",
+      "archive_sha256": "d0b1aaffa23bee02f4e22db6e7fa123e996c99e941f1fc3c40454929f2c1eaa9",
+      "archive_bytes": 6145214,
+      "uncompressed_regular_bytes": 156870911,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_synth_t60_b",
+      "archive": "build/local_archive/runs/stage8_synth_t60_b.tar.zst",
+      "archive_sha256": "33023faf2415a4f32513265592e7bc9c6f37f4ad13ad3e006cf1b8f6521a683b",
+      "archive_bytes": 14183008,
+      "uncompressed_regular_bytes": 388314832,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t100_u30_a",
+      "archive": "build/local_archive/runs/stage8_t100_u30_a.tar.zst",
+      "archive_sha256": "ea368b0a08e92cc02d423eeef9bf4eb6d4af92bc6859e3155d4f6eab77f50295",
+      "archive_bytes": 139829800,
+      "uncompressed_regular_bytes": 1929858880,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t100_u40_b",
+      "archive": "build/local_archive/runs/stage8_t100_u40_b.tar.zst",
+      "archive_sha256": "8642f91018184ff18c28809162129f6a41207c92b12570fbd57153de772cf102",
+      "archive_bytes": 480499568,
+      "uncompressed_regular_bytes": 4441235465,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t100_u50_a",
+      "archive": "build/local_archive/runs/stage8_t100_u50_a.tar.zst",
+      "archive_sha256": "ac4ec765b721b9357fbb9d032e6b7c9a9ababcbc80d268a4100862af009e8ef0",
+      "archive_bytes": 131697543,
+      "uncompressed_regular_bytes": 1738699059,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t40_u40_a",
+      "archive": "build/local_archive/runs/stage8_t40_u40_a.tar.zst",
+      "archive_sha256": "cb005b115a5846d55d1e4e5fa2d9f18f92bdb1da9988d57e33e0fd1fbc9c2e39",
+      "archive_bytes": 26276397,
+      "uncompressed_regular_bytes": 380434640,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t40_u40_b",
+      "archive": "build/local_archive/runs/stage8_t40_u40_b.tar.zst",
+      "archive_sha256": "eecdab9b581fa54fcee168bb3d9eadc21e4cc4c5bdbc1412736ced7327cf21da",
+      "archive_bytes": 46206443,
+      "uncompressed_regular_bytes": 554529890,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t40_u40_nomargin_a",
+      "archive": "build/local_archive/runs/stage8_t40_u40_nomargin_a.tar.zst",
+      "archive_sha256": "6ff09225fda6d7989b3d4c6b9acfe9a1ab966d9722e52be27728dbee7850be12",
+      "archive_bytes": 109411849,
+      "uncompressed_regular_bytes": 1445591368,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t60_u40_a",
+      "archive": "build/local_archive/runs/stage8_t60_u40_a.tar.zst",
+      "archive_sha256": "d7f47b2e28718231cda193abb25bf1739b9f194d96e64600967fc5aba3fd7726",
+      "archive_bytes": 140770633,
+      "uncompressed_regular_bytes": 1859007572,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage8_t60_u40_b",
+      "archive": "build/local_archive/runs/stage8_t60_u40_b.tar.zst",
+      "archive_sha256": "d6113d04fe810c1b579d005fb422c7d52f16b62a0cbbf3fc0a60eb49692e5b87",
+      "archive_bytes": 471624333,
+      "uncompressed_regular_bytes": 4394920373,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    },
+    {
+      "run": "stage9_100ns_u40_academic_b",
+      "archive": "build/local_archive/runs/stage9_100ns_u40_academic_b.tar.zst",
+      "archive_sha256": "b82243040137effb3bdecb3535b17332049138fb4d9286221803b889ea55daf3",
+      "archive_bytes": 118136359,
+      "uncompressed_regular_bytes": 787101823,
+      "full_member_hashes_verified": true,
+      "originals_deleted": false
+    }
+  ],
+  "kept_runs": [
+    "stage10_trace_wait_only_b",
+    "stage12_electrical_route_b",
+    "stage13_final_traceable_a",
+    "stage13_trace_wait_only_a",
+    "stage7_trace_ref_a",
+    "stage7_trace_ref_b"
+  ],
+  "project_allocated_bytes_before": 76275003392,
+  "free_bytes_before": 185958400000
+}

@@ -1,0 +1,61 @@
+{
+  "run": "stage6_100ns_u40_route_eco3_b",
+  "gds": "config/gf180/runs/stage6_100ns_u40_route_eco3_b/final/klayout_gds/asic_top.klayout.gds",
+  "die_bbox_um": [
+    0.0,
+    0.0,
+    1387.35,
+    1405.27
+  ],
+  "capture_bbox_um": [
+    1103.84,
+    522.72,
+    1272.8,
+    656.64
+  ],
+  "regions": {
+    "gate": [
+      {
+        "name": "fanout10268",
+        "master": "gf180mcu_fd_sc_mcu7t5v0__dlyb_1",
+        "bbox_um": [
+          1183.84,
+          552.72,
+          1192.8,
+          556.64
+        ]
+      }
+    ],
+    "diode": [
+      {
+        "name": "ANTENNA_1207",
+        "master": "gf180mcu_fd_sc_mcu7t5v0__antenna",
+        "bbox_um": [
+          1183.84,
+          595.84,
+          1184.96,
+          599.76
+        ]
+      }
+    ]
+  },
+  "labels": {
+    "gate": "Puerta afectada: fanout10268/I",
+    "diode": "Diodo reubicado: ANTENNA_1207"
+  },
+  "colors": {
+    "gate": 12856099,
+    "diode": 32858
+  },
+  "capture_groups": [
+    "overview"
+  ],
+  "net": "net10289",
+  "method": "Exact gate/diode IDs and connectivity to net10289 checked in routed OpenDB.",
+  "input_sha256": {
+    "config/gf180/runs/stage6_100ns_u40_route_eco3_b/17-openroad-stapostpnr/state_out.json": "3ce225c87f9d749f94b1e1cafa19f51d6cba8eb20b253af422064442ef6464d7",
+    "config/gf180/runs/stage6_100ns_u40_route_eco3_b/15-odb-cellfrequencytables/asic_top.odb": "d419c67cd31c4af2d368ffb71ba3f86fa20656e89c816eb7d1c3893c528bd75a",
+    "config/gf180/runs/stage6_100ns_u40_route_eco3_b/final/klayout_gds/asic_top.klayout.gds": "dc2e4b1951cbac7d0b18bb884f294056d6bf7b71eaf788abd0ed8383f00ddb62",
+    "scripts/extract_gf180_antenna_capture.py": "5eed715e1fcc94e8b6fa7d1875513380f85620ec9c7341a16e7db76c958a6895"
+  }
+}

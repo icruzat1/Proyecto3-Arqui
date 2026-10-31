@@ -1,0 +1,78 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/work/config/gf180/runs/stage7_trace_physical_candidate_a/25-openroad-resizertimingpostcts/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: Metal5 and clock max routing layer to Metal5. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 521 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical       115746         77282          33.23%
+Metal3     Horizontal     117586         78334          33.38%
+Metal4     Vertical       115731         77272          33.23%
+Metal5     Horizontal      71862         48372          32.69%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 54160
+[INFO GRT-0198] Via related Steiner nodes: 1579
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 69275
+[INFO GRT-0112] Final usage 3D: 277131
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2           77282         36174           46.81%             0 /  0 /  0
+Metal3           78334         30714           39.21%             0 /  0 /  0
+Metal4           77272          1797            2.33%             0 /  0 /  0
+Metal5           48372           621            1.28%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           281260         69306           24.64%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 811062 um
+[INFO GRT-0014] Routed nets: 8135
+[INFO GRT-0303] Global routing runtime = 00:00:00
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             372    1633.23
+  Tap cell                               3480   15278.59
+  Tie cell                                 33     289.77
+  Buffer                                  119    1567.37
+  Clock buffer                            648   32651.40
+  Timing Repair Buffer                    926   32620.67
+  Inverter                                287    2520.09
+  Clock inverter                           46     667.34
+  Sequential cell                        1411  105352.04
+  Multi-Input combinational cell         4830  104660.55
+  Total                                 12152  297241.06
+Writing OpenROAD database to '/work/config/gf180/runs/stage7_trace_physical_candidate_a/27-openroad-globalrouting/asic_top.odb'…
+Writing layout to '/work/config/gf180/runs/stage7_trace_physical_candidate_a/27-openroad-globalrouting/asic_top.def'…

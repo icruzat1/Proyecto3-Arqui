@@ -1,0 +1,31 @@
+{
+  "final_netlist": "config/gf180/runs/stage12_electrical_route_b/final/nl/asic_top.nl.v",
+  "final_netlist_sha256": "ec1f8b4916ae876a1e8c6005beaf8919803b3c36e8566a262c9e65c2107d8d27",
+  "matches_tested_netlist": true,
+  "scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+  "full_game_verified": false,
+  "sdf_timing": false,
+  "files": {
+    "build/gf180_routed/final_b_electrical/results.json": {
+      "archive": "evidence/gf180_final_b_electrical/functional/results.json",
+      "sha256": "958dcead0904abf3115bfb7300984fc6303dc19673e0befee161bd1dc39fcc0c"
+    },
+    "build/gf180_routed/final_b_electrical/b/simulation.log": {
+      "archive": "evidence/gf180_final_b_electrical/functional/simulation.log",
+      "sha256": "616ac816f51481692824e2970c16412c9cb7896669c109fc822dadc074bdb64b"
+    },
+    "build/gf180_routed/final_b_electrical/b/tb_physical.v": {
+      "archive": "evidence/gf180_final_b_electrical/functional/tb_physical.v",
+      "sha256": "82b58c1e2bd44d6d489be49f550e516ab17133156da0314c862677272224dbaa"
+    },
+    "build/gf180_routed/final_b_electrical/b/iverilog_version.log": {
+      "archive": "evidence/gf180_final_b_electrical/functional/iverilog_version.log",
+      "sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d"
+    },
+    "build/gf180_routed/final_b_electrical/b/compile.log": {
+      "archive": "evidence/gf180_final_b_electrical/functional/compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "physical_copy_sha256": "0bfbf3b635704d46ee7a1663549dd83774877fb3e1ff7ff6923830dba80f9303"
+}

@@ -1,0 +1,32 @@
+{
+  "results.json": {
+    "source": "build/final_traceable_functional_a_v2/results.json",
+    "source_sha256": "dfc621bc583c6edc953778551a5e118e6d7ae3b850839f6f983706db37f0becc",
+    "archive_sha256": "dfc621bc583c6edc953778551a5e118e6d7ae3b850839f6f983706db37f0becc"
+  },
+  "a/physical.v.gz": {
+    "source": "build/final_traceable_functional_a_v2/a/physical.v",
+    "source_sha256": "bd53b70bd56241955c111994454aeb99fc4a07beba406973a9999abee4c80553",
+    "archive_sha256": "1a9e923827da9cd1e387dd8aca405a650dadd94a80c75c0dc8022c96c1912469"
+  },
+  "a/compile.log": {
+    "source": "build/final_traceable_functional_a_v2/a/compile.log",
+    "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "a/iverilog_version.log": {
+    "source": "build/final_traceable_functional_a_v2/a/iverilog_version.log",
+    "source_sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d",
+    "archive_sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d"
+  },
+  "a/tb_physical.v.gz": {
+    "source": "build/final_traceable_functional_a_v2/a/tb_physical.v",
+    "source_sha256": "b3d78674fe32fb5c7a67431f29f5a22a0b0de47e49bb18aaf9ab72058481d7da",
+    "archive_sha256": "d803d5b0da34a854df3aacdb8f876319bf1de5edae45ddd500bbd82443156fe7"
+  },
+  "a/simulation.log": {
+    "source": "build/final_traceable_functional_a_v2/a/simulation.log",
+    "source_sha256": "30753206e9b5dcd882e300119965c6af70fae804d097f3b15dcc3016dd8d055a",
+    "archive_sha256": "30753206e9b5dcd882e300119965c6af70fae804d097f3b15dcc3016dd8d055a"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "build/gf180_final_game/results.json": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/results.json",
+    "sha256": "ec7c84efabff9b23e2932cf7cd819c1c5d3ef4887f68a7c969c6f1f86ba6ceb6"
+  },
+  "build/gf180_final_game/mapped_b.log": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/mapped_b.log",
+    "sha256": "9981c2ece4d4f78400f50bf2057619acdd055018f900b319766dc08a65aa8bac"
+  },
+  "build/gf180_final_game/compile_b.log": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/compile_b.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "build/gf180_final_game/tb_game_wait_only_mapped.v": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/tb_game_wait_only_mapped.v",
+    "sha256": "f6e49fe081d4c28485fd776668dbb60599623d6b6e281cd75113c21e2cae62ad"
+  },
+  "build/gf180_final_game_synthesis/results.json": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/synthesis_results.json",
+    "sha256": "5c3b00f16822c659f7fb15e28d765ef47070734a4ac21090e42f229c48524c88"
+  },
+  "build/gf180_final_game_synthesis/flow.log": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/synthesis_flow.log",
+    "sha256": "4ec83664fc6567cf30d1876ab509b2007adcc5ec5c70fe6d47e9c75e7a24c5da"
+  },
+  "build/gf180_final_game/mapped_b.v": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/mapped_b.v.gz",
+    "uncompressed_sha256": "209c67c2a56704506f10b3fe2fb05f31afe11cdf523f6ffa159aa6e23828b584",
+    "compressed_sha256": "27895fb395ee0be88c0b639ce61a902ff61f662561eb3bbab07d0419d534c654"
+  },
+  "build/gf180_final_game/mapped_b.trace.csv": {
+    "archive": "evidence/gf180_final_b_academic/game_wait_only/mapped_b.trace.csv.gz",
+    "uncompressed_sha256": "d72a4651fef8c1fe6a335fa0c5add5b823fa723c6f34b8a3e6df762b5aa497d9",
+    "compressed_sha256": "13bbe61e6297b7116a6837b9f7f1ecec3d663099f7c4c5941a5f043dc764d1a0"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "period_ns": 100,
+  "frequency_MHz": 10,
+  "initial_utilization_percent": 40,
+  "a_run": "stage13_final_traceable_a",
+  "b_run": "stage12_electrical_route_b",
+  "rows": [
+    {
+      "check": "Setup",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Hold (incluye recovery/removal)",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "DRC de ruteo",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Magic DRC",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "LVS",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Antenas (redes)",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Capacidad (salidas \u00fanicas)",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Transici\u00f3n (pines \u00fanicos)",
+      "a": 0,
+      "b": 0
+    },
+    {
+      "check": "Fanout > 10 (conductores \u00fanicos)",
+      "a": 0,
+      "b": 0
+    }
+  ],
+  "source_sha256": {
+    "evidence/gf180_final_a_traceable/results.json": "e088c6fa792ccfacffb0fb3588d5b4d2ed42ad68bdda460ab6e8a00161063ce0",
+    "evidence/gf180_final_b_electrical/results.json": "d7ae0d1d05065b753818c50056621f9ec13105fc4a55f1b58c7371170cd7c2b2"
+  },
+  "verification": {
+    "a": {
+      "annotation_and_propagation_verified": true,
+      "complete_fresh_nine_corners": true,
+      "electrical_passed": true,
+      "expected_corners": [
+        "nom_tt_025C_5v00",
+        "nom_ss_125C_4v50",
+        "nom_ff_n40C_5v50",
+        "min_tt_025C_5v00",
+        "min_ss_125C_4v50",
+        "min_ff_n40C_5v50",
+        "max_tt_025C_5v00",
+        "max_ss_125C_4v50",
+        "max_ff_n40C_5v50"
+      ],
+      "max_cap_violations_per_corner": 0,
+      "max_fanout_violations_per_corner": 0,
+      "max_slew_violations_per_corner": 0,
+      "measured_corners": [
+        "max_ff_n40C_5v50",
+        "max_ss_125C_4v50",
+        "max_tt_025C_5v00",
+        "min_ff_n40C_5v50",
+        "min_ss_125C_4v50",
+        "min_tt_025C_5v00",
+        "nom_ff_n40C_5v50",
+        "nom_ss_125C_4v50",
+        "nom_tt_025C_5v00"
+      ],
+      "setup_hold_passed": true,
+      "source_verified": true,
+      "worst_hold_corner": "min_ff_n40C_5v50",
+      "worst_hold_slack_ns": 0.13082246767280262,
+      "worst_setup_corner": "max_ss_125C_4v50",
+      "worst_setup_slack_ns": 46.59729445302585
+    },
+    "b": {
+      "annotation_and_propagation_verified": true,
+      "complete_fresh_nine_corners": true,
+      "electrical_passed": true,
+      "expected_corners": [
+        "nom_tt_025C_5v00",
+        "nom_ss_125C_4v50",
+        "nom_ff_n40C_5v50",
+        "min_tt_025C_5v00",
+        "min_ss_125C_4v50",
+        "min_ff_n40C_5v50",
+        "max_tt_025C_5v00",
+        "max_ss_125C_4v50",
+        "max_ff_n40C_5v50"
+      ],
+      "max_cap_violations_per_corner": 0,
+      "max_fanout_violations_per_corner": 0,
+      "max_slew_violations_per_corner": 0,
+      "measured_corners": [
+        "max_ff_n40C_5v50",
+        "max_ss_125C_4v50",
+        "max_tt_025C_5v00",
+        "min_ff_n40C_5v50",
+        "min_ss_125C_4v50",
+        "min_tt_025C_5v00",
+        "nom_ff_n40C_5v50",
+        "nom_ss_125C_4v50",
+        "nom_tt_025C_5v00"
+      ],
+      "setup_hold_passed": true,
+      "source_verified": true,
+      "worst_hold_corner": "min_ff_n40C_5v50",
+      "worst_hold_slack_ns": 0.2930769043739347,
+      "worst_setup_corner": "max_ss_125C_4v50",
+      "worst_setup_slack_ns": 22.614664558871187
+    }
+  },
+  "previous_b": "stage9_100ns_u40_academic_b",
+  "scope": "Zero violations in all executed checks, nine timing corners; not full fabrication signoff.",
+  "limitations": [
+    "KLayout DRC omitted: no runset.",
+    "No formal EQY equivalence or IR/EM signoff claimed.",
+    "LVS uses the documented DEF/LEF extraction.",
+    "Final A and B are repaired versions of their deferred_flatten references; sweeps remain historical measurements."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+    "json_h": "/work/config/gf180/runs/stage7_trace_ref_a/05-yosys-jsonheader/asic_top.h.json",
+    "odb": "/work/config/gf180/runs/stage13_reset_prepared_v2_a/01-reset-incremental/asic_top.odb",
+    "def": "/work/config/gf180/runs/stage13_reset_prepared_v2_a/01-reset-incremental/asic_top.def",
+    "sdc": "/work/config/gf180/runs/stage7_trace_physical_ref_a/34-openroad-detailedrouting/asic_top.sdc",
+    "vh": "/work/config/gf180/runs/stage7_trace_physical_ref_a/17-odb-writeverilogheader/asic_top.vh",
+    "metrics": {
+        "design__die__bbox": "0.0 0.0 734.995 752.915",
+        "design__die__area": 553389,
+        "flow__warnings__count": 1,
+        "flow__errors__count": 0,
+        "flow__warnings__count:ORD-0039": 1,
+        "flow__warnings__type_count": 1
+    }
+}

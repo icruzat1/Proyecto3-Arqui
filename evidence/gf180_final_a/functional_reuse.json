@@ -1,0 +1,10 @@
+{
+  "scope": "Reuse bounded functional result because final netlist bytes are identical",
+  "source_test": "build/gf180_routed/stage6_100ns_u40_route_eco3/results.json",
+  "source_test_sha256": "cd6c1166b0701afa9d6e99be4b6cd1d52c605d8f43571f2f26da965e1217b424",
+  "old_netlist": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/final/nl/asic_top.nl.v",
+  "new_netlist": "config/gf180/runs/stage6_100ns_u40_final_a/final/nl/asic_top.nl.v",
+  "common_netlist_sha256": "41ecfce7ef7569f5019849741cf863cccd96ace650b633dc4b9e58a798f92cab",
+  "test_reexecuted": false,
+  "passed": true
+}

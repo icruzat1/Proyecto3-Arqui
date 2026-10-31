@@ -1,0 +1,40 @@
+┏━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ P / R ┃ Partial ┃ Required ┃ Net                                  ┃ Pin                                     ┃ Layer  ┃
+┡━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 4.62  │ 1848.05 │ 400.00   │ u_mem.genblk1.gen_b.u_memory._09012_ │ fanout1340/I                            │ Metal2 │
+│ 2.24  │ 896.57  │ 400.00   │ net892                               │ fanout890/I                             │ Metal2 │
+│ 2.13  │ 851.24  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._08894_ │ fanout1020/I                            │ Metal3 │
+│ 2.03  │ 813.55  │ 400.00   │ net2902                              │ fanout2890/I                            │ Metal2 │
+│ 1.86  │ 743.26  │ 400.00   │ net3034                              │ u_mem.genblk1.gen_b.u_memory._14442_/I  │ Metal2 │
+│ 1.76  │ 703.14  │ 400.00   │ net3719                              │ fanout3713/I                            │ Metal2 │
+│ 1.74  │ 696.48  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._08954_ │ fanout700/I                             │ Metal2 │
+│ 1.63  │ 652.26  │ 400.00   │ net1                                 │ hold3895/I                              │ Metal2 │
+│ 1.56  │ 624.72  │ 400.00   │ net1818                              │ fanout1817/I                            │ Metal2 │
+│ 1.47  │ 589.32  │ 400.00   │ net1047                              │ fanout1046/I                            │ Metal2 │
+│ 1.45  │ 580.68  │ 400.00   │ net2004                              │ fanout2000/I                            │ Metal2 │
+│ 1.44  │ 575.83  │ 400.00   │ net2086                              │ fanout2085/I                            │ Metal2 │
+│ 1.43  │ 571.26  │ 400.00   │ u_soc.u_core.u_rf._0570_             │ fanout2751/I                            │ Metal2 │
+│ 1.42  │ 568.74  │ 400.00   │ net2101                              │ fanout2097/I                            │ Metal2 │
+│ 1.41  │ 563.63  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._08963_ │ fanout626/I                             │ Metal2 │
+│ 1.41  │ 562.63  │ 400.00   │ net3342                              │ fanout3320/I                            │ Metal2 │
+│ 1.37  │ 546.58  │ 400.00   │ net1411                              │ u_mem.genblk1.gen_b.u_memory._21429_/A2 │ Metal2 │
+│ 1.29  │ 514.75  │ 400.00   │ net2450                              │ fanout2438/I                            │ Metal2 │
+│ 1.28  │ 513.72  │ 400.00   │ net9                                 │ output9/I                               │ Metal5 │
+│ 1.27  │ 507.60  │ 400.00   │ net1370                              │ fanout1366/I                            │ Metal3 │
+│ 1.26  │ 504.32  │ 400.00   │ net1148                              │ fanout1140/I                            │ Metal2 │
+│ 1.26  │ 503.79  │ 400.00   │ eco11_net3401_0_net                  │ fanout3313/I                            │ Metal2 │
+│ 1.26  │ 502.92  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._08885_ │ fanout1073/I                            │ Metal4 │
+│ 1.23  │ 493.63  │ 400.00   │ net775                               │ fanout762/I                             │ Metal2 │
+│ 1.22  │ 488.18  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._04747_ │ u_mem.genblk1.gen_b.u_memory._17204_/B  │ Metal3 │
+│ 1.21  │ 484.24  │ 400.00   │ net3027                              │ u_mem.genblk1.gen_b.u_memory._24690_/B  │ Metal2 │
+│ 1.16  │ 464.08  │ 400.00   │ net1929                              │ fanout1921/I                            │ Metal2 │
+│ 1.15  │ 461.83  │ 400.00   │ net1093                              │ fanout1092/I                            │ Metal2 │
+│ 1.13  │ 451.62  │ 400.00   │ net3022                              │ fanout3013/I                            │ Metal2 │
+│ 1.13  │ 450.95  │ 400.00   │ net1632                              │ u_mem.genblk1.gen_b.u_memory._18511_/B2 │ Metal2 │
+│ 1.11  │ 443.35  │ 400.00   │ net1219                              │ fanout1216/I                            │ Metal2 │
+│ 1.07  │ 428.68  │ 400.00   │ net3372                              │ fanout3371/I                            │ Metal2 │
+│ 1.06  │ 423.44  │ 400.00   │ u_mem.genblk1.gen_b.u_memory._08597_ │ u_mem.genblk1.gen_b.u_memory._18441_/I0 │ Metal2 │
+│ 1.01  │ 405.61  │ 400.00   │ net978                               │ fanout977/I                             │ Metal2 │
+│ 1.01  │ 405.57  │ 400.00   │ net3024                              │ u_mem.genblk1.gen_b.u_memory._22896_/A1 │ Metal2 │
+│ 1.00  │ 400.19  │ 400.00   │ net3624                              │ fanout3623/I                            │ Metal2 │
+└───────┴─────────┴──────────┴──────────────────────────────────────┴─────────────────────────────────────────┴────────┘

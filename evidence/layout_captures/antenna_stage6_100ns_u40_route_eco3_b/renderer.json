@@ -1,0 +1,6 @@
+{
+  "renderer": "KLayout LayoutView GUI with offscreen Qt platform",
+  "version": "KLayout 0.30.7",
+  "macro": "scripts/klayout_capture_regions.py",
+  "source_gds_unchanged": true
+}

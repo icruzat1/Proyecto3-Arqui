@@ -1,0 +1,41 @@
+{
+  "variant": "a",
+  "source_state": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/state_out.json",
+  "source_state_sha256": "831bec4cae3dd600fe5d8ab56ff0a297485e41fe107a1e40bcbfe98323265b72",
+  "config": "config/gf180/a_librarylimits.json",
+  "config_sha256": "6f7cc895f287ad43a9b72b9544a8190529acc4b9f6745b0dbf3c934b1a29de7b",
+  "from_step": "Odb.RemoveRoutingObstructions",
+  "scope": "Existing routed checkpoint; replays extraction/STA/export/checks, not synthesis or routing from RTL.",
+  "files": {
+    "views/00_asic_top.h.json": {
+      "source": "config/gf180/runs/stage4_100ns_u40_floorplan_a/05-yosys-jsonheader/asic_top.h.json",
+      "sha256": "f6b9ec1bcb9a703559e1b46cfb55a6c1c51540589cb9f9bfe7425990aa90901c"
+    },
+    "views/01_asic_top.nl.v": {
+      "source": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/asic_top.nl.v",
+      "sha256": "22d54ebe9293a0d6d5c8bda60e4a50dcf44c97c023e6d88da954640af210739d"
+    },
+    "views/02_asic_top.sdc": {
+      "source": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/asic_top.sdc",
+      "sha256": "78dfb22ff8aee0037f27c4854f250bfe27cdb0232938b50750e9324938632dbc"
+    },
+    "views/03_asic_top.pnl.v": {
+      "source": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/asic_top.pnl.v",
+      "sha256": "9c59217b9ec51f292d161cccc82d1d75d45dec3531d9e01813d2965bec171170"
+    },
+    "views/04_asic_top.vh": {
+      "source": "config/gf180/runs/stage5_100ns_u40_cts_a/03-odb-writeverilogheader/asic_top.vh",
+      "sha256": "dd79caee1fa1dff6c258ab6f35d1b6ed4423ec722e31fd96cb27d9b39c706e23"
+    },
+    "views/05_asic_top.odb": {
+      "source": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/asic_top.odb",
+      "sha256": "9f9e21d148b0cbb668286dbf47f4812e793514a7174b032c549533bba36a622f"
+    },
+    "views/06_asic_top.def": {
+      "source": "config/gf180/runs/stage6_100ns_u40_route_eco3_a/06-openroad-detailedrouting/asic_top.def",
+      "sha256": "3f46821f9f8d583759e2655e641439cc318953bf3d37c25fa4e5cd2d8f2bf9df"
+    }
+  },
+  "archive_sha256": "40843043da160025bb2d3537f6b55a3bb0f53645e98bd259c52f3220258f88be",
+  "archive_bytes": 5738113
+}

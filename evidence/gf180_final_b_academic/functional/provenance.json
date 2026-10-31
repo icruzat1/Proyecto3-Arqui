@@ -1,0 +1,31 @@
+{
+  "final_netlist": "config/gf180/runs/stage9_100ns_u40_academic_b/final/nl/asic_top.nl.v",
+  "final_netlist_sha256": "1418cae9d53b3756a8c6103d90b1b625762265175978ed74cb607af09be10aea",
+  "matches_tested_netlist": true,
+  "scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+  "full_game_verified": false,
+  "sdf_timing": false,
+  "files": {
+    "build/gf180_routed/final_b_trace/results.json": {
+      "archive": "evidence/gf180_final_b_academic/functional/results.json",
+      "sha256": "5d7ca39b5794c4d9f7a6dd85c1ce626cd87e6958bb797c3f7904414844f659d9"
+    },
+    "build/gf180_routed/final_b_trace/b/compile.log": {
+      "archive": "evidence/gf180_final_b_academic/functional/compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/gf180_routed/final_b_trace/b/iverilog_version.log": {
+      "archive": "evidence/gf180_final_b_academic/functional/iverilog_version.log",
+      "sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d"
+    },
+    "build/gf180_routed/final_b_trace/b/simulation.log": {
+      "archive": "evidence/gf180_final_b_academic/functional/simulation.log",
+      "sha256": "a49eabf4ec5966880b2d092a5afef132e5705b20727acbea91f70af28bf0db44"
+    },
+    "build/gf180_routed/final_b_trace/b/tb_physical.v": {
+      "archive": "evidence/gf180_final_b_academic/functional/tb_physical.v",
+      "sha256": "82b58c1e2bd44d6d489be49f550e516ab17133156da0314c862677272224dbaa"
+    }
+  },
+  "physical_copy_sha256": "f2ef2fc8f3255ec75202c09148d66afda463c9c724f009bbe7ff10293f7442f2"
+}

@@ -1,0 +1,359 @@
+Reading timing models for corner max_ff_n40C_5v50…
+Reading timing library for the 'max_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+Reading timing models for corner max_tt_025C_5v00…
+Reading timing library for the 'max_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading timing models for corner nom_ff_n40C_5v50…
+Reading timing library for the 'nom_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner min_ss_125C_4v50…
+Reading timing library for the 'min_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+Reading timing models for corner min_ff_n40C_5v50…
+Reading timing library for the 'min_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner min_tt_025C_5v00…
+Reading timing library for the 'min_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner max_ss_125C_4v50…
+Reading timing library for the 'max_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading timing models for corner nom_ss_125C_4v50…
+Reading timing library for the 'nom_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading OpenROAD database at '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/03-openroad-repairantennas/1-openroad-diodeinsertion/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: Metal5 and clock max routing layer to Metal5. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 3622 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical       402161        268162          33.32%
+Metal3     Horizontal     408110        271888          33.38%
+Metal4     Vertical       402134        268144          33.32%
+Metal5     Horizontal     249608        168264          32.59%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/50
+[INFO GRT-0197] Via related to pin nodes: 249301
+[INFO GRT-0198] Via related Steiner nodes: 7369
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 330410
+[INFO GRT-0112] Final usage 3D: 1372029
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2          268162        168924           62.99%             0 /  0 /  0
+Metal3          271888        152589           56.12%             0 /  0 /  0
+Metal4          268144         36516           13.62%             0 /  0 /  0
+Metal5          168264         22770           13.53%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           976458        380799           39.00%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 4302144 um
+[INFO GRT-0014] Routed nets: 41109
+[INFO GRT-0303] Global routing runtime = 00:00:02
++ repair_timing -verbose -setup -setup_margin 30.0 -max_buffer_percent 50.0
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 5022 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 5022 out of 5022 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   TNS      |  Viol  | Worst
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            | Endpts | Endpt
+--------------------------------------------------------------------------------------------------------------
+        0 |       0 |       0 |        0 |      0 |     0 |    +0.0% |  -12.995 |   -11434.5 |   5022 | _35086_/D
+       10 |       0 |       9 |        0 |      0 |     0 |    -0.0% |   -9.889 |    -9246.0 |   5022 | _36810_/D
+       20 |       0 |      19 |        0 |      0 |     0 |    +0.0% |   -9.033 |    -8616.9 |   5022 | _36587_/D
+       30 |       0 |      29 |        0 |      0 |     0 |    +0.0% |   -6.024 |    -3201.4 |   5022 | _36618_/D
+       40 |       0 |      39 |        0 |      0 |     0 |    +0.0% |   -5.262 |    -2982.1 |   5022 | _39202_/D
+       50 |       0 |      49 |        0 |      0 |     0 |    +0.0% |   -4.917 |    -2598.9 |   5022 | _36618_/D
+       60 |       0 |      59 |        0 |      0 |     0 |    +0.0% |   -2.527 |     -636.4 |   5022 | _36185_/D
+       70 |       0 |      69 |        0 |      0 |     0 |    -0.0% |   -0.875 |      -58.8 |   5022 | _36415_/D
+       80 |       0 |      79 |        0 |      0 |     0 |    -0.0% |    0.946 |        0.0 |   5022 | _35533_/D
+       90 |       0 |      89 |        0 |      0 |     0 |    -0.0% |    1.158 |        0.0 |   5022 | _35533_/D
+      100 |       0 |      99 |        0 |      0 |     0 |    -0.0% |    1.376 |        0.0 |   5022 | _35533_/D
+      110 |       0 |     109 |        0 |      0 |     0 |    -0.0% |    2.470 |        0.0 |   5022 | _36618_/D
+      120 |       0 |     119 |        0 |      0 |     0 |    -0.0% |    3.254 |        0.0 |   5022 | _36587_/D
+      130 |       0 |     128 |        1 |      0 |     0 |    +0.0% |    3.990 |        0.0 |   5022 | _39173_/D
+      140 |       0 |     138 |        1 |      0 |     0 |    -0.0% |    4.456 |        0.0 |   5022 | _39730_/D
+      150 |       0 |     148 |        1 |      0 |     0 |    +0.0% |    4.601 |        0.0 |   5022 | _35500_/D
+      160 |       0 |     158 |        1 |      0 |     0 |    +0.0% |    5.230 |        0.0 |   5022 | _39833_/D
+      170 |       0 |     168 |        1 |      0 |     0 |    +0.0% |    5.363 |        0.0 |   5022 | _35477_/D
+      180 |       0 |     178 |        1 |      0 |     0 |    +0.0% |    5.582 |        0.0 |   5022 | _39815_/D
+      190 |       0 |     188 |        1 |      0 |     0 |    +0.0% |    5.878 |        0.0 |   5022 | _39268_/D
+      200 |       0 |     198 |        1 |      0 |     0 |    +0.0% |    5.925 |        0.0 |   5022 | _34963_/D
+      210 |       0 |     208 |        1 |      0 |     0 |    +0.0% |    6.512 |        0.0 |   5022 | _39333_/D
+      220 |       0 |     218 |        1 |      0 |     0 |    +0.0% |    6.844 |        0.0 |   5022 | _39920_/D
+      230 |       0 |     228 |        1 |      0 |     0 |    +0.0% |    6.975 |        0.0 |   5022 | _36185_/D
+      240 |       0 |     238 |        1 |      0 |     0 |    +0.0% |    7.048 |        0.0 |   5022 | _36411_/D
+      250 |       0 |     248 |        1 |      0 |     0 |    +0.0% |    7.509 |        0.0 |   5022 | _39920_/D
+      260 |       0 |     257 |        1 |      0 |     1 |    +0.0% |    8.615 |        0.0 |   5022 | _40156_/D
+      270 |       0 |     267 |        1 |      0 |     1 |    +0.0% |    9.317 |        0.0 |   5022 | _39202_/D
+      280 |       0 |     277 |        1 |      0 |     1 |    -0.0% |    9.644 |        0.0 |   5022 | _35737_/D
+      290 |       0 |     287 |        1 |      0 |     1 |    -0.0% |    9.973 |        0.0 |   5022 | _39341_/D
+      300 |       0 |     297 |        1 |      0 |     1 |    -0.0% |   10.734 |        0.0 |   5022 | _38916_/D
+      310 |       0 |     307 |        1 |      0 |     1 |    -0.0% |   12.333 |        0.0 |   5022 | _38052_/D
+      320 |       0 |     317 |        1 |      0 |     1 |    -0.0% |   13.389 |        0.0 |   5022 | _38052_/D
+      330 |       0 |     327 |        1 |      0 |     1 |    -0.0% |   13.889 |        0.0 |   5022 | _39553_/D
+      340 |       0 |     337 |        1 |      0 |     1 |    -0.0% |   14.659 |        0.0 |   5022 | _38992_/D
+      350 |       0 |     346 |        1 |      0 |     2 |    -0.0% |   14.853 |        0.0 |   5022 | _35493_/D
+      360 |       0 |     356 |        1 |      0 |     2 |    -0.0% |   15.013 |        0.0 |   5022 | _38034_/D
+      370 |       0 |     366 |        1 |      0 |     2 |    -0.0% |   15.243 |        0.0 |   5022 | _35943_/D
+      380 |       0 |     376 |        1 |      0 |     2 |    -0.0% |   15.420 |        0.0 |   5022 | _38165_/D
+      390 |       0 |     386 |        1 |      0 |     2 |    -0.0% |   15.704 |        0.0 |   5022 | _36431_/D
+      400 |       0 |     396 |        1 |      0 |     2 |    -0.0% |   15.822 |        0.0 |   5022 | _36415_/D
+      410 |       0 |     406 |        1 |      0 |     2 |    -0.0% |   16.415 |        0.0 |   5022 | _36082_/D
+      420 |       0 |     416 |        1 |      0 |     2 |    -0.0% |   16.498 |        0.0 |   5022 | _36415_/D
+      430 |       0 |     426 |        1 |      0 |     2 |    -0.0% |   16.610 |        0.0 |   5022 | _35601_/D
+      440 |       0 |     436 |        1 |      0 |     2 |    -0.0% |   16.652 |        0.0 |   5022 | _39341_/D
+      450 |       0 |     446 |        1 |      0 |     2 |    -0.0% |   16.781 |        0.0 |   5022 | _40156_/D
+      460 |       0 |     456 |        1 |      0 |     2 |    -0.0% |   16.879 |        0.0 |   5022 | _40156_/D
+      470 |       0 |     466 |        1 |      0 |     2 |    -0.0% |   17.040 |        0.0 |   5022 | _38248_/D
+      480 |       0 |     476 |        1 |      0 |     2 |    -0.0% |   17.181 |        0.0 |   5022 | _36415_/D
+      490 |       0 |     486 |        1 |      0 |     2 |    -0.0% |   17.293 |        0.0 |   5022 | _40156_/D
+      500 |       0 |     496 |        1 |      0 |     2 |    -0.1% |   17.433 |        0.0 |   5022 | _38363_/D
+      510 |       0 |     506 |        1 |      0 |     2 |    -0.1% |   17.546 |        0.0 |   5022 | _35293_/D
+      520 |       0 |     516 |        1 |      0 |     2 |    -0.1% |   17.668 |        0.0 |   5022 | _38363_/D
+      530 |       0 |     526 |        1 |      0 |     2 |    -0.1% |   17.753 |        0.0 |   5022 | _38992_/D
+      540 |       0 |     536 |        1 |      0 |     2 |    -0.1% |   17.851 |        0.0 |   5022 | _36503_/D
+      550 |       0 |     546 |        1 |      0 |     2 |    -0.1% |   17.865 |        0.0 |   5022 | _36810_/D
+      560 |       0 |     556 |        1 |      0 |     2 |    -0.1% |   17.993 |        0.0 |   5022 | _36794_/D
+      570 |       0 |     566 |        1 |      0 |     2 |    -0.1% |   18.058 |        0.0 |   5022 | _35206_/D
+      580 |       0 |     576 |        1 |      0 |     2 |    -0.1% |   18.152 |        0.0 |   5022 | _36991_/D
+      590 |       0 |     586 |        1 |      0 |     2 |    -0.1% |   18.196 |        0.0 |   5022 | _36780_/D
+      600 |       0 |     596 |        1 |      0 |     2 |    -0.1% |   18.235 |        0.0 |   5022 | _35232_/D
+      610 |       0 |     606 |        1 |      0 |     2 |    -0.1% |   18.574 |        0.0 |   5022 | _35618_/D
+      620 |       0 |     616 |        1 |      0 |     2 |    -0.1% |   18.742 |        0.0 |   5022 | _35618_/D
+      630 |       0 |     626 |        1 |      0 |     2 |    -0.1% |   18.791 |        0.0 |   5022 | _39560_/D
+      640 |       0 |     636 |        1 |      0 |     2 |    -0.1% |   18.832 |        0.0 |   5022 | _35206_/D
+      650 |       0 |     646 |        1 |      0 |     2 |    -0.1% |   18.952 |        0.0 |   5022 | _39194_/D
+      660 |       0 |     656 |        1 |      0 |     2 |    -0.1% |   19.212 |        0.0 |   5022 | _40004_/D
+      670 |       0 |     666 |        1 |      0 |     2 |    -0.1% |   19.254 |        0.0 |   5022 | _38052_/D
+      680 |       0 |     676 |        1 |      0 |     2 |    -0.1% |   19.398 |        0.0 |   5022 | _39268_/D
+      690 |       0 |     686 |        1 |      0 |     2 |    -0.1% |   19.425 |        0.0 |   5022 | _38052_/D
+      700 |       0 |     696 |        1 |      0 |     2 |    -0.1% |   19.480 |        0.0 |   5022 | _38259_/D
+      710 |       0 |     706 |        1 |      0 |     2 |    -0.1% |   19.535 |        0.0 |   5022 | _35400_/D
+      720 |       0 |     716 |        1 |      0 |     2 |    -0.1% |   19.577 |        0.0 |   5022 | _34967_/D
+      730 |       0 |     726 |        1 |      0 |     2 |    -0.1% |   19.611 |        0.0 |   5022 | _36647_/D
+      740 |       0 |     736 |        1 |      0 |     2 |    -0.1% |   19.745 |        0.0 |   5022 | _39553_/D
+      750 |       0 |     746 |        1 |      0 |     2 |    -0.1% |   19.869 |        0.0 |   5022 | _35246_/D
+      760 |       0 |     756 |        1 |      0 |     2 |    -0.1% |   20.008 |        0.0 |   5022 | _35651_/D
+      770 |       0 |     766 |        1 |      0 |     2 |    -0.1% |   20.088 |        0.0 |   5022 | _38659_/D
+      780 |       0 |     776 |        1 |      0 |     2 |    -0.1% |   20.277 |        0.0 |   5022 | _38916_/D
+      790 |       0 |     786 |        1 |      0 |     2 |    -0.1% |   20.455 |        0.0 |   5022 | _36490_/D
+      800 |       0 |     796 |        1 |      0 |     2 |    -0.1% |   20.602 |        0.0 |   5022 | _36556_/D
+      810 |       0 |     806 |        1 |      0 |     2 |    -0.1% |   20.664 |        0.0 |   5022 | _37969_/D
+      820 |       0 |     816 |        1 |      0 |     2 |    -0.1% |   20.731 |        0.0 |   5022 | _34987_/D
+      830 |       0 |     826 |        1 |      0 |     2 |    -0.1% |   21.130 |        0.0 |   5022 | _38165_/D
+      840 |       0 |     836 |        1 |      0 |     2 |    -0.1% |   21.772 |        0.0 |   5022 | _39333_/D
+      850 |       0 |     846 |        1 |      0 |     2 |    -0.1% |   22.370 |        0.0 |   5022 | _39730_/D
+      860 |       0 |     856 |        1 |      0 |     2 |    -0.1% |   22.925 |        0.0 |   5022 | _39333_/D
+      870 |       0 |     866 |        1 |      0 |     2 |    -0.1% |   23.191 |        0.0 |   5022 | _40156_/D
+      880 |       0 |     876 |        1 |      0 |     2 |    -0.1% |   23.381 |        0.0 |   5022 | _38166_/D
+      890 |       0 |     885 |        1 |      0 |     3 |    -0.1% |   23.449 |        0.0 |   5022 | _36454_/D
+      900 |       0 |     895 |        1 |      0 |     3 |    -0.1% |   23.738 |        0.0 |   5022 | _38001_/D
+      910 |       0 |     905 |        1 |      0 |     3 |    -0.2% |   23.897 |        0.0 |   5022 | _34954_/D
+      920 |       0 |     915 |        1 |      0 |     3 |    -0.1% |   23.927 |        0.0 |   5022 | _35718_/D
+      930 |       0 |     925 |        1 |      0 |     3 |    -0.1% |   23.946 |        0.0 |   5022 | _39770_/D
+      940 |       0 |     935 |        1 |      0 |     3 |    -0.1% |   24.030 |        0.0 |   5022 | _39362_/D
+      950 |       0 |     945 |        1 |      0 |     3 |    -0.1% |   24.103 |        0.0 |   5022 | _36647_/D
+      960 |       0 |     955 |        1 |      0 |     3 |    -0.2% |   24.202 |        0.0 |   5022 | _38052_/D
+      970 |       0 |     965 |        1 |      0 |     3 |    -0.2% |   24.388 |        0.0 |   5022 | _35718_/D
+      980 |       0 |     975 |        1 |      0 |     3 |    -0.2% |   24.623 |        0.0 |   5022 | _38052_/D
+      990 |       0 |     985 |        1 |      0 |     3 |    -0.2% |   24.678 |        0.0 |   5022 | _39380_/D
+     1000 |       0 |     995 |        1 |      0 |     3 |    -0.2% |   24.723 |        0.0 |   5022 | _38083_/D
+     1010 |       0 |    1005 |        1 |      0 |     3 |    -0.2% |   24.800 |        0.0 |   5022 | _35718_/D
+     1020 |       0 |    1015 |        1 |      0 |     3 |    -0.2% |   24.853 |        0.0 |   5022 | _39233_/D
+     1030 |       0 |    1025 |        1 |      0 |     3 |    -0.2% |   24.950 |        0.0 |   5022 | _35718_/D
+     1040 |       0 |    1035 |        1 |      0 |     3 |    -0.2% |   24.993 |        0.0 |   5022 | _38818_/D
+     1050 |       0 |    1045 |        1 |      0 |     3 |    -0.2% |   25.058 |        0.0 |   5022 | _36125_/D
+     1060 |       0 |    1055 |        1 |      0 |     3 |    -0.2% |   25.092 |        0.0 |   5022 | _39866_/D
+     1070 |       0 |    1065 |        1 |      0 |     3 |    -0.2% |   25.125 |        0.0 |   5022 | _39501_/D
+     1080 |       0 |    1075 |        1 |      0 |     3 |    -0.2% |   25.143 |        0.0 |   5022 | _36082_/D
+     1090 |       0 |    1085 |        1 |      0 |     3 |    -0.2% |   25.098 |        0.0 |   5022 | _36116_/D
+     1100 |       0 |    1095 |        1 |      0 |     3 |    -0.2% |   25.205 |        0.0 |   5022 | _39316_/D
+     1100 |       0 |    1095 |        1 |      0 |     3 |    -0.2% |   25.205 |        0.0 |   5022 | _39316_/D
+     1110 |       0 |    1104 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5022 | _37965_/D
+     1115 |       0 |    1109 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5020 | _37965_/D
+     1120 |       0 |    1113 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5020 | _37965_/D
+     1122 |       0 |    1115 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5018 | _37965_/D
+     1123 |       0 |    1115 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5017 | _37965_/D
+     1130 |       0 |    1121 |        1 |      0 |     3 |    -0.2% |   25.207 |        0.0 |   5017 | _37965_/D
+     1140 |       0 |    1131 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5017 | _37965_/D
+     1142 |       0 |    1133 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5015 | _37965_/D
+     1143 |       0 |    1133 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5014 | _37965_/D
+     1144 |       0 |    1133 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5013 | _37965_/D
+     1149 |       0 |    1137 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5011 | _37965_/D
+     1150 |       0 |    1137 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5011 | _37965_/D
+     1150 |       0 |    1137 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5010 | _37965_/D
+     1151 |       0 |    1137 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5009 | _37965_/D
+     1155 |       0 |    1140 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5007 | _37965_/D
+     1156 |       0 |    1140 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5006 | _37965_/D
+     1157 |       0 |    1140 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5005 | _37965_/D
+     1160 |       0 |    1142 |        1 |      0 |     3 |    -0.2% |   25.906 |        0.0 |   5005 | _37965_/D
+     1162 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   5003 | _37965_/D
+     1163 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   5002 | _37965_/D
+     1164 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   5001 | _37965_/D
+     1165 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   5000 | _37965_/D
+     1166 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4999 | _37965_/D
+     1167 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4998 | _37965_/D
+     1168 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4997 | _37965_/D
+     1169 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4996 | _37965_/D
+     1170 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4996 | _37965_/D
+     1170 |       0 |    1144 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4995 | _37965_/D
+     1174 |       0 |    1147 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4993 | _37965_/D
+     1175 |       0 |    1147 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4992 | _37965_/D
+     1180 |       0 |    1151 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4992 | _37965_/D
+     1182 |       0 |    1153 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4990 | _37965_/D
+     1183 |       0 |    1153 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4989 | _37965_/D
+     1184 |       0 |    1153 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4988 | _37965_/D
+     1185 |       0 |    1153 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4987 | _37965_/D
+     1186 |       0 |    1153 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4986 | _37965_/D
+     1188 |       0 |    1154 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4984 | _37965_/D
+     1189 |       0 |    1154 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4983 | _37965_/D
+     1190 |       0 |    1154 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4983 | _37965_/D
+     1192 |       0 |    1156 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4981 | _37965_/D
+     1193 |       0 |    1156 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4980 | _37965_/D
+     1195 |       0 |    1157 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4978 | _37965_/D
+     1196 |       0 |    1157 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4977 | _37965_/D
+     1199 |       0 |    1159 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4975 | _37965_/D
+     1200 |       0 |    1159 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4975 | _37965_/D
+     1200 |       0 |    1159 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   4975 | _37965_/D
+    final |       0 |    1159 |        1 |      0 |     3 |    -0.2% |   26.613 |        0.0 |   2305 | _37965_/D
+--------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0040] Inserted 1 buffers.
+[INFO RSZ-0051] Resized 1159 instances: 1159 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 3 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
++ repair_timing -verbose -hold -setup_margin 30.0 -hold_margin 0.3 -max_buffer_percent 50.0
+[INFO RSZ-0046] Found 124 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.627 |  -1.927 | _37692_/RN
+       10 |       0 |       9 |            0 |    +0.0% |   0.142 |   0.000 | _37675_/D
+       20 |       0 |      21 |            0 |    +0.1% |   0.184 |   0.000 | _37753_/D
+       30 |       0 |      35 |            0 |    +0.1% |   0.217 |   0.000 | _37627_/D
+       40 |       0 |      45 |            0 |    +0.2% |   0.250 |   0.000 | _37757_/D
+       50 |       0 |      52 |            0 |    +0.2% |   0.261 |   0.000 | _37141_/D
+       60 |       0 |      63 |            0 |    +0.3% |   0.261 |   0.000 | _37141_/D
+       70 |       0 |      72 |            0 |    +0.3% |   0.261 |   0.000 | _37141_/D
+       80 |       0 |      80 |            0 |    +0.3% |   0.261 |   0.000 | _37141_/D
+       90 |       0 |      90 |            0 |    +0.4% |   0.261 |   0.000 | _37141_/D
+      100 |       0 |      99 |            0 |    +0.4% |   0.261 |   0.000 | _37141_/D
+      110 |       0 |     107 |            0 |    +0.4% |   0.261 |   0.000 | _37141_/D
+      120 |       0 |     116 |            0 |    +0.5% |   0.261 |   0.000 | _37141_/D
+      130 |       0 |     126 |            0 |    +0.5% |   0.273 |   0.000 | _37153_/D
+      140 |       0 |     137 |            0 |    +0.6% |   0.287 |   0.000 | _37133_/D
+    final |       0 |     144 |            0 |    +0.6% |   0.300 |   0.000 | _37317_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 144 hold buffers.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement       6895.3 u
+average displacement        0.1 u
+max displacement           28.6 u
+original HPWL         3133161.4 u
+legalized HPWL        3137779.6 u
+delta HPWL                    0 %
+
+[INFO DPL-0020] Mirrored 19787 instances
+[INFO DPL-0021] HPWL before          3137779.6 u
+[INFO DPL-0022] HPWL after           3059902.5 u
+[INFO DPL-0023] HPWL delta               -2.5 %
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 3622 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical       402161        268162          33.32%
+Metal3     Horizontal     408110        271888          33.38%
+Metal4     Vertical       402134        268144          33.32%
+Metal5     Horizontal     249608        168264          32.59%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 249818
+[INFO GRT-0198] Via related Steiner nodes: 7359
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 330452
+[INFO GRT-0112] Final usage 3D: 1373448
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2          268162        164993           61.53%             0 /  0 /  0
+Metal3          271888        152710           56.17%             0 /  0 /  0
+Metal4          268144         41087           15.32%             0 /  0 /  0
+Metal5          168264         23302           13.85%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           976458        382092           39.13%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 4308368 um
+[INFO GRT-0014] Routed nets: 41254
+[INFO GRT-0303] Global routing runtime = 00:00:04
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 580 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             700    3073.28
+  Tap cell                              12324   54107.29
+  Antenna cell                            873    3832.82
+  Tie cell                                  1       8.78
+  Clock buffer                           4324  234530.78
+  Timing Repair Buffer                  14763  351067.36
+  Inverter                                432    3802.09
+  Clock inverter                           45     728.81
+  Sequential cell                        5433  354963.84
+  Multi-Input combinational cell        16995  398907.35
+  Total                                 55890 1405022.39
+Writing OpenROAD database to '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/04-openroad-resizertimingpostgrt/asic_top.odb'…
+Writing netlist to '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/04-openroad-resizertimingpostgrt/asic_top.nl.v'…
+Writing powered netlist to '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/04-openroad-resizertimingpostgrt/asic_top.pnl.v'…
+Writing layout to '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/04-openroad-resizertimingpostgrt/asic_top.def'…
+Writing timing constraints to '/work/config/gf180/runs/stage6_100ns_u40_route_eco3_b/04-openroad-resizertimingpostgrt/asic_top.sdc'…

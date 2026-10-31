@@ -1,0 +1,24 @@
+{
+  "clock_period_ns": 100,
+  "initial_core_util_percent": 40,
+  "variants": {
+    "a": {
+      "run": "stage13_final_traceable_a",
+      "evidence": "evidence/gf180_final_a_traceable",
+      "synthesis": "stage7_trace_ref_a",
+      "config": "config/gf180/a_final_traceable.json",
+      "captures": "evidence/layout_captures/stage13_final_traceable_a_blocks",
+      "checkpoint": "evidence/gf180_final_replay/final/a_checkpoint.zip",
+      "checkpoint_sha256": "6ab3731f51254bae088bebe06e78234d9d4a6edc689e500212e0886bad330c96"
+    },
+    "b": {
+      "run": "stage12_electrical_route_b",
+      "evidence": "evidence/gf180_final_b_electrical",
+      "synthesis": "stage7_trace_ref_b",
+      "config": "config/gf180/b_electrical_eco.json",
+      "captures": "evidence/layout_captures/stage12_electrical_route_b_blocks",
+      "checkpoint": "evidence/gf180_final_replay/final/b_checkpoint.zip",
+      "checkpoint_sha256": "d2d1ec70138665369f961b2ab47281e97f1ba39562fe9efc49997cc9e46ccd07"
+    }
+  }
+}

@@ -1,0 +1,259 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/work/config/gf180/runs/stage6_100ns_u40_route_b/08-openroad-detailedrouting/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+%OL_CREATE_REPORT /work/config/gf180/runs/stage6_100ns_u40_route_b/10-openroad-checkantennas-1/reports/antenna.rpt
+Net: net6029
+  Pin:   fanout6017/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:    2.84
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    2.84
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   11.09
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   11.09
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.17
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    0.34
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    1.27
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    4.11
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    5.09
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   16.18
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+  Pin:   fanout6028/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:  128.16
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  128.16
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  495.11
+      Required ratio:  400.00 (Side area) (VIOLATED)
+      Cumulative area ratio:  495.11
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.34
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.51
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    1.27
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  129.44
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    5.09
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:  500.20
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+
+Net: net10904
+  Pin:   fanout10896/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:   19.71
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:   19.71
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   76.77
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   76.77
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.34
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    1.60
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:   21.30
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    6.37
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   83.14
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+  Pin:   fanout10903/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:  131.01
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  131.01
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  506.07
+      Required ratio:  400.00 (Side area) (VIOLATED)
+      Cumulative area ratio:  506.07
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.34
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.51
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    1.60
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  132.60
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    6.37
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:  512.44
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+
+Net: net11525
+  Pin:   fanout11519/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:    2.55
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    2.55
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    9.99
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:    9.99
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.17
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    0.34
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    8.48
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:   11.03
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   32.80
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   42.79
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+  Pin:   fanout11520/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:    2.25
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:    2.25
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:    9.44
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:    9.44
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.34
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    8.48
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:   10.72
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   32.80
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:   42.24
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+  Pin:   fanout11524/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+    Layer: Via1
+      Partial area ratio:    0.17
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.17
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal2
+      Partial area ratio:  116.68
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  116.68
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:  450.82
+      Required ratio:  400.00 (Side area) (VIOLATED)
+      Cumulative area ratio:  450.82
+      Required ratio:    0.00 (Cumulative side area) 
+
+    Layer: Via2
+      Partial area ratio:    0.34
+      Required ratio:   20.00 (Gate area) 
+      Cumulative area ratio:    0.51
+      Required ratio:    0.00 (Cumulative area) 
+
+    Layer: Metal3
+      Partial area ratio:    8.48
+      Required ratio:    0.00 (Gate area) 
+      Cumulative area ratio:  125.16
+      Required ratio:    0.00 (Cumulative area) 
+      Partial area ratio:   32.80
+      Required ratio:  400.00 (Side area) 
+      Cumulative area ratio:  483.62
+      Required ratio:    0.00 (Cumulative side area) 
+
+
+
+[INFO ANT-0002] Found 3 net violations.
+[INFO ANT-0001] Found 3 pin violations.
+%OL_END_REPORT

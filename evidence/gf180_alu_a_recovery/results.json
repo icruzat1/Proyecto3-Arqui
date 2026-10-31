@@ -1,0 +1,82 @@
+{
+  "date_local": "2026-10-30",
+  "status": "exact_final_cell_identification_not_recovered",
+  "run": "stage6_100ns_u40_final_a",
+  "method": "Read existing JSON/netlists/logs and inventory saved ABC exchange files; no EDA invocation, synthesis, simulation, or physical run.",
+  "premap_alu_cell_count": 27,
+  "premap_alu_cells": {
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$add$/work/rtl/espino_core/espino_alu.v:65$248": "$add",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$add$/work/rtl/espino_core/espino_alu.v:76$253": "$add",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$and$/work/rtl/espino_core/espino_alu.v:69$252": "$and",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$eq$/work/rtl/espino_core/espino_alu.v:46$240": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$lt$/work/rtl/espino_core/espino_alu.v:47$241": "$lt",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$lt$/work/rtl/espino_core/espino_alu.v:48$242": "$lt",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$not$/work/rtl/espino_core/espino_alu.v:53$244": "$not",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$not$/work/rtl/espino_core/espino_alu.v:55$245": "$not",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$not$/work/rtl/espino_core/espino_alu.v:57$246": "$not",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$or$/work/rtl/espino_core/espino_alu.v:68$251": "$or",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2008": "$pmux",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2009_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2010_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2011_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2012_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2013_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2014_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2015_CMP0": "$logic_not",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2017": "$pmux",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2018_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2019_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2020_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2021_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2022_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$procmux$2023_CMP0": "$eq",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$sub$/work/rtl/espino_core/espino_alu.v:66$249": "$sub",
+    "$flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$xor$/work/rtl/espino_core/espino_alu.v:67$250": "$xor"
+  },
+  "premap_boundary_aliases": [
+    "u_soc.u_core.lsu_addr",
+    "u_soc.u_core.u_id.alu_cmp_result",
+    "u_soc.u_core.u_id.alu_operator",
+    "u_soc.u_core.u_id.operand_a",
+    "u_soc.u_core.u_id.operand_b"
+  ],
+  "mapped_boundary_aliases": [],
+  "mapped_alu_source_cells": [],
+  "mapped_alu_source_nets": [],
+  "saved_abc_exchange_files_in_source_run": [],
+  "log_evidence": [
+    {
+      "line": 1380,
+      "text": "  creating $alu cell for $flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$add$/work/rtl/espino_core/espino_alu.v:65$248: $auto$alumacc.cc:512:replace_alu$3096"
+    },
+    {
+      "line": 1381,
+      "text": "  creating $alu cell for $flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$sub$/work/rtl/espino_core/espino_alu.v:66$249, $flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$lt$/work/rtl/espino_core/espino_alu.v:47$241, $flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$lt$/work/rtl/espino_core/espino_alu.v:48$242, $flatten\\u_soc.\\u_core.\\u_id.\\u_alu.$eq$/work/rtl/espino_core/espino_alu.v:46$240: $auto$alumacc.cc:512:replace_alu$3099"
+    },
+    {
+      "line": 2771,
+      "text": "Removing temp directory."
+    },
+    {
+      "line": 3290,
+      "text": "Removing temp directory."
+    }
+  ],
+  "input_sha256": {
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/final/json_h/asic_top.h.json": "f6b9ec1bcb9a703559e1b46cfb55a6c1c51540589cb9f9bfe7425990aa90901c",
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/asic_top.nl.v.json": "e2b9a8844ec230967b60d220ba673c48b3fb1abdd5cc4a466d2d4fe486235760",
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/asic_top.nl.v": "6a417b628f50153c3d5370401715075656abc36c8d4f5108488564578fbb1c05",
+    "config/gf180/runs/stage4_100ns_u40_floorplan_a/06-yosys-synthesis/yosys-synthesis.log": "8bac8ce144263e08f63537aa584c920505007613e44663eb90f9b7d8886a0298",
+    "config/gf180/runs/stage6_100ns_u40_final_a/final/json_h/asic_top.h.json": "f6b9ec1bcb9a703559e1b46cfb55a6c1c51540589cb9f9bfe7425990aa90901c",
+    "config/gf180/runs/stage6_100ns_u40_final_a/final/nl/asic_top.nl.v": "41ecfce7ef7569f5019849741cf863cccd96ace650b633dc4b9e58a798f92cab",
+    "config/gf180/runs/stage6_100ns_u40_final_a/final/def/asic_top.def": "c7c62f12c34444a0a4aa2dd5a1ba14c1cf89c7434f8614b01f1ffa4395cfbf29",
+    "rtl/espino_core/espino_alu.v": "1b958157b3fb1224857e4171d9df8c910523bae6f15d2a84e6ba0dd18b617601"
+  },
+  "conclusion": "ALU is identifiable before technology mapping. Existing mapped netlist has no surviving named boundary or ALU source attributes. Exact correspondence to final physical cells was not recovered. This does not prove functional absence or rule out a separately authorized formal reconstruction.",
+  "limitations": [
+    "ALU-like generic synthesis names also refer to the peripheral counter; these are not CPU ALU evidence.",
+    "Other A implementations cannot supply coordinates or instance identities for this final A.",
+    "No guessed cell set, region, or ALU area is reported.",
+    "No new simulation or equivalence proof was performed."
+  ]
+}

@@ -1,5 +1,7 @@
 # Mapeo GF180 y primer floorplan
 
+Estado histórico del primer floorplan; la continuación vigente está en [Colocación y timing](Colocacion_Timing.md).
+
 29 de octubre de 2026. A y B completaron síntesis mapeada, dimensionamiento, filas, alimentación y terminales a **100 ns y 40 % de ocupación objetivo**. La prueba funcional con celdas GF180 también pasó en ambas variantes. **El diseño todavía no cierra timing y no tiene signoff físico.** [Resultados y huellas](../evidence/gf180_stage4/results.json).
 
 ## Configuración y alcance

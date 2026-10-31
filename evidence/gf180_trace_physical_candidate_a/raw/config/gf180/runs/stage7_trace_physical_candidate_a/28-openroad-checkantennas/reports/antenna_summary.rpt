@@ -1,0 +1,33 @@
+┏━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┓
+┃ P / R ┃ Partial ┃ Required ┃ Net                         ┃ Pin                        ┃ Layer  ┃
+┡━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━┩
+│ 2.59  │ 1037.08 │ 400.00   │ u_soc.u_core.u_rf._1239_    │ fanout288/I                │ Metal2 │
+│ 2.13  │ 850.48  │ 400.00   │ net904                      │ fanout903/I                │ Metal2 │
+│ 2.13  │ 850.25  │ 400.00   │ u_soc.u_core.u_id._334_     │ fanout598/I                │ Metal2 │
+│ 2.03  │ 810.05  │ 400.00   │ u_soc.u_core.u_rf._0910_    │ fanout423/I                │ Metal2 │
+│ 1.96  │ 783.81  │ 400.00   │ u_soc.u_core.rf_raddr_a[0\] │ fanout622/I                │ Metal2 │
+│ 1.91  │ 762.43  │ 400.00   │ u_soc.u_core.u_rf._0904_    │ fanout439/I                │ Metal2 │
+│ 1.69  │ 677.90  │ 400.00   │ u_soc.u_core.u_rf._0900_    │ fanout455/I                │ Metal2 │
+│ 1.65  │ 661.10  │ 400.00   │ net878                      │ fanout876/I                │ Metal2 │
+│ 1.63  │ 653.19  │ 400.00   │ u_soc.u_core.u_rf._1256_    │ fanout316/I                │ Metal2 │
+│ 1.63  │ 653.19  │ 400.00   │ u_soc.u_core.u_rf._1256_    │ fanout319/I                │ Metal2 │
+│ 1.63  │ 650.68  │ 400.00   │ u_soc.u_core.u_rf._0911_    │ fanout419/I                │ Metal2 │
+│ 1.57  │ 626.50  │ 400.00   │ net222                      │ fanout221/I                │ Metal2 │
+│ 1.53  │ 612.23  │ 400.00   │ net94                       │ fanout93/I                 │ Metal2 │
+│ 1.44  │ 574.80  │ 400.00   │ u_soc.u_core.u_rf._0575_    │ fanout473/I                │ Metal4 │
+│ 1.29  │ 514.74  │ 400.00   │ u_soc.u_core.u_rf._0902_    │ fanout449/I                │ Metal2 │
+│ 1.28  │ 513.21  │ 400.00   │ net114                      │ fanout110/I                │ Metal2 │
+│ 1.24  │ 494.35  │ 400.00   │ net902                      │ fanout823/I                │ Metal2 │
+│ 1.23  │ 493.63  │ 400.00   │ net529                      │ fanout528/I                │ Metal2 │
+│ 1.17  │ 467.13  │ 400.00   │ net449                      │ fanout448/I                │ Metal2 │
+│ 1.14  │ 457.08  │ 400.00   │ net90                       │ u_soc.u_core.u_if._258_/A1 │ Metal2 │
+│ 1.11  │ 445.48  │ 400.00   │ u_soc.u_core.u_rf._0909_    │ fanout429/I                │ Metal2 │
+│ 1.11  │ 444.76  │ 400.00   │ u_soc.u_core.u_rf._1247_    │ fanout337/I                │ Metal2 │
+│ 1.11  │ 444.48  │ 400.00   │ u_soc.u_core.u_rf._0895_    │ fanout553/I                │ Metal2 │
+│ 1.10  │ 439.64  │ 400.00   │ net493                      │ fanout492/I                │ Metal2 │
+│ 1.10  │ 438.12  │ 400.00   │ u_soc.u_core.u_rf._1259_    │ fanout300/I                │ Metal2 │
+│ 1.09  │ 437.35  │ 400.00   │ u_soc.u_core.u_rf._0906_    │ fanout437/I                │ Metal2 │
+│ 1.06  │ 423.10  │ 400.00   │ u_soc.u_core.u_rf._0557_    │ fanout557/I                │ Metal2 │
+│ 1.01  │ 403.52  │ 400.00   │ u_soc.u_core.rf_wdata[9\]   │ fanout78/I                 │ Metal2 │
+│ 1.01  │ 402.99  │ 400.00   │ data_wdata[7\]              │ fanout558/I                │ Metal2 │
+└───────┴─────────┴──────────┴─────────────────────────────┴────────────────────────────┴────────┘

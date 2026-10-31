@@ -1,0 +1,204 @@
+{
+  "academic_acceptance_passed": true,
+  "electrical_compliance_passed": false,
+  "physical_signoff_claimed": false,
+  "approval": {
+    "date": "2026-10-30",
+    "user_instruction": "Ok, cierralo y en el archivo de la defensa explica que es lo que ocurri\u00f3 que nos llev\u00f3 a cerrarlo, porque tomamos la decisi\u00f3n y que implica de aqu\u00ed en adelante."
+  },
+  "final_run": "stage9_100ns_u40_academic_b",
+  "flow_returncode": 0,
+  "inputs_unchanged": true,
+  "period_ns": 100,
+  "core_util_percent": 40,
+  "configuration_diff": {
+    "MAX_SLEW_VIOLATION_CORNERS": {
+      "old": [
+        "*"
+      ],
+      "new": [
+        ""
+      ]
+    },
+    "MAX_CAP_VIOLATION_CORNERS": {
+      "old": [
+        "*"
+      ],
+      "new": [
+        ""
+      ]
+    }
+  },
+  "source_evidence": "evidence/gf180_sweeps/stage8_t100_u40_b/results.json",
+  "source_evidence_sha256": "64412965e55c54433a8281933dbacfdb5cb1fd51fadb92387ae4a65273d8abe5",
+  "final_runner_record": "build/gf180_stage5/stage9_100ns_u40_academic_b/result.json",
+  "final_runner_sha256": "04ec0f42882def22e65f22ae3f00671b427b85d1552df50ccaabaed31258dfdf",
+  "inherited_verified_STA": {
+    "annotation_and_propagation_verified": true,
+    "complete_fresh_nine_corners": true,
+    "electrical_passed": false,
+    "expected_corners": [
+      "nom_tt_025C_5v00",
+      "nom_ss_125C_4v50",
+      "nom_ff_n40C_5v50",
+      "min_tt_025C_5v00",
+      "min_ss_125C_4v50",
+      "min_ff_n40C_5v50",
+      "max_tt_025C_5v00",
+      "max_ss_125C_4v50",
+      "max_ff_n40C_5v50"
+    ],
+    "max_cap_violations_per_corner": 3,
+    "max_fanout_violations_per_corner": 12,
+    "max_slew_violations_per_corner": 6,
+    "measured_corners": [
+      "max_ff_n40C_5v50",
+      "max_ss_125C_4v50",
+      "max_tt_025C_5v00",
+      "min_ff_n40C_5v50",
+      "min_ss_125C_4v50",
+      "min_tt_025C_5v00",
+      "nom_ff_n40C_5v50",
+      "nom_ss_125C_4v50",
+      "nom_tt_025C_5v00"
+    ],
+    "setup_hold_passed": true,
+    "source_verified": true,
+    "worst_hold_corner": "max_ff_n40C_5v50",
+    "worst_hold_slack_ns": 0.2778060082829301,
+    "worst_setup_corner": "max_ss_125C_4v50",
+    "worst_setup_slack_ns": 23.44464955198614
+  },
+  "original_checks_unchanged": {
+    "antenna": {
+      "metrics": {
+        "antenna__violating__nets": 0,
+        "antenna__violating__pins": 0,
+        "flow__errors__count": 0,
+        "flow__warnings__count": 0,
+        "flow__warnings__type_count": 0
+      },
+      "source": "config/gf180/runs/stage8_t100_u40_b/36-openroad-checkantennas-1",
+      "status": "pass"
+    },
+    "disconnected_pins": {
+      "method": "direct_metric",
+      "metric": "design__critical_disconnected_pin__count",
+      "reports": [],
+      "source": "config/gf180/runs/stage8_t100_u40_b/38-odb-reportdisconnectedpins",
+      "status": "pass",
+      "value": 0
+    },
+    "electrical": {
+      "status": "fail"
+    },
+    "illegal_overlap": {
+      "method": "known_producer_state_with_own_report",
+      "metric": "magic__illegal_overlap__count",
+      "reports": [
+        "config/gf180/runs/stage8_t100_u40_b/58-magic-spiceextraction/feedback.txt"
+      ],
+      "source": "config/gf180/runs/stage8_t100_u40_b/58-magic-spiceextraction",
+      "status": "pass",
+      "value": 0
+    },
+    "klayout_drc": {
+      "method": "direct_metric",
+      "metric": "klayout__drc_error__count",
+      "reports": [],
+      "source": "config/gf180/runs/stage8_t100_u40_b/55-klayout-drc",
+      "status": "skipped_no_runset",
+      "value": null
+    },
+    "lvs": {
+      "method": "known_producer_state_with_own_report",
+      "metric": "design__lvs_error__count",
+      "reports": [
+        "config/gf180/runs/stage8_t100_u40_b/60-netgen-lvs/reports/lvs.netgen.json"
+      ],
+      "source": "config/gf180/runs/stage8_t100_u40_b/60-netgen-lvs",
+      "status": "pass",
+      "value": 0
+    },
+    "magic_drc": {
+      "method": "known_producer_state_with_own_report",
+      "metric": "magic__drc_error__count",
+      "reports": [
+        "config/gf180/runs/stage8_t100_u40_b/54-magic-drc/reports/drc.magic.rpt"
+      ],
+      "source": "config/gf180/runs/stage8_t100_u40_b/54-magic-drc",
+      "status": "pass",
+      "value": 0
+    },
+    "routing_drc": {
+      "method": "direct_metric",
+      "metric": "route__drc_errors",
+      "reports": [],
+      "source": "config/gf180/runs/stage8_t100_u40_b/34-openroad-detailedrouting",
+      "status": "pass",
+      "value": 0
+    },
+    "setup_hold": {
+      "status": "pass"
+    },
+    "xor": {
+      "method": "direct_metric",
+      "metric": "design__xor_difference__count",
+      "reports": [
+        "config/gf180/runs/stage8_t100_u40_b/52-klayout-xor/xor.xml"
+      ],
+      "source": "config/gf180/runs/stage8_t100_u40_b/52-klayout-xor",
+      "status": "pass",
+      "value": 0
+    }
+  },
+  "views_unchanged": {
+    "nl/asic_top.nl.v": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/nl/asic_top.nl.v",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/nl/asic_top.nl.v",
+      "sha256": "1418cae9d53b3756a8c6103d90b1b625762265175978ed74cb607af09be10aea"
+    },
+    "def/asic_top.def": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/def/asic_top.def",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/def/asic_top.def",
+      "sha256": "50cc0ff2ae506b933703675165301c10d1e5b1291495d1b9ba6e1e5fdd3487e5"
+    },
+    "gds/asic_top.gds": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/gds/asic_top.gds",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/gds/asic_top.gds",
+      "sha256": "f5ead3a42d8f5ec1ab2d4a530400d4fb6831e1b18a94055a5df007101aa83b67"
+    },
+    "klayout_gds/asic_top.klayout.gds": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/klayout_gds/asic_top.klayout.gds",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/klayout_gds/asic_top.klayout.gds",
+      "sha256": "32f4cfd2ce0e7f3fe98b20b39d49f96bfce67e7dab1352d8f57800d2f3340200"
+    },
+    "lef/asic_top.lef": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/lef/asic_top.lef",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/lef/asic_top.lef",
+      "sha256": "82dda06887e0790cc5c2b6e84827cb4ec128191fb73d4e6e24c6d6bbfbe8b172"
+    },
+    "sdc/asic_top.sdc": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/final/sdc/asic_top.sdc",
+      "final": "config/gf180/runs/stage9_100ns_u40_academic_b/final/sdc/asic_top.sdc",
+      "sha256": "61e00d8ff22bb2616ef6fa652e76d3adde37e38492309c90d160c03922767114"
+    }
+  },
+  "accepted_warnings": {
+    "unique_cap_outputs": 4,
+    "unique_slew_pins": 6,
+    "fanout_drivers_above_10": 12,
+    "maximum_fanout": 14,
+    "audit": "evidence/gf180_sweeps/b100_limits.json",
+    "audit_sha256": "8c87b56dc400f3af94180f6f5165ebdbf85212102c895123e85b73f25ffa98f0"
+  },
+  "limitations": [
+    "KLayout DRC has no configured runset; skipped is not PASS",
+    "Formal EQY equivalence disabled or unsupported for GF180",
+    "LVS extraction uses DEF/LEF; not complete transistor-level GDS extraction",
+    "IR-drop analysis has no explicit supply-source locations; report is not power-integrity signoff",
+    "Acceptance changed; the circuit, Liberty limits, constraints SDC and extracted timing did not change.",
+    "This continuation reran final checkers only; it does not claim new extraction or new nine-corner STA.",
+    "Capacitance and transition limits remain exceeded; fanout includes antenna diodes."
+  ]
+}

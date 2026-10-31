@@ -1,0 +1,149 @@
+{
+    "EXTRA_LIBS": null,
+    "PDK_ROOT": "/work/.pdk",
+    "SYNTH_DRIVING_CELL": "gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN",
+    "PNR_SDC_FILE": "/work/config/gf180/constraints.sdc",
+    "CLOCK_PERIOD": 100,
+    "MAX_CAPACITANCE_CONSTRAINT": 0.2,
+    "CELL_BB_VERILOG_MODELS": null,
+    "PAD_BONDPAD_NAME": null,
+    "CELL_VERILOG_MODELS": [
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/gf180mcu_fd_sc_mcu7t5v0.v",
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/primitives.v"
+    ],
+    "PDN_MACRO_CONNECTIONS": null,
+    "PAD_CORNER": null,
+    "PAD_CDLS": null,
+    "MACROS": null,
+    "TRISTATE_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__bufz*"
+    ],
+    "SYNTH_BUFFER_CELL": "gf180mcu_fd_sc_mcu7t5v0__buf_1/I/Z",
+    "CELL_GDS": [
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds"
+    ],
+    "SYNTH_EXCLUDED_CELL_FILE": "/work/.pdk/gf180mcuD/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/no_synth.cells",
+    "PNR_CORNERS": [
+        "min_ss_125C_4v50"
+    ],
+    "SYNTH_CLK_DRIVING_CELL": "gf180mcu_fd_sc_mcu7t5v0__inv_4/ZN",
+    "PAD_BONDPAD_WIDTH": null,
+    "DIE_AREA": null,
+    "DEFAULT_CORNER": "min_ss_125C_4v50",
+    "CLOCK_TRANSITION_CONSTRAINT": 0.15,
+    "EXTRA_SPICE_MODELS": null,
+    "PAD_LIBS": null,
+    "SCL_POWER_PINS": [
+        "VDD",
+        "VNW"
+    ],
+    "CELL_CDLS": [
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/cdl/gf180mcu_fd_sc_mcu7t5v0.cdl"
+    ],
+    "DESIGN_NAME": "asic_top",
+    "PAD_FILLERS": null,
+    "TIME_DERATING_CONSTRAINT": 5,
+    "LIB": {
+        "*_tt_025C_5v00": [
+            "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
+        ],
+        "*_ss_125C_4v50": [
+            "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib"
+        ],
+        "*_ff_n40C_5v50": [
+            "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib"
+        ]
+    },
+    "MAX_TRANSITION_CONSTRAINT": 3,
+    "CELL_LEFS": [
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef"
+    ],
+    "STA_CORNERS": [
+        "nom_tt_025C_5v00",
+        "nom_ss_125C_4v50",
+        "nom_ff_n40C_5v50",
+        "min_tt_025C_5v00",
+        "min_ss_125C_4v50",
+        "min_ff_n40C_5v50",
+        "max_tt_025C_5v00",
+        "max_ss_125C_4v50",
+        "max_ff_n40C_5v50"
+    ],
+    "PAD_SITE_NAME": null,
+    "EXTRA_VERILOG_MODELS": null,
+    "PAD_LEFS": null,
+    "MAX_FANOUT_CONSTRAINT": 4,
+    "GND_PIN": "VSS",
+    "WELLTAP_CELL": "gf180mcu_fd_sc_mcu7t5v0__filltie",
+    "EXTRA_CDLS": null,
+    "TECH_LEFS": {
+        "nom_*": "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef",
+        "min_*": "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__min.tlef",
+        "max_*": "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef"
+    },
+    "PAD_EDGE_SPACING": 0,
+    "SIGNAL_WIRE_RC_LAYERS": null,
+    "IO_DELAY_CONSTRAINT": 20,
+    "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+    "DECAP_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__fillcap_*"
+    ],
+    "PDK": "gf180mcuD",
+    "EXTRA_EXCLUDED_CELLS": null,
+    "VDD_NETS": null,
+    "SET_RC_VERBOSE": false,
+    "PNR_EXCLUDED_CELL_FILE": "/work/.pdk/gf180mcuD/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/drc_exclude.cells",
+    "OUTPUT_CAP_LOAD": 72.91,
+    "SYNTH_TIEHI_CELL": "gf180mcu_fd_sc_mcu7t5v0__tieh/Z",
+    "CELL_PAD_EXCLUDE": [
+        "gf180mcu_fd_sc_mcu7t5v0__filltie",
+        "gf180mcu_fd_sc_mcu7t5v0__fill_*",
+        "gf180mcu_fd_sc_mcu7t5v0__endcap"
+    ],
+    "FALLBACK_SDC": "/nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/base.sdc",
+    "PAD_PLACE_IO_TERMINALS": null,
+    "VDD_PIN": "VDD",
+    "RT_MAX_LAYER": "Metal5",
+    "PLACE_SITE": "GF018hv5v_mcu_sc7",
+    "DESIGN_DIR": "/work/config/gf180",
+    "CLOCK_WIRE_RC_LAYERS": null,
+    "GND_NETS": null,
+    "PDN_ENABLE_GLOBAL_CONNECTIONS": true,
+    "PAD_SPICE_MODELS": null,
+    "ENDCAP_CELL": "gf180mcu_fd_sc_mcu7t5v0__endcap",
+    "SCL_GROUND_PINS": [
+        "VSS",
+        "VPW"
+    ],
+    "DEFAULT_MAX_TRAN": null,
+    "PAD_VERILOG_MODELS": null,
+    "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
+    "PAD_CORNER_SITE_NAME": null,
+    "PAD_BONDPAD_OFFSETS": null,
+    "DIODE_CELL": "gf180mcu_fd_sc_mcu7t5v0__antenna/I",
+    "VIAS_R": null,
+    "EXTRA_LEFS": null,
+    "FILL_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__fill_*"
+    ],
+    "PAD_GDS": null,
+    "CLOCK_NET": null,
+    "RT_MIN_LAYER": "Metal2",
+    "CELL_SPICE_MODELS": [
+        "/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice"
+    ],
+    "SYNTH_TIELO_CELL": "gf180mcu_fd_sc_mcu7t5v0__tiel/ZN",
+    "PAD_FAKE_SITES": null,
+    "PRIMARY_GDSII_STREAMOUT_TOOL": "magic",
+    "PDN_CONNECT_MACROS_TO_GRID": true,
+    "DEDUPLICATE_CORNERS": false,
+    "STA_EXTRA_CORNER_TCL_FILE": null,
+    "PAD_BONDPAD_HEIGHT": null,
+    "CLOCK_PORT": "clk_i",
+    "LAYERS_RC": null,
+    "EXTRA_GDS": null,
+    "meta": {
+        "librelane_version": "3.0.17",
+        "step": "OpenROAD.STAMidPNR"
+    }
+}

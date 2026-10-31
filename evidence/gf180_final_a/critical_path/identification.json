@@ -1,0 +1,15 @@
+{
+  "corner": "max_ss_125C_4v50",
+  "source_report": "config/gf180/runs/stage6_100ns_u40_final_a/11-openroad-stapostpnr/max_ss_125C_4v50/max.rpt",
+  "netlist": "config/gf180/runs/stage6_100ns_u40_final_a/08-openroad-fillinsertion/asic_top.nl.v",
+  "netlist_sha256": "41ecfce7ef7569f5019849741cf863cccd96ace650b633dc4b9e58a798f92cab",
+  "instances": {
+    "_10456_": " gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 _10456_ (.D(_00129_),\n    .RN(net2900),\n    .CLK(clknet_leaf_203_clk_i),\n    .Q(\\instr_rdata[3] ));",
+    "_10602_": " gf180mcu_fd_sc_mcu7t5v0__dffrnq_1 _10602_ (.D(_00275_),\n    .RN(net4331),\n    .CLK(clknet_leaf_16_clk_i),\n    .Q(\\u_mem.gen_a.u_memory.ram_ff[2][21] ));"
+  },
+  "start_storage": "instr_rdata[3]",
+  "end_storage": "u_mem.gen_a.u_memory.ram_ff[2][21]",
+  "interpretation": "Instruction-derived control/data path ending at data RAM write. Decode-to-memory interpretation; intermediate flattened gates are not attributed wholesale to ALU.",
+  "actual_slack_line": "10.907265   slack (MET)",
+  "production_rtl_changed": false
+}

@@ -1,0 +1,103 @@
+Reading timing models for corner max_ff_n40C_5v50…
+Reading timing library for the 'max_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+Reading timing models for corner max_tt_025C_5v00…
+Reading timing library for the 'max_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading timing models for corner nom_ff_n40C_5v50…
+Reading timing library for the 'nom_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner min_ss_125C_4v50…
+Reading timing library for the 'min_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+Reading timing models for corner min_ff_n40C_5v50…
+Reading timing library for the 'min_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner min_tt_025C_5v00…
+Reading timing library for the 'min_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner max_ss_125C_4v50…
+Reading timing library for the 'max_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading timing models for corner nom_ss_125C_4v50…
+Reading timing library for the 'nom_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading OpenROAD database at '/work/config/gf180/runs/stage5_100ns_u40_cts_b/02-openroad-globalplacement/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO RSZ-0027] Inserted 8 gf180mcu_fd_sc_mcu7t5v0__dlyb_1 input buffers.
+[INFO RSZ-0028] Inserted 19 gf180mcu_fd_sc_mcu7t5v0__dlyb_1 output buffers.
++ repair_design -verbose -max_wire_length 0.0 -slew_margin 20.0 -cap_margin 20.0
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     22897
+     1000 |     +0.0% |       0 |       0 |             0 |     21897
+     2000 |     +0.0% |       0 |       0 |             0 |     20897
+     3000 |     +0.0% |       0 |       0 |             0 |     19897
+     4000 |     +0.0% |       0 |       0 |             0 |     18897
+     5000 |     +1.2% |       0 |     268 |           132 |     17897
+     6000 |    +18.9% |       0 |    4077 |           665 |     16897
+     7000 |    +21.0% |       0 |    4540 |           725 |     15897
+     8000 |    +21.0% |       0 |    4543 |           729 |     14897
+     9000 |    +21.0% |       0 |    4546 |           733 |     13897
+    10000 |    +21.0% |       0 |    4546 |           733 |     12897
+    11000 |    +34.7% |       0 |    7486 |           765 |     11897
+    12000 |    +37.4% |       0 |    8101 |           844 |     10897
+    13000 |    +38.1% |       0 |    8259 |           900 |      9897
+    14000 |    +38.2% |       0 |    8276 |           904 |      8897
+    15000 |    +38.4% |       0 |    8316 |           921 |      7897
+    16000 |    +38.4% |       0 |    8316 |           921 |      6897
+    17000 |    +40.1% |       0 |    8695 |           965 |      5897
+    18000 |    +53.5% |       0 |   11566 |          1046 |      4897
+    19000 |    +53.5% |       0 |   11566 |          1046 |      3897
+    20000 |    +53.5% |       0 |   11578 |          1052 |      2897
+    21000 |    +59.5% |       0 |   12854 |          1152 |      1897
+    22000 |    +59.5% |       0 |   12854 |          1152 |       897
+    final |    +59.5% |       0 |   12854 |          1152 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 928 slew violations.
+[INFO RSZ-0035] Found 1066 fanout violations.
+[INFO RSZ-0036] Found 1 capacitance violations.
+[INFO RSZ-0038] Inserted 12854 buffers in 1152 nets.
+[INFO RSZ-0042] Inserted 1 tie gf180mcu_fd_sc_mcu7t5v0__tieh instances.
+[WARNING RSZ-0020] found 2 floating nets.
+ VDD
+ VSS
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement     225385.4 u
+average displacement        4.6 u
+max displacement           61.4 u
+original HPWL         2526024.0 u
+legalized HPWL        2706584.1 u
+delta HPWL                    7 %
+
+[INFO DPL-0020] Mirrored 15217 instances
+[INFO DPL-0021] HPWL before          2706584.1 u
+[INFO DPL-0022] HPWL after           2649002.3 u
+[INFO DPL-0023] HPWL delta               -2.1 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 51528 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             700    3073.28
+  Tap cell                              12324   54107.29
+  Tie cell                                  1       8.78
+  Timing Repair Buffer                  12881  450459.43
+  Inverter                                432    3793.31
+  Sequential cell                        5433  354950.67
+  Multi-Input combinational cell        16995  396299.46
+  Total                                 48766 1262692.21
+Writing OpenROAD database to '/work/config/gf180/runs/stage5_100ns_u40_cts_b/06-openroad-repairdesignpostgpl/asic_top.odb'…
+Writing netlist to '/work/config/gf180/runs/stage5_100ns_u40_cts_b/06-openroad-repairdesignpostgpl/asic_top.nl.v'…
+Writing powered netlist to '/work/config/gf180/runs/stage5_100ns_u40_cts_b/06-openroad-repairdesignpostgpl/asic_top.pnl.v'…
+Writing layout to '/work/config/gf180/runs/stage5_100ns_u40_cts_b/06-openroad-repairdesignpostgpl/asic_top.def'…
+Writing timing constraints to '/work/config/gf180/runs/stage5_100ns_u40_cts_b/06-openroad-repairdesignpostgpl/asic_top.sdc'…

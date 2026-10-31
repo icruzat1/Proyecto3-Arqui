@@ -1,0 +1,19 @@
+# Full production RTL: select asic_top.MemoryVariant at elaboration (0=A, 1=B).
+rtl/asic/asic_memory.v
+rtl/asic/asic_top.v
+rtl/asic/btn_sync.v
+rtl/asic/generated/asic_program_rom.v
+rtl/asic/memory_a.v
+rtl/asic/memory_b.v
+rtl/asic/reset_ctrl.v
+rtl/espino_core/espino_alu.v
+rtl/espino_core/espino_controller.v
+rtl/espino_core/espino_core.v
+rtl/espino_core/espino_decoder.v
+rtl/espino_core/espino_id_stage.v
+rtl/espino_core/espino_if_stage.v
+rtl/espino_core/espino_load_store_unit.v
+rtl/espino_core/espino_register_file.v
+rtl/pochoco_periph.v
+rtl/pochoco_soc.v
+rtl/pochoco_spi_slave.v

@@ -1,0 +1,28 @@
+{
+  "scope": "Visualization of existing final layouts, not a new physical run or initial floorplan",
+  "columns": [
+    "A",
+    "B"
+  ],
+  "rows": [
+    "Final cells and routing",
+    "Functional cells colored with metal layers hidden"
+  ],
+  "same_physical_scale_between_variants": false,
+  "block_labels_source": "Final ODB/netlist verified regions.json for each variant",
+  "input_sha256": {
+    "evidence/layout_captures/stage13_final_traceable_a_blocks/regions.json": "7d840263ec284330b622523ad56c695765d95b5e6fe988d5db34649a4e0d4156",
+    "config/gf180/runs/stage13_final_traceable_a/final/klayout_gds/asic_top.klayout.gds": "fabaa65155990c9087b276d3d0dbdd1cbf4b45f4fd164c5bb7f9350eb965e99c",
+    "evidence/layout_captures/stage12_electrical_route_b_blocks/regions.json": "6dc5a1b92cdabb634a8cbe4e6f4db2c21e99d2ff26201af247cb6a3b91f44703",
+    "config/gf180/runs/stage12_electrical_route_b/final/klayout_gds/asic_top.klayout.gds": "20cc3fcfa064d4143584ff294ad5500d9fe1652d156caf1b75766696971837dd"
+  },
+  "files": {
+    "export.py": "c4250426353bd07297b287c92b11654a5b7115992fd6dfb742345d45bc1e888d",
+    "B_complete.png": "ab1345a511625a02c676a2fc36d503f5e8d77ad27b47ce0221e90793f1c8114d",
+    "A_blocks.png": "26a79b1dd069c576fb8dd24f61162ac314bbe2cfab67b33d891b3e43dd44c96c",
+    "assemble.py": "82808178b63801db0aa879b36fbdb5c1dc22d98456b144bf769df0f628e5c45d",
+    "B_blocks.png": "4d43e9c3a5067be7227906f5bce9dabc7000b31e9b4e1f089228e1be00f7521d",
+    "A_complete.png": "8eac212c1f00455ae3408eb66fd87b844a6891fa05c4aa7597ac290943d415f8",
+    "Comparacion_AB_2x2.png": "b3506ec96c8257c4aa13af81de0353e042df5329eab0475b6522c3d69f52bdb1"
+  }
+}

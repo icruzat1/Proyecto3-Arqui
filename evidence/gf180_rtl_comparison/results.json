@@ -1,0 +1,274 @@
+{
+  "scope": "A only, one reference and one candidate physical run, 100 ns / 40%, common deferred_flatten recipe; no production replacement",
+  "runs": {
+    "ref": {
+      "run": "stage7_trace_physical_ref_a",
+      "evidence": "evidence/gf180_trace_physical_ref_a/results.json",
+      "evidence_sha256": "e2114af46482ecb15c59125b280867d0f207b9035aa69370d3b59e3f16770b6a",
+      "sta_state": "config/gf180/runs/stage7_trace_physical_ref_a/45-openroad-stapostpnr/state_out.json",
+      "sta_state_sha256": "bf6f004e6cdc8320d556b952dbd161589fc2556b4725a6b3612537f46a55f2f6",
+      "verification": {
+        "annotation_and_propagation_verified": true,
+        "complete_fresh_nine_corners": true,
+        "electrical_passed": true,
+        "expected_corners": [
+          "nom_tt_025C_5v00",
+          "nom_ss_125C_4v50",
+          "nom_ff_n40C_5v50",
+          "min_tt_025C_5v00",
+          "min_ss_125C_4v50",
+          "min_ff_n40C_5v50",
+          "max_tt_025C_5v00",
+          "max_ss_125C_4v50",
+          "max_ff_n40C_5v50"
+        ],
+        "max_cap_violations_per_corner": 0,
+        "max_fanout_violations_per_corner": 0,
+        "max_slew_violations_per_corner": 0,
+        "measured_corners": [
+          "max_ff_n40C_5v50",
+          "max_ss_125C_4v50",
+          "max_tt_025C_5v00",
+          "min_ff_n40C_5v50",
+          "min_ss_125C_4v50",
+          "min_tt_025C_5v00",
+          "nom_ff_n40C_5v50",
+          "nom_ss_125C_4v50",
+          "nom_tt_025C_5v00"
+        ],
+        "setup_hold_passed": false,
+        "source_verified": true,
+        "worst_hold_corner": "max_ff_n40C_5v50",
+        "worst_hold_slack_ns": -0.02272027075231712,
+        "worst_setup_corner": "max_ss_125C_4v50",
+        "worst_setup_slack_ns": 46.597209187895146
+      },
+      "checks": {
+        "antenna": {
+          "metrics": {
+            "antenna__violating__nets": 0,
+            "antenna__violating__pins": 0,
+            "flow__errors__count": 0,
+            "flow__warnings__count": 0,
+            "flow__warnings__type_count": 0
+          },
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/36-openroad-checkantennas-1",
+          "status": "pass"
+        },
+        "disconnected_pins": {
+          "method": "direct_metric",
+          "metric": "design__critical_disconnected_pin__count",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/38-odb-reportdisconnectedpins",
+          "status": "pass",
+          "value": 0
+        },
+        "electrical": {
+          "status": "pass"
+        },
+        "illegal_overlap": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "magic__illegal_overlap__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_ref_a/58-magic-spiceextraction/feedback.txt"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/58-magic-spiceextraction",
+          "status": "pass",
+          "value": 0
+        },
+        "klayout_drc": {
+          "method": "direct_metric",
+          "metric": "klayout__drc_error__count",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/55-klayout-drc",
+          "status": "skipped_no_runset",
+          "value": null
+        },
+        "lvs": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "design__lvs_error__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_ref_a/60-netgen-lvs/reports/lvs.netgen.json"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/60-netgen-lvs",
+          "status": "pass",
+          "value": 0
+        },
+        "magic_drc": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "magic__drc_error__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_ref_a/54-magic-drc/reports/drc.magic.rpt"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/54-magic-drc",
+          "status": "pass",
+          "value": 0
+        },
+        "routing_drc": {
+          "method": "direct_metric",
+          "metric": "route__drc_errors",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/34-openroad-detailedrouting",
+          "status": "pass",
+          "value": 0
+        },
+        "setup_hold": {
+          "status": "fail"
+        },
+        "xor": {
+          "method": "direct_metric",
+          "metric": "design__xor_difference__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_ref_a/52-klayout-xor/xor.xml"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_ref_a/52-klayout-xor",
+          "status": "pass",
+          "value": 0
+        }
+      },
+      "synthesis_cell_area_um2": 208256.428799999,
+      "pnr_stdcell_area_um2": 284008,
+      "die_area_um2": 553389,
+      "functional_scope": "Mapped synthesis startup comparison against production RTL; no routed-netlist simulation or SDF in this experiment."
+    },
+    "candidate": {
+      "run": "stage7_trace_physical_candidate_a",
+      "evidence": "evidence/gf180_trace_physical_candidate_a/results.json",
+      "evidence_sha256": "eaab84796be72367b30b258cee33ea9aa7f4f5132b2d30301f2708742c7bd248",
+      "sta_state": "config/gf180/runs/stage7_trace_physical_candidate_a/45-openroad-stapostpnr/state_out.json",
+      "sta_state_sha256": "dfee3b99dc4e101402af4515dc12db90aa5f67862fa16b30e919e60276e91b93",
+      "verification": {
+        "annotation_and_propagation_verified": true,
+        "complete_fresh_nine_corners": true,
+        "electrical_passed": false,
+        "expected_corners": [
+          "nom_tt_025C_5v00",
+          "nom_ss_125C_4v50",
+          "nom_ff_n40C_5v50",
+          "min_tt_025C_5v00",
+          "min_ss_125C_4v50",
+          "min_ff_n40C_5v50",
+          "max_tt_025C_5v00",
+          "max_ss_125C_4v50",
+          "max_ff_n40C_5v50"
+        ],
+        "max_cap_violations_per_corner": 0,
+        "max_fanout_violations_per_corner": 1,
+        "max_slew_violations_per_corner": 0,
+        "measured_corners": [
+          "max_ff_n40C_5v50",
+          "max_ss_125C_4v50",
+          "max_tt_025C_5v00",
+          "min_ff_n40C_5v50",
+          "min_ss_125C_4v50",
+          "min_tt_025C_5v00",
+          "nom_ff_n40C_5v50",
+          "nom_ss_125C_4v50",
+          "nom_tt_025C_5v00"
+        ],
+        "setup_hold_passed": true,
+        "source_verified": true,
+        "worst_hold_corner": "max_ff_n40C_5v50",
+        "worst_hold_slack_ns": 0.0155238049031669,
+        "worst_setup_corner": "max_ss_125C_4v50",
+        "worst_setup_slack_ns": 55.219947510874356
+      },
+      "checks": {
+        "antenna": {
+          "metrics": {
+            "antenna__violating__nets": 0,
+            "antenna__violating__pins": 0,
+            "flow__errors__count": 0,
+            "flow__warnings__count": 0,
+            "flow__warnings__type_count": 0
+          },
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/36-openroad-checkantennas-1",
+          "status": "pass"
+        },
+        "disconnected_pins": {
+          "method": "direct_metric",
+          "metric": "design__critical_disconnected_pin__count",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/38-odb-reportdisconnectedpins",
+          "status": "pass",
+          "value": 0
+        },
+        "electrical": {
+          "status": "fail"
+        },
+        "illegal_overlap": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "magic__illegal_overlap__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_candidate_a/58-magic-spiceextraction/feedback.txt"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/58-magic-spiceextraction",
+          "status": "pass",
+          "value": 0
+        },
+        "klayout_drc": {
+          "method": "direct_metric",
+          "metric": "klayout__drc_error__count",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/55-klayout-drc",
+          "status": "skipped_no_runset",
+          "value": null
+        },
+        "lvs": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "design__lvs_error__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_candidate_a/60-netgen-lvs/reports/lvs.netgen.json"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/60-netgen-lvs",
+          "status": "pass",
+          "value": 0
+        },
+        "magic_drc": {
+          "method": "known_producer_state_with_own_report",
+          "metric": "magic__drc_error__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_candidate_a/54-magic-drc/reports/drc.magic.rpt"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/54-magic-drc",
+          "status": "pass",
+          "value": 0
+        },
+        "routing_drc": {
+          "method": "direct_metric",
+          "metric": "route__drc_errors",
+          "reports": [],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/34-openroad-detailedrouting",
+          "status": "pass",
+          "value": 0
+        },
+        "setup_hold": {
+          "status": "pass"
+        },
+        "xor": {
+          "method": "direct_metric",
+          "metric": "design__xor_difference__count",
+          "reports": [
+            "config/gf180/runs/stage7_trace_physical_candidate_a/52-klayout-xor/xor.xml"
+          ],
+          "source": "config/gf180/runs/stage7_trace_physical_candidate_a/52-klayout-xor",
+          "status": "pass",
+          "value": 0
+        }
+      },
+      "synthesis_cell_area_um2": 214389.81759999902,
+      "pnr_stdcell_area_um2": 294043,
+      "die_area_um2": 569198,
+      "functional_scope": "Mapped synthesis startup comparison against production RTL; no routed-netlist simulation or SDF in this experiment."
+    }
+  },
+  "setup_slack_change_ns": 8.62273832297921,
+  "synthesis_area_change_pct": 2.945113788487297,
+  "pnr_stdcell_area_change_pct": 3.5333511732063894,
+  "candidate_remaining_issue": {
+    "pin": "fanout222/Z",
+    "fanout": 12,
+    "limit": 10
+  },
+  "conclusion": "Measured timing benefit at area cost; candidate not accepted under all current criteria. No automatic repair."
+}

@@ -1,0 +1,55 @@
+{
+  "scope": "Bounded functional test only, no SDF or physical signoff",
+  "all_passed": true,
+  "files": {
+    "build/gf180_routed/stage6_100ns_u40_route/results.json": {
+      "sha256": "a2985b25e5b767ebefbac7499e2af9989c78bfc01dd4e58c4cbf97ec76cf7ab7",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/results.json"
+    },
+    "scripts/check_gf180_routed.py": {
+      "sha256": "af78420a31bc99941991dcf22f0e6309cf208bda663f13f6b17e712a4abef709",
+      "archive": "raw/scripts/check_gf180_routed.py"
+    },
+    "scripts/check_gf180_physical.py": {
+      "sha256": "2f10cbabdf9bd9cb283b775a42fab1d4e395685dd8a47aec8ef80f968d0079af",
+      "archive": "raw/scripts/check_gf180_physical.py"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/a/simulation.log": {
+      "sha256": "2b0a123eb05b30ad5f2cc3efcf7c423b5f3df309e4fea26f3189905b06e8e5b4",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/a/simulation.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/a/compile.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/a/compile.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/a/iverilog_version.log": {
+      "sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/a/iverilog_version.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/a/tb_physical.v": {
+      "sha256": "0723b8a346b1ac84a21667e84163c2449c03d1d9d90c2efaa01e63385b549096",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/a/tb_physical.v"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/b/simulation.log": {
+      "sha256": "fef02fb56577081a24f7fe83519d800cf3398c945707c9170869972ec60a7702",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/b/simulation.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/b/compile.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/b/compile.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/b/iverilog_version.log": {
+      "sha256": "ca23091099109d3237b10e6336dbb5b325dda94c3c52cd4111d924bd60227f5d",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/b/iverilog_version.log"
+    },
+    "build/gf180_routed/stage6_100ns_u40_route/b/tb_physical.v": {
+      "sha256": "82b58c1e2bd44d6d489be49f550e516ab17133156da0314c862677272224dbaa",
+      "archive": "raw/build/gf180_routed/stage6_100ns_u40_route/b/tb_physical.v"
+    }
+  },
+  "reproduction_package": {
+    "path": "reproduction.zip",
+    "bytes": 1153318,
+    "sha256": "449be172b734a5868f7eaaaaac19e15b9557d53e1bd4c6311764cd32d8b61de9"
+  }
+}

@@ -1,6 +1,0 @@
-# Kit de continuidad — Proyecto 3, Etapa 5 (29-10-2026)
-
-Carga `Cuaderno_Continuidad_Proyecto3.md` para recuperar el contexto, y `Plan_Pruebas_Experimentos_Proyecto3.md` para retomar la siguiente fase.
-Estado: 7 de 8 tareas «AHORA» completadas. Pendiente únicamente preparar los prompts iniciales de Codex.
-No hay simulación, GDSII ni signoff ejecutados. No usar GitHub de oficina; el repositorio destino personal aún no ha sido creado.
-Los ZIP de código aportados se conservan sin modificarse en este kit.

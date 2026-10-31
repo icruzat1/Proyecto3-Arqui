@@ -1,0 +1,876 @@
+{
+  "a": {
+    "measured_run": "stage6_100ns_u40_final_a",
+    "final_acceptance_run": "stage6_100ns_u40_final_a",
+    "hierarchy_mode": "flatten",
+    "period_ns": 100,
+    "initial_utilization_percent": 40,
+    "die_bbox_um": [
+      0.0,
+      0.0,
+      724.34,
+      742.26
+    ],
+    "die_area_um2": 537649,
+    "stdcell_area_um2": 390691,
+    "placed_utilization": 0.774852,
+    "sequential_cells": 1327,
+    "didactic_cost_usd": 12365.927000000001,
+    "pins": [
+      {
+        "name": "VDD",
+        "use": "POWER",
+        "position_um": [
+          362.04,
+          645.05
+        ],
+        "edge": null,
+        "layers": [
+          "Metal4",
+          "Metal5"
+        ]
+      },
+      {
+        "name": "VSS",
+        "use": "GROUND",
+        "position_um": [
+          362.04,
+          648.35
+        ],
+        "edge": null,
+        "layers": [
+          "Metal4",
+          "Metal5"
+        ]
+      },
+      {
+        "name": "btn_i[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          55.16
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          160.44
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          265.72
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          371.0
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "clk_i",
+        "use": "SIGNAL",
+        "position_um": [
+          180.6,
+          741.98
+        ],
+        "edge": "norte",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "leds_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          724.06,
+          75.32
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          724.06,
+          223.16
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          724.06,
+          371.0
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          724.06,
+          518.84
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "rst_ni",
+        "use": "SIGNAL",
+        "position_um": [
+          542.36,
+          741.98
+        ],
+        "edge": "norte",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          27.16,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          78.68,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          130.2,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          181.72,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[4]",
+        "use": "SIGNAL",
+        "position_um": [
+          233.24,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[5]",
+        "use": "SIGNAL",
+        "position_um": [
+          284.76,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[6]",
+        "use": "SIGNAL",
+        "position_um": [
+          336.28,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          387.8,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          439.32,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          490.84,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          542.36,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[4]",
+        "use": "SIGNAL",
+        "position_um": [
+          593.88,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[5]",
+        "use": "SIGNAL",
+        "position_um": [
+          645.4,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[6]",
+        "use": "SIGNAL",
+        "position_um": [
+          696.92,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "spi_cs_n_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          476.28
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_miso_o",
+        "use": "SIGNAL",
+        "position_um": [
+          724.06,
+          666.68
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_mosi_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          686.84
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_sclk_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          581.56
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      }
+    ],
+    "pdn": {
+      "PDN_RAIL_LAYER": "Metal1",
+      "PDN_RAIL_WIDTH": 0.6,
+      "PDN_HORIZONTAL_LAYER": "Metal5",
+      "PDN_VERTICAL_LAYER": "Metal4",
+      "PDN_HWIDTH": 1.6,
+      "PDN_VWIDTH": 1.6,
+      "PDN_HPITCH": 153.18,
+      "PDN_VPITCH": 153.6,
+      "PDN_HSPACING": 1.7,
+      "PDN_VSPACING": 1.7,
+      "PDN_CORE_RING": false
+    },
+    "verification": {
+      "annotation_and_propagation_verified": true,
+      "complete_fresh_nine_corners": true,
+      "electrical_passed": true,
+      "expected_corners": [
+        "nom_tt_025C_5v00",
+        "nom_ss_125C_4v50",
+        "nom_ff_n40C_5v50",
+        "min_tt_025C_5v00",
+        "min_ss_125C_4v50",
+        "min_ff_n40C_5v50",
+        "max_tt_025C_5v00",
+        "max_ss_125C_4v50",
+        "max_ff_n40C_5v50"
+      ],
+      "max_cap_violations_per_corner": 0,
+      "max_fanout_violations_per_corner": 0,
+      "max_slew_violations_per_corner": 0,
+      "measured_corners": [
+        "max_ff_n40C_5v50",
+        "max_ss_125C_4v50",
+        "max_tt_025C_5v00",
+        "min_ff_n40C_5v50",
+        "min_ss_125C_4v50",
+        "min_tt_025C_5v00",
+        "nom_ff_n40C_5v50",
+        "nom_ss_125C_4v50",
+        "nom_tt_025C_5v00"
+      ],
+      "setup_hold_passed": true,
+      "source_verified": true,
+      "worst_hold_corner": "max_ff_n40C_5v50",
+      "worst_hold_slack_ns": 0.11060974671482222,
+      "worst_setup_corner": "max_ss_125C_4v50",
+      "worst_setup_slack_ns": 10.907264733464865
+    },
+    "sources": {
+      "evidence/gf180_final_a/results.json": "418703c9ad23e80ef9e4bb6f3c4fd7528753347b4894c085d912d0aff3c9fcbb",
+      "config/gf180/runs/stage6_100ns_u40_final_a/final/def/asic_top.def": "c7c62f12c34444a0a4aa2dd5a1ba14c1cf89c7434f8614b01f1ffa4395cfbf29",
+      "config/gf180/runs/stage6_100ns_u40_final_a/resolved.json": "20606bee681c476b3efc456f9c815be833db37a56e611ba75cc127fc6c2c1de1",
+      "config/gf180/runs/stage6_100ns_u40_final_a/11-openroad-stapostpnr/state_out.json": "4edeede89599abf98516422e2f0b0bbdbc70820578efb3725b17b5fea9e5fd4b"
+    }
+  },
+  "b": {
+    "measured_run": "stage12_electrical_route_b",
+    "final_acceptance_run": "stage12_electrical_route_b",
+    "hierarchy_mode": "deferred_flatten",
+    "period_ns": 100,
+    "initial_utilization_percent": 40,
+    "die_bbox_um": [
+      0.0,
+      0.0,
+      1452.395,
+      1470.315
+    ],
+    "die_area_um2": 2135480,
+    "stdcell_area_um2": 1166260,
+    "placed_utilization": 0.563497,
+    "sequential_cells": 5433,
+    "didactic_cost_usd": 49116.03999999999,
+    "pins": [
+      {
+        "name": "VDD",
+        "use": "POWER",
+        "position_um": [
+          726.04,
+          1410.95
+        ],
+        "edge": null,
+        "layers": [
+          "Metal4",
+          "Metal5"
+        ]
+      },
+      {
+        "name": "VSS",
+        "use": "GROUND",
+        "position_um": [
+          726.04,
+          1414.25
+        ],
+        "edge": null,
+        "layers": [
+          "Metal4",
+          "Metal5"
+        ]
+      },
+      {
+        "name": "btn_i[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          106.68
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          316.12
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          525.56
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "btn_i[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          735.0
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "clk_i",
+        "use": "SIGNAL",
+        "position_um": [
+          363.16,
+          1470.035
+        ],
+        "edge": "norte",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "leds_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          1452.115,
+          148.12
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          1452.115,
+          441.56
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          1452.115,
+          735.0
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "leds_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          1452.115,
+          1028.44
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "rst_ni",
+        "use": "SIGNAL",
+        "position_um": [
+          1088.92,
+          1470.035
+        ],
+        "edge": "norte",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          56.28,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          159.32,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          262.36,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          365.4,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[4]",
+        "use": "SIGNAL",
+        "position_um": [
+          468.44,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[5]",
+        "use": "SIGNAL",
+        "position_um": [
+          571.48,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg1_o[6]",
+        "use": "SIGNAL",
+        "position_um": [
+          674.52,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[0]",
+        "use": "SIGNAL",
+        "position_um": [
+          777.56,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[1]",
+        "use": "SIGNAL",
+        "position_um": [
+          880.6,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[2]",
+        "use": "SIGNAL",
+        "position_um": [
+          983.64,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[3]",
+        "use": "SIGNAL",
+        "position_um": [
+          1086.68,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[4]",
+        "use": "SIGNAL",
+        "position_um": [
+          1189.72,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[5]",
+        "use": "SIGNAL",
+        "position_um": [
+          1292.76,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "seg2_o[6]",
+        "use": "SIGNAL",
+        "position_um": [
+          1395.8,
+          0.28
+        ],
+        "edge": "sur",
+        "layers": [
+          "Metal2"
+        ]
+      },
+      {
+        "name": "spi_cs_n_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          944.44
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_miso_o",
+        "use": "SIGNAL",
+        "position_um": [
+          1452.115,
+          1321.88
+        ],
+        "edge": "este",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_mosi_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          1363.32
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      },
+      {
+        "name": "spi_sclk_i",
+        "use": "SIGNAL",
+        "position_um": [
+          0.28,
+          1153.88
+        ],
+        "edge": "oeste",
+        "layers": [
+          "Metal3"
+        ]
+      }
+    ],
+    "pdn": {
+      "PDN_RAIL_LAYER": "Metal1",
+      "PDN_RAIL_WIDTH": 0.6,
+      "PDN_HORIZONTAL_LAYER": "Metal5",
+      "PDN_VERTICAL_LAYER": "Metal4",
+      "PDN_HWIDTH": 1.6,
+      "PDN_VWIDTH": 1.6,
+      "PDN_HPITCH": 153.18,
+      "PDN_VPITCH": 153.6,
+      "PDN_HSPACING": 1.7,
+      "PDN_VSPACING": 1.7,
+      "PDN_CORE_RING": false
+    },
+    "verification": {
+      "annotation_and_propagation_verified": true,
+      "complete_fresh_nine_corners": true,
+      "electrical_passed": true,
+      "expected_corners": [
+        "nom_tt_025C_5v00",
+        "nom_ss_125C_4v50",
+        "nom_ff_n40C_5v50",
+        "min_tt_025C_5v00",
+        "min_ss_125C_4v50",
+        "min_ff_n40C_5v50",
+        "max_tt_025C_5v00",
+        "max_ss_125C_4v50",
+        "max_ff_n40C_5v50"
+      ],
+      "max_cap_violations_per_corner": 0,
+      "max_fanout_violations_per_corner": 0,
+      "max_slew_violations_per_corner": 0,
+      "measured_corners": [
+        "max_ff_n40C_5v50",
+        "max_ss_125C_4v50",
+        "max_tt_025C_5v00",
+        "min_ff_n40C_5v50",
+        "min_ss_125C_4v50",
+        "min_tt_025C_5v00",
+        "nom_ff_n40C_5v50",
+        "nom_ss_125C_4v50",
+        "nom_tt_025C_5v00"
+      ],
+      "setup_hold_passed": true,
+      "source_verified": true,
+      "worst_hold_corner": "min_ff_n40C_5v50",
+      "worst_hold_slack_ns": 0.2930769043739347,
+      "worst_setup_corner": "max_ss_125C_4v50",
+      "worst_setup_slack_ns": 22.614664558871187
+    },
+    "sources": {
+      "evidence/gf180_final_b_electrical/results.json": "d7ae0d1d05065b753818c50056621f9ec13105fc4a55f1b58c7371170cd7c2b2",
+      "config/gf180/runs/stage12_electrical_route_b/final/def/asic_top.def": "02478f10d11afb61aea7975d8190247f52ddb3f3f7e9e04d09eff3dcff42e18b",
+      "config/gf180/runs/stage12_electrical_route_b/resolved.json": "8dfa273069b6e49316b0fc133682b8fa7751fd0bee512771adafef51ef913c4b",
+      "config/gf180/runs/stage12_electrical_route_b/12-openroad-stapostpnr/state_out.json": "eea86e3f2fe1c86df96cbc25c1fe4496e32643729b2163464f469bce200c862c"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "variant": "b",
+  "source_state": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/state_out.json",
+  "source_state_sha256": "da01612808b6f895058ece7686fb23438493b0373cadfff23faa5f498f94c99c",
+  "config": "config/gf180/b_electrical_eco.json",
+  "config_sha256": "4c022f4a83d1ee68150d621f98942183dc6f4c11247cb373ce00bd54377b82d6",
+  "from_step": "Odb.RemoveRoutingObstructions",
+  "scope": "Existing routed checkpoint; replays extraction/STA/export/checks, not synthesis or routing from RTL.",
+  "files": {
+    "views/00_asic_top.h.json": {
+      "source": "config/gf180/runs/stage7_trace_ref_b/05-yosys-jsonheader/asic_top.h.json",
+      "sha256": "fd7d02cc3a71877697621180008c6c6424a0449216b25062a504a5fba27d2b4d"
+    },
+    "views/01_asic_top.sdc": {
+      "source": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/asic_top.sdc",
+      "sha256": "61e00d8ff22bb2616ef6fa652e76d3adde37e38492309c90d160c03922767114"
+    },
+    "views/02_asic_top.vh": {
+      "source": "config/gf180/runs/stage8_t100_u40_b/17-odb-writeverilogheader/asic_top.vh",
+      "sha256": "dd79caee1fa1dff6c258ab6f35d1b6ed4423ec722e31fd96cb27d9b39c706e23"
+    },
+    "views/03_asic_top.odb": {
+      "source": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/asic_top.odb",
+      "sha256": "bb6c079883aa50864e4c21558474fc43007f6c29690d8978d0a3b18e4379b9b6"
+    },
+    "views/04_asic_top.def": {
+      "source": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/asic_top.def",
+      "sha256": "74cbd607ee787ee573ab7c2c24ed7c1eb0200fa50fb9523ac97f99140dffa1aa"
+    },
+    "views/05_asic_top.nl.v": {
+      "source": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/asic_top.nl.v",
+      "sha256": "df40a51c73d64d710baea4e127e9ee0e529432328700093a5683aad5a02e4aeb"
+    },
+    "views/06_asic_top.pnl.v": {
+      "source": "config/gf180/runs/stage12_electrical_route_b/01-openroad-detailedrouting/asic_top.pnl.v",
+      "sha256": "b7426efd010f4c97a9ca7ee0a1d38f19604d85738c43791c50b9453f2a67a90d"
+    }
+  },
+  "archive_sha256": "d2d1ec70138665369f961b2ab47281e97f1ba39562fe9efc49997cc9e46ccd07",
+  "archive_bytes": 15366486
+}

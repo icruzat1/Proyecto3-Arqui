@@ -1,74 +1,85 @@
-# Proyecto 3 de Arquitectura de Computadores
+# Proyecto 3 — Espino ASIC / GF180MCU
 
-Adaptación ASIC del procesador Espino y del juego del Proyecto 2, con LibreLane y GF180MCU. El desarrollo conserva el Proyecto 2 original y utiliza exclusivamente la cuenta personal icruzat1.
+Macro digital del juego de reflejos del Proyecto 2. Entrega y defensa: **4 de noviembre de 2026, 10:30**. Macro de celdas estándar con terminales lógicos; no incluye pads ni encapsulado.
 
-## Estado
+## Documentación de entrega
 
-El firmware ASIC está recalibrado a 10 MHz y ocupa 95 instrucciones. A usa ROM128 + RAM16 y B una memoria FF144 con carga de 144 ciclos. Ambas arquitecturas pasaron la partida completa y la comparación por ciclo entre RTL y netlists genéricas del macro completo. Una prueba adicional conserva la décima de producción y acelera únicamente la espera inicial, comprobando los ciclos de acierto, error y reintento. Ver [Juego a 10 MHz](docs/Juego_10MHz.md) y [resultados](evidence/asic_game/results.json).
+[Entrega técnica](docs/Entrega_Tecnica.md) reúne arquitectura, resultados y la comparación visual 2×2. El [inventario de entrega](docs/Inventario_Entrega.md) identifica los documentos y artefactos preparados para publicación. El informe académico PDF se realiza por separado.
 
-La base FPGA conservada reproduce sus 94 instrucciones originales. La comprobación de almacenamiento confirma 512 bits FF de RAM en A y 4608 bits reescribibles en B. El primer mapeo GF180 y floorplan A/B están completados y pasó una prueba funcional con celdas GF180. El timing previo a colocación no cierra; barridos físicos, Fmax y signoff siguen pendientes. Ver [Mapeo y floorplan](docs/Mapeo_Floorplan.md). La prueba física ya completada corresponde exclusivamente al ejemplo oficial spm.
+![Comparación de layouts finales A y B](evidence/layout_captures/entrega_2x2/Comparacion_AB_2x2.png)
 
-## Archivos
+## Finales seleccionados
 
-- `baseline/proyecto2`: copia del código FPGA. Su único cambio funcional de preparación es usar `sw/game.hex` en lugar de una ruta absoluta de Windows.
-- `sim/tb_proyecto2_startup.v`: prueba de carga, reset, PC, LED y contador del arranque FPGA.
-- `scripts/check_baseline.py`: regeneración del programa y simulación con un modelo iCE40 oficial de Yosys.
-- `docs`: cuadernos de estudio y continuidad, y checklist.
-- `evidence`: resultados y huellas del original.
-- `rtl`: interfaz ASIC, memorias A/B, ROM de producción generada, reset, sincronización de botones, RF portable y pipeline/periféricos conservados.
-- `firmware/asic/game.s`: copia ASIC a 10 MHz; no modifica el programa original.
-- `sim/asic_stage3`: pruebas de temporización, perfiles y juego antes/después de síntesis.
-- `config/rtl_asic.f`: manifiesto completo; asic_top.MemoryVariant=0 selecciona A y 1 selecciona B.
-- `config/rtl_stage1.f`: subconjunto de regresión para aislar la memoria de simulación de la primera etapa.
-- `sim/asic_stage1` y `scripts/check_asic_stage1.py`: pruebas de la primera adaptación.
+| Variante | Corrida | Memoria | Reloj / utilización inicial |
+|---|---|---|---|
+| A | stage13_final_traceable_a | ROM128 + RAM16 | 100 ns / 40 % |
+| B | stage12_electrical_route_b | FF144 con carga desde ROM al iniciar | 100 ns / 40 % |
 
-## Verificación local
+Ambas pasan setup/hold en nueve esquinas, capacidad, transición, fanout, DRC de ruteo, Magic DRC, LVS y antenas. Ambas conservan identificación de RF, ALU, contador y demás bloques funcionales. Selección verificable: [final_selection.json](config/gf180/final_selection.json).
 
-Ejecutar `python3 scripts/check_baseline.py --ice40-model RUTA_AL_MODELO_CELLS_SIM_V` desde esta carpeta. El modelo puede obtenerse de `share/yosys/ice40/cells_sim.v` de OSS CAD Suite o Yosys. La prueba utiliza Icarus Verilog y crea sus salidas en `build/baseline`.
+| Resultado | A | B |
+|---|---:|---:|
+| Peor setup, ns | +46,597294 | +22,614665 |
+| Peor hold/removal, ns | +0,130822 | +0,293077 |
+| Área stdcell post-PNR, µm² | 284044 | 1166260 |
+| Área die, mm² | 0,553389 | 2,135480 |
+| Celdas secuenciales | 1329 | 5433 |
 
-En la referencia FPGA, el archivo contiene 94 palabras para una memoria de 512; su prueba de arranque comprueba las instrucciones utilizadas. La implementación ASIC actual tiene 95 palabras de programa y 33 NOP explícitos en una ROM128; sus rondas se verifican con los comandos del informe del juego.
+KLayout DRC se omite por falta de runset; no se afirma signoff IR/EM, equivalencia formal ni simulación SDF. Alcances: [Verificación](docs/Verificacion_Final.md) y [violaciones](docs/Violaciones_Finales_10MHz.md).
 
-Consultar `docs/Checklist.md` para los pasos pendientes. No ejecutar el Makefile FPGA por defecto: su destino final intenta programar la placa.
+## Entorno e instalación
 
-## LibreLane mediante Docker
+Mac Apple Silicon con Docker Desktop; contenedores Linux ARM64. LibreLane 3.0.17 y Yosys 0.62. PDK GF180MCU revisión 54435919abffb937387ec956209f9cf5fd2dfbee, variante gf180mcuD y biblioteca gf180mcu_fd_sc_mcu7t5v0. Imagen y versiones en [environment.lock.json](config/environment.lock.json). Python 3.13 e Icarus Verilog 13.0 se usaron para utilidades y simulación.
 
-Docker Desktop debe estar iniciado. Ejecutar `python3 scripts/run_librelane.py --pdk gf180mcuD --scl gf180mcu_fd_sc_mcu7t5v0 ruta/relativa/config.yaml` desde el proyecto. El lanzador utiliza la imagen ARM64 fijada en config/environment.lock.json y monta esta carpeta como /work, evitando problemas con espacios en las rutas del Mac.
+Instalar Docker Desktop para Apple Silicon y Python. Desde la raíz del repositorio:
 
-El ejemplo oficial de prueba está en build/environment/spm. Se ejecuta con sus propios parámetros de 24 ns y 38 por ciento de utilización; es una comprobación del entorno, separada de la implementación ASIC del Proyecto 3.
+~~~sh
+python3 -m venv .venv
+.venv/bin/python -m pip install ciel==2.6.1
+docker pull ghcr.io/librelane/librelane@sha256:24640bd645ae992fa22d4a3e18fde10d728763c78fb140184f9975aa6c7d3e5e
+env -u GITHUB_TOKEN -u GH_TOKEN .venv/bin/ciel fetch --pdk-root "$PWD/.pdk" --pdk-family gf180mcu 54435919abffb937387ec956209f9cf5fd2dfbee
+env -u GITHUB_TOKEN -u GH_TOKEN .venv/bin/ciel enable --pdk-root "$PWD/.pdk" --pdk-family gf180mcu 54435919abffb937387ec956209f9cf5fd2dfbee
+~~~
 
-La prueba del entorno terminó con cero errores de Magic DRC, LVS y antena. KLayout DRC se omitió por falta de configuración del PDK. Consultar evidence/gf180_environment_summary.json para los resultados y límites de esa prueba.
+Para simulaciones locales, instalar Icarus Verilog; en macOS: brew install icarus-verilog. scripts/run_librelane.py usa la imagen fijada y monta el proyecto en /work sin red. No necesita Linux nativo ni una conexión GitHub de oficina.
 
-## Documentación y enunciado
+## Reproducción final
 
-Los cuadernos principales integran las etapas 1 a 5 y las verificaciones del Mac. docs/Requisitos_Proyecto3.md relaciona las exigencias con la evidencia pendiente. Los originales y el kit recuperado están en docs/referencias. Entrega y defensa: 4 de noviembre de 2026, 10:30.
+Los checkpoints finales suman unos **19,7 MB comprimidos**. Restaurar y comprobar sus huellas sin ejecutar herramientas físicas:
 
+~~~sh
+.venv/bin/python -B scripts/replay_delivery_checkpoint.py --variant a --prepare-only
+.venv/bin/python -B scripts/replay_delivery_checkpoint.py --variant b --prepare-only
+~~~
 
-## Adaptación RTL de la primera etapa
+Para repetir extracción, STA, exportación y comprobaciones desde las geometrías ruteadas, usar tags nuevos:
 
-Ejecutar `python3 scripts/check_asic_stage1.py --ice40-model RUTA_AL_MODELO_CELLS_SIM_V`. Comprueba RF, reset, botones, reinicios, MMIO, display, SPI y los primeros 10000 ciclos del juego frente al RF original. Usa una memoria exclusivamente de simulación; no constituye una implementación de A/B ni equivalencia post-síntesis. Los resultados están en `evidence/asic_stage1` y el detalle en [Adaptación RTL](docs/Adaptacion_RTL_Etapa1.md).
+~~~sh
+.venv/bin/python -B scripts/replay_delivery_checkpoint.py --variant a --tag entrega_a
+.venv/bin/python -B scripts/replay_delivery_checkpoint.py --variant b --tag entrega_b
+~~~
 
-La comprobación genérica `python3 scripts/check_asic_stage1_synthesis.py` pasó para los cuatro bloques, con Yosys 0.62 de la imagen fijada. No descarga imágenes ni ejecuta el flujo físico; utiliza red deshabilitada. `evidence/asic_stage1_synthesis` conserva logs, scripts de síntesis, conteos y huellas. Estos conteos son de lógica genérica, no área ni celdas GF180 mapeadas.
+Se verificaron restauración, CRC y SHA. Restaurar no equivale a una nueva ejecución de signoff: los resultados medidos corresponden a las corridas originales. La cadena desde RTL y sus reparaciones físicas se documenta en [Reproducción final](docs/Reproduccion_Final.md).
 
+## Programa y pruebas
 
-## Memorias A/B y firmware vigente
+~~~sh
+.venv/bin/python -B scripts/generate_asic_memory.py
+.venv/bin/python -B scripts/generate_asic_memory.py --check
+~~~
 
-El [informe histórico de memorias](docs/Memorias_AB.md) conserva la etapa del commit d867d61. El [informe actual del juego](docs/Juego_10MHz.md) documenta firmware, perfiles, pruebas y resultados vigentes.
+El assembler y generador toman firmware/asic/game.s: **95 instrucciones**. A 10 MHz, tres segundos son 30.000.000 ciclos y una décima 1.000.000. Proyecto 2 se conserva en baseline/proyecto2; su Makefile por defecto programa la placa y no debe ejecutarse en este flujo.
 
-Regenerar la ROM de producción con `python3 scripts/generate_asic_memory.py`; comprobar sus archivos con `python3 scripts/generate_asic_memory.py --check`. El origen predeterminado es `firmware/asic/game.s`, con 30 000 000 ciclos de espera y 1 000 000 por décima. El assembler original permanece sin modificaciones.
+Las netlists físicas A/B pasaron 21.295 muestras de comparación. La receta GF180 de cada variante pasó rondas correctas, error y reintento frente a RTL con estímulos idénticos y espera acortada. Esa prueba se distingue de la geometría de producción y de una simulación con retardos. Ver [pruebas](docs/Verificacion_Final.md).
 
-Ejecutar `python3 scripts/check_asic_memories.py`, `python3 scripts/check_asic_memory_synthesis.py` y `python3 scripts/check_memory_netlist.py` para validar interfaces, integración y almacenamiento. La primera orden incluye nueve pruebas del generador. Estas regresiones también pasaron con el firmware recalibrado; la evidencia preservada está en [evidence/asic_game](evidence/asic_game/README.md).
+## Documentación técnica
 
-## Juego y comparación post-síntesis
+- [Requisitos](docs/Requisitos_Proyecto3.md).
+- [Comparación, terminales, PDN y costo](docs/Comparacion_Final_AB.md).
+- [Síntesis y bloques finales](docs/Sintesis_Final_Trazable.md).
+- [Capturas](docs/Capturas_Layout.md).
+- [Barridos: ocho puntos históricos, incluidos fallos](docs/Barridos_GF180.md).
+- [Cambio RTL medido](docs/Ensayo_RTL_Trazabilidad.md).
+- [Reparación eléctrica B](docs/Cierre_Electrico_B.md).
 
-```sh
-python3 -m unittest discover -s sim/asic_stage3 -p 'test_generate_game_firmware.py' -v
-python3 scripts/check_game_timing.py
-python3 scripts/check_full_game.py
-python3 scripts/check_game_wait_only.py
-```
-
-El generador de perfiles pasó seis pruebas. El ensayo temporal comprueba código máquina y 20 casos dirigidos con la ALU de Espino: reproduce dos fallos del límite absoluto anterior y ninguno con tiempo transcurrido. La partida completa cubre diez aciertos, dos errores, botón mantenido, saturación, promedio y resets. Usa un perfil con ambos umbrales divididos por 10 000. La prueba `wait_only` conserva la décima de producción y acelera solo la espera, para comprobar la sección 3.7.
-
-Ambas pruebas de juego sintetizan y comparan A/B con estímulos idénticos por ciclo. Requieren Python, Icarus y Docker Desktop con la imagen fijada en `config/environment.lock.json`; no descargan imágenes ni usan red dentro del contenedor. La opción `--rtl-only` permite ejecutar únicamente la parte RTL y no demuestra comparación post-síntesis. Los artefactos de trabajo se generan en `build`, y las evidencias seleccionadas incluyen huellas, logs y resultados.
-
-Son netlists del macro completo con celdas genéricas, sin mapeo GF180 ni SDF. Debe repetirse la comprobación tras el mapeo del flujo final. La configuración final exigida es 100 ns y 40 %; sus restricciones, barridos, mejora de ruta crítica y cierre físico son el siguiente bloque de trabajo.
+La carpeta entrega contiene el proyecto publicable. Las guías personales, cuadernos internos y archivos de trabajo se conservan fuera del repositorio. Informe PDF y preparación oral del equipo se realizan por separado.

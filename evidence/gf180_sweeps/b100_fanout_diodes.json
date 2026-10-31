@@ -1,0 +1,132 @@
+[
+  {
+    "pin": "fanout1952/Z",
+    "net": "net1952",
+    "total_reported": 14,
+    "antenna_diodes": 6,
+    "diode_names": [
+      "ANTENNA_129",
+      "ANTENNA_130",
+      "ANTENNA_131",
+      "ANTENNA_197",
+      "ANTENNA_220",
+      "ANTENNA_221"
+    ]
+  },
+  {
+    "pin": "fanout1012/Z",
+    "net": "net1012",
+    "total_reported": 13,
+    "antenna_diodes": 3,
+    "diode_names": [
+      "ANTENNA_189",
+      "ANTENNA_218",
+      "ANTENNA_88"
+    ]
+  },
+  {
+    "pin": "fanout911/Z",
+    "net": "net911",
+    "total_reported": 13,
+    "antenna_diodes": 3,
+    "diode_names": [
+      "ANTENNA_188",
+      "ANTENNA_217",
+      "ANTENNA_84"
+    ]
+  },
+  {
+    "pin": "fanout2159/Z",
+    "net": "net2159",
+    "total_reported": 12,
+    "antenna_diodes": 4,
+    "diode_names": [
+      "ANTENNA_25",
+      "ANTENNA_26",
+      "ANTENNA_27",
+      "ANTENNA_28"
+    ]
+  },
+  {
+    "pin": "fanout3401/Z",
+    "net": "net3401",
+    "total_reported": 12,
+    "antenna_diodes": 4,
+    "diode_names": [
+      "ANTENNA_170",
+      "ANTENNA_171",
+      "ANTENNA_172",
+      "ANTENNA_173"
+    ]
+  },
+  {
+    "pin": "fanout881/Z",
+    "net": "net881",
+    "total_reported": 12,
+    "antenna_diodes": 2,
+    "diode_names": [
+      "ANTENNA_186",
+      "ANTENNA_82"
+    ]
+  },
+  {
+    "pin": "fanout899/Z",
+    "net": "net899",
+    "total_reported": 12,
+    "antenna_diodes": 2,
+    "diode_names": [
+      "ANTENNA_187",
+      "ANTENNA_83"
+    ]
+  },
+  {
+    "pin": "fanout1645/Z",
+    "net": "net1645",
+    "total_reported": 11,
+    "antenna_diodes": 1,
+    "diode_names": [
+      "ANTENNA_113"
+    ]
+  },
+  {
+    "pin": "fanout2406/Z",
+    "net": "net2406",
+    "total_reported": 11,
+    "antenna_diodes": 4,
+    "diode_names": [
+      "ANTENNA_141",
+      "ANTENNA_199",
+      "ANTENNA_223",
+      "ANTENNA_227"
+    ]
+  },
+  {
+    "pin": "fanout3068/Z",
+    "net": "net3068",
+    "total_reported": 11,
+    "antenna_diodes": 1,
+    "diode_names": [
+      "ANTENNA_157"
+    ]
+  },
+  {
+    "pin": "fanout3400/Z",
+    "net": "net3400",
+    "total_reported": 11,
+    "antenna_diodes": 3,
+    "diode_names": [
+      "ANTENNA_169",
+      "ANTENNA_212",
+      "ANTENNA_213"
+    ]
+  },
+  {
+    "pin": "fanout781/Z",
+    "net": "net781",
+    "total_reported": 11,
+    "antenna_diodes": 1,
+    "diode_names": [
+      "ANTENNA_79"
+    ]
+  }
+]

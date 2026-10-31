@@ -1,0 +1,42 @@
+Clock: clk_i
+Sources: clk_i 
+Generated: no
+Virtual: yes
+Propagated: no
+Period: 100.000000
+
+===========================================================================
+report_clock_properties
+============================================================================
+Clock                   Period          Waveform
+----------------------------------------------------
+clk_i               100.000000    0.000000 50.000000
+
+===========================================================================
+report_clock_latency
+============================================================================
+Clock clk_i
+rise -> rise
+    min     max
+0.000000 0.000000 source latency
+2.732597         network latency u_mem.genblk1.gen_b.u_memory._29398_/CLK
+        3.295929 network latency u_soc.u_core.u_rf._2552_/CLK
+---------------
+2.732597 3.295929 latency
+        0.563333 skew
+
+fall -> fall
+    min     max
+0.000000 0.000000 source latency
+2.756920         network latency u_mem.genblk1.gen_b.u_memory._29398_/CLK
+        3.351961 network latency u_soc.u_core.u_rf._2552_/CLK
+---------------
+2.756920 3.351961 latency
+        0.595041 skew
+
+
+
+===========================================================================
+report_clock_min_period
+============================================================================
+clk_i period_min = 24.73 fmax = 40.44

@@ -1,0 +1,2 @@
+PASS physical_startup variant=1 epochs=2 samples=21295 active_cycles=20913 fetch_changes=10456 spi_frames=4 reset_checks=2 button_changes=178
+/Users/ics/Desktop/Universidad/UAndes/Segundo Semestre - 2026/Arquitectura de Computadores/Proyecto 3/build/gf180_physical/stage5_100ns_u40_cts/b/tb_physical.v:311: $finish called at 2129300000 (1ps)

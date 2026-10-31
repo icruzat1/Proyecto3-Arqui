@@ -1,0 +1,13 @@
+{
+    "json_h": "/work/config/gf180/runs/stage4_100ns_u40_floorplan_b/05-yosys-jsonheader/asic_top.h.json",
+    "nl": "/work/config/gf180/runs/stage6_100ns_u40_route_b/08-openroad-detailedrouting/asic_top.nl.v",
+    "sdc": "/work/config/gf180/runs/stage6_100ns_u40_route_b/08-openroad-detailedrouting/asic_top.sdc",
+    "pnl": "/work/config/gf180/runs/stage6_100ns_u40_route_b/08-openroad-detailedrouting/asic_top.pnl.v",
+    "vh": "/work/config/gf180/runs/stage5_100ns_u40_cts_b/03-odb-writeverilogheader/asic_top.vh",
+    "odb": "/work/config/gf180/runs/stage6_100ns_u40_unrouted_v3_b/00-clear-signal-routes/asic_top.odb",
+    "def": "/work/config/gf180/runs/stage6_100ns_u40_unrouted_v3_b/00-clear-signal-routes/asic_top.def",
+    "metrics": {
+        "design__die__bbox": "0 0 1387.35 1405.27",
+        "design__die__area": 1949601.3345
+    }
+}

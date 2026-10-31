@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /work/config/gf180/runs/stage8_t60_u40_b/27-openroad-globalrouting/or_metrics_out.json /nix/store/f5hfihqp8c0ndd7qd4061yhsk0v6yj4n-python3-3.13.9-env/lib/python3.13/site-packages/librelane/scripts/openroad/grt.tcl

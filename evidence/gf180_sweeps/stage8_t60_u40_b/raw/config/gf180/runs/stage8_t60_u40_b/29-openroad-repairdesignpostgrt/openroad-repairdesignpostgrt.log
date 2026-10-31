@@ -1,0 +1,204 @@
+Reading timing models for corner max_ff_n40C_5v50…
+Reading timing library for the 'max_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+Reading timing models for corner max_tt_025C_5v00…
+Reading timing library for the 'max_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading timing models for corner nom_ff_n40C_5v50…
+Reading timing library for the 'nom_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner min_ss_125C_4v50…
+Reading timing library for the 'min_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+Reading timing models for corner min_ff_n40C_5v50…
+Reading timing library for the 'min_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner min_tt_025C_5v00…
+Reading timing library for the 'min_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner max_ss_125C_4v50…
+Reading timing library for the 'max_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading timing models for corner nom_ss_125C_4v50…
+Reading timing library for the 'nom_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading OpenROAD database at '/work/config/gf180/runs/stage8_t60_u40_b/27-openroad-globalrouting/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 12.0
+[INFO] Setting input delay to: 12.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO] Setting signal min routing layer to: Metal2 and clock min routing layer to Metal2. 
+[INFO] Setting signal max routing layer to: Metal5 and clock max routing layer to Metal5. 
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 2143 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical       440690        293966          33.29%
+Metal3     Horizontal     444955        296425          33.38%
+Metal4     Vertical       440660        293946          33.29%
+Metal5     Horizontal     271719        183141          32.60%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 187913
+[INFO GRT-0198] Via related Steiner nodes: 6757
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 239233
+[INFO GRT-0112] Final usage 3D: 1000844
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2          293966        134570           45.78%             0 /  0 /  0
+Metal3          296425        131208           44.26%             0 /  0 /  0
+Metal4          293946         13010            4.43%             0 /  0 /  0
+Metal5          183141          4357            2.38%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          1067478        283145           26.52%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 3172663 um
+[INFO GRT-0014] Routed nets: 29126
+[INFO GRT-0303] Global routing runtime = 00:00:02
++ repair_design -verbose -max_wire_length 0.0 -slew_margin 70.0 -cap_margin 70.0
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     30048
+     1000 |     +0.0% |       5 |       0 |             2 |     29048
+     2000 |     +0.1% |      25 |       0 |             6 |     28048
+     3000 |     +0.1% |      44 |       0 |             7 |     27048
+     4000 |     +0.2% |      88 |       0 |             9 |     26048
+     5000 |     +0.4% |     215 |       0 |            16 |     25048
+     6000 |     +1.0% |     619 |       0 |            40 |     24048
+     7000 |     +0.9% |    1030 |       0 |            56 |     23048
+     8000 |     +0.9% |    1124 |       0 |            57 |     22048
+     9000 |     +0.9% |    1178 |       0 |            58 |     21048
+    10000 |     +0.8% |    1247 |       0 |            58 |     20048
+    11000 |     +0.8% |    1290 |       0 |            58 |     19048
+    12000 |     +0.6% |    1409 |       0 |            58 |     18048
+    13000 |     +0.1% |    1718 |       0 |            58 |     17048
+    14000 |     +0.1% |    1805 |       0 |            63 |     16048
+    15000 |     +0.1% |    1838 |       0 |            63 |     15048
+    16000 |     +0.1% |    1877 |       0 |            63 |     14048
+    17000 |     +0.0% |    1940 |       0 |            63 |     13048
+    18000 |     -0.1% |    2020 |       0 |            63 |     12048
+    19000 |     -0.1% |    2105 |       0 |            66 |     11048
+    20000 |     -0.4% |    2321 |       0 |            66 |     10048
+    21000 |     -0.8% |    2631 |       1 |            68 |      9048
+    22000 |     -0.8% |    2647 |       1 |            70 |      8048
+    23000 |     -0.8% |    2651 |       1 |            70 |      7048
+    24000 |     -0.8% |    2662 |       1 |            70 |      6048
+    25000 |     -0.8% |    2662 |       1 |            70 |      5048
+    26000 |     -0.8% |    2662 |       1 |            70 |      4048
+    27000 |     -0.8% |    2662 |       1 |            70 |      3048
+    28000 |     -0.8% |    2662 |       1 |            70 |      2048
+    29000 |     -0.8% |    2662 |       1 |            70 |      1048
+    30000 |     -0.8% |    2662 |       1 |            70 |        48
+    final |     -0.8% |    2662 |       1 |            70 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 2662 slew violations.
+[INFO RSZ-0036] Found 53 capacitance violations.
+[INFO RSZ-0039] Resized 2662 instances.
+[INFO RSZ-0038] Inserted 1 buffers in 70 nets.
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement       6871.2 u
+average displacement        0.2 u
+max displacement           19.0 u
+original HPWL         2052943.2 u
+legalized HPWL        2086172.8 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 9034 instances
+[INFO DPL-0021] HPWL before          2086172.8 u
+[INFO DPL-0022] HPWL after           2055231.2 u
+[INFO DPL-0023] HPWL delta               -1.5 %
++ global_route -congestion_iterations 50 -verbose
+[INFO GRT-0020] Min routing layer: Metal2
+[INFO GRT-0021] Max routing layer: Metal5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer Metal1  Track-Pitch = 0.5600  line-2-Via Pitch: 0.4750
+[INFO GRT-0088] Layer Metal2  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal3  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal4  Track-Pitch = 0.5600  line-2-Via Pitch: 0.5600
+[INFO GRT-0088] Layer Metal5  Track-Pitch = 0.9000  line-2-Via Pitch: 0.8200
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 2143 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 11
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+Metal1     Horizontal          0             0          0.00%
+Metal2     Vertical       440690        293966          33.29%
+Metal3     Horizontal     444955        296425          33.38%
+Metal4     Vertical       440660        293946          33.29%
+Metal5     Horizontal     271719        183141          32.60%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 188793
+[INFO GRT-0198] Via related Steiner nodes: 6838
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 240609
+[INFO GRT-0112] Final usage 3D: 1005821
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+Metal1               0             0            0.00%             0 /  0 /  0
+Metal2          293966        135009           45.93%             0 /  0 /  0
+Metal3          296425        132106           44.57%             0 /  0 /  0
+Metal4          293946         12782            4.35%             0 /  0 /  0
+Metal5          183141          4097            2.24%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total          1067478        283994           26.60%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 3185263 um
+[INFO GRT-0014] Routed nets: 29127
+[INFO GRT-0303] Global routing runtime = 00:00:01
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 4 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             734    3222.55
+  Tap cell                              13472   59147.47
+  Tie cell                                 31     272.20
+  Buffer                                  119    1628.84
+  Clock buffer                           2994  143434.37
+  Timing Repair Buffer                   3868   96116.83
+  Inverter                                815    7182.69
+  Clock inverter                           70    1141.50
+  Sequential cell                        5433  355016.52
+  Multi-Input combinational cell        16710  488789.82
+  Total                                 44246 1155952.81
+Writing OpenROAD database to '/work/config/gf180/runs/stage8_t60_u40_b/29-openroad-repairdesignpostgrt/asic_top.odb'…
+Writing netlist to '/work/config/gf180/runs/stage8_t60_u40_b/29-openroad-repairdesignpostgrt/asic_top.nl.v'…
+Writing powered netlist to '/work/config/gf180/runs/stage8_t60_u40_b/29-openroad-repairdesignpostgrt/asic_top.pnl.v'…
+Writing layout to '/work/config/gf180/runs/stage8_t60_u40_b/29-openroad-repairdesignpostgrt/asic_top.def'…
+Writing timing constraints to '/work/config/gf180/runs/stage8_t60_u40_b/29-openroad-repairdesignpostgrt/asic_top.sdc'…

@@ -1,0 +1,46 @@
+{
+  "reviewed_at_utc": "2026-10-30T22:42:44.663110+00:00",
+  "scope": "Read-only audit of existing final physical and functional evidence; no physical rerun",
+  "variants": {
+    "a": {
+      "run": "stage6_100ns_u40_final_a",
+      "status": "PASS",
+      "archived_artifacts_verified": 352,
+      "final_views_verified": 11,
+      "fresh_raw_corners_verified": 9,
+      "functional_samples": 21295,
+      "functional_scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+      "netlist_sha256": "41ecfce7ef7569f5019849741cf863cccd96ace650b633dc4b9e58a798f92cab",
+      "checkpoint_crc_and_sha_verified": true,
+      "setup_slack_ns": 10.907264733464865,
+      "hold_slack_ns": 0.11060974671482222,
+      "omissions": [
+        "KLayout DRC has no configured runset; skipped is not PASS",
+        "Formal EQY equivalence disabled or unsupported for GF180",
+        "LVS extraction uses DEF/LEF; not complete transistor-level GDS extraction",
+        "IR-drop analysis has no explicit supply-source locations; report is not power-integrity signoff"
+      ]
+    },
+    "b": {
+      "run": "stage12_electrical_route_b",
+      "status": "PASS",
+      "archived_artifacts_verified": 360,
+      "final_views_verified": 11,
+      "fresh_raw_corners_verified": 9,
+      "functional_samples": 21295,
+      "functional_scope": "Bounded production startup/reset/buttons/SPI and retained-net comparison after routing",
+      "netlist_sha256": "ec1f8b4916ae876a1e8c6005beaf8919803b3c36e8566a262c9e65c2107d8d27",
+      "checkpoint_crc_and_sha_verified": true,
+      "setup_slack_ns": 22.614664558871187,
+      "hold_slack_ns": 0.2930769043739347,
+      "omissions": [
+        "KLayout DRC has no configured runset; skipped is not PASS",
+        "Formal EQY equivalence disabled or unsupported for GF180",
+        "LVS extraction uses DEF/LEF; not complete transistor-level GDS extraction",
+        "IR-drop analysis has no explicit supply-source locations; report is not power-integrity signoff"
+      ]
+    }
+  },
+  "sweeps_complete": true,
+  "sweeps_count": 8
+}

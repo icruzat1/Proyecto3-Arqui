@@ -9,3 +9,17 @@ runs/
 *.vvp
 *.vcd
 *.dmg
+
+# Archived evidence preserves source paths that may contain build/ or runs/.
+!evidence/**/raw/
+!evidence/**/raw/**
+
+# Local personal material is excluded from publication.
+*.docx
+/AGENTS.md
+/docs/Cuaderno*.md
+/docs/Checklist.md
+/docs/Pausa_*.md
+/docs/Limpieza_Final.md
+/docs/historial/
+/historial y extras/

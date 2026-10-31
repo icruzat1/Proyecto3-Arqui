@@ -1,0 +1,19 @@
+
+===========================================================================
+Violator List
+============================================================================
+[hold in-reg] rst_ni -> _11634_/RN : -2.013370
+[hold in-reg] rst_ni -> _11633_/RN : -2.013316
+[hold in-reg] btn_i[0] -> _11635_/D : -1.823575
+[hold in-reg] btn_i[1] -> _11636_/D : -1.820729
+[hold in-reg] spi_mosi_i -> _11649_/D : -1.810970
+[hold in-reg] btn_i[2] -> _11637_/D : -1.779457
+[hold in-reg] btn_i[3] -> _11638_/D : -1.714034
+[hold in-reg] spi_cs_n_i -> _11646_/D : -1.656816
+[hold in-reg] spi_sclk_i -> _11643_/D : -1.599995
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_5v00: 9
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_5v00: 0.156200
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_5v00: 0
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_5v00: 51.231720
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_5v00: 0

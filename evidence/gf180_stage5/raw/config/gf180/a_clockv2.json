@@ -1,0 +1,41 @@
+{
+  "DESIGN_NAME": "asic_top",
+  "VERILOG_FILES": [
+    "dir::../../rtl/asic/asic_memory.v",
+    "dir::../../rtl/asic/asic_top.v",
+    "dir::../../rtl/asic/btn_sync.v",
+    "dir::../../rtl/asic/generated/asic_program_rom.v",
+    "dir::../../rtl/asic/memory_a.v",
+    "dir::../../rtl/asic/memory_b.v",
+    "dir::../../rtl/asic/reset_ctrl.v",
+    "dir::../../rtl/espino_core/espino_alu.v",
+    "dir::../../rtl/espino_core/espino_controller.v",
+    "dir::../../rtl/espino_core/espino_core.v",
+    "dir::../../rtl/espino_core/espino_decoder.v",
+    "dir::../../rtl/espino_core/espino_id_stage.v",
+    "dir::../../rtl/espino_core/espino_if_stage.v",
+    "dir::../../rtl/espino_core/espino_load_store_unit.v",
+    "dir::../../rtl/espino_core/espino_register_file.v",
+    "dir::../../rtl/pochoco_periph.v",
+    "dir::../../rtl/pochoco_soc.v",
+    "dir::../../rtl/pochoco_spi_slave.v"
+  ],
+  "CLOCK_PORT": "clk_i",
+  "CLOCK_PERIOD": 100,
+  "FP_CORE_UTIL": 40,
+  "FP_ASPECT_RATIO": 1,
+  "PL_TARGET_DENSITY": 0.45,
+  "MAX_FANOUT_CONSTRAINT": 4,
+  "IO_DELAY_CONSTRAINT": 20,
+  "SYNTH_HIERARCHY_MODE": "flatten",
+  "PNR_SDC_FILE": "dir::constraints.sdc",
+  "SIGNOFF_SDC_FILE": "dir::constraints.sdc",
+  "IO_PIN_ORDER_CFG": "dir::pin_order.cfg",
+  "ERRORS_ON_UNMATCHED_IO": "both",
+  "SYNTH_PARAMETERS": [
+    "MemoryVariant=0"
+  ],
+  "CTS_SINK_CLUSTERING_SIZE": 4,
+  "CTS_MAX_CAP": 0.16,
+  "CTS_DISTANCE_BETWEEN_BUFFERS": 100
+}

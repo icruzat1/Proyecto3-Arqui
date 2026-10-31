@@ -1,0 +1,188 @@
+Reading timing models for corner max_ff_n40C_5v50…
+Reading timing library for the 'max_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+Reading timing models for corner max_tt_025C_5v00…
+Reading timing library for the 'max_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading timing models for corner nom_ff_n40C_5v50…
+Reading timing library for the 'nom_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner min_ss_125C_4v50…
+Reading timing library for the 'min_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+Reading timing models for corner min_ff_n40C_5v50…
+Reading timing library for the 'min_ff_n40C_5v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_5v50 already exists.
+Reading timing models for corner min_tt_025C_5v00…
+Reading timing library for the 'min_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00 already exists.
+Reading timing models for corner max_ss_125C_4v50…
+Reading timing library for the 'max_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading timing models for corner nom_ss_125C_4v50…
+Reading timing library for the 'nom_ss_125C_4v50' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib'…
+[WARNING STA-1140] /work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_4v50 already exists.
+Reading OpenROAD database at '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/03-openroad-detailedplacement/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
+[INFO] Configuring cts characterization…
++ configure_cts_characterization -max_cap 1.6e-13
+[INFO] Performing clock tree synthesis…
+[INFO] Looking for the following net(s): clk_i
+[INFO] Running Clock Tree Synthesis…
++ clock_tree_synthesis -buf_list gf180mcu_fd_sc_mcu7t5v0__clkbuf_2 gf180mcu_fd_sc_mcu7t5v0__clkbuf_4 gf180mcu_fd_sc_mcu7t5v0__clkbuf_8 -root_buf gf180mcu_fd_sc_mcu7t5v0__clkbuf_16 -sink_clustering_size 4 -sink_clustering_enable -apply_ndr half -distance_between_buffers 25.0
+[INFO CTS-0050] Root buffer is gf180mcu_fd_sc_mcu7t5v0__clkbuf_16.
+[INFO CTS-0051] Sink buffer is gf180mcu_fd_sc_mcu7t5v0__clkbuf_8.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    gf180mcu_fd_sc_mcu7t5v0__clkbuf_2
+                    gf180mcu_fd_sc_mcu7t5v0__clkbuf_4
+                    gf180mcu_fd_sc_mcu7t5v0__clkbuf_8
+[INFO CTS-0049] Characterization buffer is gf180mcu_fd_sc_mcu7t5v0__clkbuf_8.
+[INFO CTS-0007] Net "clk_i" found for clock "clk_i".
+[INFO CTS-0010]  Clock net "clk_i" has 1327 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0201] 0 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i.
+[INFO CTS-0028]  Total number of sinks: 1327.
+[INFO CTS-0029]  Register sinks will be clustered in groups of up to 4 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 39200  dbu (19 um).
+[INFO CTS-0021]  Distance between buffers: 0 units (25 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 4 and clustering diameter of 50.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 389.
+[INFO CTS-0024]  Normalized sink region: [(0.532908, 1.4), (36.4957, 36.5)].
+[INFO CTS-0025]     Width:  35.9628.
+[INFO CTS-0026]     Height: 35.1000.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 195
+    Sub-region size: 17.9814 X 35.1000
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 98
+    Sub-region size: 17.9814 X 17.5500
+[INFO CTS-0034]     Segment length (rounded): 8.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 49
+    Sub-region size: 8.9907 X 17.5500
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 25
+    Sub-region size: 8.9907 X 8.7750
+[INFO CTS-0034]     Segment length (rounded): 4.
+ Level 5
+    Direction: Horizontal
+    Sinks per sub-region: 13
+    Sub-region size: 4.4953 X 8.7750
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 6
+    Direction: Vertical
+    Sinks per sub-region: 7
+    Sub-region size: 4.4953 X 4.3875
+[INFO CTS-0034]     Segment length (rounded): 2.
+ Level 7
+    Direction: Horizontal
+    Sinks per sub-region: 4
+    Sub-region size: 2.2477 X 4.3875
+[INFO CTS-0034]     Segment length (rounded): 1.
+ Level 8
+    Direction: Vertical
+    Sinks per sub-region: 2
+    Sub-region size: 2.2477 X 2.1938
+[INFO CTS-0034]     Segment length (rounded): 1.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 4.
+[INFO CTS-0035]  Number of sinks covered: 389.
+[INFO CTS-0018]     Created 880 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 9.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 10.
+[INFO CTS-0015]     Created 880 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 1:123, 2:169, 3:97, 4:236..
+[INFO CTS-0017]     Max level of the clock tree: 8.
+[INFO CTS-0098] Clock net "clk_i"
+[INFO CTS-0099]  Sinks 1513
+[INFO CTS-0100]  Leaf buffers 369
+[INFO CTS-0101]  Average sink wire length 1174.21 um
+[INFO CTS-0102]  Path depth 9 - 10
+[INFO CTS-0207]  Dummy loads inserted 186
+[INFO] Repairing long wires on clock nets…
+[INFO RSZ-0058] Using max wire length 11493um.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 4264 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             362    1589.32
+  Tap cell                               3296   14470.76
+  Tie cell                                  2      17.56
+  Clock buffer                           1049   57474.73
+  Timing Repair Buffer                   3617  126087.90
+  Inverter                                240    2107.39
+  Clock inverter                           17     276.60
+  Sequential cell                        1327   99060.60
+  Multi-Input combinational cell         4995  100966.03
+  Total                                 14905  402050.88
+Writing OpenROAD database to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.odb'…
+Writing netlist to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.nl.v'…
+Writing powered netlist to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.pnl.v'…
+Writing layout to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.def'…
+Writing timing constraints to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.sdc'…
+[INFO] Legalizing…
++ detailed_placement -max_displacement  500 100 
+Placement Analysis
+---------------------------------
+total displacement      59847.7 u
+average displacement        4.0 u
+max displacement           86.2 u
+original HPWL          648397.4 u
+legalized HPWL         724648.4 u
+delta HPWL                   12 %
+
+[INFO DPL-0020] Mirrored 5416 instances
+[INFO DPL-0021] HPWL before          724648.4 u
+[INFO DPL-0022] HPWL after           700418.9 u
+[INFO DPL-0023] HPWL delta               -3.3 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 0 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             362    1589.32
+  Tap cell                               3296   14470.76
+  Tie cell                                  2      17.56
+  Clock buffer                           1049   57474.73
+  Timing Repair Buffer                   3617  126087.90
+  Inverter                                240    2107.39
+  Clock inverter                           17     276.60
+  Sequential cell                        1327   99060.60
+  Multi-Input combinational cell         4995  100966.03
+  Total                                 14905  402050.88
+Writing OpenROAD database to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.odb'…
+Writing netlist to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.nl.v'…
+Writing powered netlist to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.pnl.v'…
+Writing layout to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.def'…
+Writing timing constraints to '/work/config/gf180/runs/stage5_100ns_u40_clockv3_a/04-openroad-cts/asic_top.sdc'…
+%OL_CREATE_REPORT cts.rpt
+Total number of Clock Roots: 1.
+Total number of Buffers Inserted: 880.
+Total number of Clock Subnets: 880.
+Total number of Sinks: 1327.
+Cells used:
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8: 879
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_16: 1
+Dummys used:
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_2: 62
+  gf180mcu_fd_sc_mcu7t5v0__clkbuf_8: 107
+  gf180mcu_fd_sc_mcu7t5v0__clkinv_2: 11
+  gf180mcu_fd_sc_mcu7t5v0__inv_4: 6
+%OL_END_REPORT

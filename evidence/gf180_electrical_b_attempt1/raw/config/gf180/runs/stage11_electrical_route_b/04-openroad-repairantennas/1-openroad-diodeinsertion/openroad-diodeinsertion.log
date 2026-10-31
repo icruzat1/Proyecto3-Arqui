@@ -1,0 +1,42 @@
+Reading timing models for corner nom_tt_025C_5v00…
+Reading timing library for the 'nom_tt_025C_5v00' corner at '/work/.pdk/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib'…
+Reading OpenROAD database at '/work/config/gf180/runs/stage11_electrical_route_b/01-openroad-globalrouting/asic_top.odb'…
+Reading design constraints file at '/work/config/gf180/constraints.sdc'…
+[INFO] Using clock clk_i…
+[INFO] Setting output delay to: 20.0
+[INFO] Setting input delay to: 20.0
+[INFO] Setting load to: 0.07291
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5.0%
++ repair_antennas gf180mcu_fd_sc_mcu7t5v0__antenna -iterations 6 -ratio_margin 30
+[INFO GRT-0012] Found 90 antenna violations.
+[INFO GRT-0302] Inserted 96 jumpers for 86 nets.
+[INFO GRT-0012] Found 4 antenna violations.
+[INFO GRT-0015] Inserted 8 diodes.
+[INFO GRT-0012] Found 5 antenna violations.
+[INFO GRT-0302] Inserted 4 jumpers for 4 nets.
+[INFO GRT-0012] Found 1 antenna violations.
+[INFO GRT-0015] Inserted 1 diodes.
+[INFO GRT-0012] Found 1 antenna violations.
+[INFO GRT-0302] Inserted 1 jumpers for 1 nets.
+[INFO GRT-0012] Found 0 antenna violations.
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+[INFO ODB-0403] 36 connections made, 0 conflicts skipped.
+Updating metrics…
+Cell type report:                       Count       Area
+  Endcap cell                             734    3222.55
+  Tap cell                              13472   59147.47
+  Antenna cell                            239    1049.31
+  Tie cell                                 31     272.20
+  Buffer                                  143    2353.25
+  Clock buffer                           2994  143434.37
+  Timing Repair Buffer                   4016  104001.99
+  Inverter                                815    7182.69
+  Clock inverter                           70    1141.50
+  Sequential cell                        5433  355020.92
+  Multi-Input combinational cell        16710  489022.51
+  Total                                 44657 1165848.77
+Writing OpenROAD database to '/work/config/gf180/runs/stage11_electrical_route_b/04-openroad-repairantennas/1-openroad-diodeinsertion/asic_top.odb'…
+Writing layout to '/work/config/gf180/runs/stage11_electrical_route_b/04-openroad-repairantennas/1-openroad-diodeinsertion/asic_top.def'…

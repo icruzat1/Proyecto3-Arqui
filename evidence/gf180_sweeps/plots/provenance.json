@@ -1,0 +1,10 @@
+{
+  "source": "evidence/gf180_sweeps/summary.json",
+  "source_sha256": "4fe164737f2ead76e21d74c186add9bd04796b05511ecd500e94c0091fa951f1",
+  "script_sha256": "6c95654a1b743c38e2b4f2214880af8b440e4465b4b7d8a1f2179cc1aa7c354b",
+  "points": [
+    "stage8_t100_u30_a",
+    "stage7_trace_physical_ref_a",
+    "stage8_t100_u50_a"
+  ]
+}
